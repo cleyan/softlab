@@ -1,0 +1,252 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>list_informes</title>
+<meta content="CodeCharge Studio 3.0.1.6" name="GENERATOR">
+<link href="Themes/InLine/Style.css" type="text/css" rel="stylesheet">
+<script language="JavaScript">
+function CheckAll(referencia)
+  {
+  for (var i=0;i<document.seleccion_informes.elements.length;i++)
+    {    
+    var e = document.seleccion_informes.elements[i];
+    
+    if (e.name != referencia.name)
+      e.checked = referencia.checked;
+    }
+  }     
+</script>
+<script language="JavaScript">
+//Begin CCS script
+//Include Common JSFunctions @1-EC9749B1
+</script>
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-252A7665
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-A87AC9EE
+</script>
+{page:scriptIncludes}
+<script type="text/javascript">
+//End Include User Scripts
+
+//Common Script Start @1-8BFA436B
+jQuery(function ($) {
+    var features = { };
+    var actions = { };
+    var params = { };
+//End Common Script Start
+
+//Controls Selecting @1-8B530D33
+    $('body').ccsBind(function() {
+        features["Panel1UpdatePanel"] = $('*:ccsControl(Panel1)');
+    });
+//End Controls Selecting
+
+//Feature Parameters @1-59F0C907
+    params["Panel1UpdatePanel"] = {
+        name: "Panel1"
+    };
+//End Feature Parameters
+
+//Feature Init @1-A0AABFC6
+    features["Panel1UpdatePanel"].ccsBind(function() {
+        this.ccsUpdatePanel(params["Panel1UpdatePanel"]);
+    });
+//End Feature Init
+
+//UpdatePanel refresh Entry Point @111-270C76BB
+    actions["Panel1UpdatePanel_refresh"] = function () {
+        features["Panel1UpdatePanel"].ccsUpdatePanel("refresh");
+        return false;
+    };
+//End UpdatePanel refresh Entry Point
+
+//Event Binding @1-C7DEE951
+    $('#informe_datoslnkInforme').ccsBind(function() {
+        this.bind("click", actions["Panel1UpdatePanel_refresh"]);
+    });
+    $('#informe_datospeticion_id').ccsBind(function() {
+        this.bind("click", actions["Panel1UpdatePanel_refresh"]);
+    });
+//End Event Binding
+
+//Common Script End @1-562554DE
+});
+//End Common Script End
+
+//End CCS script
+</script>
+</head>
+<body class="InLinePageBODY" text="#000000" vlink="#000000" alink="#000000" link="#000000" bgcolor="#ffffff">
+{avisos} 
+<table width="100%" align="center" border="0">
+  <tr>
+    <td colspan="2">
+      <!-- BEGIN Record informe_datosSearch -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3">
+          <tr>
+            <td class="InLineFormHeaderFont" colspan="2">Buscar / Filtrar Peticiones </td> 
+          </tr>
+ 
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="2">{Error}</td> 
+          </tr>
+ <!-- END Error -->
+          <tr>
+            <td class="InLineFieldCaptionTD">Número&nbsp;de&nbsp;Petición&nbsp;</td> 
+            <td class="InLineDataTD"><input class="InLineInput" id="informe_datosSearchs_peticion_id" maxlength="20" size="10" value="{s_peticion_id}" name="{s_peticion_id_Name}">&nbsp;&nbsp; Paciente&nbsp; &nbsp;<input class="InLineInput" id="informe_datosSearchs_paciente" maxlength="200" size="50" value="{s_paciente}" name="{s_paciente_Name}"></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD">Rango de Fecha&nbsp;</td> 
+            <td class="InLineDataTD" nowrap><input class="InLineInput" id="informe_datosSearchs_fecha_ini" maxlength="10" size="10" value="{s_fecha_ini}" name="{s_fecha_ini_Name}"><a href="javascript:void(0)" hidefocus="hidefocus" title="haga click aquí para elegir la Fecha" onclick="if(self.gfPop)gfPop.fStartPop(document.{HTMLFormName}.{s_fecha_ini_Name},document.{HTMLFormName}.{s_fecha_fin_Name});return false;"><img class="PopcalTrigger" height="22" alt="" src="calbtn.gif" width="34" align="absMiddle" border="0"></a>&nbsp;-&nbsp;<input class="InLineInput" id="informe_datosSearchs_fecha_fin" maxlength="10" size="10" value="{s_fecha_fin}" name="{s_fecha_fin_Name}"><a href="javascript:void(0)" hidefocus="hidefocus" title="haga click aquí para elegir la Fecha" onclick="if(self.gfPop)gfPop.fEndPop(document.{HTMLFormName}.{s_fecha_ini_Name},document.{HTMLFormName}.{s_fecha_fin_Name});return false;"><img class="PopcalTrigger" height="22" alt="" src="calbtn.gif" width="34" align="absMiddle" border="0"></a>&nbsp; Procedencia 
+              <select class="InLineSelect" id="informe_datosSearchs_procedencia_id" name="{s_procedencia_id_Name}">
+                <option value="" selected>(Todas las Procedencias)</option>
+ {s_procedencia_id_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD" colspan="2">
+              <!-- BEGIN Panel Panel1 --><input class="" id="informe_datosSearchPanel1filtra" type="checkbox" value="1" name="{filtra_Name}" {filtra}>&nbsp;Mostrar todos los informes anteriores<!-- END Panel Panel1 --></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="2">
+              <!-- BEGIN Button Button_DoSearch --><input class="InLineButton" id="informe_datosSearchButton_DoSearch" type="submit" value="Buscar" name="{Button_Name}"><!-- END Button Button_DoSearch --></td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END Record informe_datosSearch --></td> 
+  </tr>
+ 
+  <tr>
+    <td valign="top">
+      <!-- BEGIN Grid informe_datos -->
+      <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+        <tr>
+          <td class="InLineFormHeaderFont" nowrap align="center" colspan="4">Lista de Peticiones Firmadas </td> 
+        </tr>
+ 
+        <tr>
+          <td class="InLineColumnTD" nowrap>&nbsp;</td> 
+          <td class="InLineColumnTD" nowrap align="center">
+            <!-- BEGIN Sorter Sorter_peticion_id --><a href="{Sort_URL}" class="InLineSorterLink">Petición</a> 
+            <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_peticion_id --></td> 
+          <td class="InLineColumnTD" nowrap>Paciente&nbsp;</td> 
+          <td class="InLineColumnTD" nowrap>Fecha Pet.</td> 
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr>
+          <td class="InLineDataTD"><a href="{lnkInforme}" class="InLineDataLink"><img class="" src="images/btns_Elegir.png" align="absMiddle" border="0"></a></td> 
+          <td class="InLineDataTD" align="center">
+            <p><a href="{peticion_id_Src}" class="InLineDataLink" id="informe_datospeticion_id">{peticion_id}</a></p>
+ </td> 
+          <td class="InLineDataTD" nowrap width="100%">{nombres}&nbsp;{apellidos}&nbsp;</td> 
+          <td class="InLineDataTD">{fecha}</td> 
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr>
+          <td class="InLineDataTD" colspan="4"><img id="Image1" src="images/emblem-important.png" align="left" name="Image1">No se encontaron informes FIRMADOS para la petición</td> 
+        </tr>
+ <!-- END NoRecords -->
+        <tr>
+          <td class="InLineFooterTD" nowrap colspan="4">&nbsp; </td> 
+        </tr>
+ 
+      </table>
+ <!-- END Grid informe_datos --></td> 
+    <td valign="top" width="60%">
+      <form name="seleccion_informes" action="list_informes.php" method="post">
+        <!-- BEGIN Grid informe_datos1 -->
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+          <tr>
+            <td class="InLineFormHeaderFont" nowrap align="left" colspan="5">Informes Firmados para Petición: <label></label>{peticion_id}&nbsp;- {s_nombres}&nbsp; {s_apellidos} <input id="informe_datos1s_fecha_ini" type="hidden" value="{s_fecha_ini}" name="{s_fecha_ini_Name}"><input id="informe_datos1s_fecha_fin" type="hidden" value="{s_fecha_fin}" name="{s_fecha_fin_Name}"><input id="informe_datos1s_paciente" type="hidden" value="{s_paciente}" name="{s_paciente_Name}"><input id="informe_datos1s_peticion_id" type="hidden" value="{s_peticion_id}" name="{s_peticion_id_Name}"><input id="informe_datos1x_peticion_id" type="hidden" value="{x_peticion_id}" name="{x_peticion_id_Name}"><input id="informe_datos1nom_paciente" type="hidden" value="{nom_paciente}" name="{nom_paciente_Name}"></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineColumnTD" nowrap>&nbsp; &nbsp;</td> 
+            <td class="InLineColumnTD" nowrap><input id="chkTodos" title="Marcar/Descmarcar Todos" onclick="JavaScript:CheckAll(this);" type="checkbox" name="chkTodos"></td> 
+            <td class="InLineColumnTD" nowrap width="100%">Informe&nbsp;</td> 
+            <td class="InLineColumnTD" nowrap>&nbsp;Firmado por</td> 
+            <td class="InLineColumnTD" nowrap>Fecha</td> 
+          </tr>
+ 
+          <!-- BEGIN Row -->
+          <tr>
+            <td class="InLineDataTD">{lbl_icono}</td> 
+            <td class="InLineDataTD" align="center">{lbl_chk}</td> 
+            <td class="InLineDataTD" nowrap width="100%">{nom_informe}&nbsp;<input id="informe_datos1serie" type="hidden" value="{serie}" name="{serie_Name}"><input id="informe_datos1informe_id" type="hidden" value="{informe_id}" name="{informe_id_Name}"></td> 
+            <td class="InLineDataTD">{firma_nombre}</td> 
+            <td class="InLineDataTD" nowrap>{fecha_firma}</td> 
+          </tr>
+ <!-- END Row -->
+          <!-- BEGIN NoRecords -->
+          <tr>
+            <td class="InLineDataTD" colspan="5"><img id="Image2" src="images/emblem-important.png" align="left" name="Image2">No se encontaron informes FIRMADOS para la petición o no se ha seleccionado la petición</td> 
+          </tr>
+ <!-- END NoRecords -->
+          <tr>
+            <td class="InLineFooterTD" nowrap colspan="5">
+              <!-- BEGIN Button Imprimir --><input class="InLineButton" id="informe_datos1Imprimir" type="submit" value="Imprimir" name="{Button_Name}"><!-- END Button Imprimir -->&nbsp; </td> 
+          </tr>
+ 
+        </table>
+ <!-- END Grid informe_datos1 -->
+      </form>
+ 
+      <!-- BEGIN Panel Panel1 -->&nbsp; 
+      <!-- BEGIN Grid informe_datos2 -->
+      <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+        <tr>
+          <td class="InLineFormHeaderFont" nowrap align="left" colspan="5">Informes Firmados para Petición: <label></label>{peticion_id}&nbsp;- {s_nombres}&nbsp; {s_apellidos} <input id="Panel1informe_datos2s_fecha_ini" type="hidden" value="{s_fecha_ini}" name="{s_fecha_ini_Name}"><input id="Panel1informe_datos2s_fecha_fin" type="hidden" value="{s_fecha_fin}" name="{s_fecha_fin_Name}"><input id="Panel1informe_datos2s_paciente" type="hidden" value="{s_paciente}" name="{s_paciente_Name}"><input id="Panel1informe_datos2s_peticion_id" type="hidden" value="{s_peticion_id}" name="{s_peticion_id_Name}"><input id="Panel1informe_datos2x_peticion_id" type="hidden" value="{x_peticion_id}" name="{x_peticion_id_Name}"><input id="Panel1informe_datos2nom_paciente" type="hidden" value="{nom_paciente}" name="{nom_paciente_Name}"></td> 
+        </tr>
+ 
+        <tr>
+          <td class="InLineColumnTD" nowrap>&nbsp; &nbsp;</td> 
+          <td class="InLineColumnTD" nowrap><input id="chkTodos" title="Marcar/Descmarcar Todos" onclick="JavaScript:CheckAll(this);" type="checkbox" name="chkTodos"></td> 
+          <td class="InLineColumnTD" nowrap width="100%">Informe&nbsp;</td> 
+          <td class="InLineColumnTD" nowrap>&nbsp;Firmado por</td> 
+          <td class="InLineColumnTD" nowrap>Fecha</td> 
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr>
+          <td class="InLineDataTD">{lbl_icono}</td> 
+          <td class="InLineDataTD" align="center">{lbl_chk}</td> 
+          <td class="InLineDataTD" nowrap width="100%">{nom_informe}&nbsp;<input id="Panel1informe_datos2serie" type="hidden" value="{serie}" name="{serie_Name}"><input id="Panel1informe_datos2informe_id" type="hidden" value="{informe_id}" name="{informe_id_Name}"></td> 
+          <td class="InLineDataTD">{firma_nombre}</td> 
+          <td class="InLineDataTD" nowrap>{fecha_firma}</td> 
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr>
+          <td class="InLineDataTD" colspan="5"><img id="Image2" src="images/emblem-important.png" align="left" name="Image2">No se encontaron informes FIRMADOS para la petición o no se ha seleccionado la petición</td> 
+        </tr>
+ <!-- END NoRecords -->
+        <tr>
+          <td class="InLineFooterTD" nowrap colspan="5">
+            <!-- BEGIN Button Imprimir --><input class="InLineButton" id="Panel1informe_datos2Imprimir" type="submit" value="Imprimir" name="{Button_Name}"><!-- END Button Imprimir -->&nbsp; </td> 
+        </tr>
+ 
+      </table>
+ <!-- END Grid informe_datos2 --><!-- END Panel Panel1 --></td> 
+  </tr>
+</table>
+{calendar_tag} 
+</body>
+</html>

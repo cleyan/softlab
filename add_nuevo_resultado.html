@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Softlab</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+<link rel="stylesheet" type="text/css" href="Themes/InLine/Style.css">
+<script>
+function pasar_valor(objeto,hidden){
+	 document.getElementById(hidden).value = document.getElementById(objeto).value;
+}
+</script>
+</head>
+<body class="InLinePageBODY">
+<table width="530" align="center" border="0">
+  <tr>
+    <td>
+      <!-- BEGIN Record resultados -->
+      <form name="{HTMLFormName}" action="{Action}" method="post" enctype="{HTMLFormEnctype}">
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+          <tr>
+            <td class="InLineFormHeaderFont" colspan="2">Agregar nuevo resultado </td> 
+          </tr>
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="2">{Error}</td> 
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineFieldCaptionTD">Valor&nbsp;</td> 
+            <td class="InLineDataTD">
+              <div {style_list_valor} nowrap >
+                <select class="InLineSelect" name="{list_valor_Name}" onchange="javascript: pasar_valor('{list_valor_Name}','{hidden_valor_Name}');" id="resultadoslist_valor">
+                  <option value="" selected>Seleccionar Valor</option>
+ {list_valor_Options} 
+                </select>
+ 
+              </div>
+ 
+              <div {style_text_valor} nowrap >
+                <input class="InLineInput" maxlength="100" value="{valor}" name="{valor_Name}" onchange="javascript: pasar_valor('{valor_Name}','{hidden_valor_Name}');" id="resultadosvalor">
+              </div>
+ 
+              <div {style_textarea_valor} nowrap >
+                <textarea class="InLineTextarea" id="resultadosTextArea_valor" style="WIDTH: 436px; HEIGHT: 65px" name="{TextArea_valor_Name}" rows="3" cols="61" onchange="javascript: pasar_valor('{TextArea_valor_Name}','{hidden_valor_Name}');">{TextArea_valor}</textarea> 
+              </div>
+ <input type="hidden" name="{resultado_id_Name}" value="{resultado_id}" style="WIDTH: 33px; HEIGHT: 22px" size="3" id="resultadosresultado_id"><input type="hidden" name="{peticion_id_Name}" value="{peticion_id}" style="WIDTH: 31px; HEIGHT: 22px" size="3" id="resultadospeticion_id"><input type="hidden" name="{test_id_Name}" value="{test_id}" style="WIDTH: 33px; HEIGHT: 22px" size="3" id="resultadostest_id"><input type="hidden" name="{muestra_id_Name}" value="{muestra_id}" style="WIDTH: 33px; HEIGHT: 22px" size="3" id="resultadosmuestra_id"><input type="hidden" name="{estado_id_Name}" value="{estado_id}" style="WIDTH: 28px; HEIGHT: 22px" size="3" id="resultadosestado_id"><input type="hidden" name="{hora_creacion_Name}" value="{hora_creacion}" style="WIDTH: 23px; HEIGHT: 22px" size="2" id="resultadoshora_creacion"><input type="hidden" name="{fecha_creacion_Name}" value="{fecha_creacion}" style="WIDTH: 28px; HEIGHT: 22px" size="3" id="resultadosfecha_creacion"><input type="hidden" name="{ingresado_por_Name}" value="{ingresado_por}" style="WIDTH: 34px; HEIGHT: 22px" size="3" id="resultadosingresado_por"><input type="hidden" name="{pagina_Name}" value="{pagina}" style="WIDTH: 39px; HEIGHT: 22px" size="4" id="resultadospagina"><input type="hidden" name="{hidden_valor_Name}" value="{hidden_valor}" id="resultadoshidden_valor"></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input class="InLineButton" type="submit" value="Agregar" name="{Button_Name}" id="resultadosButton_Insert"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Cancel --><input class="InLineButton" type="button" value="Cancelar" name="{Button_Name}" id="resultadosButton_Cancel"><!-- END Button Button_Cancel -->&nbsp; </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END Record resultados --></td> 
+  </tr>
+</table>
+</body>
+</html>

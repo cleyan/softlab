@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>edit_orden</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+<link rel="stylesheet" type="text/css" href="Themes/InLine/Style.css">
+<script language="JavaScript">
+//Begin CCS script
+//End CCS script
+</script>
+</head>
+<body bgcolor="#ffffff" link="#000000" alink="#000000" vlink="#000000" text="#000000" class="InLinePageBODY">
+<table width="700" align="center" border="0">
+  <tr>
+    <td>
+      <!-- BEGIN EditableGrid grupos_detalle_test_grupo -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <input type="hidden" value="{FormState}" name="FormState">{FormScript} 
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3">
+          <tr>
+            <td class="InLineFormHeaderFont" align="middle" colspan="3">EDITANDO
+              ORDEN EN GRUPO: {nom_grupo} 
+              <hr>Lista de&nbsp;Los Test y su Orden&nbsp;&nbsp;(Total de
+              Registros:{grupos_detalle_test_grupo_TotalRecords}) </td> 
+          </tr>
+ 
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="3">{Error}</td> 
+          </tr>
+ <!-- END Error -->
+          <tr>
+            <td class="InLineColumnTD" nowrap>
+              <!-- BEGIN Sorter Sorter_cod_test --><a class="InLineSorterLink" href="{Sort_URL}">Cod
+              Test</a> 
+              <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+              <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_cod_test -->&nbsp;</td> 
+            <td class="InLineColumnTD" nowrap>
+              <!-- BEGIN Sorter Sorter_nom_test --><a class="InLineSorterLink" href="{Sort_URL}">Nom
+              Test</a> 
+              <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+              <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_nom_test -->&nbsp;</td> 
+            <td class="InLineColumnTD" nowrap>
+              <!-- BEGIN Sorter Sorter_orden_informe --><a class="InLineSorterLink" href="{Sort_URL}">Orden
+              Informe</a> 
+              <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+              <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_orden_informe -->&nbsp;</td> 
+          </tr>
+ 
+          <!-- BEGIN Row -->
+          <!-- BEGIN RowError -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="3">{Error}</td> 
+          </tr>
+ <!-- END RowError -->
+          <tr>
+            <td class="InLineDataTD">{cod_test}&nbsp;</td> 
+            <td class="InLineDataTD">{nom_test}&nbsp;</td> 
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="10" size="10" value="{orden_informe}" name="{orden_informe_Name}" id="grupos_detalle_test_grupoorden_informe">&nbsp;<input type="hidden" value="{orden_ingreso}" name="{orden_ingreso_Name}" id="grupos_detalle_test_grupoorden_ingreso"></td> 
+          </tr>
+ <!-- END Row -->
+          <!-- BEGIN NoRecords -->
+          <tr>
+            <td class="InLineDataTD" colspan="3">No se encontaron
+              registros&nbsp;</td> 
+          </tr>
+ <!-- END NoRecords -->
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="3">&nbsp; 
+              <!-- BEGIN Button Button_Submit --><input class="InLineButton" type="submit" value="Grabar" name="{Button_Name}" id="grupos_detalle_test_grupoButton_Submit"><!-- END Button Button_Submit -->&nbsp; 
+              <!-- BEGIN Button Cancelar --><input class="InLineButton" type="submit" value="Cancelar" name="{Button_Name}" id="grupos_detalle_test_grupoCancelar"><!-- END Button Cancelar --></td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END EditableGrid grupos_detalle_test_grupo --></td> 
+  </tr>
+</table>
+</body>
+</html>

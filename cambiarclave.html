@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>cambiarclave</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+<link rel="stylesheet" type="text/css" href="Themes/InLine/Style.css">
+</head>
+<body class="InLinePageBODY">
+<table width="700" align="center" border="0">
+  <tr>
+    <td>&nbsp; 
+      <!-- BEGIN Record usuarios -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="70%">
+          <tr>
+            <td class="InLineFormHeaderFont" colspan="2">Modificar mi contraseña </td> 
+          </tr>
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="2">{Error}</td> 
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineFieldCaptionTD">Nombre</td> 
+            <td class="InLineDataTD">{nom_usuario}&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD">Login&nbsp;</td> 
+            <td class="InLineDataTD">{log_usuario}&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD">Clave actual&nbsp;</td> 
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="10" size="10" value="{clave_actual}" name="{clave_actual_Name}" type="password" id="usuariosclave_actual">&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD">Nueva Clave</td> 
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="10" size="10" value="{nueva_clave}" name="{nueva_clave_Name}" type="password" id="usuariosnueva_clave"></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD">Repetir Nueva Clave</td> 
+            <td class="InLineDataTD"><input class="InLineInput" value="{nueva_clave2}" name="{nueva_clave2_Name}" type="password" maxlength="10" size="10" id="usuariosnueva_clave2"></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="2">
+              <!-- BEGIN Button Button_Update --><input class="InLineButton" type="submit" value="Grabar" name="{Button_Name}" id="usuariosButton_Update"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Cancel --><input class="InLineButton" type="submit" value="Cancelar" name="{Button_Name}" id="usuariosButton_Cancel"><!-- END Button Button_Cancel -->&nbsp; </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END Record usuarios --></td> 
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,37 @@
+/* GiantSteps CCSTheme */
+BODY, TABLE, TH, TR, TD, UL, OL, LI, P, FONT, A, BLOCKQUOTE, LABEL { font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 13px; }
+.GiantStepsPageBODY{ font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 13px; }
+.GiantStepsFormHeaderFont{ color: #505050; font-size: 16px; font-weight: bold; }
+.GiantStepsFormTABLE{ font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 13px; }
+.GiantStepsFieldCaptionTD{ border-bottom: 1px solid #E6E6E6; background-color: #F7F7F7; color: #000000; font-size: 13px; font-weight: bold; }
+.GiantStepsAltDataTD{ border-bottom: 1px solid #E6E6E6; background-color: #F7F7F7; color: #000000; font-size: 13px; }
+.GiantStepsColumnTD{ border-top: 2px solid #000000; border-bottom: 1px solid #000000; background-color: #F3F3F3; color: #000000; font-size: 13px; font-weight: bold; }
+.GiantStepsDataTD{ border-bottom: 1px solid #E6E6E6; background-color: #FFFFFF; color: #000000; font-size: 13px; }
+.GiantStepsErrorDataTD{ border-bottom: 1px solid #E6E6E6; background-color: #FFFFFF; color: #FF0000; font-size: 13px; }
+.GiantStepsSeparatorTD{ height: 1px; background-color: #000000; }
+.GiantStepsFooterTD{ border-top: 2px solid #000000; background-color: #F3F3F3; color: #000000; font-size: 13px; }
+a.GiantStepsSorterLink:link,a.GiantStepsSorterLink:visited{ color: #000000; font-size: 13px; text-decoration: underline; }
+a.GiantStepsSorterLink:hover,a.GiantStepsSorterLink:active{ color: #000000; font-size: 13px; text-decoration: none; }
+a.GiantStepsDataLink:link,a.GiantStepsDataLink:visited{ color: #000000; font-size: 13px; text-decoration: underline; }
+a.GiantStepsDataLink:hover,a.GiantStepsDataLink:active{ color: #000000; font-size: 13px; text-decoration: none; }
+a.GiantStepsNavigatorLink:link,a.GiantStepsNavigatorLink:visited{ color: #000000; font-size: 13px; font-weight: bold; text-decoration: underline; }
+a.GiantStepsNavigatorLink:hover,a.GiantStepsNavigatorLink:active{ color: #000000; font-size: 13px; font-weight: bold; text-decoration: none; }
+.GiantStepsButton { border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; border-top: 1px solid #000000; background-color: #F3F3F3; font-size: 13px; font-family: Tahoma, Verdana, Arial, Helvetica; }
+.GiantStepsInput { border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; border-top: 1px solid #000000; background-color: #FFFFFF; font-size: 13px; font-family: Tahoma, Verdana, Arial, Helvetica; }
+.GiantStepsTextarea { border-left: 1px solid #000000; border-right: 1px solid #000000; border-top: 1px solid #000000; border-bottom: 1px solid #000000; background-color: #FFFFFF; font-size: 13px; font-family: Tahoma, Verdana, Arial, Helvetica; }
+.GiantStepsSelect { font-size: 13px; font-family: Tahoma, Verdana, Arial, Helvetica; }
+/* Calendar */
+a.today:link,a.today:visited{ color: #FF0000; font-weight: bold; text-decoration: none; }
+a.today:hover,a.today:active{ color: #000000; font-weight: bold; text-decoration: none; }
+a.selectedDay:link,a.selectedDay:visited{ color: #000000; font-weight: bold; text-decoration: none; }
+a.selectedDay:hover,a.selectedDay:active{ color: #FF0000; font-weight: bold; text-decoration: none; }
+a.weekDay:link,a.weekDay:visited{ color: #000000; text-decoration: none; }
+a.weekDay:hover,a.weekDay:active{ color: #FF0000; text-decoration: none; }
+TD.selectedDay { border-bottom: 1px solid #E6E6E6; background-color: #DDDDDD; color: #000000; font-size: 13px; }
+TD.today { border-top: 1px solid #FF0000; border-left: 1px solid #FF0000; border-bottom: 1px solid #FF0000; border-right: 1px solid #FF0000; background-color: #FFFFFF; color: #000000; font-size: 13px; }
+TD.workday { border-bottom: 1px solid #E6E6E6; background-color: #FFFFFF; color: #000000; font-size: 13px; }
+TD.weekend { border-bottom: 1px solid #E6E6E6; background-color: #ECECEC; color: #000000; font-size: 13px; }
+TH.calendar { margin: 1px; border-top: 2px solid #000000; border-bottom: 1px solid #000000; background-color: #F3F3F3; color: #000000; font-size: 13px; font-weight: bold; }
+.CalendarButtons { border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; border-top: 1px solid #000000; background-color: #F3F3F3; font-size: 13px; font-family: Tahoma, Verdana, Arial, Helvetica; }
+.CalendarControls { font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 13px; }
+.Table { }

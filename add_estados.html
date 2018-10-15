@@ -1,0 +1,190 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>add_estados</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+<link rel="stylesheet" type="text/css" href="Themes/InLine/Style.css">
+<script language="JavaScript">
+//Begin CCS script
+//Include Common JSFunctions @1-921C7A7E
+</script>
+<script src="ClientI18N.php?file=Globalize.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-A87AC9EE
+</script>
+{page:scriptIncludes}
+<script type="text/javascript">
+//End Include User Scripts
+
+//Common Script Start @1-8BFA436B
+jQuery(function ($) {
+    var features = { };
+    var actions = { };
+    var params = { };
+//End Common Script Start
+
+//estadosButton_SubmitOnClick Event Start @-8388CCEF
+    actions["estadosButton_SubmitOnClick"] = function (eventType, parameters) {
+        var result = true;
+//End estadosButton_SubmitOnClick Event Start
+
+//Confirmation Message @13-96FAE8C2
+        return confirm('Enviar registro?');
+//End Confirmation Message
+
+//estadosButton_SubmitOnClick Event End @-A5B9ECB8
+        return result;
+    };
+//End estadosButton_SubmitOnClick Event End
+
+//Event Binding @1-43BA405C
+    $('*:ccsControl(estados, Button_Submit)').ccsBind(function() {
+        this.bind("click", actions["estadosButton_SubmitOnClick"]);
+    });
+//End Event Binding
+
+//Plugin Calls @1-18472D61
+    $('*:ccsControl(estados, Cancel)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+//End Plugin Calls
+
+//Common Script End @1-562554DE
+});
+//End Common Script End
+//End CCS script
+</script>
+</head>
+<body  class="InLinePageBODY">
+<table width="700" align="center" border="0">
+  <tr>
+    <td>
+      <!-- BEGIN Record estadosSearch -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+          <tr>
+            <td class="InLineFormHeaderFont" colspan="3">Buscar/Filtrar Estados
+              según donde se usará </td> 
+          </tr>
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="3">{Error}</td> 
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineFieldCaptionTD" nowrap>Usar En&nbsp;</td> 
+            <td class="InLineDataTD" width="100%">
+              <select class="InLineSelect" name="{s_usar_en_Name}" style="WIDTH: 100%" id="estadosSearchs_usar_en">
+                <option value="" selected>Seleccionar Valor</option>
+ {s_usar_en_Options} 
+              </select>
+ </td> 
+            <td class="InLineFooterTD" nowrap>
+              <!-- BEGIN Button Button_DoSearch --><input class="InLineButton" type="submit" value="Buscar" name="{Button_Name}" id="estadosSearchButton_DoSearch"><!-- END Button Button_DoSearch --></td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END Record estadosSearch -->
+      <!-- BEGIN EditableGrid estados -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <input type="hidden" value="{FormState}" name="FormState">{FormScript} <br/>
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="7">{Error}&nbsp;</td> 
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineTitulo" nowrap colspan="7">
+              <p align="center">Listado de estados (Total de Registros:&nbsp;
+              {estados_TotalRecords})</p>
+ </td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineColumnTD" nowrap>
+              <!-- BEGIN Sorter ID --><a class="InLineSorterLink" href="{Sort_URL}">ID</a><!-- END Sorter ID --></td> 
+            <td class="InLineColumnTD" nowrap>
+              <p align="center">
+              <!-- BEGIN Sorter Sorter_nom_estado --><a class="InLineSorterLink" href="{Sort_URL}">Estado</a> 
+              <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+              <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_nom_estado --></p>
+ </td> 
+            <td class="InLineColumnTD" nowrap>
+              <p align="center">
+              <!-- BEGIN Sorter Sorter_usar_en --><a class="InLineSorterLink" href="{Sort_URL}">Usar
+              En</a> 
+              <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+              <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_usar_en --></p>
+ </td> 
+            <td class="InLineColumnTD" nowrap>Predet.</td> 
+            <td class="InLineColumnTD" nowrap>
+              <p align="center">Activo</p>
+ </td> 
+            <td class="InLineColumnTD" nowrap>Ver&nbsp;en valida.</td> 
+            <td class="InLineColumnTD" nowrap>
+              <p align="center">Borrar</p>
+ </td> 
+          </tr>
+          <!-- BEGIN Row -->
+          <!-- BEGIN RowError -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="7">{Error}</td> 
+          </tr>
+          <!-- END RowError -->
+          <tr>
+            <td class="InLineDataTD"><input class="InLineInput" value="{estado_id}" name="{estado_id_Name}" maxlength="3" size="3" id="estadosestado_id"></td> 
+            <td class="InLineDataTD" width="100%"><input class="InLineInput" maxlength="100" size="50" value="{nom_estado}" name="{nom_estado_Name}" style="WIDTH: 100%" id="estadosnom_estado"></td> 
+            <td class="InLineDataTD" style="WIDTH: 45%">
+              <select name="{usar_en_Name}" class="InLineSelect" id="estadosusar_en">
+                <option value="" selected>Seleccionar Valor</option>
+ {usar_en_Options} 
+              </select>
+ </td> 
+            <td class="InLineDataTD" align="middle"><input class="InLineInput" type="checkbox" value="1" name="{predeterminado_Name}" {predeterminado} id="estadospredeterminado"></td> 
+            <td class="InLineDataTD">
+              <p align="center"><input class="InLineInput" type="checkbox" value="1" name="{activo_Name}" {activo} id="estadosactivo"></p>
+ </td> 
+            <td class="InLineDataTD" align="middle"><input class="InLineInput" type="checkbox" value="1" name="{visible_validacion_Name}" {visible_validacion} id="estadosvisible_validacion"></td> 
+            <td class="InLineDataTD">
+              <!-- BEGIN CheckBox CheckBox_Delete -->
+              <p align="center" id="estadosCheckBox_Delete"><input class="InLineInput" type="checkbox" value="1" name="{CheckBox_Delete_Name}" {CheckBox_Delete}></p>
+              <!-- END CheckBox CheckBox_Delete --></td> 
+          </tr>
+          <!-- END Row -->
+          <!-- BEGIN NoRecords -->
+          <tr>
+            <td class="InLineDataTD" colspan="7">No hay registros&nbsp;</td> 
+          </tr>
+          <!-- END NoRecords -->
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="7">
+              <p align="center">
+              <!-- BEGIN Navigator Navigator1 -->
+              <!-- BEGIN First_On --><a class="InLineNavigatorLink" href="{First_URL}"><img src="Themes/Square/FirstOn.gif" border="0"></a> <!-- END First_On -->
+              <!-- BEGIN Prev_On --><a class="InLineNavigatorLink" href="{Prev_URL}"><img src="Themes/Square/PrevOn.gif" border="0"></a> <!-- END Prev_On -->&nbsp;{Page_Number}&nbsp;de
+              {Total_Pages}&nbsp; 
+              <!-- BEGIN Next_On --><a class="InLineNavigatorLink" href="{Next_URL}"><img src="Themes/Square/NextOn.gif" border="0"></a> <!-- END Next_On -->
+              <!-- BEGIN Last_On --><a class="InLineNavigatorLink" href="{Last_URL}"><img src="Themes/Square/LastOn.gif" border="0"></a> <!-- END Last_On --><!-- END Navigator Navigator1 --></p>
+ </td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="7">
+              <p align="right">
+              <!-- BEGIN Button Button_Submit --><input class="InLineButton" type="submit" value="Guardar" name="{Button_Name}" id="estadosButton_Submit"><!-- END Button Button_Submit -->&nbsp; 
+              <!-- BEGIN Button Cancel --><input class="InLineButton" type="submit" value="Cancelar" name="{Button_Name}" id="estadosCancel"><!-- END Button Cancel --></p>
+ </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END EditableGrid estados --></td> 
+  </tr>
+</table>
+</body>
+</html>

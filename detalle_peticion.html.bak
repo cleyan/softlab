@@ -1,0 +1,71 @@
+<!-- BEGIN Grid peticiones_estados_estado -->
+<table class="InLineFormTABLE" cellspacing="0" cellpadding="0" width="100%">
+  <!-- BEGIN Row -->
+  <tr>
+    <td class="" nowrap bgcolor="#ffcc00"><strong>Nº de Peticion</strong> &nbsp;</td> 
+    <td class="" bgcolor="#ffcc00"><strong>{peticion_id}</strong>&nbsp;</td> 
+    <td class="InLineDataTD"><strong>RUT/Ficha</strong></td> 
+    <td class="InLineDataTD">{rut}&nbsp;/{ficha}</td> 
+  </tr>
+ 
+  <tr>
+    <td class="InLineDataTD" nowrap><strong>Paciente</strong></td> 
+    <td class="InLineDataTD" nowrap>{nombres}&nbsp;{apellidos}</td> 
+    <td class="InLineDataTD"><strong>Previsión</strong>&nbsp;</td> 
+    <td class="InLineDataTD">{nom_prevision}</td> 
+  </tr>
+ 
+  <tr>
+    <td class="InLineDataTD" nowrap><strong>Fecha</strong>&nbsp;</td> 
+    <td class="InLineDataTD">{fecha}&nbsp;{hora}</td> 
+    <td class="InLineDataTD" nowrap><strong>Fecha Nacimiento</strong> </td> 
+    <td class="InLineDataTD" nowrap>{fecha_nacimiento}&nbsp;-{edad}</td> 
+  </tr>
+ 
+  <tr>
+    <td class="InLineDataTD" nowrap><strong>Médico</strong>&nbsp;</td> 
+    <td class="InLineDataTD">&nbsp;{nom_medico}</td> 
+    <td class="InLineDataTD"><strong>Estado Pago</strong> </td> 
+    <td class="InLineDataTD">{nom_estado_pago}&nbsp;{img_aviso}</td> 
+  </tr>
+ 
+  <tr>
+    <td class="InLineDataTD" nowrap><strong>Fono</strong>&nbsp;</td> 
+    <td class="InLineDataTD">&nbsp;{pacientes_fono}</td> 
+    <td class="InLineDataTD"><strong>Estado</strong>&nbsp;</td> 
+    <td class="InLineDataTD">{nom_estado}&nbsp;</td> 
+  </tr>
+ 
+  <tr>
+    <td class="InLineDataTD" nowrap><strong>Celular</strong>&nbsp;</td> 
+    <td class="InLineDataTD">&nbsp;{celular}</td> 
+    <td class="InLineDataTD" nowrap><strong>Valor de la Petición</strong></td> 
+    <td class="InLineDataTD">{valor}</td> 
+  </tr>
+ 
+  <tr>
+    <td class="InLineDataTD" nowrap><strong>Email</strong>&nbsp;</td> 
+    <td class="InLineDataTD">{pacientes_email}&nbsp;</td> 
+    <td class="InLineDataTD"><strong>Saldo Pendiente</strong></td> 
+    <td class="InLineDataTD">{saldo}</td> 
+  </tr>
+ 
+  <tr>
+    <td class="InLineDataTD" nowrap><strong>Procedencia</strong></td> 
+    <td class="InLineDataTD">{nom_procedencia}</td> 
+    <td class="InLineDataTD"><strong>Usuario</strong></td> 
+    <td class="InLineDataTD">{nom_usuario}</td> 
+  </tr>
+ 
+  <tr>
+    <td class="InLineDataTD" nowrap><strong>Observaciones</strong>&nbsp;</td> 
+    <td class="InLineDataTD" colspan="3">{observaciones}&nbsp;</td> 
+  </tr>
+  <!-- END Row -->
+  <!-- BEGIN NoRecords -->
+  <tr>
+    <td class="InLineDataTD" colspan="4">No se encontaron registros&nbsp;</td> 
+  </tr>
+  <!-- END NoRecords -->
+</table>
+<!-- END Grid peticiones_estados_estado -->

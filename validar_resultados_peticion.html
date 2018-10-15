@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="GENERATOR" content="CodeCharge Studio 3.0.1.6">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>validar_resultados_peticion</title>
+<link href="Themes/InLine/Style.css" type="text/css" rel="stylesheet">
+<script language="javascript" src="funciones.js"></script>
+<script language="JavaScript">
+//Begin CCS script
+//End CCS script
+</script>
+<script language="JavaScript">
+function CheckAll(referencia)
+  {
+  for (var i=0;i<document.val_resultados.elements.length;i++)
+    {    
+    var e = document.val_resultados.elements[i];
+    
+    if (e.name != referencia.name)
+      e.checked = referencia.checked;
+    }
+  }     
+</script>
+</head>
+<body class="InLinePageBODY" text="#000000" vlink="#000000" alink="#000000" link="#000000" bgcolor="#ffffff">
+<table class="Table" width="100%" align="center" border="0">
+  <tr>
+    <td>
+      <!-- BEGIN Record peticiones_pacientesSearch -->
+      <table class="InLineFormTable" cellspacing="0" cellpadding="1" width="100%">
+        <form name="{HTMLFormName}" action="{Action}" method="post">
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="4">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineFormHeaderFont" nowrap width="150">Número de
+              Petición&nbsp;</td> 
+            <td class="InLineDataTD" width="300"><input class="InLineInput" maxlength="20" value="{s_peticion_id}" name="{s_peticion_id_Name}" id="peticiones_pacientesSearchs_peticion_id"></td> 
+            <td class="InLineFooterTD" align="left" colspan="2">
+              <!-- BEGIN Button Button_DoSearch --><input class="InLineButton" type="submit" value="Buscar" name="{Button_Name}" id="peticiones_pacientesSearchButton_DoSearch"><!-- END Button Button_DoSearch --></td>
+          </tr>
+        </form>
+      </table>
+      <!-- END Record peticiones_pacientesSearch -->
+      <!-- BEGIN Grid peticiones_pacientes -->
+      <table>
+        <!-- BEGIN Row -->
+        <tr>
+          <td class="InLineColumnTD" nowrap width="150">Número de Petición</td> 
+          <td class="InLineDataTD" width="300">{peticion_id}</td> 
+          <td class="InLineColumnTD">Fecha Petición </td> 
+          <td class="InLineDataTD" nowrap>{fecha}<input type="hidden" value="{paciente_id}" name="{paciente_id_Name}" id="peticiones_pacientespaciente_id">&nbsp;-
+            {Hora}&nbsp;Hrs.</td>
+        </tr>
+ 
+        <tr>
+          <td class="InLineColumnTD">Nombre&nbsp;</td> 
+          <td class="InLineDataTD" nowrap>{nombres}&nbsp;{apellidos}</td> 
+          <td class="InLineColumnTD" nowrap>Fecha Nacimiento y Edad</td> 
+          <td class="InLineDataTD">{fecha_nacimiento}&nbsp;-&nbsp;{Edad}</td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr>
+          <td class="InLineDataTD" colspan="4"><img id="Image3" src="images/emblem-important.png" align="absMiddle" name="Image3">No
+            se encontraron Datos para La Petición&nbsp;</td>
+        </tr>
+        <!-- END NoRecords -->
+      </table>
+      <!-- END Grid peticiones_pacientes -->
+      <!-- BEGIN Record test_resultados_estadosSearch -->
+      <table class="InLineFormTable" cellspacing="0" cellpadding="3">
+        <form name="{HTMLFormName}" action="{Action}" method="post">
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="6">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineFormHeaderFont">FILTRAR</td> 
+            <td class="InLineFieldCaptionTD"><input style="WIDTH: 97px; HEIGHT: 22px" type="hidden" size="12" value="{s_peticion_id}" name="{s_peticion_id_Name}" id="test_resultados_estadosSearchs_peticion_id">Sección&nbsp;</td> 
+            <td class="InLineDataTD">
+              <select class="InLineSelect" name="{s_secciones_id_Name}" id="test_resultados_estadosSearchs_secciones_id">
+                <option value="" selected>Todas las Secciones</option>
+                {s_secciones_id_Options}
+              </select>
+ </td> 
+            <td class="InLineDataTD">Equipo&nbsp;</td> 
+            <td class="InLineDataTD">
+              <select class="InLineSelect" name="{s_equipo_id_Name}" id="test_resultados_estadosSearchs_equipo_id">
+                <option value="" selected>Todos los Equipos</option>
+                {s_equipo_id_Options}
+              </select>
+ </td> 
+            <td class="InLineFooterTD" width="100%">
+              <p align="left">
+              <!-- BEGIN Button Button_DoSearch --><input class="InLineButton" type="submit" value="Filtrar" name="{Button_Name}" id="test_resultados_estadosSearchButton_DoSearch"><!-- END Button Button_DoSearch --></p>
+            </td>
+          </tr>
+        </form>
+      </table>
+      <!-- END Record test_resultados_estadosSearch -->
+      <!-- BEGIN Grid test_resultados_estados -->
+      <table class="InLineFormTable" cellspacing="0" cellpadding="3" width="100%">
+        <form name="val_resultados" action="validar_resultados_peticion.php" method="get">
+          <input type="hidden" value="{s_peticion_id}" name="{s_peticion_id_Name}" id="test_resultados_estadoss_peticion_id">
+          <tr>
+            <td class="InLineColumnTD" nowrap align="center"><input id="Checkbox1" title="Marcar o Desmarcar Todos" onclick="JavaScript:CheckAll(this);" type="checkbox" name="Checkbox1"></td> 
+            <td class="InLineColumnTD" nowrap>Test&nbsp;</td> 
+            <td class="InLineColumnTD" nowrap>Valor&nbsp;</td> 
+            <td class="InLineColumnTD" nowrap>Rep.</td> 
+            <td class="InLineColumnTD" nowrap align="center">Hist.</td> 
+            <td class="InLineColumnTD" nowrap>Estado&nbsp;</td>
+          </tr>
+ 
+          <!-- BEGIN Row -->
+          <tr class="InLineDataTD">
+            <td class="InLineDataTD" align="center">{marcador}</td> 
+            <td class="InLineDataTD" nowrap>{lblDeCompuesto}{cod_test}&nbsp;</td> 
+            <td class="InLineDataTD" width="100%">{valor}&nbsp;<small>{unidad_medida}</small></td> 
+            <td class="InLineDataTD" width="100%">{repetido}</td> 
+            <td class="InLineDataTD" nowrap align="center"><a class="InLineDataLink" title="Ver Historia del Test" href="{lnkHistoria_Src}" id="test_resultados_estadoslnkHistoria">{lnkHistoria}</a>&nbsp;</td> 
+            <td class="InLineDataTD" nowrap>{nom_estado}&nbsp;</td>
+          </tr>
+ <!-- END Row -->
+          <!-- BEGIN NoRecords -->
+          <tr>
+            <td class="InLineDataTD" colspan="6"><img id="Image2" src="images/emblem-important.png" align="left" name="Image2">No
+              se encontaron registros&nbsp;</td>
+          </tr>
+          <!-- END NoRecords -->
+        </table>
+ 
+        <table class="Table2" width="50%" border="0">
+          <tr>
+            <td><button class="InLineButton" name="Accion" type="submit" value="Aceptar"><img id="Image1" src="images/button_ok.gif" align="absMiddle" name="Image1">Aceptar</button> </td> 
+            <td><button class="InLineButton" name="Accion" type="submit" value="Rechazar"><img id="Image1" src="images/button_cancel.gif" align="absMiddle" name="Image1">Rechazar</button> </td> 
+            <td><button class="InLineButton" name="Accion" type="submit" value="Borrar">Borrar
+              Estado</button> </td> 
+            <td class="" width="100%"></td>
+          </tr>
+        </form>
+      </table>
+      <!-- END Grid test_resultados_estados -->
+      <table cellspacing="0" cellpadding="0" width="100%" border="0">
+        <tr>
+          <td width="100%"></td> 
+          <td align="right"><a class="InLineDataLink" href="{ImageLink1}"><img class="" src="images/btn_irresultados.png" align="absMiddle" border="0"></a>&nbsp;</td> 
+          <td align="right"><a class="InLineDataLink" href="{ImageLink2}"><img class="" src="images/btn_inicio.png" align="absMiddle" border="0"></a>&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

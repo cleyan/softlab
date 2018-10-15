@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="GENERATOR" content="CodeCharge Studio 3.0.1.6">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>ver_detalletomamuestra</title>
+<link href="Themes/InLine/Style.css" type="text/css" rel="stylesheet">
+</head>
+<body class="InLinePageBODY">
+<table width="700" align="center" border="0">
+  <tr>
+    <td align="middle">
+      <!-- BEGIN Grid peticiones_pacientes_proc -->
+      <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+        <tr>
+          <td class="InLineFormHeaderFont" align="center" colspan="4">Detalle de
+            la petición </td>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr>
+          <td class="InLineColumnTD" nowrap>Peticion Id&nbsp;</td> 
+          <td class="InLineDataTD" width="100%"><strong>{peticion_id}</strong>&nbsp;</td> 
+          <td class="InLineColumnTD" width="100%">&nbsp;Fecha&nbsp;Ingreso</td> 
+          <td class="InLineDataTD" nowrap width="100%">&nbsp;{fecha}&nbsp;
+            -{hora}&nbsp;Hrs.</td>
+        </tr>
+ 
+        <tr>
+          <td class="InLineColumnTD" nowrap>Rut&nbsp;/ Ficha</td> 
+          <td class="InLineDataTD" colspan="3">{rut}&nbsp;/{ficha}</td>
+        </tr>
+ 
+        <tr>
+          <td class="InLineColumnTD" nowrap>Nombre del Paciente</td> 
+          <td class="InLineDataTD" colspan="3">{nombres}&nbsp;{apellidos}</td>
+        </tr>
+ 
+        <tr>
+          <td class="InLineColumnTD" nowrap>Procedencia&nbsp;</td> 
+          <td class="InLineDataTD" colspan="3">{nom_procedencia}&nbsp;</td>
+        </tr>
+ 
+        <tr>
+          <td class="InLineColumnTD" nowrap>Estado&nbsp;</td> 
+          <td class="InLineDataTD" colspan="3"><strong>{nom_estado}</strong>&nbsp;</td>
+        </tr>
+ 
+        <tr>
+          <td class="InLineColumnTD" nowrap>Observaciones&nbsp;</td> 
+          <td class="InLineDataTD" colspan="3">{observaciones}&nbsp;</td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords --><!-- END NoRecords -->
+      </table>
+      <!-- END Grid peticiones_pacientes_proc -->
+      <!-- BEGIN Grid peticiones_peticiones_det -->
+      <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+        <tr>
+          <td class="InLineFormHeaderFont" align="center" colspan="4">Detalle de
+            la toma de muestra con los Test Solicitados </td>
+        </tr>
+ 
+        <tr>
+          <td class="InLineColumnTD" nowrap>Muestra Id&nbsp;(rotular)</td> 
+          <td class="InLineColumnTD" nowrap>Nom Test&nbsp;</td> 
+          <td class="InLineColumnTD" nowrap>Muestra&nbsp;</td> 
+          <td class="InLineColumnTD" nowrap>Detalle Indicacion&nbsp;</td>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr>
+          <td class="InLineDataTD" nowrap>{muestra_id}&nbsp;</td> 
+          <td class="InLineDataTD" nowrap>{nom_test}&nbsp;</td> 
+          <td class="InLineDataTD" nowrap>&nbsp;{nom_tipo_muestra}</td> 
+          <td class="InLineDataTD">{cuerpo_indicacion}&nbsp;</td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN AltRow -->
+        <tr>
+          <td class="InLineAltDataTD" nowrap>{Alt_muestra_id}&nbsp;</td> 
+          <td class="InLineAltDataTD">{Alt_nom_test}&nbsp;</td> 
+          <td class="InLineAltDataTD">&nbsp;{Alt_nom_tipo_muestra}</td> 
+          <td class="InLineAltDataTD">{Alt_cuerpo_indicacion}&nbsp;</td>
+        </tr>
+ <!-- END AltRow -->
+        <!-- BEGIN NoRecords -->
+        <tr>
+          <td class="InLineAltDataTD" colspan="4">No se encontaron
+            indicaciones&nbsp;</td>
+        </tr>
+        <!-- END NoRecords -->
+        <tr>
+          <td class="InLineFooterTD" nowrap colspan="4">
+            <!-- BEGIN Navigator Navigator -->
+            <!-- BEGIN First_On --><a class="InLineNavigatorLink" href="{First_URL}">Inicio</a> <!-- END First_On -->
+            <!-- BEGIN First_Off -->Inicio <!-- END First_Off -->
+            <!-- BEGIN Prev_On --><a class="InLineNavigatorLink" href="{Prev_URL}">Anterior</a> <!-- END Prev_On -->
+            <!-- BEGIN Prev_Off -->Anterior <!-- END Prev_Off -->&nbsp; 
+            <!-- BEGIN Pages -->
+            <!-- BEGIN Page_On --><a class="InLineNavigatorLink" href="{Page_URL}">{Page_Number}</a>&nbsp;<!-- END Page_On -->
+            <!-- BEGIN Page_Off -->{Page_Number}&nbsp;<!-- END Page_Off --><!-- END Pages -->de
+            {Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a class="InLineNavigatorLink" href="{Next_URL}">Siguiente</a> <!-- END Next_On -->
+            <!-- BEGIN Next_Off -->Siguiente <!-- END Next_Off -->
+            <!-- BEGIN Last_On --><a class="InLineNavigatorLink" href="{Last_URL}">Final</a> <!-- END Last_On -->
+            <!-- BEGIN Last_Off -->Final <!-- END Last_Off --><!-- END Navigator Navigator -->&nbsp; </td>
+        </tr>
+      </table>
+ 
+      <table width="100%" align="center" border="0">
+        <tr>
+          <td align="right"><a class="InLineDataLink" href="{ImageLink1}"><img class="" src="images/tm.gif" border="0"></a>&nbsp; <a class="InLineDataLink" href="{ImageLink1}"></a></td> 
+          <td width="100%"><strong>Volver a ver el resumen de toma de muestra</strong>&nbsp;&nbsp;</td> 
+          <td>&nbsp;</td>
+        </tr>
+      </table>
+      <!-- END Grid peticiones_peticiones_det --></td>
+  </tr>
+</table>
+</body>
+</html>

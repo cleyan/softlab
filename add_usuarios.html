@@ -1,0 +1,192 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>add_usuarios</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+<link rel="stylesheet" type="text/css" href="Themes/InLine/Style.css">
+<script language="JavaScript">
+//Begin CCS script
+//Include Common JSFunctions @1-921C7A7E
+</script>
+<script src="ClientI18N.php?file=Globalize.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-A87AC9EE
+</script>
+{page:scriptIncludes}
+<script type="text/javascript">
+//End Include User Scripts
+
+//Common Script Start @1-8BFA436B
+jQuery(function ($) {
+    var features = { };
+    var actions = { };
+    var params = { };
+//End Common Script Start
+
+//usuariosButton_SubmitOnClick Event Start @-CE7DD32D
+    actions["usuariosButton_SubmitOnClick"] = function (eventType, parameters) {
+        var result = true;
+//End usuariosButton_SubmitOnClick Event Start
+
+//Confirmation Message @62-96FAE8C2
+        return confirm('Enviar registro?');
+//End Confirmation Message
+
+//usuariosButton_SubmitOnClick Event End @-A5B9ECB8
+        return result;
+    };
+//End usuariosButton_SubmitOnClick Event End
+
+//Event Binding @1-99B24EE2
+    $('*:ccsControl(usuarios, Button_Submit)').ccsBind(function() {
+        this.bind("click", actions["usuariosButton_SubmitOnClick"]);
+    });
+//End Event Binding
+
+//Plugin Calls @1-5884038A
+    $('*:ccsControl(usuarios, Cancel)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+//End Plugin Calls
+
+//Common Script End @1-562554DE
+});
+//End Common Script End
+//End CCS script
+</script>
+</head>
+<body class="InLinePageBODY" bgcolor="#ffffff" link="#000000" alink="#000000" vlink="#000000" text="#000000">
+<table width="700" align="center" border="0">
+  <tr>
+    <td>
+      <!-- BEGIN Record usuariosSearch -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+          <tr>
+            <td class="InLineFormHeaderFont" colspan="2">Buscar Usuarios </td> 
+          </tr>
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="2">{Error}</td> 
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineFieldCaptionTD">Nombre / Login</td> 
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="100" size="50" value="{s_usuario}" name="{s_usuario_Name}" id="usuariosSearchs_usuario">&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD">Nivel</td> 
+            <td class="InLineDataTD">
+              <select name="{s_nivel_Name}" class="InLineSelect" id="usuariosSearchs_nivel">
+                <option value="" selected>Seleccionar Valor</option>
+ {s_nivel_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="2">
+              <!-- BEGIN Button Button_DoSearch --><input class="InLineButton" type="submit" value="Buscar" name="{Button_Name}" id="usuariosSearchButton_DoSearch"><!-- END Button Button_DoSearch -->&nbsp; </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END Record usuariosSearch --><br>
+      <!-- BEGIN EditableGrid usuarios -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <input type="hidden" value="{FormState}" name="FormState">{FormScript} 
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3">
+          <tr>
+            <td class="InLineFormHeaderFont" align="middle" colspan="7">Lista de
+              Usuarios &nbsp;(Total de Registros:{usuarios_TotalRecords}) </td> 
+          </tr>
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="7">{Error}</td> 
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineColumnTD" nowrap>
+              <!-- BEGIN Sorter Sorter_nom_usuario --><a class="InLineSorterLink" href="{Sort_URL}">Nombre</a> 
+              <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+              <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_nom_usuario -->&nbsp;</td> 
+            <td class="InLineColumnTD" nowrap>
+              <!-- BEGIN Sorter Sorter_log_usuario --><a class="InLineSorterLink" href="{Sort_URL}">Login</a> 
+              <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+              <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_log_usuario -->&nbsp;</td> 
+            <td class="InLineColumnTD" nowrap>
+              <!-- BEGIN Sorter Sorter_clave --><a class="InLineSorterLink" href="{Sort_URL}">Clave</a> 
+              <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+              <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_clave -->&nbsp;</td> 
+            <td class="InLineColumnTD" nowrap>Nivel&nbsp;</td> 
+            <td class="InLineColumnTD" nowrap>
+              <!-- BEGIN Sorter Sorter_procedencia_id --><a class="InLineSorterLink" href="{Sort_URL}">Procedencia</a> 
+              <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+              <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_procedencia_id -->&nbsp;</td> 
+            <td class="InLineColumnTD" nowrap>
+              <!-- BEGIN Sorter Sorter_seccion_id --><a class="InLineSorterLink" href="{Sort_URL}">Sección</a> 
+              <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+              <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_seccion_id -->&nbsp;</td> 
+            <td class="InLineColumnTD" nowrap>Borrar &nbsp;</td> 
+          </tr>
+          <!-- BEGIN Row -->
+          <!-- BEGIN RowError -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="7">{Error}</td> 
+          </tr>
+          <!-- END RowError -->
+          <tr>
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="100" size="25" value="{nom_usuario}" name="{nom_usuario_Name}" id="usuariosnom_usuario"></td> 
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="20" value="{log_usuario}" name="{log_usuario_Name}" size="15" id="usuarioslog_usuario"></td> 
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="10" size="10" value="{clave}" name="{clave_Name}" type="password" id="usuariosclave"></td> 
+            <td class="InLineDataTD">
+              <select name="{nivel_acceso_id_Name}" class="InLineSelect" id="usuariosnivel_acceso_id">
+                <option value="" selected>Seleccionar Valor</option>
+ {nivel_acceso_id_Options} 
+              </select>
+ </td> 
+            <td class="InLineDataTD">
+              <select name="{procedencia_id_Name}" class="InLineSelect" style="WIDTH: 124px" id="usuariosprocedencia_id">
+                <option value="" selected>Seleccionar Valor</option>
+ {procedencia_id_Options} 
+              </select>
+ </td> 
+            <td class="InLineDataTD">
+              <select name="{seccion_id_Name}" class="InLineSelect" style="WIDTH: 125px" id="usuariosseccion_id">
+                <option value="" selected>Seleccionar Valor</option>
+ {seccion_id_Options} 
+              </select>
+ </td> 
+            <td class="InLineDataTD">
+              <!-- BEGIN CheckBox CheckBox_Delete --><input class="InLineInput" type="checkbox" value="1" name="{CheckBox_Delete_Name}" {CheckBox_Delete} id="usuariosCheckBox_Delete"><!-- END CheckBox CheckBox_Delete -->&nbsp;</td> 
+          </tr>
+          <!-- END Row -->
+          <!-- BEGIN NoRecords -->
+          <tr>
+            <td class="InLineDataTD" colspan="7">No se encontaron
+              registros&nbsp;</td> 
+          </tr>
+          <!-- END NoRecords -->
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="7">
+              <!-- BEGIN Navigator Navigator -->
+              <!-- BEGIN First_On --><a class="InLineNavigatorLink" href="{First_URL}"><img src="Themes/InLine/FirstOn.gif" border="0"></a> <!-- END First_On -->
+              <!-- BEGIN Prev_On --><a class="InLineNavigatorLink" href="{Prev_URL}"><img src="Themes/InLine/PrevOn.gif" border="0"></a> <!-- END Prev_On -->&nbsp;{Page_Number}&nbsp;de
+              {Total_Pages}&nbsp; 
+              <!-- BEGIN Next_On --><a class="InLineNavigatorLink" href="{Next_URL}"><img src="Themes/InLine/NextOn.gif" border="0"></a> <!-- END Next_On -->
+              <!-- BEGIN Last_On --><a class="InLineNavigatorLink" href="{Last_URL}"><img src="Themes/InLine/LastOn.gif" border="0"></a> <!-- END Last_On --><!-- END Navigator Navigator -->&nbsp; 
+              <!-- BEGIN Button Button_Submit --><input class="InLineButton" type="submit" value="Grabar" name="{Button_Name}" id="usuariosButton_Submit"><!-- END Button Button_Submit -->&nbsp; 
+              <!-- BEGIN Button Cancel --><input class="InLineButton" type="submit" value="Cancelar" name="{Button_Name}" id="usuariosCancel"><!-- END Button Cancel -->&nbsp; </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END EditableGrid usuarios --></td> 
+  </tr>
+</table>
+</body>
+</html>

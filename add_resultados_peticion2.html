@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="GENERATOR" content="CodeCharge Studio 3.0.1.6">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title></title>
+<link href="Themes/InLine/Style.css" type="text/css" rel="stylesheet">
+<script language="javascript" src="funciones.js"></script>
+<script>
+function pasar_valor(lista, valor_enviar, id_resultado){
+        var lista_valores = document.getElementById(lista);
+        var tx_valor = document.getElementById(valor_enviar);
+        var tx_id_resultado = document.getElementById(id_resultado);
+
+        tx_valor.value = lista_valores.options[lista_valores.selectedIndex].text;
+        tx_id_resultado.value = lista_valores.options[lista_valores.selectedIndex].value;
+
+}
+function cancelar(){
+        parent.mainFrame.location.href='menu_principal.php';
+}
+
+function popAdd_Imagen_2(peticion_id, test_id, muestra_id, estado_id,nom_valor_enviar, pagina, parametros) {
+        //alert("peticion: "+peticion_id+" Nombre de ID:"+nom_id_resultado);
+    aTemplate = "add_resultado_imagen.php?s_peticion_id="+peticion_id+"&test_id="+test_id+"&muestra_id="+muestra_id+"&estado_id="+estado_id+"&nom_valor_enviar="+nom_valor_enviar+"&pagina="+pagina+parametros;
+    openWindow(aTemplate, "winPreview", '550','440');
+}
+function popVer_Imagen(resultado_id) {
+    aTemplate = "add_resultado_ver_imagen.php?resultado_id="+resultado_id;
+    openWindow(aTemplate, "winPreview", '550','440');
+}
+function popAdd_Resultado(peticion_id,test_id,muestra_id,parametros,pagina){
+    aTemplate = "add_nuevo_resultado.php?peticion_id="+peticion_id+"&test_id="+test_id+"&muestra_id="+muestra_id+"&pagina="+pagina+parametros;
+    openWindow(aTemplate, "winPreview", '550','170');
+}
+</script>
+</head>
+<body class="InLinePageBODY">
+<table width="100%" align="center" border="0">
+  <tr>
+    <td>
+      <!-- BEGIN Record filtro -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineFormHeaderFont" nowrap align="right">Buscar Número
+              de Petición</td> 
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="20" value="{s_peticion_id}" name="{s_peticion_id_Name}" id="filtros_peticion_id">&nbsp; 
+              <!-- BEGIN Button Button_DoSearch --><input class="InLineButton" type="submit" value="Buscar" name="{Button_Name}" id="filtroButton_DoSearch"><!-- END Button Button_DoSearch --></td>
+          </tr>
+        </table>
+      </form>
+      <!-- END Record filtro --></td>
+  </tr>
+ 
+  <tr>
+    <td>
+      <!-- BEGIN Record grilla -->
+      <form name="{HTMLFormName}" action="add_resultados_peticion2.php?s_peticion_id={peticion_id}" method="post">
+        <input class="InLineInput" type="hidden" value="{peticion_id}" name="peticion_id" id="grillapeticion_id">{inf_peticion}
+        {grilla_peticiones} <input class="InLineInput" type="hidden" value="{filas}" name="{filas_Name}" id="grillafilas">
+      </form>
+      <a class="InLineDataLink" href="{btnValidar}"></a> 
+      <p align="center"><a class="InLineDataLink" href="{btn_validar}"><img class="" src="images/btn_validar.png" border="0"></a>&nbsp;<a class="InLineDataLink" title="Ir a ver Detalle de la Petición" href="{ImageLink1}"><img class="" src="images/btn_adetallepeticion.png" border="0"></a>&nbsp;<a class="InLineDataLink" title="Ir Directamente a editar Petición" href="{ImageLink2}"><img class="" src="images/btn_editarpeticion.png" border="0"></a></p>
+      <!-- END Record grilla --></td>
+  </tr>
+</table>
+</body>
+</html>

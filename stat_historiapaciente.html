@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="GENERATOR" content="CodeCharge Studio 3.0.1.6">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>stat_historiapaciente</title>
+<link href="Themes/InLine/Style.css" type="text/css" rel="stylesheet">
+<script language="javascript" src="funciones.js"></script>
+</head>
+<body class="InLinePageBODY">
+{Header}
+<table width="700" align="center" border="0">
+  <tr>
+    <td>
+      <!-- BEGIN Record resultados_testSearch -->Elija el Test para el que
+      quiere ver su evolución: <br>
+      <strong>Paciente: {lbl_nom_paciente} </strong> 
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+          <tr>
+            <td class="InLineFormHeaderFont" colspan="3">Buscar / Filtrar Test </td>
+          </tr>
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="3">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineFieldCaptionTD" nowrap>Palabra clave&nbsp;</td> 
+            <td class="InLineDataTD" width="100%"><input class="InLineInput" style="WIDTH: 100%" maxlength="30" size="44" value="{s_keyword}" name="{s_keyword_Name}" id="resultados_testSearchs_keyword"></td> 
+            <td class="InLineFooterTD">
+              <!-- BEGIN Button Button_DoSearch --><input class="InLineButton" type="submit" value="Buscar" name="{Button_Name}" id="resultados_testSearchButton_DoSearch"><!-- END Button Button_DoSearch --></td>
+          </tr>
+        </table>
+      </form>
+      <!-- END Record resultados_testSearch -->
+      <!-- BEGIN Grid resultados_test -->
+      <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+        <tr>
+          <td class="InLineFormHeaderFont" align="center" colspan="4">Lista de
+            Resultados, Test </td>
+        </tr>
+ 
+        <tr>
+          <td class="InLineColumnTD" nowrap>Ver</td> 
+          <td class="InLineColumnTD" nowrap>
+            <!-- BEGIN Sorter Sorter_cod_test --><a class="InLineSorterLink" href="{Sort_URL}">Cod
+            Test</a> 
+            <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_cod_test -->&nbsp;</td> 
+          <td class="InLineColumnTD" nowrap>
+            <!-- BEGIN Sorter Sorter_nom_test --><a class="InLineSorterLink" href="{Sort_URL}">Nom
+            Test</a> 
+            <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_nom_test -->&nbsp;</td> 
+          <td class="InLineColumnTD" nowrap>QTY</td>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr>
+          <td class="InLineDataTD"><a href="{lnkVerHistoria}"><img src="images/xmag.png" border="0"></a><input type="hidden" value="{test_id}" name="{test_id_Name}" id="resultados_testtest_id"></td> 
+          <td class="InLineDataTD">{cod_test}&nbsp;</td> 
+          <td class="InLineDataTD">{nom_test}&nbsp;</td> 
+          <td class="InLineDataTD">{qty}</td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr>
+          <td class="InLineDataTD" colspan="4">No se encontaron registros&nbsp;</td>
+        </tr>
+        <!-- END NoRecords -->
+        <tr>
+          <td class="InLineFooterTD" nowrap colspan="4"><a class="InLineDataLink" href="{ImageLink1}"><img class="" src="images/btn_inicio.png" border="0"></a>&nbsp; </td>
+        </tr>
+      </table>
+      <!-- END Grid resultados_test --></td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>SoftLab</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+<link rel="stylesheet" type="text/css" href="Themes/InLine/Style.css">
+<script>
+	function pasar_valor(f){
+		if(f.perfil_id.value != ""){
+			alert("Sii");
+			parent.mainFrame.location.href="add_perfiles_detalle.php?perfil_id="+f.perfil_id.value;
+			window.close();
+		}
+	}
+</script>
+</head>
+<body  class="InLinePageBODY" onload="">
+<table width="500" align="center" border="0">
+  <tr>
+    <td>
+      <!-- BEGIN Record perfiles -->
+      <form name="{HTMLFormName}" action="{Action}" method="post" target="mainFrame">
+        <input type="hidden" name="{perfil_id_Name}" value="{perfil_id}" id="perfilesperfil_id">
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+          <tr>
+            <td class="InLineFormHeaderFont" colspan="2">
+              <p>Agregar perfil </p>
+ </td> 
+          </tr>
+ 
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="2">{Error}</td> 
+          </tr>
+ <!-- END Error -->
+          <tr>
+            <td class="InLineFieldCaptionTD" nowrap>Nombre Perfil&nbsp;</td> 
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="200" size="50" value="{nom_perfil}" name="{nom_perfil_Name}" id="perfilesnom_perfil">&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="2">
+              <p align="right">
+              <!-- BEGIN Button Button_Insert --><input class="InLineButton" type="submit" value="Agregar" name="{Button_Name}" onclick="javascript:window.close();" id="perfilesButton_Insert"><!-- END Button Button_Insert -->&nbsp; 
+              <!-- BEGIN Button Button_Update --><input class="InLineButton" type="submit" value="Guardar" name="{Button_Name}" onclick="javascript:window.close();" id="perfilesButton_Update"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Cancel --><input class="InLineButton" onclick="javascript:window.close();" type="button" value="Cancelar" name="{Button_Name}" id="perfilesButton_Cancel"><!-- END Button Button_Cancel --></p>
+ </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END Record perfiles --></td> 
+  </tr>
+ 
+</table>
+</tr>
+</table>
+</body>
+</html>

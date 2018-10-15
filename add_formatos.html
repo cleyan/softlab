@@ -1,0 +1,149 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>add_formatos</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+<link rel="stylesheet" type="text/css" href="Themes/InLine/Style.css">
+<script language="JavaScript">
+//Begin CCS script
+//Include Common JSFunctions @1-921C7A7E
+</script>
+<script src="ClientI18N.php?file=Globalize.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-A87AC9EE
+</script>
+{page:scriptIncludes}
+<script type="text/javascript">
+//End Include User Scripts
+
+//Common Script Start @1-8BFA436B
+jQuery(function ($) {
+    var features = { };
+    var actions = { };
+    var params = { };
+//End Common Script Start
+
+//formatosButton_SubmitOnClick Event Start @-3BB8C7BF
+    actions["formatosButton_SubmitOnClick"] = function (eventType, parameters) {
+        var result = true;
+//End formatosButton_SubmitOnClick Event Start
+
+//Confirmation Message @20-96FAE8C2
+        return confirm('Enviar registro?');
+//End Confirmation Message
+
+//formatosButton_SubmitOnClick Event End @-A5B9ECB8
+        return result;
+    };
+//End formatosButton_SubmitOnClick Event End
+
+//Event Binding @1-F6058CAD
+    $('*:ccsControl(formatos, Button_Submit)').ccsBind(function() {
+        this.bind("click", actions["formatosButton_SubmitOnClick"]);
+    });
+//End Event Binding
+
+//Plugin Calls @1-97AD4DAB
+    $('*:ccsControl(formatos, Cancel)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+//End Plugin Calls
+
+//Common Script End @1-562554DE
+});
+//End Common Script End
+//End CCS script
+</script>
+</head>
+<body  class="InLinePageBODY">
+<table width="700" align="center" border="0">
+  <tr>
+    <td>
+      <!-- BEGIN EditableGrid formatos -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <input type="hidden" value="{FormState}" name="FormState">{FormScript} 
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+          <tr>
+            <td class="InLineFormHeaderFont" align="middle" colspan="4">Lista de
+              Formatos &nbsp;(Total de Registros:{formatos_TotalRecords}) </td> 
+          </tr>
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="4">{Error}</td> 
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineColumnTD" nowrap>
+              <!-- BEGIN Sorter Sorter_nom_formato --><a class="InLineSorterLink" href="{Sort_URL}">Nombre
+              del&nbsp;Formato</a> 
+              <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+              <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_nom_formato --></td> 
+            <td class="InLineColumnTD" nowrap>
+              <!-- BEGIN Sorter Sorter_formato --><a class="InLineSorterLink" href="{Sort_URL}">Formato</a> 
+              <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+              <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_formato --></td> 
+            <td class="InLineColumnTD" nowrap>
+              <p align="center">Activo&nbsp;</p>
+ </td> 
+            <td class="InLineColumnTD" nowrap>
+              <p align="center">Borrar</p>
+ </td> 
+          </tr>
+          <!-- BEGIN Row -->
+          <!-- BEGIN RowError -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="4">{Error}</td> 
+          </tr>
+          <!-- END RowError -->
+          <tr>
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="100" size="50" value="{nom_formato}" name="{nom_formato_Name}" id="formatosnom_formato">&nbsp;</td> 
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="100" size="50" value="{formato}" name="{formato_Name}" id="formatosformato">&nbsp;</td> 
+            <td class="InLineDataTD">
+              <p align="center"><input type="checkbox" name="{activo_Name}" value="1" class="InLineInput" {activo} id="formatosactivo"></p>
+ </td> 
+            <td class="InLineDataTD">
+              <!-- BEGIN CheckBox CheckBox_Delete -->
+              <p align="center" id="formatosCheckBox_Delete"><input class="InLineInput" type="checkbox" value="1" name="{CheckBox_Delete_Name}" {CheckBox_Delete}></p>
+              <!-- END CheckBox CheckBox_Delete --></td> 
+          </tr>
+          <!-- END Row -->
+          <!-- BEGIN NoRecords -->
+          <tr>
+            <td class="InLineDataTD" colspan="4">No se encontaron
+              registros&nbsp;</td> 
+          </tr>
+          <!-- END NoRecords -->
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="4">
+              <!-- BEGIN Navigator Navigator -->
+              <!-- BEGIN First_On --><a class="InLineNavigatorLink" href="{First_URL}">Inicio</a> <!-- END First_On -->
+              <!-- BEGIN First_Off -->Inicio <!-- END First_Off -->
+              <!-- BEGIN Prev_On --><a class="InLineNavigatorLink" href="{Prev_URL}">Anterior</a> <!-- END Prev_On -->
+              <!-- BEGIN Prev_Off -->Anterior <!-- END Prev_Off -->&nbsp; 
+              <!-- BEGIN Pages -->
+              <!-- BEGIN Page_On --><a class="InLineNavigatorLink" href="{Page_URL}">{Page_Number}</a>&nbsp;<!-- END Page_On -->
+              <!-- BEGIN Page_Off -->{Page_Number}&nbsp;<!-- END Page_Off --><!-- END Pages -->de
+              {Total_Pages}&nbsp; 
+              <!-- BEGIN Next_On --><a class="InLineNavigatorLink" href="{Next_URL}">Siguiente</a> <!-- END Next_On -->
+              <!-- BEGIN Next_Off -->Siguiente <!-- END Next_Off -->
+              <!-- BEGIN Last_On --><a class="InLineNavigatorLink" href="{Last_URL}">Final</a> <!-- END Last_On -->
+              <!-- BEGIN Last_Off -->Final <!-- END Last_Off --><!-- END Navigator Navigator --></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="4">
+              <p align="right">&nbsp; 
+              <!-- BEGIN Button Button_Submit --><input class="InLineButton" type="submit" value="Grabar" name="{Button_Name}" id="formatosButton_Submit"><!-- END Button Button_Submit -->
+              <!-- BEGIN Button Cancel --><input class="InLineButton" type="submit" value="Cancelar" name="{Button_Name}" id="formatosCancel"><!-- END Button Cancel --></p>
+ </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END EditableGrid formatos --></td> 
+  </tr>
+</table>
+</body>
+</html>

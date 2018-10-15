@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>cfg_seguridad</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+<link rel="stylesheet" type="text/css" href="Themes/InLine/Style.css">
+</head>
+<body bgcolor="#ffffff" link="#000000" alink="#000000" vlink="#000000" text="#000000" class="InLinePageBODY">
+<!-- BEGIN EditableGrid usuarios -->
+<form name="{HTMLFormName}" action="{Action}" method="post">
+  <input type="hidden" value="{FormState}" name="FormState">{FormScript} 
+  <table class="InLineFormTABLE" cellspacing="0" cellpadding="3">
+    <tr>
+      <td class="InLineFormHeaderFont" align="middle" colspan="4">Lista de
+        Usuarios y Permisos Especiales&nbsp;&nbsp;(Total de
+        Registros:{usuarios_TotalRecords}) </td> 
+    </tr>
+ 
+    <!-- BEGIN Error -->
+    <tr>
+      <td class="InLineErrorDataTD" colspan="4">{Error}</td> 
+    </tr>
+ <!-- END Error -->
+    <tr>
+      <td class="InLineColumnTD" nowrap>
+        <!-- BEGIN Sorter Sorter_nom_usuario --><a class="InLineSorterLink" href="{Sort_URL}">Nom
+        Usuario</a> 
+        <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+        <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_nom_usuario -->&nbsp;</td> 
+      <td class="InLineColumnTD" nowrap>
+        <!-- BEGIN Sorter Sorter_log_usuario --><a class="InLineSorterLink" href="{Sort_URL}">Log
+        Usuario</a> 
+        <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+        <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_log_usuario -->&nbsp;</td> 
+      <td class="InLineColumnTD" nowrap>
+        <!-- BEGIN Sorter Sorter_p_validar --><a class="InLineSorterLink" href="{Sort_URL}">Validar</a> 
+        <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+        <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_p_validar -->&nbsp;</td> 
+      <td class="InLineColumnTD" nowrap>
+        <!-- BEGIN Sorter Sorter_p_firmar --><a class="InLineSorterLink" href="{Sort_URL}">Firmar</a> 
+        <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+        <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_p_firmar -->&nbsp;</td> 
+    </tr>
+ 
+    <!-- BEGIN Row -->
+    <!-- BEGIN RowError -->
+    <tr>
+      <td class="InLineErrorDataTD" colspan="4">{Error}</td> 
+    </tr>
+ <!-- END RowError -->
+    <tr>
+      <td class="InLineDataTD">{nom_usuario}&nbsp;</td> 
+      <td class="InLineDataTD">{log_usuario}&nbsp;</td> 
+      <td class="InLineDataTD" align="middle"><input type="checkbox" name="{p_validar_Name}" value="1" class="" {p_validar} id="usuariosp_validar">&nbsp;</td> 
+      <td class="InLineDataTD" align="middle"><input type="checkbox" name="{p_firmar_Name}" value="1" class="" {p_firmar} id="usuariosp_firmar">&nbsp;</td> 
+    </tr>
+ <!-- END Row -->
+    <!-- BEGIN NoRecords -->
+    <tr>
+      <td class="InLineDataTD" colspan="4">No se encontaron registros&nbsp;</td> 
+    </tr>
+ <!-- END NoRecords -->
+    <tr>
+      <td class="InLineFooterTD" nowrap align="right" colspan="4">
+        <!-- BEGIN Navigator Navigator -->
+        <!-- BEGIN First_On --><a class="InLineNavigatorLink" href="{First_URL}"><img src="Themes/InLine/FirstOn.gif" border="0"></a> <!-- END First_On -->
+        <!-- BEGIN Prev_On --><a class="InLineNavigatorLink" href="{Prev_URL}"><img src="Themes/InLine/PrevOn.gif" border="0"></a> <!-- END Prev_On -->&nbsp;{Page_Number}&nbsp;de
+        {Total_Pages}&nbsp; 
+        <!-- BEGIN Next_On --><a class="InLineNavigatorLink" href="{Next_URL}"><img src="Themes/InLine/NextOn.gif" border="0"></a> <!-- END Next_On -->
+        <!-- BEGIN Last_On --><a class="InLineNavigatorLink" href="{Last_URL}"><img src="Themes/InLine/LastOn.gif" border="0"></a> <!-- END Last_On --><!-- END Navigator Navigator -->&nbsp; 
+        <!-- BEGIN Button Button_Submit --><input class="InLineButton" type="submit" value="Grabar" name="{Button_Name}" id="usuariosButton_Submit"><!-- END Button Button_Submit -->&nbsp; 
+        <!-- BEGIN Button Cancel --><input class="InLineButton" type="submit" value="Cancelar" name="{Button_Name}" id="usuariosCancel"><!-- END Button Cancel -->&nbsp; </td> 
+    </tr>
+ 
+  </table>
+</form>
+<!-- END EditableGrid usuarios -->
+</body>
+</html>

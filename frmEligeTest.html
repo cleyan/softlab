@@ -1,0 +1,168 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>::: Elegir Test desde una Lista :::</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+<link rel="stylesheet" type="text/css" href="Themes/InLine/Style.css">
+<script language="JavaScript">
+
+function confirmaTest()
+{
+	var items="";
+	var itemsLista="";
+	var elegido="";
+	var sep="";
+	
+	for (var ii=0;ii<document.forma_eligetest.elements.length;ii++)
+	{    		
+		if (document.forma_eligetest.elements[ii].type == 'checkbox' && document.forma_eligetest.elements[ii].checked==true) {
+				var id_elegido=document.forma_eligetest.elements[ii].id;
+				activar_chk(id_elegido);
+		}
+	}
+//	window.opener.document.paciente.mas_test.value=items;
+	window.opener.focus();
+	window.close();
+}
+
+
+function activar_chk(elem)
+{
+	var ctrl_e = window.opener.document.getElementById(elem);
+	ctrl_e.click();
+	ctrl_e.checked=true;
+
+	return true;
+}
+
+
+</script>
+<script language="JavaScript">
+//Begin CCS script
+//End CCS script
+</script>
+</head>
+<body class="InLinePageBODY" >
+<table width="100%" border="0">
+  <tr>
+    <td>
+      <!-- BEGIN Record test_secciones_equiposSearch -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3">
+          <tr>
+            <td class="InLineFormHeaderFont" colspan="4">Buscar/Filtrar Test</td> 
+          </tr>
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="4">{Error}</td> 
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineFieldCaptionTD">Test&nbsp;</td> 
+            <td class="InLineDataTD" colspan="3"><input class="InLineInput" maxlength="30" size="39" value="{s_test}" name="{s_test_Name}" id="test_secciones_equiposSearchs_test">
+              <!-- BEGIN Button Button_DoSearch --><input class="InLineButton" type="submit" value="Buscar" name="{Button_Name}" id="test_secciones_equiposSearchButton_DoSearch"><!-- END Button Button_DoSearch --></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD">Sección</td> 
+            <td class="InLineDataTD">
+              <div {lbl_hideseccion}>
+                <select class="InLineSelect" name="{s_secciones_id_Name}" id="test_secciones_equiposSearchs_secciones_id">
+                  <option value="" selected>Seleccionar Valor</option>
+ {s_secciones_id_Options} 
+                </select>
+ 
+              </div>
+ {nombre_seccion} </td> 
+            <td class="InLineDataTD">Equipo</td> 
+            <td class="InLineDataTD">
+              <select class="InLineSelect" name="{s_test_equipo_id_Name}" id="test_secciones_equiposSearchs_test_equipo_id">
+                <option value="" selected>Seleccionar Valor</option>
+ {s_test_equipo_id_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END Record test_secciones_equiposSearch -->
+      <!-- BEGIN Grid test_secciones_equipos -->
+      <form name="forma_eligetest" id="forma_eligetest">
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+          <tr>
+            <td class="InLineFormHeaderFont" align="middle" colspan="6">Lista de
+              Test, Secciones, Equipos </td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineColumnTD" nowrap align="middle">Solicitar</td> 
+            <td class="InLineColumnTD" nowrap>
+              <!-- BEGIN Sorter Sorter_cod_test --><a class="InLineSorterLink" href="{Sort_URL}">Cod
+              Test</a> 
+              <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+              <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_cod_test -->&nbsp;</td> 
+            <td class="InLineColumnTD" nowrap>
+              <!-- BEGIN Sorter Sorter_nom_test --><a class="InLineSorterLink" href="{Sort_URL}">Nom
+              Test</a> 
+              <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+              <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_nom_test -->&nbsp;</td> 
+            <td class="InLineColumnTD" nowrap>
+              <!-- BEGIN Sorter Sorter_codigo_fonasa --><a class="InLineSorterLink" href="{Sort_URL}">Codigo
+              Fonasa</a> 
+              <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+              <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_codigo_fonasa -->&nbsp;</td> 
+            <td class="InLineColumnTD" nowrap>
+              <!-- BEGIN Sorter Sorter_nom_seccion --><a class="InLineSorterLink" href="{Sort_URL}">Nom
+              Seccion</a> 
+              <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+              <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_nom_seccion -->&nbsp;</td> 
+            <td class="InLineColumnTD" nowrap>
+              <!-- BEGIN Sorter Sorter_nom_equipo --><a class="InLineSorterLink" href="{Sort_URL}">Nom
+              Equipo</a> 
+              <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+              <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_nom_equipo -->&nbsp;</td> 
+          </tr>
+          <!-- BEGIN Row -->
+          <tr>
+            <td class="InLineDataTD" nowrap align="middle">{lblOp}</td> 
+            <td class="InLineDataTD" nowrap>{cod_test}&nbsp;<input type="hidden" value="{test_id}" name="{test_id_Name}" id="test_secciones_equipostest_id"></td> 
+            <td class="InLineDataTD" nowrap>{nom_test}&nbsp;</td> 
+            <td class="InLineDataTD" nowrap>{codigo_fonasa}&nbsp;</td> 
+            <td class="InLineDataTD" nowrap>{nom_seccion}&nbsp;</td> 
+            <td class="InLineDataTD" nowrap>{nom_equipo}&nbsp;</td> 
+          </tr>
+          <!-- END Row -->
+          <!-- BEGIN AltRow -->
+          <tr>
+            <td class="InLineAltDataTD" nowrap align="middle">{Alt_lblOp}</td> 
+            <td class="InLineAltDataTD" nowrap>{Alt_cod_test}&nbsp;<input type="hidden" value="{Alt_test_id}" name="{Alt_test_id_Name}" id="test_secciones_equiposAlt_test_id"></td> 
+            <td class="InLineAltDataTD" nowrap>{Alt_nom_test}&nbsp;</td> 
+            <td class="InLineAltDataTD" nowrap>{Alt_codigo_fonasa}&nbsp;</td> 
+            <td class="InLineAltDataTD" nowrap>{Alt_nom_seccion}&nbsp;</td> 
+            <td class="InLineAltDataTD" nowrap>{Alt_nom_equipo}&nbsp;</td> 
+          </tr>
+          <!-- END AltRow -->
+          <!-- BEGIN NoRecords -->
+          <tr>
+            <td class="InLineAltDataTD" colspan="6">No se encontaron test que
+              cumplan la condición&nbsp;</td> 
+          </tr>
+          <!-- END NoRecords -->
+          <tr>
+            <td class="InLineFooterTD" nowrap colspan="6">
+              <!-- BEGIN Navigator Navigator1 -->
+              <!-- BEGIN First_On --><a class="InLineNavigatorLink" href="{First_URL}"><img src="Themes/Square/FirstOn.gif" border="0"></a> <!-- END First_On -->
+              <!-- BEGIN Prev_On --><a class="InLineNavigatorLink" href="{Prev_URL}"><img src="Themes/Square/PrevOn.gif" border="0"></a> <!-- END Prev_On -->&nbsp;{Page_Number}&nbsp;de
+              {Total_Pages}&nbsp; 
+              <!-- BEGIN Next_On --><a class="InLineNavigatorLink" href="{Next_URL}"><img src="Themes/Square/NextOn.gif" border="0"></a> <!-- END Next_On -->
+              <!-- BEGIN Last_On --><a class="InLineNavigatorLink" href="{Last_URL}"><img src="Themes/Square/LastOn.gif" border="0"></a> <!-- END Last_On --><!-- END Navigator Navigator1 -->&nbsp; </td> 
+          </tr>
+ 
+        </table>
+ <input class="InLineButton" id="confirmatest" onclick="javascript:confirmaTest();" type="button" value="Confirmar Test Solicitados" name="confirmatest">&nbsp; <input class="InLineButton" id="Button1" onclick="javascript:window.close();" type="button" value="Cancelar" name="Button1">
+      </form>
+ <!-- END Grid test_secciones_equipos --></td> 
+  </tr>
+</table>
+</body>
+</html>

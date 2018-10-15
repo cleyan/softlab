@@ -1,0 +1,66 @@
+<Site id="0" language="PHPTemplates" name="softlab" siteLanguage="es" securityType="Table" urlType="Absolute" useCCSCultureFormats="True" fileExtension=".php" improvedHTTPCaching="False" userIDStoreMethod="Session" userIDVariable="UserID" userLoginVariable="UserLogin" groupIDVariable="GroupID" cookieVariable="UserInfo" automatedLogin="False" PHPGlobalArrays="True" ccsVersion="3.1.0.1" connection="Datos" securityConnection="Datos" loginPage="login.ccp" usersTable="usuarios" userIDField="usuario_id" userLoginField="log_usuario" userPasswordField="clave" userGroupField="nivel_acceso_id" higherLevel="False" defaultDateFormat="dd/mm/yyyy" startPage="login.ccp" charset="iso-8859-1" showDepreciatedStyles="All" LSEnableQueryString="True" LSQueryStringName="locale" LSEnableHTTPHeader="False" LSEnableSession="True" LSSessionName="locale" LSLanguageSessionName="lang" LSEnableCookie="False" LSCookieName="locale" LSCookieExpired="365" cachingMethod="None" useI18nFeatures="False" useDynamicStyles="False" SSEnableQueryString="True" SSQueryStringName="style" SSEnableSession="True" SSSessionName="style" SSEnableCookie="False" SSCookieName="style" SSCookieExpired="365" outputFileFormat="unix" PHPVersion="4" defaultStyle="SoftLab" defaultHTMLEncoding="iso-8859-1" codeFileEncoding="iso-8859-1" CVSLogin=":local:D:\servidor\cvsrep\CVSROOT" PHPEncodeExtension="mb" omitIfEmpty="True">
+	<Components>
+	</Components>
+	<Connections>
+		<Connection id="1" serverDatabase="MySQL" DBNameUppercase="True" PHPDBLib="MySQL" database="MySQL" showViews="True" showSynonyms="True" showSysTable="False" showSysView="False" showAliases="True" relationshipDiscovery="True" serverPersistentConnection="True" serverUseODBCCursor="0" connectionType="ODBC" connectionString="softlab" name="Datos" DBDateFormat="yyyy-mm-dd HH:nn:ss" DBBooleanFormat="V;F" serverDatabaseName="softlab_v2" connection="Datos" OptimizeSQL="False"/>
+	</Connections>
+	<CodeFiles>
+		<CodeFile id="Templates" language="PHPTemplates" name="Template.php" comment="//" codePage="iso-8859-1" forShow="False"/>
+		<CodeFile id="Common" language="PHPTemplates" name="Common.php" comment="//" codePage="iso-8859-1" forShow="False"/>
+		<CodeFile id="Sorter" language="PHPTemplates" name="Sorter.php" comment="//" codePage="iso-8859-1" forShow="False"/>
+		<CodeFile id="Navigator" language="PHPTemplates" name="Navigator.php" comment="//" codePage="iso-8859-1" forShow="False"/>
+		<CodeFile id="db_mysql" language="PHPTemplates" name="db_mysql.php" comment="//" codePage="iso-8859-1" forShow="False"/>
+		<CodeFile id="JSFunctions" language="PHPTemplates" name="Functions.js" comment="//" codePage="utf-8" forShow="False"/>
+		<CodeFile id="JSDatePickerHTML" language="PHPTemplates" name="DatePicker.html" comment="&lt;!--" commentEnd="--&gt;" codePage="iso-8859-1" forShow="False"/>
+		<CodeFile id="JSDatePicker" language="PHPTemplates" name="DatePicker.js" comment="//" codePage="utf-8" forShow="False"/>
+		<CodeFile id="Classes" language="PHPTemplates" forShow="False" name="Classes.php" codePage="iso-8859-1" comment="//"/>
+		<CodeFile id="CalendarNavigator" language="PHPTemplates" name="CalendarNavigator.php" forShow="False" comment="//" codePage="iso-8859-1"/>
+		<CodeFile id="Client" language="PHPTemplates" name="ClientI18N.php" forShow="False" comment="//" codePage="utf-8"/>
+	</CodeFiles>
+	<Groups>
+		<Group id="46" name="Visita" value="0"/>
+<Group id="47" name="Invitado" value="1"/>
+<Group id="48" name="Paciente" value="2"/>
+<Group id="49" name="Médico" value="3"/>
+<Group id="50" name="Secretaria" value="4"/>
+<Group id="51" name="Secretaria 2" value="5"/>
+<Group id="52" name="Administrativo 1" value="6"/>
+<Group id="53" name="Administrativo 2" value="7"/>
+<Group id="54" name="Cobranza" value="8"/>
+<Group id="55" name="Enfermera" value="9"/>
+<Group id="56" name="Auxiliar 1" value="10"/>
+<Group id="57" name="Auxiliar 2" value="11"/>
+<Group id="58" name="Tecnólogo " value="12"/>
+<Group id="59" name="Tecnólogo 2" value="13"/>
+<Group id="60" name="Jefe de Sección" value="14"/>
+<Group id="61" name="Coordinador" value="15"/>
+<Group id="62" name="Jefe de Laboratorio" value="16"/>
+<Group id="63" name="Administrador" value="17"/>
+<Group id="64" name="Administrador 2" value="18"/>
+<Group id="65" name="Reservado" value="19"/>
+<Group id="66" name="Super Usuario" value="20"/>
+</Groups>
+	<Events/>
+	<Profiles>
+		<Profile name="Server1" location="Local" localServerPath="d:\servidor\www\softlab\bodega" localServerURL="http://localhost/softlab/bodega" publishingType="ExceptMask" publishingAllMask="html;js;asp;php;jsp;cfm;pl;pm;cgi;mdb;gif;jpg;css;xml;java;asax;ascx;aspx;cs;vb;vbproj;resx;config;vsdisco;csproj;webinfo;bat;tld;jar;properties;inc;txt;resources;cfc" publishingExceptMask="ccs;ccp;db;.db" securedServerURL="" FTPFolder="" FTPLogin="" FTPPassiveMode="False" FTPPassword="" FTPSecureConnection="False" FTPServer="" FTPServerURL="" FTPpublishingAllMask="" FTPpublishingExceptMask="" FTPpublishingType="AllMask" fileExtension=".php" __specValue="">
+			<Connections>
+				<Connection id="1" serverDatabase="MySQL" DBNameUppercase="True" PHPDBLib="MySQL" database="MySQL" showViews="True" showSynonyms="True" showSysTable="False" showSysView="False" showAliases="True" relationshipDiscovery="True" serverPersistentConnection="True" serverUseODBCCursor="0" connectionType="ODBC" connectionString="softlab" name="Datos" DBDateFormat="yyyy-mm-dd HH:nn:ss" DBBooleanFormat="V;F" serverDatabaseName="softlab_v2" connection="Datos" OptimizeSQL="True" login="root"/>
+			</Connections>
+		</Profile>
+		<Profile name="Server2" location="FTP" localServerPath="" localServerURL="" publishingType="" publishingAllMask="" publishingExceptMask="" securedServerURL="" FTPServer="129.92.46.225" FTPFolder="/" FTPLogin="cleyan" FTPPassword="carlitos" FTPServerURL="http://servidorlab/softlab/" FTPPassiveMode="True" FTPpublishingType="ExceptMask" FTPpublishingAllMask="html;js;asp;php;jsp;cfm;pl;pm;cgi;mdb;gif;jpg;css;xml;java;ascx;aspx;cs;vb;vbproj;resx;config;vsdisco;csproj;webinfo;bat;tld;jar;properties;inc;txt;resources;cfc;asax" FTPpublishingExceptMask="ccs;ccp">
+			<Connections>
+				<Connection id="1" serverDatabase="MySQL" DBNameUppercase="True" PHPDBLib="MySQL" database="MySQL" showViews="True" showSynonyms="True" showSysTable="False" showSysView="False" showAliases="True" relationshipDiscovery="True" serverPersistentConnection="True" serverUseODBCCursor="0" connectionType="ODBC" connectionString="softlab" name="Datos" DBDateFormat="yyyy-mm-dd HH:nn:ss" DBBooleanFormat="V;F" serverDatabaseName="softlab_v2" connection="Datos" OptimizeSQL="False"/>
+			</Connections>
+		</Profile>
+	</Profiles>
+	<Languages>
+		<Language name="es" encoding="windows-1252" defaultCountry="ES">
+			<LocaleInfo booleanFormat="V;F"/>
+		</Language>
+	</Languages>
+	<Styles>
+		<Style id="23" name="SoftLab" caption="SoftLab"/>
+		<Style id="45" name="SandBeach" caption="Sand Beach"/>
+	</Styles>
+	<CustomButtons/>
+</Site>

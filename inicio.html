@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Softlab</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+
+
+<script language="JavaScript">  
+function page_OnLoad()
+{
+
+//previene de mostrar en un frame
+if (top.location != self.location)top.location = self.location;
+}
+
+
+function bind_events() {
+    page_OnLoad();
+//    forms_onload();
+}
+//End bind_events
+window.onload = bind_events;
+</script>
+
+</head>
+
+<frameset rows="30,*" cols="*" framespacing="0" frameborder="no" border="0">
+  <frame src="menu_top.php" name="topFrame" scrolling="NO" noresize>
+  <frameset rows="*" cols="76,*" frameborder="no">
+    <frame src="menu_rapido.php" name="menuRapido" scrolling="no" noresize>
+    <frame src="menu_principal.php" name="mainFrame">
+  </frameset>
+</frameset>
+<noframes><body>
+</body></noframes>
+</html>

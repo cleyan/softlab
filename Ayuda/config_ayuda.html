@@ -1,0 +1,184 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>config_ayuda</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+<link rel="stylesheet" type="text/css" href="Themes/InLine/Style.css">
+<script language="JavaScript">
+//Begin CCS script
+//Include Common JSFunctions @1-9D65069C
+</script>
+<script src="../ClientI18N.php?file=Globalize.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-A87AC9EE
+</script>
+{page:scriptIncludes}
+<script type="text/javascript">
+//End Include User Scripts
+
+//Common Script Start @1-8BFA436B
+jQuery(function ($) {
+    var features = { };
+    var actions = { };
+    var params = { };
+//End Common Script Start
+
+//ayudaButton_SubmitOnClick Event Start @-2B666B1B
+    actions["ayudaButton_SubmitOnClick"] = function (eventType, parameters) {
+        var result = true;
+//End ayudaButton_SubmitOnClick Event Start
+
+//Confirmation Message @23-96FAE8C2
+        return confirm('Enviar registro?');
+//End Confirmation Message
+
+//ayudaButton_SubmitOnClick Event End @-A5B9ECB8
+        return result;
+    };
+//End ayudaButton_SubmitOnClick Event End
+
+//Event Binding @1-DE3BF050
+    $('*:ccsControl(ayuda, Button_Submit)').ccsBind(function() {
+        this.bind("click", actions["ayudaButton_SubmitOnClick"]);
+    });
+//End Event Binding
+
+//Plugin Calls @1-C129EABB
+    $('*:ccsControl(ayuda, Cancel)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+//End Plugin Calls
+
+//Common Script End @1-562554DE
+});
+//End Common Script End
+//End CCS script
+</script>
+</head>
+<body class="InLinePageBODY">
+<table width="700" align="center" border="0">
+  <tr>
+    <td>
+      <!-- BEGIN Record ayudaSearch -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+          <tr>
+            <td class="InLineFormHeaderFont" colspan="2">Buscar Ayuda </td> 
+          </tr>
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="2">{Error}</td> 
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineFieldCaptionTD">Titulo&nbsp;</td> 
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="100" size="49" value="{s_titulo}" name="{s_titulo_Name}" style="WIDTH: 100%" id="ayudaSearchs_titulo"></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD">Pagina&nbsp;</td> 
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="50" size="50" value="{s_pagina}" name="{s_pagina_Name}" style="WIDTH: 100%" id="ayudaSearchs_pagina"></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD">Contenido&nbsp;</td> 
+            <td class="InLineDataTD" width="100%"><input class="InLineInput" size="50" value="{s_contenido}" name="{s_contenido_Name}" style="WIDTH: 100%" id="ayudaSearchs_contenido"></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="2">
+              <!-- BEGIN Button Button_DoSearch --><input class="InLineButton" type="submit" value="Buscar" name="{Button_Name}" id="ayudaSearchButton_DoSearch"><!-- END Button Button_DoSearch -->&nbsp; </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END Record ayudaSearch -->
+      <!-- BEGIN EditableGrid ayuda -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <input type="hidden" value="{FormState}" name="FormState">{FormScript} 
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" height="100%" width="100%">
+          <tr>
+            <td class="InLineFormHeaderFont" align="middle">Lista de Ayuda </td> 
+          </tr>
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD">{Error}</td> 
+          </tr>
+          <!-- END Error -->
+          <!-- BEGIN Row -->
+          <!-- BEGIN RowError -->
+          <tr>
+            <td class="InLineErrorDataTD">{Error}</td> 
+          </tr>
+          <!-- END RowError -->
+          <tr>
+            <td class="InLineColumnTD" nowrap>Titulo&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="100" size="50" value="{titulo}" name="{titulo_Name}" style="WIDTH: 100%" id="ayudatitulo"></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineColumnTD" nowrap>Pagina&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="50" size="50" value="{pagina}" name="{pagina_Name}" id="ayudapagina">&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineColumnTD" nowrap>Contenido&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineDataTD" width="100%" height="100%"><textarea class="InLineTextarea" style="WIDTH: 100%" name="{contenido_Name}" rows="20" cols="50" id="ayudacontenido">{contenido}</textarea></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineColumnTD" nowrap>Borrar&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineDataTD">
+              <!-- BEGIN CheckBox CheckBox_Delete --><input class="InLineInput" type="checkbox" value="1" name="{CheckBox_Delete_Name}" {CheckBox_Delete} id="ayudaCheckBox_Delete"><!-- END CheckBox CheckBox_Delete -->&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineDataTD" colspan="2">&nbsp;</td> 
+          </tr>
+          <!-- END Row -->
+          <!-- BEGIN NoRecords -->
+          <tr>
+            <td class="InLineDataTD">No se encontaron registros&nbsp;</td> 
+          </tr>
+          <!-- END NoRecords -->
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right">
+              <!-- BEGIN Navigator Navigator -->
+              <!-- BEGIN First_On --><a class="InLineNavigatorLink" href="{First_URL}">Inicio</a> <!-- END First_On -->
+              <!-- BEGIN First_Off -->Inicio <!-- END First_Off -->
+              <!-- BEGIN Prev_On --><a class="InLineNavigatorLink" href="{Prev_URL}">Anterior</a> <!-- END Prev_On -->
+              <!-- BEGIN Prev_Off -->Anterior <!-- END Prev_Off -->&nbsp; 
+              <!-- BEGIN Pages -->
+              <!-- BEGIN Page_On --><a class="InLineNavigatorLink" href="{Page_URL}">{Page_Number}</a>&nbsp;<!-- END Page_On -->
+              <!-- BEGIN Page_Off -->{Page_Number}&nbsp;<!-- END Page_Off --><!-- END Pages -->de
+              {Total_Pages}&nbsp; 
+              <!-- BEGIN Next_On --><a class="InLineNavigatorLink" href="{Next_URL}">Siguiente</a> <!-- END Next_On -->
+              <!-- BEGIN Next_Off -->Siguiente <!-- END Next_Off -->
+              <!-- BEGIN Last_On --><a class="InLineNavigatorLink" href="{Last_URL}">Final</a> <!-- END Last_On -->
+              <!-- BEGIN Last_Off -->Final <!-- END Last_Off --><!-- END Navigator Navigator -->&nbsp; 
+              <!-- BEGIN Button Button_Submit --><input class="InLineButton" type="submit" value="Grabar" name="{Button_Name}" id="ayudaButton_Submit"><!-- END Button Button_Submit -->&nbsp; 
+              <!-- BEGIN Button Cancel --><input class="InLineButton" type="submit" value="Cancelar" name="{Button_Name}" id="ayudaCancel"><!-- END Button Cancel -->&nbsp; </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END EditableGrid ayuda --></td> 
+  </tr>
+</table>
+</body>
+</html>

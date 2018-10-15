@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>misdatos</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+<link rel="stylesheet" type="text/css" href="Themes/InLine/Style.css">
+</head>
+<body class="InLinePageBODY">
+<table width="700" align="center" border="0">
+  <tr>
+    <td>
+      <!-- BEGIN Record usuarios -->
+      <form name="{HTMLFormName}" action="{Action}" method="post" enctype="{HTMLFormEnctype}">
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3">
+          <tr>
+            <td class="InLineFormHeaderFont" colspan="2">Editar Mis Datos
+              Personales </td> 
+          </tr>
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="2">{Error}</td> 
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineFieldCaptionTD">Nombre&nbsp;</td> 
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="100" size="50" value="{nom_usuario}" name="{nom_usuario_Name}" id="usuariosnom_usuario">&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD">Login</td> 
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="20" value="{log_usuario}" name="{log_usuario_Name}" id="usuarioslog_usuario">&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD">Firma Nombre&nbsp;</td> 
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="100" size="50" value="{firma_nombre}" name="{firma_nombre_Name}" id="usuariosfirma_nombre">&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD">Firma Titulo&nbsp;</td> 
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="100" size="50" value="{firma_titulo}" name="{firma_titulo_Name}" id="usuariosfirma_titulo">&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD">Firma Imagen&nbsp;</td> 
+            <td class="InLineDataTD">
+              <!-- BEGIN FileUpload firma_imagen --><input type="hidden" value="{State}" name="{ControlName}" id="usuariosfirma_imagenControlName">
+              <!-- BEGIN Info -->&nbsp;{FileName}&nbsp;{FileSize}&nbsp;bytes. <!-- END Info -->
+              <!-- BEGIN Upload --><input class="InLineInput" type="file" name="{FileControl}"><!-- END Upload -->
+              <!-- BEGIN DeleteControl -->Borrar <input class="InLineInput" type="checkbox" name="{DeleteControl}" {DeleteChecked}><!-- END DeleteControl --><!-- END FileUpload firma_imagen --><br>
+              {lblfirma}</td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="2">
+              <!-- BEGIN Button Button_Update --><input class="InLineButton" type="submit" value="Grabar" name="{Button_Name}" id="usuariosButton_Update"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Cancel --><input class="InLineButton" type="submit" value="Cancelar" name="{Button_Name}" id="usuariosButton_Cancel"><!-- END Button Button_Cancel -->&nbsp; </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END Record usuarios --></td> 
+  </tr>
+</table>
+</body>
+</html>

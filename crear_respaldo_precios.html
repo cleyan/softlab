@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>crear_respaldo_precios</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+<link rel="stylesheet" type="text/css" href="Themes/InLine/Style.css">
+<script>
+function respaldo(f){
+	if(f.estado.value=="true"){
+		alert("¡Respaldo creado satisfactoriamente!");
+		f.estado.value=="";
+	}
+}
+</script>
+</head>
+<body onload="javascript: respaldo(respaldos_precios_test);" leftmargin="1" topmargin="1" bgcolor="#e5e5e5" link="#000000" alink="#000000" vlink="#000000" text="#000000" class="InLinePageBODY">
+<table width="700" align="center" border="0">
+  <tr>
+    <td>
+      <!-- BEGIN Record respaldos_precios_test -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <input type="hidden" value="{estado}" name="{estado_Name}" id="respaldos_precios_testestado">
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%" align="center">
+          <tr>
+            <td class="InLineFormHeaderFont" colspan="2"><img class="" src="images/money.gif">&nbsp;&nbsp;Respaldo
+              de&nbsp;Precios </td> 
+          </tr>
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="2">{Error}</td> 
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineFieldCaptionTD" align="right">Fecha&nbsp;referencial
+              de respaldo</td> 
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="10" size="10" value="{fecha}" name="{fecha_Name}" readonly id="respaldos_precios_testfecha">&nbsp;&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input class="InLineButton" type="submit" value="Crear respaldo" name="{Button_Name}" id="respaldos_precios_testButton_Insert"><!-- END Button Button_Insert -->&nbsp; </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END Record respaldos_precios_test --></td> 
+  </tr>
+</table>
+</body>
+</html>

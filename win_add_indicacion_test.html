@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Softlab</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+<link rel="stylesheet" type="text/css" href="Themes/InLine/Style.css">
+<script>
+	function pasar_valor(f){
+		if(f.last_id.value!=""){	
+			window.opener.test.h_indicacion.value = f.last_id.value;
+			window.opener.test.h_nom_indicacion.value = f.last_nom_sec.value;
+			window.opener.test.h_indicacion.focus();			
+			window.close();
+		}
+	}
+</script>
+</head>
+<body  class="InLinePageBODY" onload="javascript:pasar_valor(indicaciones);">
+<table width="500" align="center" border="0">
+  <tr>
+    <td>
+      <!-- BEGIN Record indicaciones -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <input style="WIDTH:  103px;  HEIGHT:  22px" type="hidden" size="12" value="{indicacion_id}" name="{indicacion_id_Name}" id="indicacionesindicacion_id"><input style="WIDTH:  60px;  HEIGHT:  22px" type="hidden" size="6" value="{activo}" name="{activo_Name}" id="indicacionesactivo"><input type="hidden" value="{last_id}" name="{last_id_Name}" style="WIDTH: 78px; HEIGHT: 22px" size="10" id="indicacioneslast_id"><input type="hidden" value="{last_nom_sec}" name="{last_nom_sec_Name}" id="indicacioneslast_nom_sec">
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%" align="center">
+          <tr>
+            <td class="InLineFormHeaderFont" colspan="2">
+              <p align="center">Agregar/Editar Indicaciones para el test</p>
+ </td> 
+          </tr>
+ 
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="2">{Error}</td> 
+          </tr>
+ <!-- END Error -->
+          <tr>
+            <td class="InLineFieldCaptionTD">Nombre&nbsp;descriptivo&nbsp;</td> 
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="50" size="50" value="{nom_indicacion}" name="{nom_indicacion_Name}" id="indicacionesnom_indicacion">&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD">Descripción</td> 
+            <td class="InLineDataTD"><textarea class="InLineTextarea" name="{cuerpo_indicacion_Name}" rows="3" cols="50" id="indicacionescuerpo_indicacion">{cuerpo_indicacion}</textarea></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="2">
+              <p align="right">
+              <!-- BEGIN Button Button_Insert --><input class="InLineButton" type="submit" value="Agregar" name="{Button_Name}" id="indicacionesButton_Insert"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Cancel --><input class="InLineButton" type="button" value="Cancelar" name="{Button_Name}" onclick="javascript: window.close();" id="indicacionesButton_Cancel"><!-- END Button Button_Cancel --></p>
+ </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END Record indicaciones --></td> 
+  </tr>
+</table>
+</body>
+</html>

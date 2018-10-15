@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>edit_indecaciones_test</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+<link rel="stylesheet" type="text/css" href="Themes/InLine/Style.css">
+<script language="JavaScript">
+//Begin CCS script
+//Include Common JSFunctions @1-921C7A7E
+</script>
+<script src="ClientI18N.php?file=Globalize.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-A87AC9EE
+</script>
+{page:scriptIncludes}
+<script type="text/javascript">
+//End Include User Scripts
+
+//Common Script Start @1-8BFA436B
+jQuery(function ($) {
+    var features = { };
+    var actions = { };
+    var params = { };
+//End Common Script Start
+
+//indicaciones_testButton_DeleteOnClick Event Start @-E86A1805
+    actions["indicaciones_testButton_DeleteOnClick"] = function (eventType, parameters) {
+        var result = true;
+//End indicaciones_testButton_DeleteOnClick Event Start
+
+//Confirmation Message @6-BED55CD3
+        return confirm('Borrar registro?');
+//End Confirmation Message
+
+//indicaciones_testButton_DeleteOnClick Event End @-A5B9ECB8
+        return result;
+    };
+//End indicaciones_testButton_DeleteOnClick Event End
+
+//Event Binding @1-5469BAEE
+    $('*:ccsControl(indicaciones_test, Button_Delete)').ccsBind(function() {
+        this.bind("click", actions["indicaciones_testButton_DeleteOnClick"]);
+    });
+//End Event Binding
+
+//Plugin Calls @1-69C7F849
+    $('*:ccsControl(indicaciones_test, Button_Delete)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+    $('*:ccsControl(indicaciones_test, Button_Cancel)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+//End Plugin Calls
+
+//Common Script End @1-562554DE
+});
+//End Common Script End
+//End CCS script
+</script>
+</head>
+<body class="InLinePageBODY">
+<table width="700" align="center" border="0">
+  <tr>
+    <td>&nbsp; 
+      <!-- BEGIN Record indicaciones_test -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+          <tr>
+            <td class="InLineFormHeaderFont" colspan="2">Agregar/Editar
+              Indicaciones Test </td> 
+          </tr>
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="2">{Error}</td> 
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineFieldCaptionTD">Nombre de la&nbsp;Indicación&nbsp;</td> 
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="50" size="50" value="{nom_indicacion}" name="{nom_indicacion_Name}" id="indicaciones_testnom_indicacion">&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD">Activo&nbsp;?</td> 
+            <td class="InLineDataTD">
+              <!-- BEGIN RadioButton activo --><input type="radio" name="{activo_Name}" value="{Value}" class="InLineInput" {Check} id="indicaciones_testactivo_{activo:optionNumber}">{Description}<!-- END RadioButton activo -->&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD" colspan="2">Descripción de la
+              Indicación</td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD" colspan="2"><textarea class="InLineTextarea" style="WIDTH: 100%" name="{cuerpo_indicacion_Name}" rows="20" cols="50" id="indicaciones_testcuerpo_indicacion">{cuerpo_indicacion}</textarea> </td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input class="InLineButton" type="submit" value="Agregar" name="{Button_Name}" id="indicaciones_testButton_Insert"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input class="InLineButton" type="submit" value="Grabar" name="{Button_Name}" id="indicaciones_testButton_Update"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Delete --><input class="InLineButton" type="submit" value="Borrar" name="{Button_Name}" id="indicaciones_testButton_Delete"><!-- END Button Button_Delete -->
+              <!-- BEGIN Button Button_Cancel --><input class="InLineButton" type="submit" value="Cancelar" name="{Button_Name}" id="indicaciones_testButton_Cancel"><!-- END Button Button_Cancel -->&nbsp; </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END Record indicaciones_test --></td> 
+  </tr>
+</table>
+</body>
+</html>

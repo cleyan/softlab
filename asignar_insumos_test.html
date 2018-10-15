@@ -1,0 +1,277 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>asignar_insumos_test</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+<link rel="stylesheet" type="text/css" href="Themes/InLine/Style.css">
+<script language="JavaScript">
+//Begin CCS script
+//Include Common JSFunctions @1-921C7A7E
+</script>
+<script src="ClientI18N.php?file=Globalize.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-A87AC9EE
+</script>
+{page:scriptIncludes}
+<script type="text/javascript">
+//End Include User Scripts
+
+//Common Script Start @1-8BFA436B
+jQuery(function ($) {
+    var features = { };
+    var actions = { };
+    var params = { };
+//End Common Script Start
+
+//insumos_x_testAddRowBtnOnClick Event Start @-B5CE7C7B
+    actions["insumos_x_testAddRowBtnOnClick"] = function (eventType, parameters) {
+        var result = true;
+//End insumos_x_testAddRowBtnOnClick Event Start
+
+//Custom Code @67-2A29BDB7
+    // -------------------------
+var NS6 = (!document.all && document.getElementById) ? 1 : 0;
+var IE  = (document.all) ? 1 : 0;
+
+var FormState = document.insumos_x_test.FormState.value.split(";");
+var AllLength = parseInt(FormState[0])+parseInt(FormState[1]);
+
+  if (parseInt(FormState[0]) == 0 ) {
+      FormState[0] = 1;
+  }
+
+  var i;
+  for (i=FormState[0]; i<AllLength; i++) {
+     var objRow = document.getElementById(i);
+     if (NS6) {
+       if (objRow.style.display == "none") {
+           objRow.style.display = '';
+           break;
+       }
+     } else {
+       if (objRow.style.display == "none") {
+           objRow.style.display = "block"; 
+           break;
+       }
+	 }
+  }
+
+  if (i >= AllLength) 
+      document.forms["insumos_x_test"].AddRowBtn.disabled = true;
+    // -------------------------
+//End Custom Code
+
+//insumos_x_testAddRowBtnOnClick Event End @-A5B9ECB8
+        return result;
+    };
+//End insumos_x_testAddRowBtnOnClick Event End
+
+//insumos_x_testButton_SubmitOnClick Event Start @-4A3BCA0B
+    actions["insumos_x_testButton_SubmitOnClick"] = function (eventType, parameters) {
+        var result = true;
+//End insumos_x_testButton_SubmitOnClick Event Start
+
+//Confirmation Message @23-0372CC1F
+        return confirm('Recuerde que sólo se guardaran los cambios en los registros que esten con toda la informació solicitada. ¿Desea guardar los cambios?');
+//End Confirmation Message
+
+//insumos_x_testButton_SubmitOnClick Event End @-A5B9ECB8
+        return result;
+    };
+//End insumos_x_testButton_SubmitOnClick Event End
+
+//Event Binding @1-FAE27833
+    $('*:ccsControl(insumos_x_test, AddRowBtn)').ccsBind(function() {
+        this.bind("click", actions["insumos_x_testAddRowBtnOnClick"]);
+    });
+    $('*:ccsControl(insumos_x_test, Button_Submit)').ccsBind(function() {
+        this.bind("click", actions["insumos_x_testButton_SubmitOnClick"]);
+    });
+//End Event Binding
+
+//Plugin Calls @1-974DC751
+    $('*:ccsControl(insumos_x_test, AddRowBtn)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+    $('*:ccsControl(insumos_x_test, Cancel)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+//End Plugin Calls
+
+//Common Script End @1-562554DE
+});
+//End Common Script End
+//End CCS script
+</script>
+<script language="JavaScript">
+
+function openWindow(FileURL, winName, w, h) {
+    winStats = "width=" + w + ",height=" + h + ",toolbar=no,location=no,directories=no,menubar=no,scrollbars=no,status=no,";
+    if (navigator.appName.indexOf("Microsoft") >= 0) {// or if (document.all)
+        var xMax = screen.width, yMax = screen.height;
+    }else {
+        if (navigator.appName.indexOf("Netscape") >= 0) {// or if (document.layers)
+            var xMax = window.outerWidth, yMax = window.outerHeight;
+        }else {
+            var xMax = 640, yMax=480; //default guess
+        }
+    }
+    //calculate center
+    var xOffset = (xMax - w)/2, yOffset = (yMax - h)/2;
+    winStats += "left=" + xOffset + ",top=" + yOffset;
+	window.open(FileURL, winName, winStats);
+}
+function popAdd_Insumo(nom_insumo,id_insumo) {
+    aTemplate = "add_insumo.php?id_nom_insumo="+nom_insumo+"&id_insumo_id="+id_insumo;
+    openWindow(aTemplate, "winPreview", '550','210');
+}
+
+function add_list(listbox, ide, insumo, cant_test){
+
+	var list = document.getElementById(listbox);	
+	var ide = document.getElementById(ide);
+	var insumo = document.getElementById(insumo);
+	var largo = list.length;
+	//alert("largo: "+largo+" insumo: "+insumo.value+" ide:"+ide.value);
+	if(insumo.value != "" && ide.value!=""){
+		//alert("largo: "+largo+" insumo: "+insumo.value+" ide:"+ide.value);
+		list.options[largo] = new Option(insumo.value,ide.value);
+		largo = list.length;
+		list.options[largo-1].selected = true;
+		//cant_test.focus();
+	}
+}
+function busca_insumo_id(list_id){
+  var list_select = document.getElementById(list_id);
+  if(navigator.appName != 'Netscape'){
+    for(i=0;i<document.forms.length;i++){
+      for(j=0;j<document.forms[i].elements.length;j++){
+        var formObj=document.forms[i].elements[j];
+        if(formObj.type.toLowerCase() == "select-one"){
+			if(formObj.name != list_select.name){
+				if(formObj.value == list_select.value) {
+					if(formObj.value != "0"){
+						alert("¡El insumo seleccionado ya se encuentra ingresado!");	
+						list_select.options[0].selected = true;
+						break;
+					}
+				}
+			}
+		}
+      }
+    }
+  }
+}
+
+</script>
+<script>
+function sel_all_check(check){
+var check = document.getElementById(check);
+  if(navigator.appName != 'Netscape'){
+    for(i=0;i<document.forms.length;i++){
+      for(j=0;j<document.forms[i].elements.length;j++){
+        var formObj=document.forms[i].elements[j];
+        if(formObj.type.toLowerCase() == "checkbox"){
+			if(check.checked)
+				formObj.checked = true;
+			else
+				formObj.checked = false;
+		}
+      }
+    }
+  }
+}
+
+</script>
+</head>
+<body  class="InLinePageBODY">
+<table width="700" align="center" border="0">
+  <tr>
+    <td>
+      <!-- BEGIN EditableGrid insumos_x_test -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <input type="hidden" value="{FormState}" name="FormState">{FormScript}&nbsp;&nbsp; 
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+          <tr>
+            <td class="InLineFormHeaderFont" align="middle" colspan="4">Lista de
+              Insumos&nbsp;para el&nbsp;Test {nom_test} &nbsp;(Total de
+              Registros:{insumos_x_test_TotalRecords}) </td> 
+          </tr>
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="4">{Error}</td> 
+          </tr>
+          <!-- END Error -->
+          <tr align="middle">
+            <td width="8%" nowrap class="InLineColumnTD">Agregar</td> 
+            <td width="45%" nowrap class="InLineColumnTD">
+              <!-- BEGIN Sorter Sorter_insumo_id --><a class="InLineSorterLink" href="{Sort_URL}">Insumo</a> 
+              <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+              <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_insumo_id --></td> 
+            <td width="19%" nowrap class="InLineColumnTD" align="middle">
+              <!-- BEGIN Sorter Sorter_cantidad_x_test --><a class="InLineSorterLink" href="{Sort_URL}">Cantidad
+              X Test</a> 
+              <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+              <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_cantidad_x_test --></td> 
+            <td width="7%" nowrap class="InLineColumnTD" align="middle">Borrar&nbsp;<input id="Checkbox1" type="checkbox" name="Checkbox1" onclick="javascritp:sel_all_check('Checkbox1');"></td> 
+          </tr>
+          <!-- BEGIN Row -->
+          <!-- BEGIN RowError -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="4">{Error}</td> 
+          </tr>
+          <!-- END RowError -->
+          <tr align="middle" id="{RowIDAttribute}" name="{RowNameAttribute}" {RowStyleAttribute}>
+            <td class="InLineDataTD"><input name="{nom_insumo_Name}" id="insumos_x_testnom_insumo" value="{nom_insumo}" style="WIDTH: 0px" readonly><input name="{last_insumo_id_Name}" id="insumos_x_testlast_insumo_id" value="{last_insumo_id}" style="WIDTH: 0px" onfocus="javascript:add_list('{insumo_id_Name}','{last_insumo_id_Name}','{nom_insumo_Name}','{cantidad_x_test_Name}')" readonly><img onclick="javascript:popAdd_Insumo('{nom_insumo_Name}','{last_insumo_id_Name}');" alt="Agregar nuevo insumo" src="images/agregar.gif" width="25" border="0"></td> 
+            <td class="InLineDataTD" align="middle">
+              <select name="{insumo_id_Name}" id="insumos_x_testinsumo_id" class="InLineSelect" style="WIDTH: 100%" type="select-one" onchange="javascript:busca_insumo_id('{insumo_id_Name}')">
+                <option value="0" selected>Seleccionar Valor</option>
+ {insumo_id_Options} 
+              </select>
+ <input type="hidden" name="{test_id_Name}" value="{test_id}" id="insumos_x_testtest_id"></td> 
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="10" size="5" value="{cantidad_x_test}" id="insumos_x_testcantidad_x_test" name="{cantidad_x_test_Name}"></td> 
+            <td class="InLineDataTD">
+              <!-- BEGIN CheckBox CheckBox_Delete --><input class="InLineInput" type="checkbox" value="1" name="{CheckBox_Delete_Name}" {CheckBox_Delete} id="insumos_x_testCheckBox_Delete"><!-- END CheckBox CheckBox_Delete -->&nbsp;</td> 
+          </tr>
+          <!-- END Row -->
+          <!-- BEGIN NoRecords -->
+          <tr>
+            <td class="InLineDataTD" colspan="4">No se encontaron registros</td> 
+          </tr>
+          <!-- END NoRecords -->
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="4">
+              <!-- BEGIN Navigator Navigator -->
+              <!-- BEGIN First_On --><a class="InLineNavigatorLink" href="{First_URL}">Inicio</a> <!-- END First_On -->
+              <!-- BEGIN First_Off -->Inicio <!-- END First_Off -->
+              <!-- BEGIN Prev_On --><a class="InLineNavigatorLink" href="{Prev_URL}">Anterior</a> <!-- END Prev_On -->
+              <!-- BEGIN Prev_Off -->Anterior <!-- END Prev_Off -->&nbsp; 
+              <!-- BEGIN Pages -->
+              <!-- BEGIN Page_On --><a class="InLineNavigatorLink" href="{Page_URL}">{Page_Number}</a>&nbsp;<!-- END Page_On -->
+              <!-- BEGIN Page_Off -->{Page_Number}&nbsp;<!-- END Page_Off --><!-- END Pages -->de
+              {Total_Pages}&nbsp; 
+              <!-- BEGIN Next_On --><a class="InLineNavigatorLink" href="{Next_URL}">Siguiente</a> <!-- END Next_On -->
+              <!-- BEGIN Next_Off -->Siguiente <!-- END Next_Off -->
+              <!-- BEGIN Last_On --><a class="InLineNavigatorLink" href="{Last_URL}">Final</a> <!-- END Last_On -->
+              <!-- BEGIN Last_Off -->Final <!-- END Last_Off --><!-- END Navigator Navigator --></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="2">
+              <p align="left">
+              <!-- BEGIN Button AddRowBtn --><input class="InLineButton" type="button" value="Nueva fila" name="{Button_Name}" id="insumos_x_testAddRowBtn"><!-- END Button AddRowBtn -->&nbsp;&nbsp;</p>
+ </td> 
+            <td class="InLineFooterTD" nowrap align="right" colspan="2">
+              <!-- BEGIN Button Button_Submit --><input class="InLineButton" type="submit" value="Grabar" name="{Button_Name}" id="insumos_x_testButton_Submit"><!-- END Button Button_Submit -->&nbsp; 
+              <!-- BEGIN Button Cancel --><input class="InLineButton" type="submit" value="Cancelar" name="{Button_Name}" id="insumos_x_testCancel"><!-- END Button Cancel --></td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END EditableGrid insumos_x_test --></td> 
+  </tr>
+</table>
+</body>
+</html>

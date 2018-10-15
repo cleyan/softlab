@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>def_informe_detalle</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+<link rel="stylesheet" type="text/css" href="Themes/InLine/Style.css">
+<script language="JavaScript">
+//Begin CCS script
+//Include Common JSFunctions @1-921C7A7E
+</script>
+<script src="ClientI18N.php?file=Globalize.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-A87AC9EE
+</script>
+{page:scriptIncludes}
+<script type="text/javascript">
+//End Include User Scripts
+
+//Common Script Start @1-8BFA436B
+jQuery(function ($) {
+    var features = { };
+    var actions = { };
+    var params = { };
+//End Common Script Start
+
+//informes_detalle1Button_SubmitOnClick Event Start @-00FAE526
+    actions["informes_detalle1Button_SubmitOnClick"] = function (eventType, parameters) {
+        var result = true;
+//End informes_detalle1Button_SubmitOnClick Event Start
+
+//Confirmation Message @21-96FAE8C2
+        return confirm('Enviar registro?');
+//End Confirmation Message
+
+//informes_detalle1Button_SubmitOnClick Event End @-A5B9ECB8
+        return result;
+    };
+//End informes_detalle1Button_SubmitOnClick Event End
+
+//Event Binding @1-C1442773
+    $('*:ccsControl(informes_detalle1, Button_Submit)').ccsBind(function() {
+        this.bind("click", actions["informes_detalle1Button_SubmitOnClick"]);
+    });
+//End Event Binding
+
+//Plugin Calls @1-41F9F79F
+    $('*:ccsControl(informes_detalle1, Cancel)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+//End Plugin Calls
+
+//Common Script End @1-562554DE
+});
+//End Common Script End
+//End CCS script
+</script>
+</head>
+<body class="InLinePageBODY">
+<table width="600" align="center" border="0">
+  <tr>
+    <td>
+      <!-- BEGIN Grid informes -->
+      <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+        <tr>
+          <td class="InLineFormHeaderFont" align="middle" colspan="2">Editar
+            Test Asociados a un Informe </td> 
+        </tr>
+ 
+        <tr>
+          <td class="InLineColumnTD" nowrap>ID&nbsp;</td> 
+          <td class="InLineColumnTD" nowrap>Nombre del Informe&nbsp;</td> 
+        </tr>
+        <!-- BEGIN Row -->
+        <tr>
+          <td class="InLineDataTD">{informe_id}&nbsp;</td> 
+          <td class="InLineDataTD" width="100%"><strong>{nom_informe}</strong>&nbsp;</td> 
+        </tr>
+        <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr>
+          <td class="InLineDataTD" colspan="2"><a id="ImageLink1" href="def_informe.php" name="ImageLink1"><img src="images/btn_volver.gif" align="right" border="0"></a>No
+            se encontaron registros </td> 
+        </tr>
+        <!-- END NoRecords -->
+      </table>
+ <!-- END Grid informes -->
+      <!-- BEGIN EditableGrid informes_detalle1 -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <input type="hidden" value="{FormState}" name="FormState">{FormScript} 
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+          <tr>
+            <td class="InLineFormHeaderFont" colspan="3">Detalle de los Test
+              asociados a este Informe:</td> 
+          </tr>
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="3">{Error}</td> 
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineColumnTD" nowrap>
+              <!-- BEGIN Sorter Sorter_test_id --><a class="InLineSorterLink" href="{Sort_URL}">Nombre
+              Corto</a> 
+              <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+              <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_test_id -->&nbsp;</td> 
+            <td class="InLineColumnTD" nowrap align="left">
+              <!-- BEGIN Sorter Nombre_largo --><a class="InLineSorterLink" href="{Sort_URL}">Nombre_largo</a><!-- END Sorter Nombre_largo --></td> 
+            <td class="InLineColumnTD" nowrap align="middle">Borrar</td> 
+          </tr>
+          <!-- BEGIN Row -->
+          <!-- BEGIN RowError -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="3">{Error}</td> 
+          </tr>
+          <!-- END RowError -->
+          <tr>
+            <td class="InLineDataTD">
+              <select name="{test_id_Name}" class="InLineSelect" style="WIDTH: 100%" id="informes_detalle1test_id">
+                <option value="" selected>Seleccionar Valor</option>
+ {test_id_Options} 
+              </select>
+ </td> 
+            <td class="InLineDataTD" align="left" width="100%">{nom_test}</td> 
+            <td class="InLineDataTD" align="middle">
+              <!-- BEGIN CheckBox CheckBox_Delete --><input class="InLineInput" type="checkbox" value="1" name="{CheckBox_Delete_Name}" {CheckBox_Delete} id="informes_detalle1CheckBox_Delete"><!-- END CheckBox CheckBox_Delete -->&nbsp;</td> 
+          </tr>
+          <!-- END Row -->
+          <!-- BEGIN NoRecords -->
+          <tr>
+            <td class="InLineDataTD" colspan="3">No hay registros&nbsp;</td> 
+          </tr>
+          <!-- END NoRecords -->
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="3">
+              <!-- BEGIN Button Button_Submit --><input class="InLineButton" type="submit" value="Grabar" name="{Button_Name}" id="informes_detalle1Button_Submit"><!-- END Button Button_Submit -->&nbsp; 
+              <!-- BEGIN Button Cancel --><input class="InLineButton" type="submit" value="Cerrar" name="{Button_Name}" id="informes_detalle1Cancel"><!-- END Button Cancel --></td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ Seleccione los Test que desea agregar al Informe desde la lista desplegable de
+      la izquierda, haga click en Grabar para agregarlo al informe, cuando
+      termine haga clieck en Cerrar, para borrar, marque el cuadro borrar del
+      lado derecho, y haga click en Grabar. <!-- END EditableGrid informes_detalle1 --></td> 
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>configuracion</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+<link rel="stylesheet" type="text/css" href="Themes/InLine/Style.css">
+<script language="JavaScript">
+//Begin CCS script
+//Include Common JSFunctions @1-921C7A7E
+</script>
+<script src="ClientI18N.php?file=Globalize.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-A87AC9EE
+</script>
+{page:scriptIncludes}
+<script type="text/javascript">
+//End Include User Scripts
+
+//Common Script Start @1-8BFA436B
+jQuery(function ($) {
+    var features = { };
+    var actions = { };
+    var params = { };
+//End Common Script Start
+
+//configuracionButton_SubmitOnClick Event Start @-31572358
+    actions["configuracionButton_SubmitOnClick"] = function (eventType, parameters) {
+        var result = true;
+//End configuracionButton_SubmitOnClick Event Start
+
+//Confirmation Message @15-96FAE8C2
+        return confirm('Enviar registro?');
+//End Confirmation Message
+
+//configuracionButton_SubmitOnClick Event End @-A5B9ECB8
+        return result;
+    };
+//End configuracionButton_SubmitOnClick Event End
+
+//Event Binding @1-BC5969E8
+    $('*:ccsControl(configuracion, Button_Submit)').ccsBind(function() {
+        this.bind("click", actions["configuracionButton_SubmitOnClick"]);
+    });
+//End Event Binding
+
+//Plugin Calls @1-5E145970
+    $('*:ccsControl(configuracion, Cancel)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+//End Plugin Calls
+
+//Common Script End @1-562554DE
+});
+//End Common Script End
+//End CCS script
+</script>
+</head>
+<body class="InLinePageBODY" bgcolor="#ffffff" link="#000000" alink="#000000" vlink="#000000" text="#000000">
+<table width="700" align="center" border="0">
+  <tr>
+    <td>
+      <!-- BEGIN Record configuracionSearch -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3">
+          <tr>
+            <td class="InLineFormHeaderFont" colspan="2">Buscar Configuracion </td> 
+          </tr>
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="2">{Error}</td> 
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineFieldCaptionTD" nowrap>Palabra clave&nbsp;</td> 
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="30" size="30" value="{s_keyword}" name="{s_keyword_Name}" id="configuracionSearchs_keyword">&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFooterTD" nowrap><a class="InLineSorterLink" href="{ClearParameters_Src}" id="configuracionSearchClearParameters">Limpiar</a>&nbsp; </td> 
+            <td class="InLineFooterTD" nowrap align="right">
+              <!-- BEGIN Button Button_DoSearch --><input class="InLineButton" type="submit" value="Buscar" name="{Button_Name}" id="configuracionSearchButton_DoSearch"><!-- END Button Button_DoSearch -->&nbsp; </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END Record configuracionSearch --><br>
+      <!-- BEGIN EditableGrid configuracion -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <input type="hidden" value="{FormState}" name="FormState">{FormScript} 
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+          <tr>
+            <td class="InLineFormHeaderFont" align="middle" colspan="2">Opciones
+              de Configuracion </td> 
+          </tr>
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="2">{Error}</td> 
+          </tr>
+          <!-- END Error -->
+          <!-- BEGIN Row -->
+          <!-- BEGIN RowError -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="2">{Error}</td> 
+          </tr>
+          <!-- END RowError -->
+          <tr>
+            <td class="InLineColumnTD" nowrap>Clave&nbsp;</td> 
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="30" size="30" value="{clave}" name="{clave_Name}" id="configuracionclave">&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineColumnTD" nowrap>Valor&nbsp;Actual</td> 
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="50" size="31" value="{valor}" name="{valor_Name}" style="WIDTH: 203px; HEIGHT: 20px" id="configuracionvalor">&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineColumnTD" nowrap>Valores disponibles</td> 
+            <td class="InLineDataTD"><input class="InLineInput" style="WIDTH: 260px; HEIGHT: 20px" size="36" value="{valores}" name="{valores_Name}" id="configuracionvalores"></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineColumnTD" nowrap>Descripcion&nbsp;</td> 
+            <td class="InLineDataTD"><textarea class="InLineTextarea" style="WIDTH: 100%" name="{descripcion_Name}" rows="4" cols="50" id="configuraciondescripcion">{descripcion}</textarea></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineColumnTD" nowrap>Eliminar esta clave</td> 
+            <td class="InLineDataTD">
+              <!-- BEGIN CheckBox CheckBox_Delete --><input type="checkbox" name="{CheckBox_Delete_Name}" value="1" class="" {CheckBox_Delete} id="configuracionCheckBox_Delete"><!-- END CheckBox CheckBox_Delete -->&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineDataTD" colspan="2">&nbsp;</td> 
+          </tr>
+          <!-- END Row -->
+          <!-- BEGIN NoRecords -->
+          <tr>
+            <td class="InLineDataTD" colspan="2">No se encontaron claves de
+              configuración&nbsp;</td> 
+          </tr>
+          <!-- END NoRecords -->
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="2">
+              <!-- BEGIN Navigator Navigator1 -->
+              <!-- BEGIN First_On --><a class="InLineNavigatorLink" href="{First_URL}"><img src="Themes/Square/FirstOn.gif" border="0"></a> <!-- END First_On -->
+              <!-- BEGIN Prev_On --><a class="InLineNavigatorLink" href="{Prev_URL}"><img src="Themes/Square/PrevOn.gif" border="0"></a> <!-- END Prev_On -->&nbsp;{Page_Number}&nbsp;de
+              {Total_Pages}&nbsp; 
+              <!-- BEGIN Next_On --><a class="InLineNavigatorLink" href="{Next_URL}"><img src="Themes/Square/NextOn.gif" border="0"></a> <!-- END Next_On -->
+              <!-- BEGIN Last_On --><a class="InLineNavigatorLink" href="{Last_URL}"><img src="Themes/Square/LastOn.gif" border="0"></a> <!-- END Last_On --><!-- END Navigator Navigator1 -->&nbsp; 
+              <!-- BEGIN Button Button_Submit --><input class="InLineButton" type="submit" value="Grabar" name="{Button_Name}" id="configuracionButton_Submit"><!-- END Button Button_Submit -->&nbsp; 
+              <!-- BEGIN Button Cancel --><input class="InLineButton" type="submit" value="Cancelar" name="{Button_Name}" id="configuracionCancel"><!-- END Button Cancel -->&nbsp; </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END EditableGrid configuracion --></td> 
+  </tr>
+</table>
+</body>
+</html>

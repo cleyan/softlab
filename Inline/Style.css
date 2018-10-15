@@ -1,0 +1,669 @@
+BODY
+{
+	font-family: Tahoma, Verdana, Arial, Helvetica;
+	font-size: 13px;
+	background-color: White;
+}
+TABLE
+{
+	font-family: Tahoma, Verdana, Arial, Helvetica; 
+	font-size: 13px;
+}
+TH
+{
+	font-family: Tahoma, Verdana, Arial, Helvetica; 
+	font-size: 13px;
+}
+TRDestadada
+{
+	font-family: Tahoma, Verdana, Arial, Helvetica; 
+	font-size: 13px;
+	background: #E7EFEF;
+}
+TR.TRDestadada
+{
+	font-family: Tahoma, Verdana, Arial, Helvetica; 
+	font-size: 13px;
+	background: #E7EFEF;
+}
+
+
+TRDestacada:hover
+{
+	font-family: Tahoma, Verdana, Arial, Helvetica; 
+	font-size: 13px;
+	background: #FFFF8C;
+}
+
+TR.TRDestacada:hover
+{
+	font-family: Tahoma, Verdana, Arial, Helvetica; 
+	font-size: 13px;
+	background: #FFFF8C;
+}
+
+
+TD
+{
+	font-family: Tahoma, Verdana, Arial, Helvetica; 
+	font-size: 13px;
+}
+UL
+{
+	font-family: Tahoma, Verdana, Arial, Helvetica; 
+	font-size: 13px;
+}
+OL
+{
+	font-family: Tahoma, Verdana, Arial, Helvetica; 
+	font-size: 13px;
+}
+LI
+{
+	font-family: Tahoma, Verdana, Arial, Helvetica; 
+	font-size: 13px;
+}
+P
+{
+	font-family: Tahoma, Verdana, Arial, Helvetica; 
+	font-size: 13px;
+}
+FONT
+{
+	font-family: Tahoma, Verdana, Arial, Helvetica; 
+	font-size: 13px;
+}
+A
+{
+	font-family: Tahoma, Verdana, Arial, Helvetica; 
+	font-size: 13px;
+}
+BLOCKQUOTE
+{
+	font-family: Tahoma, Verdana, Arial, Helvetica; 
+	font-size: 13px;
+}
+LABEL
+{
+	font-family: Tahoma, Verdana, Arial, Helvetica; 
+	font-size: 13px;
+}
+SELECT
+{
+	font-size: 13px; 
+	font-family: Tahoma, Verdana, Arial, Helvetica;
+}
+SELECT:hover
+{
+	font-size: 13px;
+	color: Red; 
+	font-family: Tahoma, Verdana, Arial, Helvetica;
+	border-bottom: 1px solid Red; 
+	border-left: 1px solid Red; 
+	border-right: 1px solid Red; 
+	border-top: 1px solid Red; 
+}
+SELECT:focus
+{
+	font-size: 13px; 
+	color: Blue;
+	font-family: Tahoma, Verdana, Arial, Helvetica;
+}
+
+.INPUT
+{
+	border-bottom: 1px solid #000000; 
+	border-left: 1px solid #000000; 
+	border-right: 1px solid #000000; 
+	border-top: 1px solid #000000; 
+	background-color: #FFFFFF; 
+	font-size: 13px; 
+	font-family: Tahoma, Verdana, Arial, Helvetica;
+}
+
+.INPUT:hover
+{
+	border-bottom: 1px solid red; 
+	border-left: 1px solid red; 
+	border-right: 1px solid red; 
+	border-top: 1px solid red; 
+	background-color: #FFFFFF; 
+	font-size: 13px; 
+	font-family: Tahoma, Verdana, Arial, Helvetica;
+}
+
+.INPUT:focus
+{
+	border-bottom: 1px solid red; 
+	border-left: 1px solid red; 
+	border-right: 1px solid red; 
+	border-top: 1px solid red; 
+	background-color: #FFFFFF; 
+	font-size: 13px; 
+	font-family: Tahoma, Verdana, Arial, Helvetica;
+}
+
+
+.TEXTAREA
+{
+	border-bottom: 1px solid #000000; 
+	border-left: 1px solid #000000; 
+	border-right: 1px solid #000000; 
+	border-top: 1px solid #000000; 
+	background-color: #FFFFFF; 
+	font-size: 13px; 
+	font-family: Tahoma, Verdana, Arial, Helvetica;
+}
+
+.TEXTAREA:hover
+{
+	border-bottom: 1px solid Red; 
+	border-left: 1px solid Red; 
+	border-right: 1px solid Red; 
+	border-top: 1px solid Red; 
+	background-color: #FFFFFF; 
+	font-size: 13px; 
+	font-family: Tahoma, Verdana, Arial, Helvetica;
+}
+.TEXTAREA:focus
+{
+	border-bottom: 1px solid Red; 
+	border-left: 1px solid Red; 
+	border-right: 1px solid Red; 
+	border-top: 1px solid Red; 
+	background-color: #FFFFFF; 
+	font-size: 13px; 
+	font-family: Tahoma, Verdana, Arial, Helvetica;
+}
+
+
+
+
+.InLinePageBODY
+{
+	font-family: Tahoma, Verdana, Arial, Helvetica;
+	font-size: 13px;
+	background-color: White;
+}
+.InLineFormHeaderFont
+{
+	border-left: 1px solid #89999B; 
+	border-bottom: 1px solid #89999B; 
+	border-top: 1px solid #89999B; 
+	color: #FFFFFF; 
+	background-color: #799BA6; 
+	font-size: 13px; 
+	font-weight: bold;
+}
+.InLineFormTABLE
+{
+	font-family: Tahoma, Verdana, Arial, Helvetica; 
+	font-size: 13px;
+	border: 1px solid #B6B6B6;
+}
+
+.InLineTABLERound
+{
+	font-family: Tahoma, Verdana, Arial, Helvetica; 
+	font-size: 13px;
+	border: 1px solid #B6B6B6;
+	-moz-border-radius: 10px;     
+	-moz-background-clip: padding;
+}
+
+.InLineFieldCaptionTD
+{
+	border-bottom: 1px solid #FFFFFF; 
+	color: #000000; 
+	background-color: #E7EFEF; 
+	font-size: 13px;
+}
+.InLineAltDataTD
+{
+	color: #000000; 
+	background-color: #F2F2F2; 
+	font-size: 13px;
+}
+.InLineColumnTD
+{
+	border-left: 1px solid #89999B; 
+	border-bottom: 1px solid #89999B; 
+	border-top: 1px solid #89999B; 
+	color: #FFFFFF; 
+	background-color: #B5C7CE; 
+	font-size: 13px; 
+	font-weight: bold;
+}
+.InLineDataTD
+{
+	border-bottom: 1px solid #FFFFFF; 
+	color: Black; 
+	background-color: #E7EFEF; 
+	font-size: 13px;
+}
+.Destacada
+{
+	border-bottom: 1px solid #FFFFFF; 
+	color: Black; 
+	background-color: #E7EFEF; 
+	font-size: 13px;
+}
+
+TR.Destacada:hover
+{
+	border-bottom: 1px solid #FFFFFF; 
+	color: Blue; 
+	background-color: #FFFF91; 
+	font-size: 13px;
+}
+
+
+.InLineTitulo
+{
+	border-left: 1px solid #89999B; 
+	border-bottom: 1px solid #89999B; 
+	border-top: 1px solid #89999B; 
+	color: #FFFFFF; 
+	background-color: #799BA6; 
+	font-size: 13px; 
+	font-weight: bold;
+}
+.InLineErrorDataTD
+{
+	border-bottom: 1px solid #FFFFFF; 
+	color: #FF0000; 
+	background-color: #E7EFEF; 
+	font-size: 13px;
+}
+.InLineSeparatorTD
+{
+	height: 1px; 
+	background-color: #000000;
+}
+.InLineFooterTD
+{
+	border: 1px solid #89999B; 
+	background-color: #B1C6C8; 
+	color: #FFFFFF; 
+	font-size: 13px; 
+}
+a.InLineSorterLink:link
+{
+	color: #FFFFFF; 
+	font-weight: bold; 
+	font-size: 13px; 
+	text-decoration: underline;
+}
+a.InLineSorterLink:visited
+{
+	color: #FFFFFF; 
+	font-weight: bold; 
+	font-size: 13px; 
+	text-decoration: underline;
+}
+a.InLineSorterLink:hover
+{
+	color: #FFFFFF; 
+	font-weight: bold; 
+	font-size: 13px; 
+	text-decoration: none;
+}
+a.InLineSorterLink:active
+{
+	color: #FFFFFF; 
+	font-weight: bold; 
+	font-size: 13px; 
+	text-decoration: none;
+}
+a.InLineDataLink:link
+{
+	color: #000000; 
+	font-size: 13px; 
+	text-decoration: underline;
+}
+a.InLineDataLink:visited
+{
+	color: #000000; 
+	font-size: 13px; 
+	text-decoration: underline;
+}
+a.InLineDataLink:hover
+{
+	color: Yellow; 
+	font-size: 13px; 
+	text-decoration: none;
+	background: Red;
+}
+a.InLineDataLink:active
+{
+	color: #000000; 
+	font-size: 13px; 
+	text-decoration: none;
+}
+a.InLineNavigatorLink:link
+{
+	color: #FFFFFF; 
+	font-weight: bold; 
+	font-size: 13px; 
+	text-decoration: underline;
+}
+a.InLineNavigatorLink:visited
+{
+	color: #FFFFFF; 
+	font-weight: bold; 
+	font-size: 13px; 
+	text-decoration: underline;
+}
+a.InLineNavigatorLink:hover
+{
+	color: #FFFFFF; 
+	font-weight: bold; 
+	font-size: 13px; 
+	text-decoration: none;
+}
+a.InLineNavigatorLink:active
+{
+	color: #FFFFFF; 
+	font-weight: bold; 
+	font-size: 13px; 
+	text-decoration: none;
+}
+.InLineButton
+{
+	font-size: 12px; 
+	font-family: Tahoma, Verdana, Arial, Helvetica;
+	background: url(btn_blanco.png) no-repeat left;
+	height: 24px;
+	cursor: pointer;
+	width: 118px;
+	border: 1px solid Transparent;
+	}
+
+.InLineButton:hover
+{
+	font-size: 12px; 
+	font-family: Tahoma, Verdana, Arial, Helvetica;
+	background: url(btn_blanco.png) no-repeat left;
+	height: 24px;
+	cursor: pointer;
+	width: 118px;
+	border: 1px solid Red;
+
+}
+
+.InLineAltButton
+{
+	font-size: 12px; 
+	font-family: Tahoma, Verdana, Arial, Helvetica;
+	text-align: left;
+	cursor: pointer;
+	background: #F6F6F3 url(decobtn.jpg) no-repeat left;
+	margin-left: 10px;
+	height: 30px;
+	min-width: 100px;
+	border: 1px outset #B8B8B8;
+	}
+
+	
+.InLineInput
+{
+	border-bottom: 1px solid #000000; 
+	border-left: 1px solid #000000; 
+	border-right: 1px solid #000000; 
+	border-top: 1px solid #000000; 
+	background-color: #FFFFFF; 
+	font-size: 13px; 
+	font-family: Tahoma, Verdana, Arial, Helvetica;
+}
+
+.InLineInput:hover
+{
+	border-bottom: 1px solid red; 
+	border-left: 1px solid red; 
+	border-right: 1px solid red; 
+	border-top: 1px solid red; 
+	background-color: #FFFFFF; 
+	font-size: 13px; 
+	font-family: Tahoma, Verdana, Arial, Helvetica;
+}
+
+.InLineInput:focus
+{
+	border-bottom: 1px solid red; 
+	border-left: 1px solid red; 
+	border-right: 1px solid red; 
+	border-top: 1px solid red; 
+	background-color: #FFFFFF; 
+	font-size: 13px; 
+	font-family: Tahoma, Verdana, Arial, Helvetica;
+}
+
+
+.InLineTextarea
+{
+	border-bottom: 1px solid #000000; 
+	border-left: 1px solid #000000; 
+	border-right: 1px solid #000000; 
+	border-top: 1px solid #000000; 
+	background-color: #FFFFFF; 
+	font-size: 13px; 
+	font-family: Tahoma, Verdana, Arial, Helvetica;
+}
+
+.InLineTextarea:hover
+{
+	border-bottom: 1px solid Red; 
+	border-left: 1px solid Red; 
+	border-right: 1px solid Red; 
+	border-top: 1px solid Red; 
+	background-color: #FFFFFF; 
+	font-size: 13px; 
+	font-family: Tahoma, Verdana, Arial, Helvetica;
+}
+.InLineTextarea:focus
+{
+	border-bottom: 1px solid Red; 
+	border-left: 1px solid Red; 
+	border-right: 1px solid Red; 
+	border-top: 1px solid Red; 
+	background-color: #FFFFFF; 
+	font-size: 13px; 
+	font-family: Tahoma, Verdana, Arial, Helvetica;
+}
+
+.InLineSelect
+{
+	font-size: 13px; 
+	font-family: Tahoma, Verdana, Arial, Helvetica;
+}
+.InLineSelect:hover
+{
+	font-size: 13px;
+	color: Red; 
+	font-family: Tahoma, Verdana, Arial, Helvetica;
+	border-bottom: 1px solid Red; 
+	border-left: 1px solid Red; 
+	border-right: 1px solid Red; 
+	border-top: 1px solid Red; 
+}
+.InLineSelect:focus
+{
+	font-size: 13px; 
+	color: Blue;
+	font-family: Tahoma, Verdana, Arial, Helvetica;
+	border-bottom: 1px solid Red; 
+	border-left: 1px solid Red; 
+	border-right: 1px solid Red; 
+	border-top: 1px solid Red; 
+}
+
+
+
+a.today:link
+{
+	color: #FF0000; 
+	font-weight: bold; 
+	text-decoration: none;
+}
+a.today:visited
+{
+	color: #FF0000; 
+	font-weight: bold; 
+	text-decoration: none;
+}
+a.today:hover
+{
+	color: #000000; 
+	font-weight: bold; 
+	text-decoration: none;
+}
+a.today:active
+{
+	color: #000000; 
+	font-weight: bold; 
+	text-decoration: none;
+}
+a.selectedDay:link
+{
+	color: #000000; 
+	font-weight: bold; 
+	text-decoration: none;
+}
+a.selectedDay:visited
+{
+	color: #000000; 
+	font-weight: bold; 
+	text-decoration: none;
+}
+a.selectedDay:hover
+{
+	color: #FF0000; 
+	font-weight: bold; 
+	text-decoration: none;
+}
+a.selectedDay:active
+{
+	color: #FF0000; 
+	font-weight: bold; 
+	text-decoration: none;
+}
+a.weekDay:link
+{
+	color: #000000; 
+	text-decoration: none;
+}
+a.weekDay:visited
+{
+	color: #000000; 
+	text-decoration: none;
+}
+a.weekDay:hover
+{
+	color: #FF0000; 
+	text-decoration: none;
+}
+a.weekDay:active
+{
+	color: #FF0000; 
+	text-decoration: none;
+}
+TD.selectedDay
+{
+	margin: 1px; 
+	border-left: 1px solid #89999B; 
+	border-bottom: 1px solid #89999B; 
+	border-top: 1px solid #89999B; 
+	color: #FFFFFF; 
+	background-color: #B5C7CE; 
+	font-size: 13px; 
+	font-weight: bold;
+}
+TD.today
+{
+	border-top: 1px solid #FF0000; 
+	border-left: 1px solid #FF0000; 
+	border-bottom: 1px solid #FF0000; 
+	border-right: 1px solid #FF0000; 
+	color: #000000; 
+	background-color: #F2F2F2; 
+	font-size: 13px;
+}
+TD.workday
+{
+	color: #000000; 
+	background-color: #F2F2F2; 
+	font-size: 13px;
+}
+TD.weekend
+{
+	border-bottom: 1px solid #FFFFFF; 
+	color: #000000; 
+	background-color: #D9E3E3; 
+	font-size: 13px;
+}
+TH.calendar
+{
+	margin: 1px; 
+	border-left: 1px solid #89999B; 
+	border-bottom: 1px solid #89999B; 
+	border-top: 1px solid #89999B; 
+	color: #FFFFFF; 
+	background-color: #B5C7CE; 
+	font-size: 13px; 
+	font-weight: bold;
+}
+.CalendarButtons
+{
+	margin: 1px; 
+	border-bottom: 1px solid #000000; 
+	border-left: 1px solid #000000; 
+	border-right: 1px solid #000000; 
+	border-top: 1px solid #000000; 
+	background-color: #E7EFEF; 
+	font-size: 13px; 
+	font-family: Tahoma, Verdana, Arial, Helvetica; 
+	font-weight: bold;
+}
+.CalendarControls
+{
+	font-family: Tahoma, Verdana, Arial, Helvetica; 
+	font-size: 13px;
+}
+.Table
+{
+
+}
+
+.avisos
+{
+	background: Yellow;
+	border: 1px outset;
+	z-index: 999;
+	visibility:visible; 
+	top:0px;
+	position: absolute;
+	width: 80%;
+}
+.InLineMenuEx
+{
+background: White;
+color: Black;
+	font-size: 13px; 
+	font-family: Tahoma, Verdana, Arial, Helvetica; 
+}
+TD.InLineMenuEx:hover
+{
+background: Red;
+color: Yellow;
+	font-size: 13px; 
+	font-family: Tahoma, Verdana, Arial, Helvetica;
+	font-weight: bold;
+}
+a.InLineMenuEx:hover
+{
+background: Red;
+color: Yellow;
+	font-size: 13px; 
+	font-family: Tahoma, Verdana, Arial, Helvetica;
+	font-weight: bold;
+}

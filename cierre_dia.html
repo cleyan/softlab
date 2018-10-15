@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="GENERATOR" content="CodeCharge Studio 3.0.1.6">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>cierre_dia</title>
+<link href="Themes/InLine/Style.css" type="text/css" rel="stylesheet">
+</head>
+<body class="InLinePageBODY">
+<table width="700" align="center" border="0">
+  <tr>
+    <td>
+      <!-- BEGIN Record TablasSearch -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+          <tr>
+            <td class="InLineFormHeaderFont" colspan="2">Acciones de Fin de Día
+              y/o Optimización </td>
+          </tr>
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineFieldCaptionTD">Ejecutar Optimización de Tablas del
+              Sistema</td> 
+            <td class="InLineDataTD"><input class="InLineInput" type="checkbox" value="1" name="{s_optimizar_Name}" {s_optimizar} id="TablasSearchs_optimizar">&nbsp;</td>
+          </tr>
+ 
+          <tr>
+            <td class="InLineFooterTD" nowrap align="center" colspan="2">
+              <!-- BEGIN Button Ejecutar --><input class="InLineButton" type="submit" value="Ejecutar" name="{Button_Name}" id="TablasSearchEjecutar"><!-- END Button Ejecutar --></td>
+          </tr>
+        </table>
+      </form>
+      <!-- END Record TablasSearch --><br>
+      <!-- BEGIN Grid Tablas -->
+      <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+        <tr>
+          <td class="'InLineFormHeaderFont&quot;align=&quot;center'" colspan="4">Reparando
+            y optimizando Tablas...</td>
+        </tr>
+ 
+        <tr>
+          <td class="InLineColumnTD" nowrap>Tabla&nbsp;</td> 
+          <td class="InLineColumnTD" nowrap>Reparación</td> 
+          <td class="InLineColumnTD" nowrap>Optimización</td> 
+          <td class="InLineColumnTD" nowrap>Análisis</td>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr>
+          <td class="InLineDataTD">{nom_tabla}&nbsp;</td> 
+          <td class="InLineDataTD">{reparacion}&nbsp;</td> 
+          <td class="InLineDataTD">{optimizar}</td> 
+          <td class="InLineDataTD">{analizar}</td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr>
+          <td class="InLineDataTD" colspan="4">No se encontaron registros&nbsp;</td>
+        </tr>
+        <!-- END NoRecords -->
+      </table>
+      <!-- END Grid Tablas --></td>
+  </tr>
+</table>
+</body>
+</html>

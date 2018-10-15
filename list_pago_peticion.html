@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>add_pago_peticion</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+<link rel="stylesheet" type="text/css" href="Themes/InLine/Style.css">
+</head>
+<body class="InLinePageBODY" bgcolor="#ffffff" link="#000000" alink="#000000" vlink="#000000" text="#000000">
+<table width="700" align="center" border="0">
+  <tr>
+    <td>
+      <!-- BEGIN Grid detalle_pago_bancos_forma -->
+      <table class="InLineFormTABLE" cellspacing="0" cellpadding="3">
+        <tr>
+          <td class="InLineFormHeaderFont" align="middle" colspan="9">Listado
+            de&nbsp;Abonos a la Petición: {peticion_id} &nbsp; </td> 
+        </tr>
+ 
+        <tr>
+          <td class="InLineColumnTD" nowrap align="middle">Editar</td> 
+          <td class="InLineColumnTD" nowrap>
+            <!-- BEGIN Sorter Sorter_fecha_ingreso --><a class="InLineSorterLink" href="{Sort_URL}">Fecha
+            Ingreso</a> 
+            <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_fecha_ingreso -->&nbsp;</td> 
+          <td class="InLineColumnTD" nowrap>
+            <!-- BEGIN Sorter Sorter_nom_forma_pago --><a class="InLineSorterLink" href="{Sort_URL}">Forma
+            de Pago</a> 
+            <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_nom_forma_pago -->&nbsp;</td> 
+          <td class="InLineColumnTD" nowrap>Banco / Previsión</td> 
+          <td class="InLineColumnTD" nowrap>
+            <!-- BEGIN Sorter Sorter_num_cheque_bono --><a class="InLineSorterLink" href="{Sort_URL}">Nº
+            Documento</a> 
+            <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_num_cheque_bono -->&nbsp;</td> 
+          <td class="InLineColumnTD" nowrap align="right">
+            <!-- BEGIN Sorter Sorter_valor --><a class="InLineSorterLink" href="{Sort_URL}">Valor</a> 
+            <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_valor -->&nbsp;</td> 
+          <td class="InLineColumnTD" nowrap>
+            <!-- BEGIN Sorter Sorter_fecha_documento --><a class="InLineSorterLink" href="{Sort_URL}">Fecha
+            Documento</a> 
+            <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_fecha_documento -->&nbsp;</td> 
+          <td class="InLineColumnTD" nowrap>
+            <!-- BEGIN Sorter Sorter_nom_usuario --><a class="InLineSorterLink" href="{Sort_URL}">Usuario</a> 
+            <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_nom_usuario -->&nbsp;</td> 
+          <td class="InLineColumnTD" nowrap>Observación &nbsp;</td> 
+        </tr>
+        <!-- BEGIN Row -->
+        <tr>
+          <td class="InLineDataTD" align="middle"><a class="InLineDataLink" href="{ImageLink1}"><img class="" src="images/edit16.png" border="0"></a></td> 
+          <td class="InLineDataTD">{fecha_ingreso}&nbsp;</td> 
+          <td class="InLineDataTD">{nom_forma_pago}&nbsp;</td> 
+          <td class="InLineDataTD">{nom_banco}&nbsp;{nom_prevision}</td> 
+          <td class="InLineDataTD">{num_cheque_bono}&nbsp;</td> 
+          <td class="InLineDataTD" align="right">{valor}&nbsp;</td> 
+          <td class="InLineDataTD">{fecha_documento}&nbsp;</td> 
+          <td class="InLineDataTD">{nom_usuario}&nbsp;</td> 
+          <td class="InLineDataTD">{observacion}&nbsp;</td> 
+        </tr>
+        <!-- END Row -->
+        <tr>
+          <td class="InLineDataTD" align="middle">&nbsp;</td> 
+          <td class="InLineDataTD" colspan="4" align="right"><strong>Total
+            Abonos</strong> </td> 
+          <td class="InLineDataTD" align="right"><strong>{subTotal}</strong>&nbsp;</td> 
+          <td class="InLineDataTD"></td> 
+          <td class="InLineDataTD"></td> 
+          <td class="InLineDataTD"></td> 
+        </tr>
+ 
+        <tr>
+          <td class="InLineDataTD" align="middle">&nbsp;</td> 
+          <td class="InLineDataTD" colspan="4" align="right"><strong>Saldo
+            Pendiente</strong> </td> 
+          <td class="InLineDataTD" align="right"><strong>{Saldo}&nbsp;</strong></td> 
+          <td class="InLineDataTD"></td> 
+          <td class="InLineDataTD"></td> 
+          <td class="InLineDataTD"></td> 
+        </tr>
+        <!-- BEGIN NoRecords -->
+        <tr>
+          <td colspan="9" bgcolor="#FF9900"><strong><img id="Image1" src="images/emblem-important.png" align="left" name="Image1">No
+  se encontaron Abonos para esta Petición </strong></td> 
+        </tr>
+        <!-- END NoRecords -->
+      </table>
+ 
+      <table cellspacing="0" cellpadding="3" width="100%" align="center" border="0">
+        <tr>
+          <td nowrap><a class="InLineDataLink" href="{lnkAAbonos}"><img class="" src="images/btn_alistadeabonos.png" border="0"></a></td> 
+          <td class="" nowrap><a class="InLineDataLink" href="{lnkADetPet}"><img class="" src="images/btn_adetallepeticion.png" border="0"></a></a></td> 
+          <td nowrap></td> 
+          <td class="" width="100%"></td> 
+          <td width="100%"><a class="InLineDataLink" href="{lnkAddPago}"><img class="" src="images/btn_agregarnuevo.png" border="0"></a></a></td> 
+        </tr>
+ 
+      </table>
+ <!-- END Grid detalle_pago_bancos_forma --></td> 
+  </tr>
+</table>
+</body>
+</html>

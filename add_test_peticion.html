@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>add_test_peticion</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+<!--
+function muestracapa(control)
+{
+	
+	var valor = control.value;
+	//alert(valor);
+	
+	show(valor);
+	hide(control.name);
+}
+
+
+//Funciones para agregar el código
+function addTest(objeto, lista)
+{
+	var largo;
+	//alert('Nombre='+objeto.name+' Valor: '+objeto.value+' Marcado:'+objeto.checked);
+	if (objeto.checked==true){
+		lista.options[lista.length]=new Option(objeto.value,objeto.value);
+	} else {
+		largo = lista.length;
+		for (i=0;i<largo;i++ ){
+			//alert('lista:'+lista.options[i].value+' check: '+objeto.value);
+			//alert('Largo='+largo+' i='+i);
+			if(lista.options[i].value==objeto.value){
+				lista.options[i]=null;
+				largo = lista.length;
+			}
+		}
+	}
+}
+
+function quitar_test(lista, formulario)
+{
+	var largo=lista.length;
+	//alert('Lista: '+lista.name+' Lista sel: '+ lista.options[lista.selectedIndex].value +' Largo: '+largo + ' Form: '+formulario.name);
+	if (largo>0)
+	{
+		for(var i=0;i<largo;i++){
+			//alert('i='+i+' largo='+largo+' seleccionada='+lista.options[i].selected);
+			if (lista.options[i].selected==true && lista.options[i].value!="" )
+			{
+				//alert('lista['+i+'].selected=true');
+				var valLista = lista.options[i].value;
+				for (var ii=0;ii<formulario.elements.length;ii++)
+				{    
+					if (formulario.elements[ii].name!=lista.name)
+					{
+						var e = formulario.elements[ii];
+						//if (e.name != referencia.name)
+						//alert('voy a comparar '+e.value+' el elemento '+i+' con el valor de la lista: '+lista.options[i].value);
+						if (e.value==lista.options[i].value)
+						{
+							//alert('listo para desmarcar ' + e.name + ' con el valor ' + e.value);
+							e.checked = false;//referencia.checked;
+							//alert('Voy a eliminar elemento '+i+' con el valor '+ lista.options[i].value);
+							lista.options[i].value='__eliminar';
+						}
+					}
+				}
+			}
+		}
+		largo=lista.length;
+		for(var i=0;i<largo;i++){
+			if(lista.options[i].value=='__eliminar')
+			{
+				lista.options[i]=null;
+			}
+			largo=lista.length;
+		}
+	}
+	lista.focus();
+//	lista.SelectedIndex=0;
+}
+//-->
+</script>
+<link rel="stylesheet" type="text/css" href="Themes/InLine/Style.css">
+</head>
+<body class="InLinePageBODY">
+<table width="700" align="center" border="0">
+  <tr>
+    <td align="middle">
+      <p>{lista_de_test}&nbsp;</p>
+ </td> 
+  </tr>
+</table>
+</body>
+</html>

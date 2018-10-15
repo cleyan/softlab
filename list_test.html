@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Listar Test</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+<link rel="stylesheet" type="text/css" href="Themes/InLine/Style.css">
+</head>
+<body class="InLinePageBODY">
+<table width="100%" align="center" border="0" class="Table">
+  <tr>
+    <td width="100%">
+      <!-- BEGIN Record testSearch -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%" align="center">
+          <tr>
+            <td class="InLineFormHeaderFont" colspan="6">Buscar Test </td> 
+          </tr>
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="6">{Error}</td> 
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineFieldCaptionTD" align="right">Test/Código<a id="ImageLink1" onclick="javaScript:alert('Puede usar el Nombre del test, Código del Test o Código de Fonasa para las Búsquedas');" href="javascript:void(0);return false;" name="ImageLink1"><img src="images/ayudita.gif" border="0"></a></td> 
+            <td class="InLineDataTD" width="100%"><input class="InLineInput" maxlength="100" size="30" value="{s_nom_test}" name="{s_nom_test_Name}" style="WIDTH: 100%" autocomplete="off" id="testSearchs_nom_test"></td> 
+            <td class="InLineFieldCaptionTD" align="right">Sección</td> 
+            <td class="InLineDataTD">
+              <select class="InLineSelect" name="{s_seccion_Name}" id="testSearchs_seccion">
+                <option value="" selected>Seleccionar Valor</option>
+ {s_seccion_Options} 
+              </select>
+ </td> 
+            <td class="InLineFieldCaptionTD" align="right">Equipo</td> 
+            <td class="InLineDataTD">
+              <select class="InLineSelect" name="{s_equipo_Name}" id="testSearchs_equipo">
+                <option value="" selected>Seleccionar Valor</option>
+ {s_equipo_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+        </table>
+ 
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%" align="center">
+          <tr>
+            <td class="InLineDataTD">Test Aislado 
+              <select name="{s_aislado_Name}" class="InLineSelect" id="testSearchs_aislado">
+                <option value="" selected>Seleccionar Valor</option>
+ {s_aislado_Options} 
+              </select>
+ </td> 
+            <td class="InLineDataTD">Test Compuesto 
+              <select name="{s_compuesto_Name}" class="InLineSelect" id="testSearchs_compuesto">
+                <option value="" selected>Seleccionar Valor</option>
+ {s_compuesto_Options} 
+              </select>
+ </td> 
+            <td class="InLineDataTD">Fórmula 
+              <select class="InLineSelect" name="{s_formula_Name}" id="testSearchs_formula">
+                <option value="" selected>Seleccionar Valor</option>
+ {s_formula_Options} 
+              </select>
+ </td> 
+            <td class="InLineDataTD">Imprimible 
+              <select class="InLineSelect" name="{s_imprimible_Name}" id="testSearchs_imprimible">
+                <option value="" selected>Seleccionar Valor</option>
+ {s_imprimible_Options} 
+              </select>
+ </td> 
+            <td class="InLineDataTD">Acceso rápido 
+              <select name="{s_acceso_rapido_Name}" class="InLineSelect" id="testSearchs_acceso_rapido">
+                <option value="" selected>Seleccionar Valor</option>
+ {s_acceso_rapido_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFooterTD" nowrap align="left" colspan="4">Registros
+              por página&nbsp; 
+              <select class="InLineSelect" name="{testPageSize_Name}" id="testSearchtestPageSize">
+                {testPageSize_Options} 
+              </select>
+ </td> 
+            <td class="InLineFooterTD" nowrap align="right">
+              <!-- BEGIN Button Button_DoSearch --><input class="InLineButton" type="submit" value="Buscar" name="{Button_Name}" id="testSearchButton_DoSearch"><!-- END Button Button_DoSearch --></td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END Record testSearch -->
+      <!-- BEGIN Grid test -->
+      <table class="InLineFormTABLE" cellspacing="0" cellpadding="0" width="100%">
+        <tr>
+          <td class="InLineFormHeaderFont" align="middle" colspan="7">Listado de
+            Test &nbsp;(Total de Registros:{test_TotalRecords}) </td> 
+        </tr>
+ 
+        <tr>
+          <td class="InLineColumnTD" nowrap>Editar</td> 
+          <td class="InLineColumnTD" nowrap>Val. Ref.</td> 
+          <td class="InLineColumnTD" nowrap>Insumo</td> 
+          <td class="InLineColumnTD" nowrap>
+            <!-- BEGIN Sorter Sort_codigo_fonasa --><a class="InLineSorterLink" href="{Sort_URL}">Código
+            Fonasa</a><!-- END Sorter Sort_codigo_fonasa --></td> 
+          <td class="InLineColumnTD" nowrap>
+            <p align="center">
+            <!-- BEGIN Sorter Sorter_cod_test --><a class="InLineSorterLink" href="{Sort_URL}">Código
+            Test</a> 
+            <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_cod_test --></p>
+ </td> 
+          <td class="InLineColumnTD" nowrap>
+            <p align="center">
+            <!-- BEGIN Sorter Sorter_nom_test --><a class="InLineSorterLink" href="{Sort_URL}">Test</a> 
+            <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_nom_test --></p>
+ </td> 
+          <td class="InLineColumnTD" nowrap align="middle">
+            <!-- BEGIN Sorter C --><a class="InLineSorterLink" href="{Sort_URL}">C</a><!-- END Sorter C -->&nbsp;| 
+            <!-- BEGIN Sorter F --><a class="InLineSorterLink" href="{Sort_URL}">F</a><!-- END Sorter F -->&nbsp;| 
+            <!-- BEGIN Sorter I --><a class="InLineSorterLink" href="{Sort_URL}">I</a><!-- END Sorter I -->&nbsp;| 
+            <!-- BEGIN Sorter A --><a class="InLineSorterLink" href="{Sort_URL}">A</a><!-- END Sorter A --></td> 
+        </tr>
+        <!-- BEGIN Row -->
+        <tr>
+          <td class="InLineDataTD" align="middle"><a class="InLineDataLink" href="{ImageLink1}"><img class="" src="images/tubo_prop_22.png" border="0"></a></td> 
+          <td class="InLineDataTD" align="middle"><a class="InLineDataLink" href="{ImageLink3}"><img class="" src="images/tubo_ref_22.png" border="0"></a></td> 
+          <td class="InLineDataTD" align="middle"><a class="InLineDataLink" href="{ImageLink7}"><img class="" src="images/tubo_insumo_22.png" border="0"></a><input style="WIDTH:  55px;  HEIGHT:  22px" type="hidden" size="7" value="{test_id}" name="{test_id_Name}" id="testtest_id"><input type="hidden" name="{h_compuesto_Name}" value="{h_compuesto}" style="WIDTH: 37px; HEIGHT: 22px" size="4" id="testh_compuesto"><input type="hidden" value="{formula}" name="{formula_Name}" style="WIDTH: 58px; HEIGHT: 22px" size="7" id="testformula"><input type="hidden" value="{imprimible}" name="{imprimible_Name}" style="WIDTH: 71px; HEIGHT: 22px" size="9" id="testimprimible"><input type="hidden" value="{aislado}" name="{aislado_Name}" style="WIDTH: 49px; HEIGHT: 22px" size="6" id="testaislado"></td> 
+          <td class="InLineDataTD">{codigo_fonasa}&nbsp;</td> 
+          <td class="InLineDataTD" nowrap>{cod_test}&nbsp;</td> 
+          <td class="InLineDataTD" width="100%">{nom_test}&nbsp;</td> 
+          <td class="InLineDataTD" nowrap align="middle"><a class="" title="Test compuesto" href="{lbl_compuesto_Src}" id="testlbl_compuesto">{lbl_compuesto}</a> <a class="" title="Test Formula" href="{lbl_formula_Src}" id="testlbl_formula">{lbl_formula}</a> <a class="" title="Test Imprimible" href="{lbl_imprimible_Src}" id="testlbl_imprimible">{lbl_imprimible}</a> <a class="" title="Test aislado" href="{lbl_aislado_Src}" id="testlbl_aislado">{lbl_aislado}</a> </td> 
+        </tr>
+        <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr>
+          <td class="InLineAltDataTD" colspan="7">No se encontaron
+            registros&nbsp;</td> 
+        </tr>
+        <!-- END NoRecords -->
+        <tr>
+          <td class="InLineFooterTD" nowrap colspan="7">
+            <!-- BEGIN Navigator Navigator1 -->
+            <!-- BEGIN First_On --><a class="InLineNavigatorLink" href="{First_URL}"><img src="Themes/Square/FirstOn.gif" border="0"></a> <!-- END First_On -->
+            <!-- BEGIN Prev_On --><a class="InLineNavigatorLink" href="{Prev_URL}"><img src="Themes/Square/PrevOn.gif" border="0"></a> <!-- END Prev_On -->&nbsp;{Page_Number}&nbsp;de
+            {Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a class="InLineNavigatorLink" href="{Next_URL}"><img src="Themes/Square/NextOn.gif" border="0"></a> <!-- END Next_On -->
+            <!-- BEGIN Last_On --><a class="InLineNavigatorLink" href="{Last_URL}"><img src="Themes/Square/LastOn.gif" border="0"></a> <!-- END Last_On --><!-- END Navigator Navigator1 -->&nbsp; </td> 
+        </tr>
+ 
+      </table>
+ 
+      <p align="center"><a class="InLineDataLink" href="{agregartest}"><img class="" src="images/btn_agregarnuevo.png" border="0"></a> <a class="InLineDataLink" href="{ImageLink2}"><img class="" src="images/btn_inicio.png" border="0"></a> <!-- END Grid test --></p>
+ </td> 
+  </tr>
+</table>
+</body>
+</html>

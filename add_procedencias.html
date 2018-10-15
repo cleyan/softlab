@@ -1,0 +1,160 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>add_procedencias</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+<link rel="stylesheet" type="text/css" href="Themes/InLine/Style.css">
+<script language="JavaScript">
+//Begin CCS script
+//Include Common JSFunctions @1-921C7A7E
+</script>
+<script src="ClientI18N.php?file=Globalize.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-A87AC9EE
+</script>
+{page:scriptIncludes}
+<script type="text/javascript">
+//End Include User Scripts
+
+//Common Script Start @1-8BFA436B
+jQuery(function ($) {
+    var features = { };
+    var actions = { };
+    var params = { };
+//End Common Script Start
+
+//procedenciasButton_SubmitOnClick Event Start @-925688E5
+    actions["procedenciasButton_SubmitOnClick"] = function (eventType, parameters) {
+        var result = true;
+//End procedenciasButton_SubmitOnClick Event Start
+
+//Confirmation Message @19-96FAE8C2
+        return confirm('Enviar registro?');
+//End Confirmation Message
+
+//procedenciasButton_SubmitOnClick Event End @-A5B9ECB8
+        return result;
+    };
+//End procedenciasButton_SubmitOnClick Event End
+
+//Event Binding @1-D83525FF
+    $('*:ccsControl(procedencias, Button_Submit)').ccsBind(function() {
+        this.bind("click", actions["procedenciasButton_SubmitOnClick"]);
+    });
+//End Event Binding
+
+//Plugin Calls @1-C4334DB3
+    $('*:ccsControl(procedencias, Cancel)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+//End Plugin Calls
+
+//Common Script End @1-562554DE
+});
+//End Common Script End
+//End CCS script
+</script>
+</head>
+<body class="InLinePageBODY">
+<table width="600" align="center" border="0">
+  <tr>
+    <td>
+      <!-- BEGIN Record procedenciasSearch -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+          <tr>
+            <td class="InLineFormHeaderFont" nowrap align="right" colspan="2">
+              <p align="left"><font>Buscar / Filtrar&nbsp;Procedencias </font></p>
+ </td> 
+          </tr>
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="2">{Error}</td> 
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineFieldCaptionTD">Procedencia&nbsp;</td> 
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="200" size="50" value="{s_nom_procedencia}" name="{s_nom_procedencia_Name}" id="procedenciasSearchs_nom_procedencia">&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="2">
+              <!-- BEGIN Button Button_DoSearch --><input class="InLineButton" type="submit" value="Buscar" name="{Button_Name}" id="procedenciasSearchButton_DoSearch"><!-- END Button Button_DoSearch -->&nbsp; </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END Record procedenciasSearch -->
+      <!-- BEGIN EditableGrid procedencias -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <input type="hidden" value="{FormState}" name="FormState">{FormScript} <br>
+        Total de Registros:&nbsp; {procedencias_TotalRecords}&nbsp; 
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+          <tr>
+            <td class="InLineFormHeaderFont" nowrap align="right" colspan="4">
+              <p align="center"><font>Lista de Procedencias</font></p>
+ </td> 
+          </tr>
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="4">{Error}</td> 
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineColumnTD" nowrap>
+              <p>
+              <!-- BEGIN Sorter Sorter_nom_procedencia --><a class="InLineSorterLink" href="{Sort_URL}">Nombre</a> 
+              <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+              <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_nom_procedencia -->&nbsp;</p>
+ </td> 
+            <td class="InLineColumnTD" nowrap>
+              <!-- BEGIN Sorter Sorter_proc_fono --><a class="InLineSorterLink" href="{Sort_URL}">Fono</a> 
+              <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+              <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_proc_fono -->&nbsp;</td> 
+            <td class="InLineColumnTD" nowrap>
+              <!-- BEGIN Sorter Sorter_proc_email --><a class="InLineSorterLink" href="{Sort_URL}">Email</a> 
+              <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+              <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_proc_email -->&nbsp;</td> 
+            <td class="InLineColumnTD" nowrap>Borrar &nbsp;</td> 
+          </tr>
+          <!-- BEGIN Row -->
+          <!-- BEGIN RowError -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="4">{Error}</td> 
+          </tr>
+          <!-- END RowError -->
+          <tr>
+            <td class="InLineDataTD" width="100%"><input class="InLineInput" maxlength="200" value="{nom_procedencia}" name="{nom_procedencia_Name}" style="WIDTH: 100%" id="procedenciasnom_procedencia"></td> 
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="50" size="15" value="{proc_fono}" name="{proc_fono_Name}" id="procedenciasproc_fono"></td> 
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="100" value="{proc_email}" name="{proc_email_Name}" id="procedenciasproc_email"></td> 
+            <td class="InLineDataTD">
+              <!-- BEGIN CheckBox CheckBox_Delete --><input class="InLineInput" type="checkbox" value="1" name="{CheckBox_Delete_Name}" {CheckBox_Delete} id="procedenciasCheckBox_Delete"><!-- END CheckBox CheckBox_Delete -->&nbsp;</td> 
+          </tr>
+          <!-- END Row -->
+          <!-- BEGIN NoRecords -->
+          <tr>
+            <td class="InLineDataTD" colspan="4">No hay registros&nbsp;</td> 
+          </tr>
+          <!-- END NoRecords -->
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="4">
+              <!-- BEGIN Navigator Navigator1 -->
+              <!-- BEGIN First_On --><a class="InLineNavigatorLink" href="{First_URL}"><img src="Themes/Square/FirstOn.gif" border="0"></a> <!-- END First_On -->
+              <!-- BEGIN Prev_On --><a class="InLineNavigatorLink" href="{Prev_URL}"><img src="Themes/Square/PrevOn.gif" border="0"></a> <!-- END Prev_On -->&nbsp;{Page_Number}&nbsp;de
+              {Total_Pages}&nbsp; 
+              <!-- BEGIN Next_On --><a class="InLineNavigatorLink" href="{Next_URL}"><img src="Themes/Square/NextOn.gif" border="0"></a> <!-- END Next_On -->
+              <!-- BEGIN Last_On --><a class="InLineNavigatorLink" href="{Last_URL}"><img src="Themes/Square/LastOn.gif" border="0"></a> <!-- END Last_On --><!-- END Navigator Navigator1 -->&nbsp; 
+              <!-- BEGIN Button Button_Submit --><input class="InLineButton" type="submit" value="Grabar" name="{Button_Name}" id="procedenciasButton_Submit"><!-- END Button Button_Submit -->&nbsp; 
+              <!-- BEGIN Button Cancel --><input class="InLineButton" type="submit" value="Cancelar" name="{Button_Name}" id="procedenciasCancel"><!-- END Button Cancel -->&nbsp; </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END EditableGrid procedencias --></td> 
+  </tr>
+</table>
+</body>
+</html>

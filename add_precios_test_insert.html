@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>add_prevision_usuario</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+<link rel="stylesheet" type="text/css" href="Themes/InLine/Style.css">
+</head>
+<body  class="InLinePageBODY">
+<table width="700" align="center" border="0">
+  <tr>
+    <td>
+      <!-- BEGIN Record precios_test -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%" align="center">
+          <tr>
+            <td width="39%" valign="center" class="InLineFormHeaderFont"><img class="" src="images/money.gif">&nbsp;Ingresar&nbsp;Precios&nbsp;por
+              lote</td> 
+            <td width="61%" colspan="2" class="InLineFormHeaderFont">&nbsp; </td> 
+          </tr>
+ 
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="2">{Error}</td> 
+          </tr>
+ <!-- END Error -->
+          <tr>
+            <td class="InLineFieldCaptionTD">Crear Lista de precios para la
+              Previsón</td> 
+            <td class="InLineDataTD">
+              <select name="{prevision_aplicar_id_Name}" class="InLineSelect" style="WIDTH: 100%" size="width:100%" id="precios_testprevision_aplicar_id">
+                <option value="" selected>Seleccionar Valor</option>
+ {prevision_aplicar_id_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD">Usando como base&nbsp;los precios
+              de la previsión</td> 
+            <td class="InLineDataTD">
+              <select name="{prevision_base_id_Name}" class="InLineSelect" style="WIDTH: 100%" id="precios_testprevision_base_id">
+                <option value="" selected>Seleccionar Valor</option>
+ {prevision_base_id_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD">Que sean de la procedencia</td> 
+            <td class="InLineDataTD">
+              <select class="InLineSelect" name="{procedencia_base_id_Name}" style="WIDTH: 100%" id="precios_testprocedencia_base_id">
+                <option value="" selected>Seleccionar Valor</option>
+ {procedencia_base_id_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD">Aplicar un Factor a cada test de</td> 
+            <td class="InLineDataTD"><input type="text" name="{factor_Name}" value="{factor}" class="InLineInput" id="precios_testfactor">&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD">Incluir sólo la procedencia</td> 
+            <td class="InLineDataTD">
+              <select name="{procedencia_id_Name}" class="InLineSelect" style="WIDTH: 100%" id="precios_testprocedencia_id">
+                <option value="0" selected>Todas las procedencias</option>
+ {procedencia_id_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input class="InLineButton" type="submit" value="Crear precios" name="{Button_Name}" id="precios_testButton_Insert"><!-- END Button Button_Insert -->&nbsp; 
+              <!-- BEGIN Button Button_Cancel --><input class="InLineButton" type="submit" value="Cancelar" name="{Button_Name}" id="precios_testButton_Cancel"><!-- END Button Button_Cancel -->&nbsp; </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END Record precios_test --></td> 
+  </tr>
+</table>
+</body>
+</html>

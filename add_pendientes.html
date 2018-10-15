@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>add_pendientes</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+<link rel="stylesheet" type="text/css" href="Themes/InLine/Style.css">
+</head>
+<body bgcolor="#ffffff" link="#000000" alink="#000000" vlink="#000000" text="#000000" class="InLinePageBODY">
+<table width="100%" align="center" border="0">
+  <tr>
+    <td>
+      <!-- BEGIN Record bitacora -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+          <tr>
+            <td class="InLineFormHeaderFont" colspan="2">Agregar/Editar Bitacora </td> 
+          </tr>
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="2">{Error}</td> 
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineFieldCaptionTD" nowrap>Nº de Petición</td> 
+            <td class="InLineDataTD">{peticion_id}&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD">Fecha&nbsp;</td> 
+            <td class="InLineDataTD" width="100%"><input class="InLineInput" maxlength="10" size="10" value="{fecha}" name="{fecha_Name}" readonly id="bitacorafecha"></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD">Descripción&nbsp;</td> 
+            <td class="InLineDataTD"><textarea class="InLineTextarea" style="WIDTH: 100%" name="{descripcion_Name}" rows="3" cols="50" id="bitacoradescripcion">{descripcion}</textarea></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input class="InLineButton" type="submit" value="Grabar" name="{Button_Name}" id="bitacoraButton_Insert"><!-- END Button Button_Insert -->&nbsp; 
+              <!-- BEGIN Button Button_Cancel --><input class="InLineButton" type="submit" value="Cancelar" name="{Button_Name}" id="bitacoraButton_Cancel"><!-- END Button Button_Cancel -->&nbsp; </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END Record bitacora --></td> 
+  </tr>
+</table>
+{calendar_tag}
+</body>
+</html>

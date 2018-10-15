@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="GENERATOR" content="CodeCharge Studio 3.0.1.6">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>add_equivalencias</title>
+<link href="Themes/InLine/Style.css" type="text/css" rel="stylesheet">
+<script language="JavaScript">
+//Begin CCS script
+//Include Common JSFunctions @1-921C7A7E
+</script>
+<script src="ClientI18N.php?file=Globalize.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-A87AC9EE
+</script>
+{page:scriptIncludes}
+<script type="text/javascript">
+//End Include User Scripts
+
+//Common Script Start @1-8BFA436B
+jQuery(function ($) {
+    var features = { };
+    var actions = { };
+    var params = { };
+//End Common Script Start
+
+//equivalenciasButton_SubmitOnClick Event Start @-7A6E8586
+    actions["equivalenciasButton_SubmitOnClick"] = function (eventType, parameters) {
+        var result = true;
+//End equivalenciasButton_SubmitOnClick Event Start
+
+//Confirmation Message @19-96FAE8C2
+        return confirm('Enviar registro?');
+//End Confirmation Message
+
+//equivalenciasButton_SubmitOnClick Event End @-A5B9ECB8
+        return result;
+    };
+//End equivalenciasButton_SubmitOnClick Event End
+
+//Event Binding @1-A68897B1
+    $('*:ccsControl(equivalencias, Button_Submit)').ccsBind(function() {
+        this.bind("click", actions["equivalenciasButton_SubmitOnClick"]);
+    });
+//End Event Binding
+
+//Plugin Calls @1-C6D8157A
+    $('*:ccsControl(equivalencias, Cancel)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+//End Plugin Calls
+
+//Common Script End @1-562554DE
+});
+//End Common Script End
+//End CCS script
+</script>
+</head>
+<body class="InLinePageBODY">
+<table width="700" align="center" border="0">
+  <tr>
+    <td align="middle">
+      <!-- BEGIN Record equivalenciasSearch -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+          <tr>
+            <td class="InLineFormHeaderFont" colspan="2">Elegir Equipo </td>
+          </tr>
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineFieldCaptionTD">Elija el equipo para el que quiere
+              hacer tabla de equivalencias</td> 
+            <td class="InLineDataTD">
+              <select class="InLineSelect" name="{s_equipo_id_Name}" id="equivalenciasSearchs_equipo_id">
+                <option value="" selected>Seleccionar Valor</option>
+                {s_equipo_id_Options}
+              </select>
+ &nbsp;</td>
+          </tr>
+ 
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="2">
+              <!-- BEGIN Button Button_DoSearch --><input class="InLineButton" type="submit" value="Buscar" name="{Button_Name}" id="equivalenciasSearchButton_DoSearch"><!-- END Button Button_DoSearch -->&nbsp; </td>
+          </tr>
+        </table>
+      </form>
+      <!-- END Record equivalenciasSearch -->
+      <!-- BEGIN EditableGrid equivalencias -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <input type="hidden" value="{FormState}" name="FormState">{FormScript} 
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+          <tr>
+            <td class="InLineFormHeaderFont" align="center" colspan="4">Lista de
+              Equivalencias entre Softlab y el&nbsp;equipo&nbsp;&nbsp;(Total de
+              Registros:{equivalencias_TotalRecords}) </td>
+          </tr>
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="4">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineColumnTD" nowrap>
+              <!-- BEGIN Sorter Sorter_equipo_id --><a class="InLineSorterLink" href="{Sort_URL}">Equipo</a> 
+              <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+              <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_equipo_id -->&nbsp;</td> 
+            <td class="InLineColumnTD" nowrap>
+              <!-- BEGIN Sorter Sorter_test_id --><a class="InLineSorterLink" href="{Sort_URL}">Test</a> 
+              <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+              <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_test_id -->&nbsp;</td> 
+            <td class="InLineColumnTD" nowrap>
+              <!-- BEGIN Sorter Sorter_equipo_test_id --><a class="InLineSorterLink" href="{Sort_URL}">ID
+              del Test en el Equipo</a> 
+              <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+              <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_equipo_test_id -->&nbsp;</td> 
+            <td class="InLineColumnTD" nowrap>Borrar &nbsp;</td>
+          </tr>
+ 
+          <!-- BEGIN Row -->
+          <!-- BEGIN RowError -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="4">{Error}</td>
+          </tr>
+          <!-- END RowError -->
+          <tr>
+            <td class="InLineDataTD">
+              <select class="InLineSelect" name="{equipo_id_Name}" id="equivalenciasequipo_id">
+                <option value="" selected>Seleccionar Valor</option>
+                {equipo_id_Options}
+              </select>
+ </td> 
+            <td class="InLineDataTD" nowrap width="100%">
+              <select class="InLineSelect" style="WIDTH: 100%" name="{test_id_Name}" id="equivalenciastest_id">
+                <option value="" selected>Seleccionar Valor</option>
+                {test_id_Options}
+              </select>
+            </td> 
+            <td class="InLineDataTD" nowrap><input class="InLineInput" maxlength="20" value="{equipo_test_id}" name="{equipo_test_id_Name}" id="equivalenciasequipo_test_id"></td> 
+            <td class="InLineDataTD">
+              <!-- BEGIN CheckBox CheckBox_Delete --><input class="InLineInput" type="checkbox" value="1" name="{CheckBox_Delete_Name}" {CheckBox_Delete} id="equivalenciasCheckBox_Delete"><!-- END CheckBox CheckBox_Delete -->&nbsp;</td>
+          </tr>
+ <!-- END Row -->
+          <!-- BEGIN NoRecords -->
+          <tr>
+            <td class="InLineDataTD" colspan="4">No se encontaron
+              registros&nbsp;</td>
+          </tr>
+          <!-- END NoRecords -->
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="4">
+              <!-- BEGIN Button Button_Submit --><input class="InLineButton" type="submit" value="Grabar" name="{Button_Name}" id="equivalenciasButton_Submit"><!-- END Button Button_Submit -->&nbsp; 
+              <!-- BEGIN Button Cancel --><input class="InLineButton" type="submit" value="Cancelar" name="{Button_Name}" id="equivalenciasCancel"><!-- END Button Cancel -->&nbsp; </td>
+          </tr>
+        </table>
+      </form>
+      <!-- END EditableGrid equivalencias --></td>
+  </tr>
+</table>
+</body>
+</html>

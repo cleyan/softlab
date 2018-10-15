@@ -1,0 +1,186 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="GENERATOR" content="CodeCharge Studio 3.0.1.6">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>add_valores_referencia</title>
+<link href="Themes/InLine/Style.css" type="text/css" rel="stylesheet">
+<script language="JavaScript">
+//Begin CCS script
+//Include Common JSFunctions @1-921C7A7E
+</script>
+<script src="ClientI18N.php?file=Globalize.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-A87AC9EE
+</script>
+{page:scriptIncludes}
+<script type="text/javascript">
+//End Include User Scripts
+
+//Common Script Start @1-8BFA436B
+jQuery(function ($) {
+    var features = { };
+    var actions = { };
+    var params = { };
+//End Common Script Start
+
+//valores_referencia1Button_SubmitOnClick Event Start @-562FBD3B
+    actions["valores_referencia1Button_SubmitOnClick"] = function (eventType, parameters) {
+        var result = true;
+//End valores_referencia1Button_SubmitOnClick Event Start
+
+//Confirmation Message @33-96FAE8C2
+        return confirm('Enviar registro?');
+//End Confirmation Message
+
+//valores_referencia1Button_SubmitOnClick Event End @-A5B9ECB8
+        return result;
+    };
+//End valores_referencia1Button_SubmitOnClick Event End
+
+//Event Binding @1-05B146B7
+    $('*:ccsControl(valores_referencia1, Button_Submit)').ccsBind(function() {
+        this.bind("click", actions["valores_referencia1Button_SubmitOnClick"]);
+    });
+//End Event Binding
+
+//Plugin Calls @1-486C9BCA
+    $('*:ccsControl(valores_referencia1, Cancel)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+//End Plugin Calls
+
+//Common Script End @1-562554DE
+});
+//End Common Script End
+//End CCS script
+</script>
+</head>
+<body class="InLinePageBODY">
+<table width="700" align="center" border="0">
+  <tr>
+    <td>
+      <!-- BEGIN Record test -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+          <tr>
+            <td class="InLineFormHeaderFont" colspan="2">Actualizar Rangos de
+              Referencia para:&nbsp;{cod_test}&nbsp;(<strong>{nom_test}</strong> ) </td>
+          </tr>
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+        </table>
+      </form>
+      <!-- END Record test -->
+      <!-- BEGIN Record valores_referencia1Search -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+          <tr>
+            <td class="InLineFormHeaderFont" colspan="4">Filtrar&nbsp;Valores&nbsp;
+              de Referencia </td>
+          </tr>
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="4">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineFieldCaptionTD">Sexo</td> 
+            <td class="InLineDataTD">
+              <select class="InLineSelect" name="{s_sexo_id_Name}" id="valores_referencia1Searchs_sexo_id">
+                <option value="" selected>Seleccionar Valor</option>
+                {s_sexo_id_Options}
+              </select>
+ &nbsp;</td> 
+            <td class="InLineDataTD" nowrap>Valor Genérico&nbsp;</td> 
+            <td class="InLineDataTD"><input class="InLineInput" size="50" value="{s_valor_generico}" name="{s_valor_generico_Name}" id="valores_referencia1Searchs_valor_generico"></td>
+          </tr>
+ 
+          <tr>
+            <td class="InLineFooterTD" nowrap align="left" colspan="2">Registro
+              por página&nbsp; 
+              <select class="InLineSelect" name="{valores_referencia1PageSize_Name}" id="valores_referencia1Searchvalores_referencia1PageSize">
+                {valores_referencia1PageSize_Options}
+              </select>
+ &nbsp; </td> 
+            <td class="InLineFooterTD" nowrap align="right" colspan="2">
+              <!-- BEGIN Button Button_DoSearch --><input class="InLineButton" type="submit" value="Buscar" name="{Button_Name}" id="valores_referencia1SearchButton_DoSearch"><!-- END Button Button_DoSearch --></td>
+          </tr>
+        </table>
+      </form>
+      <!-- END Record valores_referencia1Search -->
+      <!-- BEGIN EditableGrid valores_referencia1 -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <input type="hidden" value="{FormState}" name="FormState">{FormScript}
+        {Component} 
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+          <tr>
+            <td class="InLineFormHeaderFont" align="center" colspan="5">Lista de
+              Valores Referencia &nbsp;(Total de
+              Registros:{valores_referencia1_TotalRecords}) </td>
+          </tr>
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="5">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineColumnTD" nowrap>SEXO</td> 
+            <td class="InLineColumnTD" nowrap align="center">Edad (años)</td> 
+            <td class="InLineColumnTD" nowrap align="center">Rango&nbsp;Aceptado</td> 
+            <td class="InLineColumnTD" nowrap width="100%">Valor Genérico &nbsp;</td> 
+            <td class="InLineColumnTD" nowrap align="center">Borrar &nbsp;</td>
+          </tr>
+ 
+          <!-- BEGIN Row -->
+          <!-- BEGIN RowError -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="5">{Error}</td>
+          </tr>
+          <!-- END RowError -->
+          <tr>
+            <td class="InLineDataTD">
+              <select class="InLineSelect" name="{sexo_id_Name}" id="valores_referencia1sexo_id">
+                <option value="" selected>---</option>
+                {sexo_id_Options}
+              </select>
+ </td> 
+            <td class="InLineDataTD" nowrap align="center"><input class="InLineInput" maxlength="10" size="5" value="{edad_desde}" name="{edad_desde_Name}" autocomplete="off" id="valores_referencia1edad_desde">&nbsp;-<input class="InLineInput" maxlength="10" size="5" value="{edad_hasta}" name="{edad_hasta_Name}" autocomplete="off" id="valores_referencia1edad_hasta"></td> 
+            <td class="InLineDataTD" nowrap align="center"><strong></strong><input class="InLineInput" maxlength="50" size="10" value="{valor_desde}" name="{valor_desde_Name}" autocomplete="off" id="valores_referencia1valor_desde">&nbsp;-<input class="InLineInput" maxlength="50" size="10" value="{valor_hasta}" name="{valor_hasta_Name}" autocomplete="off" id="valores_referencia1valor_hasta"></td> 
+            <td class="InLineDataTD"><textarea class="InLineTextarea" style="WIDTH: 100%" name="{valor_generico_Name}" rows="3" id="valores_referencia1valor_generico">{valor_generico}</textarea></td> 
+            <td class="InLineDataTD" align="center">
+              <!-- BEGIN CheckBox CheckBox_Delete --><input class="" type="checkbox" value="1" name="{CheckBox_Delete_Name}" {CheckBox_Delete} id="valores_referencia1CheckBox_Delete"><!-- END CheckBox CheckBox_Delete -->&nbsp;</td>
+          </tr>
+ <!-- END Row -->
+          <!-- BEGIN NoRecords -->
+          <tr>
+            <td class="" bgcolor="#0099cc"></td> 
+            <td class="" nowrap bgcolor="#0099cc">&nbsp;</td> 
+            <td class="" nowrap bgcolor="#0099cc">&nbsp;</td> 
+            <td class="" bgcolor="#0099cc"></td> 
+            <td class="InLineDataTD"></td>
+          </tr>
+ 
+          <tr>
+            <td class="InLineDataTD" colspan="5">No se encontaron valores de
+              referencia para el Test solicitado&nbsp;</td>
+          </tr>
+          <!-- END NoRecords -->
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="5">&nbsp; 
+              <!-- BEGIN Button Button_Submit --><input class="InLineButton" type="submit" value="Grabar" name="{Button_Name}" id="valores_referencia1Button_Submit"><!-- END Button Button_Submit -->&nbsp; 
+              <!-- BEGIN Button Cancel --><input class="InLineButton" type="submit" value="Cancelar" name="{Button_Name}" id="valores_referencia1Cancel"><!-- END Button Cancel -->&nbsp; </td>
+          </tr>
+        </table>
+      </form>
+      <!-- END EditableGrid valores_referencia1 --></td>
+  </tr>
+</table>
+&nbsp; 
+</body>
+</html>

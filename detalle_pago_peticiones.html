@@ -1,0 +1,173 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>detalle_pago_peticiones</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+<link rel="stylesheet" type="text/css" href="Themes/InLine/Style.css">
+</head>
+<body class="InLinePageBODY" bgcolor="#ffffff" link="#000000" alink="#000000" vlink="#000000" text="#000000">
+<table width="700" align="center" border="0">
+  <tr>
+    <td>
+      <!-- BEGIN Record peticiones_estados_pagosSearch -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+          <tr>
+            <td class="InLineFormHeaderFont" colspan="4">
+              <p>Buscar / Filtrar Abonos y Pagos</p>
+ </td> 
+          </tr>
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="4">{Error}</td> 
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineFieldCaptionTD">Petición</td> 
+            <td class="InLineDataTD"><input class="InLineInput" value="{s_peticion_id}" name="{s_peticion_id_Name}" id="peticiones_estados_pagosSearchs_peticion_id"></td> 
+            <td class="InLineDataTD">Fecha&nbsp;</td> 
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="10" size="10" value="{s_fecha_ini}" name="{s_fecha_ini_Name}" id="peticiones_estados_pagosSearchs_fecha_ini"><a hidefocus title="haga click aquí para elegir la Fecha" onclick="if(self.gfPop)gfPop.fStartPop(document.{HTMLFormName}.{s_fecha_ini_Name},document.{HTMLFormName}.{s_fecha_fin_Name});return false;" href="javascript:void(0)"><img class="PopcalTrigger" align="absMiddle" src="calbtn.gif" width="34" height="22" border="0" alt=""></a>&nbsp;- <input class="InLineInput" maxlength="10" size="10" value="{s_fecha_fin}" name="{s_fecha_fin_Name}" id="peticiones_estados_pagosSearchs_fecha_fin"><a hidefocus title="haga click aquí para elegir la Fecha" onclick="if(self.gfPop)gfPop.fEndPop(document.{HTMLFormName}.{s_fecha_ini_Name},document.{HTMLFormName}.{s_fecha_fin_Name});return false;" href="javascript:void(0)"><img class="PopcalTrigger" align="absMiddle" src="calbtn.gif" width="34" height="22" border="0" alt=""></a></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD">Rut&nbsp;</td> 
+            <td class="InLineDataTD" nowrap><input class="InLineInput" maxlength="12" size="12" value="{s_rut}" name="{s_rut_Name}" id="peticiones_estados_pagosSearchs_rut">&nbsp;Nombres&nbsp;</td> 
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="200" size="25" value="{s_nombres}" name="{s_nombres_Name}" id="peticiones_estados_pagosSearchs_nombres"></td> 
+            <td class="InLineDataTD" nowrap>Apellidos&nbsp;<input class="InLineInput" maxlength="200" size="25" value="{s_apellidos}" name="{s_apellidos_Name}" id="peticiones_estados_pagosSearchs_apellidos"></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD" nowrap>Estado de Pago</td> 
+            <td class="InLineDataTD">
+              <select name="{s_estado_pago_id_Name}" class="InLineSelect" id="peticiones_estados_pagosSearchs_estado_pago_id">
+                <option value="" selected>Seleccionar Valor</option>
+ {s_estado_pago_id_Options} 
+              </select>
+ &nbsp;</td> 
+            <td class="InLineDataTD">Procedencia</td> 
+            <td class="InLineDataTD">
+              <select name="{s_procedencia_id_Name}" class="InLineSelect" id="peticiones_estados_pagosSearchs_procedencia_id">
+                <option value="" selected>Seleccionar Valor</option>
+ {s_procedencia_id_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFooterTD" nowrap align="middle" colspan="4">
+              <!-- BEGIN Button Button_DoSearch --><input class="InLineButton" type="submit" value="Buscar" name="{Button_Name}" id="peticiones_estados_pagosSearchButton_DoSearch"><!-- END Button Button_DoSearch -->&nbsp; </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END Record peticiones_estados_pagosSearch -->
+      <!-- BEGIN Record pacientes -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+          <tr>
+            <td class="InLineFormHeaderFont" colspan="4">Recibos para el
+              Paciente </td> 
+          </tr>
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="4">{Error}</td> 
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineFieldCaptionTD"><strong>Nombre</strong>&nbsp;</td> 
+            <td class="InLineDataTD" nowrap>{nombres}&nbsp;{apellidos}</td> 
+            <td class="InLineFieldCaptionTD" nowrap><strong>Rut&nbsp;/ Ficha</strong> </td> 
+            <td class="InLineFieldCaptionTD" nowrap width="100%">{rut}&nbsp;{ficha}</td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD"><strong>Fonos</strong>&nbsp;</td> 
+            <td class="InLineDataTD" nowrap>&nbsp;{fono}&nbsp;{celular}</td> 
+            <td class="InLineFieldCaptionTD"><strong>Correo</strong></td> 
+            <td class="InLineFieldCaptionTD">{email}</td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="4"></td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END Record pacientes -->
+      <!-- BEGIN Grid peticiones_estados_pagos -->
+      <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+        <tr>
+          <td class="InLineFormHeaderFont" align="middle" colspan="7">Lista
+            de&nbsp;Pagos y Abonos&nbsp;&nbsp;(Total de
+            Registros:{peticiones_estados_pagos_TotalRecords}) </td> 
+        </tr>
+ 
+        <tr>
+          <td class="InLineColumnTD" nowrap>Det.</td> 
+          <td class="InLineColumnTD" nowrap>
+            <!-- BEGIN Sorter Sorter_peticion_id --><a class="InLineSorterLink" href="{Sort_URL}">Petición</a> 
+            <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_peticion_id -->&nbsp;</td> 
+          <td class="InLineColumnTD" nowrap>
+            <!-- BEGIN Sorter Sorter_fecha --><a class="InLineSorterLink" href="{Sort_URL}">Fecha</a> 
+            <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_fecha -->&nbsp;</td> 
+          <td class="InLineColumnTD" nowrap>
+            <!-- BEGIN Sorter Sorter_nombres --><a class="InLineSorterLink" href="{Sort_URL}">Nombres</a> 
+            <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_nombres -->&nbsp; 
+            <!-- BEGIN Sorter Sorter_apellidos --><a class="InLineSorterLink" href="{Sort_URL}">Apellidos</a> 
+            <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_apellidos --></td> 
+          <td class="InLineColumnTD" nowrap>
+            <!-- BEGIN Sorter Sorter_nom_procedencia --><a class="InLineSorterLink" href="{Sort_URL}">Procedencia</a> 
+            <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_nom_procedencia -->&nbsp;</td> 
+          <td class="InLineColumnTD" nowrap>
+            <!-- BEGIN Sorter Sorter_nom_estado_pago --><a class="InLineSorterLink" href="{Sort_URL}">Estado
+            Pago</a> 
+            <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_nom_estado_pago -->&nbsp;</td> 
+          <td class="InLineColumnTD" nowrap>
+            <!-- BEGIN Sorter Sorter_nom_usuario --><a class="InLineSorterLink" href="{Sort_URL}">Usuario</a> 
+            <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_nom_usuario -->&nbsp;</td> 
+        </tr>
+        <!-- BEGIN Row -->
+        <tr>
+          <td class="InLineDataTD" align="middle"><a class="InLineDataLink" href="{ImageLink1}"><img class="" src="images/find16.png" border="0"></a></td> 
+          <td class="InLineDataTD">{peticion_id}&nbsp;</td> 
+          <td class="InLineDataTD">{fecha}&nbsp;</td> 
+          <td class="InLineDataTD">{nombres}&nbsp;{apellidos}</td> 
+          <td class="InLineDataTD">{nom_procedencia}&nbsp;</td> 
+          <td class="InLineDataTD">{nom_estado_pago}&nbsp;</td> 
+          <td class="InLineDataTD">{nom_usuario}&nbsp;</td> 
+        </tr>
+        <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr>
+          <td class="InLineDataTD" colspan="7">No se encontaron registros&nbsp;</td> 
+        </tr>
+        <!-- END NoRecords -->
+        <tr>
+          <td class="InLineFooterTD" nowrap colspan="7">
+            <!-- BEGIN Navigator Navigator -->
+            <!-- BEGIN First_On --><a class="InLineNavigatorLink" href="{First_URL}"><img src="Themes/InLine/FirstOn.gif" border="0"></a> <!-- END First_On -->
+            <!-- BEGIN Prev_On --><a class="InLineNavigatorLink" href="{Prev_URL}"><img src="Themes/InLine/PrevOn.gif" border="0"></a> <!-- END Prev_On -->&nbsp;{Page_Number}&nbsp;de
+            {Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a class="InLineNavigatorLink" href="{Next_URL}"><img src="Themes/InLine/NextOn.gif" border="0"></a> <!-- END Next_On -->
+            <!-- BEGIN Last_On --><a class="InLineNavigatorLink" href="{Last_URL}"><img src="Themes/InLine/LastOn.gif" border="0"></a> <!-- END Last_On --><!-- END Navigator Navigator -->&nbsp; </td> 
+        </tr>
+ 
+      </table>
+ <!-- END Grid peticiones_estados_pagos --></td> 
+  </tr>
+ 
+  <tr>
+    <td></td> 
+  </tr>
+</table>
+{calendar_tag}
+</body>
+</html>

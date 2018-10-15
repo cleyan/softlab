@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>orden_ingreso</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+<link rel="stylesheet" type="text/css" href="Themes/InLine/Style.css">
+</head>
+<body bgcolor="#ffffff" link="#000000" alink="#000000" vlink="#000000" text="#000000" class="InLinePageBODY" leftmargin="0" topmargin="0" rightmargin="0">
+<table width="100%" align="center" border="0">
+  <tr>
+    <td>
+      <!-- BEGIN EditableGrid compuesto_detalle_test -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <input type="hidden" value="{FormState}" name="FormState">{FormScript} 
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="0" width="100%">
+          <tr>
+            <td class="InLineFormHeaderFont" align="middle" colspan="4">EDITAR
+              ORDEN EN VENTANA DE INGRESO DE RESULTADOS&nbsp;&nbsp;(Nro
+              Test:{compuesto_detalle_test_TotalRecords}) 
+              <hr>COMPONENTES DE: {Label1} </td> 
+          </tr>
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="4">{Error}</td> 
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineColumnTD" nowrap>
+              <!-- BEGIN Sorter Sorter_cod_test --><a class="InLineSorterLink" href="{Sort_URL}">Código</a> 
+              <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+              <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_cod_test -->&nbsp;</td> 
+            <td class="InLineColumnTD" nowrap>
+              <!-- BEGIN Sorter Sorter_nom_test --><a class="InLineSorterLink" href="{Sort_URL}">Nombre
+              del&nbsp;Test</a> 
+              <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+              <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_nom_test -->&nbsp;</td> 
+            <td class="InLineColumnTD" nowrap align="middle">
+              <!-- BEGIN Sorter Sorter_orden_ingreso --><a class="InLineSorterLink" href="{Sort_URL}">Orden
+              en Ingreso</a> 
+              <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+              <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_orden_ingreso -->&nbsp;</td> 
+            <td class="InLineColumnTD" nowrap align="middle">
+              <!-- BEGIN Sorter Orden_en_informe --><a class="InLineSorterLink" href="{Sort_URL}">Orden
+              en informe</a><!-- END Sorter Orden_en_informe -->&nbsp; <a href="#obs">(*)</a> </td> 
+          </tr>
+          <!-- BEGIN Row -->
+          <!-- BEGIN RowError -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="4">{Error}</td> 
+          </tr>
+          <!-- END RowError -->
+          <tr>
+            <td class="InLineDataTD" nowrap>{cod_test}&nbsp;</td> 
+            <td class="InLineDataTD" nowrap>{nom_test}&nbsp;</td> 
+            <td class="InLineDataTD" align="middle"><input class="InLineInput" maxlength="20" value="{orden_ingreso}" name="{orden_ingreso_Name}" id="compuesto_detalle_testorden_ingreso"></td> 
+            <td class="InLineDataTD" align="middle">{orden_informe}</td> 
+          </tr>
+          <!-- END Row -->
+          <!-- BEGIN NoRecords -->
+          <tr>
+            <td class="InLineDataTD" colspan="4">No se encontaron
+              registros&nbsp;</td> 
+          </tr>
+          <!-- END NoRecords -->
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="4">&nbsp; 
+              <!-- BEGIN Button Button_Submit --><input class="InLineButton" type="submit" value="Grabar" name="{Button_Name}" id="compuesto_detalle_testButton_Submit"><!-- END Button Button_Submit -->&nbsp; 
+              <!-- BEGIN Button Cancelar --><input class="InLineButton" type="submit" value="Cancelar" name="{Button_Name}" id="compuesto_detalle_testCancelar"><!-- END Button Cancelar --></td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END EditableGrid compuesto_detalle_test --></td> 
+  </tr>
+</table>
+<p align="center"><a name="obs"><small>(*) Nota: El orden de los informes
+corresponde al orden de cada test dentro de su respectivo grupo de informes,
+sólo son una referencia</small></a> </p>
+</body>
+</html>

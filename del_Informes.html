@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>del_Informes</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+<link rel="stylesheet" type="text/css" href="Themes/InLine/Style.css">
+</head>
+<body bgcolor="#ffffff" link="#000000" alink="#000000" vlink="#000000" text="#000000" class="InLinePageBODY">
+<table width="100%" align="center" border="0">
+  <tr>
+    <td>
+      <!-- BEGIN Record informe_datosSearch -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3">
+          <tr>
+            <td class="InLineFormHeaderFont" colspan="3">
+              <p>Buscar Informes para La petición:</p>
+ </td> 
+          </tr>
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="3">{Error}</td> 
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineFieldCaptionTD">Nº Petición</td> 
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="20" value="{s_peticion_id}" name="{s_peticion_id_Name}" id="informe_datosSearchs_peticion_id">&nbsp;</td> 
+            <td class="InLineFooterTD">
+              <!-- BEGIN Button Button_DoSearch --><input class="InLineButton" type="submit" value="Buscar" name="{Button_Name}" id="informe_datosSearchButton_DoSearch"><!-- END Button Button_DoSearch --></td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END Record informe_datosSearch -->
+      <!-- BEGIN Grid informe_datos -->
+      <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+        <tr>
+        <td class="InLineFormHeaderFont" align="middle" colspan="4">
+            <table align="left" border="0">
+                <tr>
+                  <td><font color="#ffff00"><strong>INFORMES FIRMADOS</strong></font></td>
+              </tr>
+ 
+            </table>
+ 
+            <table align="right" bgcolor="#ffffcc">
+              <tr>
+                <td><strong>Petición&nbsp;Nº&nbsp; </strong><a class="InLineDataLink" href="{s_peticion_id_Src}" id="informe_datoss_peticion_id"><strong>{s_peticion_id}</strong></a><strong></strong>&nbsp;del
+                  &nbsp;{fecha}<br>
+                  <strong>Paciente:</strong> &nbsp;&nbsp;{nombres}&nbsp;{apellidos}&nbsp;<strong>R.U.T.:</strong>{rut}</td> 
+              </tr>
+ 
+            </table>
+		</td> 
+        </tr>
+ 
+        <tr>
+          <td class="InLineColumnTD" nowrap>&nbsp;&nbsp;</td> 
+          <td class="InLineColumnTD" nowrap>
+            <!-- BEGIN Sorter Sorter_serie --><a class="InLineSorterLink" href="{Sort_URL}">Serie</a> 
+            <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_serie -->&nbsp;</td> 
+          <td class="InLineColumnTD" nowrap>
+            <!-- BEGIN Sorter Informe --><a class="InLineSorterLink" href="{Sort_URL}">Informe</a><!-- END Sorter Informe --></td> 
+          <td class="InLineColumnTD" nowrap>
+            <!-- BEGIN Sorter Sorter_firma_nombre --><a class="InLineSorterLink" href="{Sort_URL}">Firmado
+            por</a> 
+            <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_firma_nombre -->&nbsp;</td> 
+        </tr>
+        <!-- BEGIN Row -->
+        <tr>
+          <td class="InLineDataTD"><a class="InLineDataLink" href="{ImageLink1}" onclick="return confirm('Seguro de eliminar este Informe, este proceso es irreversible');"><img src="images/btns_Borrar.png" border="0"></a></td> 
+          <td class="InLineDataTD" nowrap>{serie}&nbsp;</td> 
+          <td class="InLineDataTD" nowrap width="100%">{nom_informe}</td> 
+          <td class="InLineDataTD" nowrap>{firma_nombre}&nbsp;</td> 
+        </tr>
+        <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr>
+          <td class="InLineDataTD" colspan="4"><img id="Image1" src="images/emblem-important.png" align="absMiddle" name="Image1">No
+            se encontaron Informes FIRMADOS para esta petición</td> 
+        </tr>
+        <!-- END NoRecords -->
+        <tr>
+          <td class="InLineFooterTD" nowrap colspan="4"></td> 
+        </tr>
+ 
+      </table>
+ <!-- END Grid informe_datos --></td>
+  </tr>
+</tbody>
+</table>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>add_secciones</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+<link rel="stylesheet" type="text/css" href="Themes/InLine/Style.css">
+<script language="JavaScript">
+//Begin CCS script
+//Include Common JSFunctions @1-921C7A7E
+</script>
+<script src="ClientI18N.php?file=Globalize.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-A87AC9EE
+</script>
+{page:scriptIncludes}
+<script type="text/javascript">
+//End Include User Scripts
+
+//Common Script Start @1-8BFA436B
+jQuery(function ($) {
+    var features = { };
+    var actions = { };
+    var params = { };
+//End Common Script Start
+
+//seccionesButton_SubmitOnClick Event Start @-75E1E9FA
+    actions["seccionesButton_SubmitOnClick"] = function (eventType, parameters) {
+        var result = true;
+//End seccionesButton_SubmitOnClick Event Start
+
+//Confirmation Message @11-96FAE8C2
+        return confirm('Enviar registro?');
+//End Confirmation Message
+
+//seccionesButton_SubmitOnClick Event End @-A5B9ECB8
+        return result;
+    };
+//End seccionesButton_SubmitOnClick Event End
+
+//Event Binding @1-384319D9
+    $('*:ccsControl(secciones, Button_Submit)').ccsBind(function() {
+        this.bind("click", actions["seccionesButton_SubmitOnClick"]);
+    });
+//End Event Binding
+
+//Plugin Calls @1-95B9949B
+    $('*:ccsControl(secciones, Cancel)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+//End Plugin Calls
+
+//Common Script End @1-562554DE
+});
+//End Common Script End
+//End CCS script
+</script>
+</head>
+<body  class="InLinePageBODY">
+<table width="700" border="0" align="center">
+  <tr>
+    <td>
+      <!-- BEGIN EditableGrid secciones -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <input type="hidden" value="{FormState}" name="FormState">{FormScript} <br/>
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="4">{Error}</td> 
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineTitulo" nowrap colspan="4">
+              <p align="center">Listado de secciones (Total de Registros:&nbsp;
+              {secciones_TotalRecords})</p>
+ </td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineColumnTD" nowrap>
+              <p align="center">
+              <!-- BEGIN Sorter Sorter_nom_seccion --><a class="InLineSorterLink" href="{Sort_URL}">Secciones</a> 
+              <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+              <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_nom_seccion --></p>
+ </td> 
+            <td class="InLineColumnTD" nowrap>Orden</td> 
+            <td class="InLineColumnTD" nowrap>
+              <p align="center">Activo</p>
+ </td> 
+            <td class="InLineColumnTD" nowrap>
+              <p align="center">Borrar</p>
+ </td> 
+          </tr>
+          <!-- BEGIN Row -->
+          <!-- BEGIN RowError -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="4">{Error}</td> 
+          </tr>
+          <!-- END RowError -->
+          <tr>
+            <td class="InLineDataTD" style="WIDTH: 90%"><input class="InLineInput" maxlength="200" size="50" value="{nom_seccion}" name="{nom_seccion_Name}" style="WIDTH: 100%" id="seccionesnom_seccion"></td> 
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="3" size="3" value="{orden}" name="{orden_Name}" id="seccionesorden"></td> 
+            <td class="InLineDataTD">
+              <p align="center"><input class="InLineInput" type="checkbox" value="1" name="{activo_Name}" {activo} id="seccionesactivo"></p>
+ </td> 
+            <td class="InLineDataTD">
+              <!-- BEGIN CheckBox CheckBox_Delete -->
+              <p align="center" id="seccionesCheckBox_Delete"><input class="InLineInput" type="checkbox" value="1" name="{CheckBox_Delete_Name}" {CheckBox_Delete}></p>
+              <!-- END CheckBox CheckBox_Delete --></td> 
+          </tr>
+          <!-- END Row -->
+          <!-- BEGIN NoRecords -->
+          <tr>
+            <td class="InLineDataTD" colspan="4">No hay registros&nbsp;</td> 
+          </tr>
+          <!-- END NoRecords -->
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="4"></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="4">
+              <p align="right">&nbsp; 
+              <!-- BEGIN Button Button_Submit --><input class="InLineButton" type="submit" value="Guardar" name="{Button_Name}" id="seccionesButton_Submit"><!-- END Button Button_Submit -->&nbsp; 
+              <!-- BEGIN Button Cancel --><input class="InLineButton" type="submit" value="Cancelar" name="{Button_Name}" id="seccionesCancel"><!-- END Button Cancel --></p>
+ </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END EditableGrid secciones --></td> 
+  </tr>
+</table>
+</body>
+</html>

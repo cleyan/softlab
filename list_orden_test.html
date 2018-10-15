@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="GENERATOR" content="CodeCharge Studio 3.0.1.6">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>.:: Listado con Orden de los Test ::.</title>
+<link href="Themes/InLine/Style.css" type="text/css" rel="stylesheet">
+</head>
+<body class="InLinePageBODY" onblur="self.focus()">
+<!-- BEGIN Record testSearch -->
+<form name="{HTMLFormName}" action="{Action}" method="post">
+  <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+    <tr>
+      <td class="InLineFormHeaderFont" colspan="4">Buscar / Filtrar&nbsp;Test </td>
+    </tr>
+    <!-- BEGIN Error -->
+    <tr>
+      <td class="InLineErrorDataTD" colspan="4">{Error}</td>
+    </tr>
+    <!-- END Error -->
+    <tr>
+      <td class="InLineFieldCaptionTD">Sección&nbsp;</td> 
+      <td class="InLineDataTD">
+        <select class="InLineSelect" name="{s_secciones_id_Name}" id="testSearchs_secciones_id">
+          <option value="" selected>Seleccionar Valor</option>
+          {s_secciones_id_Options}
+        </select>
+ </td> 
+      <td class="InLineFieldCaptionTD">Informe y Grupo</td> 
+      <td class="InLineFieldCaptionTD">
+        <select class="InLineSelect" name="{s_grupo_id_Name}" id="testSearchs_grupo_id">
+          <option value="" selected>Seleccionar Valor</option>
+          {s_grupo_id_Options}
+        </select>
+ </td>
+    </tr>
+ 
+    <tr>
+      <td class="InLineFooterTD" nowrap align="right" colspan="4">
+        <!-- BEGIN Button Button_DoSearch --><input class="InLineButton" type="submit" value="Buscar" name="{Button_Name}" id="testSearchButton_DoSearch"><!-- END Button Button_DoSearch -->&nbsp; </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record testSearch -->
+<!-- BEGIN Grid test -->
+<table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+  <tr>
+    <td class="InLineColumnTD" nowrap>
+      <!-- BEGIN Sorter Sorter_cod_test --><a class="InLineSorterLink" href="{Sort_URL}">Código
+      Test</a> 
+      <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+      <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_cod_test -->&nbsp;</td> 
+    <td class="InLineColumnTD" nowrap>
+      <!-- BEGIN Sorter Sorter_nom_test --><a class="InLineSorterLink" href="{Sort_URL}">Nombre
+      Test</a> 
+      <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+      <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_nom_test -->&nbsp;</td> 
+    <td class="InLineColumnTD" nowrap align="center">
+      <!-- BEGIN Sorter Sorter_orden_peticion --><a class="InLineSorterLink" href="{Sort_URL}">Orden
+      Petición</a> 
+      <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+      <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_orden_peticion -->&nbsp;</td> 
+    <td class="InLineColumnTD" nowrap align="center">
+      <!-- BEGIN Sorter Sorter_orden_informe --><a class="InLineSorterLink" href="{Sort_URL}">Orden
+      Informe</a> 
+      <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+      <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_orden_informe -->&nbsp;</td>
+  </tr>
+ 
+  <!-- BEGIN Row -->
+  <tr>
+    <td class="InLineDataTD" nowrap>{cod_test}&nbsp;</td> 
+    <td class="InLineDataTD" width="100%">{nom_test}&nbsp;</td> 
+    <td class="InLineDataTD" align="center">{orden_peticion}&nbsp;</td> 
+    <td class="InLineDataTD" align="center">{orden_informe}&nbsp;</td>
+  </tr>
+ <!-- END Row -->
+  <!-- BEGIN NoRecords -->
+  <tr>
+    <td class="InLineDataTD" colspan="4">No hay registros&nbsp;</td>
+  </tr>
+  <!-- END NoRecords -->
+  <tr>
+    <td class="InLineFooterTD" nowrap colspan="4">
+      <!-- BEGIN Navigator Navigator1 -->
+      <!-- BEGIN First_On --><a class="InLineNavigatorLink" href="{First_URL}"><img src="Themes/Square/FirstOn.gif" border="0"></a> <!-- END First_On -->
+      <!-- BEGIN First_Off --><img src="Themes/Square/FirstOff.gif" border="0"><!-- END First_Off -->
+      <!-- BEGIN Prev_On --><a class="InLineNavigatorLink" href="{Prev_URL}"><img src="Themes/Square/PrevOn.gif" border="0"></a> <!-- END Prev_On -->
+      <!-- BEGIN Prev_Off --><img src="Themes/Square/PrevOff.gif" border="0"><!-- END Prev_Off -->&nbsp;{Page_Number}&nbsp;de
+      {Total_Pages}&nbsp; 
+      <!-- BEGIN Next_On --><a class="InLineNavigatorLink" href="{Next_URL}"><img src="Themes/Square/NextOn.gif" border="0"></a> <!-- END Next_On -->
+      <!-- BEGIN Next_Off --><img src="Themes/Square/NextOff.gif" border="0"><!-- END Next_Off -->
+      <!-- BEGIN Last_On --><a class="InLineNavigatorLink" href="{Last_URL}"><img src="Themes/Square/LastOn.gif" border="0"></a> <!-- END Last_On -->
+      <!-- BEGIN Last_Off --><img src="Themes/Square/LastOff.gif" border="0"><!-- END Last_Off --><!-- END Navigator Navigator1 -->&nbsp; </td>
+  </tr>
+</table>
+<!-- END Grid test -->
+<center>
+<a title="Cerrar esta ventana" href="#"><img class="" onclick="window.close();" src="images/btn_cerrar.png" border="0"></a> 
+</center>
+</body>
+</html>

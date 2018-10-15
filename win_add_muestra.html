@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Softlab</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+<link rel="stylesheet" type="text/css" href="Themes/InLine/Style.css">
+<script>
+	function pasar_valor(f){
+		if(f.muestra_last_id.value!=""){	
+			window.opener.test.h_muestra.value = f.muestra_last_id.value;
+			window.opener.test.h_nom_muestra.value = f.last_nom_muestra.value;
+			window.opener.test.h_muestra.focus();			
+			window.close();
+		}
+	}
+	function ir(){
+		parent.location.href="win_add_indicacion_muestra.php";
+	}
+</script>
+</head>
+<body  class="InLinePageBODY" onload="javascript:pasar_valor(tipos_muestra);">
+<table width="500" align="center" border="0">
+  <tr>
+    <td>
+      <!-- BEGIN Record tipos_muestra -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <input type="hidden" name="{tipo_muestra_id_Name}" value="{tipo_muestra_id}" style="WIDTH: 61px; HEIGHT: 22px" size="7" id="tipos_muestratipo_muestra_id"><input type="hidden" name="{activo_Name}" value="{activo}" style="WIDTH: 66px; HEIGHT: 22px" size="8" id="tipos_muestraactivo"><input type="hidden" value="{muestra_last_id}" name="{muestra_last_id_Name}" style="WIDTH: 110px; HEIGHT: 22px" size="14" id="tipos_muestramuestra_last_id"><input type="hidden" value="{last_nom_muestra}" name="{last_nom_muestra_Name}" style="WIDTH: 120px; HEIGHT: 22px" size="15" id="tipos_muestralast_nom_muestra">
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%" align="center">
+          <tr>
+            <td class="InLineFormHeaderFont" colspan="2">
+              <p align="center">Agregar/Editar Tipos de muestra</p>
+ </td> 
+          </tr>
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="2">{Error}</td> 
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineFieldCaptionTD">Nombre descriptivo</td> 
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="100" size="50" value="{nom_tipo_muestra}" name="{nom_tipo_muestra_Name}" id="tipos_muestranom_tipo_muestra"></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD">Indicación</td> 
+            <td class="InLineDataTD">
+              <select name="{indicacion_id_Name}" class="InLineSelect" id="tipos_muestraindicacion_id">
+                <option value="" selected>Seleccionar Valor</option>
+ {indicacion_id_Options} 
+              </select>
+              &nbsp;<a id="ImageLink1" href="javascript: ir();" name="ImageLink1"><img src="images/btn_agregar.gif" border="0"></a></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="2">
+              <p align="right">
+              <!-- BEGIN Button Button_Insert --><input class="InLineButton" type="submit" value="Agregar" name="{Button_Name}" id="tipos_muestraButton_Insert"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Cancel --><input class="InLineButton" type="button" value="Cancelar" name="{Button_Name}" onclick="javascript: window.close();" id="tipos_muestraButton_Cancel"><!-- END Button Button_Cancel --></p>
+ </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END Record tipos_muestra --></td> 
+  </tr>
+</table>
+</body>
+</html>

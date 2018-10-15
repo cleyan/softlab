@@ -1,0 +1,219 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Softlab</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+<link rel="stylesheet" type="text/css" href="Themes/InLine/Style.css">
+<script language="JavaScript">
+//Begin CCS script
+//Include Common JSFunctions @1-921C7A7E
+</script>
+<script src="ClientI18N.php?file=Globalize.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-A87AC9EE
+</script>
+{page:scriptIncludes}
+<script type="text/javascript">
+//End Include User Scripts
+
+//Common Script Start @1-8BFA436B
+jQuery(function ($) {
+    var features = { };
+    var actions = { };
+    var params = { };
+//End Common Script Start
+
+//compuesto_detallebt_derechoOnClick Event Start @-D3D024C8
+    actions["compuesto_detallebt_derechoOnClick"] = function (eventType, parameters) {
+        var result = true;
+//End compuesto_detallebt_derechoOnClick Event Start
+
+//Custom Code @35-2A29BDB7
+
+	 pasar_valor();
+
+//End Custom Code
+
+//compuesto_detallebt_derechoOnClick Event End @-A5B9ECB8
+        return result;
+    };
+//End compuesto_detallebt_derechoOnClick Event End
+
+//compuesto_detallebt_izquierdoOnClick Event Start @-C5D30D93
+    actions["compuesto_detallebt_izquierdoOnClick"] = function (eventType, parameters) {
+        var result = true;
+//End compuesto_detallebt_izquierdoOnClick Event Start
+
+//Custom Code @36-2A29BDB7
+
+	sacar_valor();
+
+//End Custom Code
+
+//compuesto_detallebt_izquierdoOnClick Event End @-A5B9ECB8
+        return result;
+    };
+//End compuesto_detallebt_izquierdoOnClick Event End
+
+//compuesto_detalleOnSubmit Event Start @-1F43AF9A
+    actions["compuesto_detalleOnSubmit"] = function (eventType, parameters) {
+        var result = true;
+//End compuesto_detalleOnSubmit Event Start
+
+//Custom Code @41-2A29BDB7
+
+	 var LinkedLB = document.getElementById("list_compuestos");
+	 document.compuesto_detalle.LinkedID.value = "";
+	 for (i=0; i<LinkedLB.options.length; i++) {
+	    if (document.compuesto_detalle.LinkedID.value != "" ) {
+	        document.compuesto_detalle.LinkedID.value = document.compuesto_detalle.LinkedID.value + ",";
+		}
+		document.compuesto_detalle.LinkedID.value = document.compuesto_detalle.LinkedID.value + LinkedLB.options[i].value;
+	 }
+//End Custom Code
+
+//compuesto_detalleOnSubmit Event End @-A5B9ECB8
+        return result;
+    };
+//End compuesto_detalleOnSubmit Event End
+
+//Event Binding @1-B30932EE
+    $('*:ccsControl(compuesto_detalle, bt_derecho)').ccsBind(function() {
+        this.bind("click", actions["compuesto_detallebt_derechoOnClick"]);
+    });
+    $('*:ccsControl(compuesto_detalle, bt_izquierdo)').ccsBind(function() {
+        this.bind("click", actions["compuesto_detallebt_izquierdoOnClick"]);
+    });
+    $('*:ccsControl(compuesto_detalle)').ccsBind(function() {
+        this.bind("submit", actions["compuesto_detalleOnSubmit"]);
+    });
+//End Event Binding
+
+//Plugin Calls @1-1382E171
+    $('*:ccsControl(compuesto_detalle, bt_derecho)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+    $('*:ccsControl(compuesto_detalle, bt_izquierdo)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+//End Plugin Calls
+
+//Common Script End @1-562554DE
+});
+//End Common Script End
+//End CCS script
+</script>
+<script>
+	function pasar_valor(){
+		var AvailableLB = document.getElementById("list_test");
+		var LinkedLB = document.getElementById("list_compuestos");
+
+		for (var i=0; i < AvailableLB.length; i++) {
+		  if (AvailableLB.options[i].selected == true) {
+		      LinkedLB.options[LinkedLB.length] = new Option(AvailableLB.options[i].text, AvailableLB.options[i].value);
+		      AvailableLB.options[i] = null;
+		      i=i-1;
+		  }
+		}
+	}
+	function sacar_valor(){
+		var AvailableLB = document.getElementById("list_test");
+		var LinkedLB = document.getElementById("list_compuestos");
+
+		for (var i=0; i < LinkedLB.length; i++) {
+		  if (LinkedLB.options[i].selected == true) {
+		     AvailableLB.options[AvailableLB.length] = new Option(LinkedLB.options[i].text, LinkedLB.options[i].value);
+		     LinkedLB.options[i] = null;
+		     i=i-1;
+		  }
+		}
+	}
+function busca_cadena(listbox,textbox){
+	var lista = document.getElementById(listbox);
+	var texto = document.getElementById(textbox);
+	for(var index=lista.length-1; index >= 0; index--){		
+		var aguja = texto.value.toLowerCase();
+		var pajar = new String(lista.options[index].text.toLowerCase());
+		if(aguja != ""){	
+			var resultado = pajar.search(aguja);
+			if(resultado!=-1) lista.options[index].selected = true;				
+			else lista.options[index].selected = false;
+		}
+		else{
+			for(var index2=0;index2 < lista.length; index2++)
+				lista.options[index2].selected = false;
+		}
+	}
+}
+</script>
+</head>
+<body class="InLinePageBODY" leftmargin="0" topmargin="0" rightmargin="0">
+<table width="100%" align="center" border="0">
+  <tbody>
+    <tr>
+      <td valign="top">
+        <!-- BEGIN Record compuesto_detalle -->
+        <form name="{HTMLFormName}" action="{Action}" method="post">
+          <input type="hidden" name="{comp_test_id_Name}" value="{comp_test_id}" id="compuesto_detallecomp_test_id"><input type="hidden" name="{LinkedID_Name}" value="{LinkedID}" id="compuesto_detalleLinkedID">
+          <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+            <!-- BEGIN Error -->
+            <tr>
+              <td class="InLineErrorDataTD" colspan="2">{Error}</td> 
+            </tr>
+            <!-- END Error -->
+          </table>
+          {lbl_grabado} 
+          <table width="100%" align="center" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td width="47%" class="InLineFormHeaderFont" style="WIDTH: 40%">Test
+                disponibles </td> 
+              <td width="6%"></td> 
+              <td width="47%" class="InLineFormHeaderFont" style="WIDTH: 40%">Test
+                asignados </td> 
+            </tr>
+ 
+            <tr>
+              <td class="InLineFieldCaptionTD" width="47%"><input class="InLineInput" value="{cadena}" name="{cadena_Name}" id="compuesto_detallecadena" style="WIDTH: 100%" onkeyup="javascript:busca_cadena('list_test','{cadena_Name}');"></td> 
+              <td width="6%"></td> 
+              <td width="47%" rowspan="2" class="InLineFieldCaptionTD">
+                <select class="InLineSelect" id="compuesto_detallelist_compuestos" multiple size="12" name="{list_compuestos_Name}" style="WIDTH: 100%" ondblclick="javascript:sacar_valor();">
+                  {list_compuestos_Options} 
+                </select>
+ </td> 
+            </tr>
+ 
+            <tr>
+              <td>
+                <select class="InLineSelect" id="compuesto_detallelist_test" multiple name="{list_test_Name}" style="WIDTH: 100%" ondblclick="javascript:pasar_valor();" size="10">
+                  {list_test_Options} 
+                </select>
+ </td> 
+              <td valign="center" align="middle">
+                <!-- BEGIN Button bt_derecho --><input class="" type="button" value=" id="compuesto_detallebt_derecho">>" name="{Button_Name}" style="WIDTH: 95%"><!-- END Button bt_derecho --><br>
+                <br>
+                <!-- BEGIN Button bt_izquierdo --><input class="" type="button" value="<<" name="{Button_Name}" style="WIDTH: 95%" id="compuesto_detallebt_izquierdo"><!-- END Button bt_izquierdo --></td> 
+            </tr>
+ 
+          </table>
+ 
+          <table width="100%" border="0" cellpadding="0" cellspacing="0">
+          
+ 
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input class="InLineButton" type="submit" value="Grabar Cambios " name="{Button_Name}" id="compuesto_detalleButton_Insert"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input class="InLineButton" type="submit" value="Grabar Cambios " name="{Button_Name}" id="compuesto_detalleButton_Update"><!-- END Button Button_Update -->&nbsp;&nbsp;</td> 
+          </tr>
+ 
+        </table>
+ <br>
+        Puede Moficar el Orden en la ventana de Ingresos para los componentes de
+        este Test Aquí&nbsp; <a class="InLineDataLink" href="{ImageLink1}"><img class="" src="images/btn_orden_ingreso.png" align="absMiddle" border="0"></a> 
+      </form>
+ <!-- END Record compuesto_detalle --></td>
+  </tr>
+</tbody>
+</table>
+</body>
+</html>

@@ -1,0 +1,37 @@
+/* Coffee CCSTheme */
+BODY, TABLE, TH, TR, TD, UL, OL, LI, P, FONT, A, BLOCKQUOTE, LABEL { font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 13px; }
+.CoffeePageBODY{ font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 13px; }
+.CoffeeFormHeaderFont{ color: #000000; font-size: 18px; font-weight: bold; }
+.CoffeeFormTABLE{ font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 13px; }
+.CoffeeColumnTD{ background-color: #333333; color: #FFFFFF; font-size: 13px; font-weight: bold; }
+.CoffeeFieldCaptionTD{ background-color: #333333; color: #FFFFFF; font-size: 13px; font-weight: bold; }
+.CoffeeDataTD{ border-bottom: 1px solid #CCCCCC; background-color: #FFFFFF; font-size: 13px; }
+.CoffeeErrorDataTD{ border-bottom: 1px solid #CCCCCC; background-color: #FFFFFF; color: #FF0000; font-size: 13px; font-weight: bold; }
+.CoffeeSeparatorTD{ height: 0px; background-color: #000000; }
+.CoffeeAltDataTD{ border-bottom: 1px solid #CCCCCC; background-color: #F5F5F5; font-size: 13px; }
+.CoffeeFooterTD { background-color: #808080; color: #FFFFFF; font-size: 12px; font-weight: bold; }
+a.CoffeeSorterLink:link,a.CoffeeSorterLink:visited{ color: #FFFFFF; text-decoration: underline; }
+a.CoffeeSorterLink:hover,a.CoffeeSorterLink:active{ color: #FFFFFF; text-decoration: none; }
+a.CoffeeDataLink:link,a.CoffeeDataLink:visited{ color: #000000; text-decoration: underline; }
+a.CoffeeDataLink:hover,a.CoffeeDataLink:active{ color: #FF0000; text-decoration: none; }
+a.CoffeeNavigatorLink:link,a.CoffeeNavigatorLink:visited{ color: #FFFFFF; text-decoration: underline; }
+a.CoffeeNavigatorLink:hover,a.CoffeeNavigatorLink:active{ color: #FFFFFF; text-decoration: none; }
+.CoffeeButton { background-color: #333333; color: #FFFFFF; font-family: Tahoma, Arial, Verdana, Helvetica; font-size: 13px; font-weight: bold; }
+.CoffeeInput { border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; border-top: 1px solid #000000; font-family: Tahoma, Arial, Verdana, Helvetica; font-size: 13px; }
+.CoffeeTextarea { border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; border-top: 1px solid #000000; font-family: Tahoma, Arial, Verdana, Helvetica; font-size: 13px; }
+.CoffeeSelect { background-color: #333333; color: #FFFFFF; font-family: Tahoma, Arial, Verdana, Helvetica; font-size: 13px; font-weight: bold; }
+/* Calendar */
+a.today:link,a.today:visited{ color: #FF0000; font-weight: bold; text-decoration: none; }
+a.today:hover,a.today:active{ color: #333333; font-weight: bold; text-decoration: none; }
+a.selectedDay:link,a.selectedDay:visited{ color: #FFFFFF; font-weight: bold; text-decoration: none; }
+a.selectedDay:hover,a.selectedDay:active{ color: #FF0000; font-weight: bold; text-decoration: none; }
+TD.selectedDay { margin: 1px; background-color: #333333; color: #FFFFFF; font-size: 13px; font-weight: bold; }
+TD.today { border-top: 1px solid #FF0000; border-left: 1px solid #FF0000; border-bottom: 1px solid #FF0000; border-right: 1px solid #FF0000; background-color: #FFFFFF; font-size: 13px; }
+a.weekDay:link,a.weekDay:visited{ color: #333333; text-decoration: none; }
+a.weekDay:hover,a.weekDay:active{ color: #FF0000; text-decoration: none; }
+TD.workday { border-bottom: 1px solid #CCCCCC; background-color: #FFFFFF; font-size: 13px; }
+TD.weekend { border-bottom: 1px solid #CCCCCC; background-color: #E0E0E0; font-size: 13px; }
+TH.calendar { margin: 1px; background-color: #333333; color: #FFFFFF; font-size: 13px; font-weight: bold; }
+.CalendarButtons { background-color: #333333; color: #FFFFFF; font-family: Tahoma, Arial, Verdana, Helvetica; font-size: 13px; font-weight: bold; }
+.CalendarControls { font-family: Arial, Tahoma, Verdana, Helvetica; font-size: 13px; }
+.Table { background-color: #DEDBDE; }

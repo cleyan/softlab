@@ -1,0 +1,119 @@
+<LldlCache allCatalogs="True" allSchemes="True" allColumns="True" allPrimaryKeys="True" allForeignKeys="False" allTables="True" allAliases="True" allSynonyms="True" allSystemTables="False" allSystemViews="False" allViews="True" allProcedures="False" allProcedureParameters="False">
+  <catalog allSchemes="True" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="True" allAliases="True" allSynonyms="True" allSystemTables="False" allSystemViews="False" allViews="True" allProcedures="False" allProcedureParameters="False" full="False">
+    <schema SCHEMA_NAME="avea_mood577" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="True" allAliases="True" allSynonyms="True" allSystemTables="False" allSystemViews="False" allViews="True" allProcedures="False" allProcedureParameters="False" full="True" />
+    <schema SCHEMA_NAME="cur_complementario" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="True" allAliases="True" allSynonyms="True" allSystemTables="False" allSystemViews="False" allViews="True" allProcedures="False" allProcedureParameters="False" full="True" />
+    <schema SCHEMA_NAME="cur_pedagogico" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="True" allAliases="True" allSynonyms="True" allSystemTables="False" allSystemViews="False" allViews="True" allProcedures="False" allProcedureParameters="False" full="True" />
+    <schema SCHEMA_NAME="information_schema" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="True" allAliases="True" allSynonyms="True" allSystemTables="False" allSystemViews="False" allViews="True" allProcedures="False" allProcedureParameters="False" full="True" />
+    <schema SCHEMA_NAME="inncrea" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="True" allAliases="True" allSynonyms="True" allSystemTables="False" allSystemViews="False" allViews="True" allProcedures="False" allProcedureParameters="False" full="True" />
+    <schema SCHEMA_NAME="kalabaza" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="True" allAliases="True" allSynonyms="True" allSystemTables="False" allSystemViews="False" allViews="True" allProcedures="False" allProcedureParameters="False" full="True" />
+    <schema SCHEMA_NAME="laravel" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="True" allAliases="True" allSynonyms="True" allSystemTables="False" allSystemViews="False" allViews="True" allProcedures="False" allProcedureParameters="False" full="True" />
+    <schema SCHEMA_NAME="mysql" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="True" allAliases="True" allSynonyms="True" allSystemTables="False" allSystemViews="False" allViews="True" allProcedures="False" allProcedureParameters="False" full="True" />
+    <schema SCHEMA_NAME="perfil" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="True" allAliases="True" allSynonyms="True" allSystemTables="False" allSystemViews="False" allViews="True" allProcedures="False" allProcedureParameters="False" full="True" />
+    <schema SCHEMA_NAME="performance_schema" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="True" allAliases="True" allSynonyms="True" allSystemTables="False" allSystemViews="False" allViews="True" allProcedures="False" allProcedureParameters="False" full="True" />
+    <schema SCHEMA_NAME="public_backlog" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="True" allAliases="True" allSynonyms="True" allSystemTables="False" allSystemViews="False" allViews="True" allProcedures="False" allProcedureParameters="False" full="True" />
+    <schema SCHEMA_NAME="public_faveo" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="True" allAliases="True" allSynonyms="True" allSystemTables="False" allSystemViews="False" allViews="True" allProcedures="False" allProcedureParameters="False" full="True" />
+    <schema SCHEMA_NAME="public_soporte" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="True" allAliases="True" allSynonyms="True" allSystemTables="False" allSystemViews="False" allViews="True" allProcedures="False" allProcedureParameters="False" full="True" />
+    <schema SCHEMA_NAME="rockriverlab" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="True" allAliases="True" allSynonyms="True" allSystemTables="False" allSystemViews="False" allViews="True" allProcedures="False" allProcedureParameters="False" full="True" />
+    <schema SCHEMA_NAME="sicof" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="True" allAliases="True" allSynonyms="True" allSystemTables="False" allSystemViews="False" allViews="True" allProcedures="False" allProcedureParameters="False" full="True" />
+    <schema SCHEMA_NAME="sicof_ago" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="True" allAliases="True" allSynonyms="True" allSystemTables="False" allSystemViews="False" allViews="True" allProcedures="False" allProcedureParameters="False" full="True" />
+    <schema SCHEMA_NAME="softlab_v2" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="True" allAliases="True" allSynonyms="True" allSystemTables="False" allSystemViews="False" allViews="True" allProcedures="False" allProcedureParameters="False" full="True">
+      <table TABLE_NAME="accesos" TABLE_TYPE="5" DESCRIPTION="Registro de Acceso al sistema" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="auditoria" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="ayuda" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="bancos" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="bitacora" TABLE_TYPE="5" DESCRIPTION="Bitacora de las Peticiones" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="compuesto_detalle" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="configuracion" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="detalle_pago" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="equipos" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="equipos_test" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="equivalencias" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="especialidades" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="estados" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="estados_pagos" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="estados_uso" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="etiquetas" TABLE_TYPE="5" DESCRIPTION="Tabla donde se guardan las etiquetas de codigo de Barra" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="formas_pago" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="formatos" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="formulas" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="get_serie" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="grupos" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="grupos_detalle" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="grupos_modelo" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="iconos" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="impresiones" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="indicaciones_muestra" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="indicaciones_test" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="informe_datos" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="informe_datos_history" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="informes" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="informes_detalle" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="informes_encabezado" TABLE_TYPE="5" DESCRIPTION="Contiene descripción de diseños de encabezado" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="insumo_por_examen" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="insumos" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="insumos_ingreso" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="insumos_x_test" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="lugares_entrega" TABLE_TYPE="5" DESCRIPTION="Instrucciones para retiro de examenes" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="medicos" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="mensajes_ayuda" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="menu" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="metodos" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="niveles_acceso" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="noticias" TABLE_TYPE="5" DESCRIPTION="Noticias y Mensajes a Usuarios" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="novedades" TABLE_TYPE="5" DESCRIPTION="Libro de Novedades" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="novedades_tipos" TABLE_TYPE="5" DESCRIPTION="Tipos de Anotación el el Libro de Novedades" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="pacientes" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="perfiles" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="perfiles_detalle" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="peticiones" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="peticiones_detalle" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="peticiones_detalle_history" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="peticiones_history" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="precios_test" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="previsiones" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="prioridades" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="procedencias" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="recepcion_estados" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="relojcontrol" TABLE_TYPE="5" DESCRIPTION="Registro del Reloj Control" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="reportmanager" TABLE_TYPE="5" DESCRIPTION="Configuracion informes ReportManager" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="respaldos_precios_test" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="resultados" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="resultados_history" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="secciones" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="sexos" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="test" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="tipos_bitacora" TABLE_TYPE="5" DESCRIPTION="Tipos de Bitacora" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="tipos_muestra" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="tool_bar" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="traducciones" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="usuarios" TABLE_TYPE="5" DESCRIPTION="" allColumns="True" allPrimaryKeys="True" allForeignKeys="False" full="True">
+        <column COLUMN_NAME="usuario_id" ORDINAL_POSITION="1" DATA_TYPE="20" CCS_TYPE="0" NATIVE_TYPE="System.Int64" NUMERIC_PRECISION="19" IS_NULLABLE="False" DEFAULT_VALUE="0" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="procedencia_id" ORDINAL_POSITION="2" DATA_TYPE="20" CCS_TYPE="0" NATIVE_TYPE="System.Int64" NUMERIC_PRECISION="19" IS_NULLABLE="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="nom_usuario" ORDINAL_POSITION="3" DATA_TYPE="129" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="100" OCTET_LENGTH="100" IS_NULLABLE="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="log_usuario" ORDINAL_POSITION="4" DATA_TYPE="129" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="20" OCTET_LENGTH="20" IS_NULLABLE="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="clave" ORDINAL_POSITION="5" DATA_TYPE="129" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="10" OCTET_LENGTH="10" IS_NULLABLE="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="nivel_acceso_id" ORDINAL_POSITION="6" DATA_TYPE="20" CCS_TYPE="0" NATIVE_TYPE="System.Int64" NUMERIC_PRECISION="19" IS_NULLABLE="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="firma_nombre" ORDINAL_POSITION="7" DATA_TYPE="129" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="100" OCTET_LENGTH="100" IS_NULLABLE="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="firma_imagen" ORDINAL_POSITION="8" DATA_TYPE="129" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="255" OCTET_LENGTH="255" IS_NULLABLE="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="firma_titulo" ORDINAL_POSITION="9" DATA_TYPE="129" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="100" OCTET_LENGTH="100" IS_NULLABLE="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="seccion_id" ORDINAL_POSITION="10" DATA_TYPE="20" CCS_TYPE="0" NATIVE_TYPE="System.Int64" NUMERIC_PRECISION="19" IS_NULLABLE="True" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="p_validar" ORDINAL_POSITION="11" DATA_TYPE="129" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="1" OCTET_LENGTH="1" IS_NULLABLE="False" DEFAULT_VALUE="'F'" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="p_firmar" ORDINAL_POSITION="12" DATA_TYPE="129" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="1" OCTET_LENGTH="1" IS_NULLABLE="False" DEFAULT_VALUE="'F'" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="p_auditar" ORDINAL_POSITION="13" DATA_TYPE="129" CCS_TYPE="2" NATIVE_TYPE="System.String" MAX_LENGTH="1" OCTET_LENGTH="1" IS_NULLABLE="True" DEFAULT_VALUE="'F'" DESCRIPTION="" full="True" />
+        <column COLUMN_NAME="last_login" ORDINAL_POSITION="14" DATA_TYPE="135" CCS_TYPE="3" NATIVE_TYPE="System.DateTime" DATE_TIME_PRECISION="19" IS_NULLABLE="True" DESCRIPTION="" full="True" />
+        <primaryKey PK_COLUMN_NAME="usuario_id" KEY_NAME="PRIMARY" ENABLED="True" full="True" />
+      </table>
+      <table TABLE_NAME="valores_referencia" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="valores_resultado" TABLE_TYPE="5" DESCRIPTION="" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+    </schema>
+    <schema SCHEMA_NAME="suscripcion" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="True" allAliases="True" allSynonyms="True" allSystemTables="False" allSystemViews="False" allViews="True" allProcedures="False" allProcedureParameters="False" full="True" />
+    <schema SCHEMA_NAME="test" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="True" allAliases="True" allSynonyms="True" allSystemTables="False" allSystemViews="False" allViews="True" allProcedures="False" allProcedureParameters="False" full="True" />
+    <schema SCHEMA_NAME="twk_actas" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="True" allAliases="True" allSynonyms="True" allSystemTables="False" allSystemViews="False" allViews="True" allProcedures="False" allProcedureParameters="False" full="True" />
+    <schema SCHEMA_NAME="twk_admision" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="True" allAliases="True" allSynonyms="True" allSystemTables="False" allSystemViews="False" allViews="True" allProcedures="False" allProcedureParameters="False" full="True" />
+    <schema SCHEMA_NAME="twk_evaluacion" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="True" allAliases="True" allSynonyms="True" allSystemTables="False" allSystemViews="False" allViews="True" allProcedures="False" allProcedureParameters="False" full="True" />
+    <schema SCHEMA_NAME="twk_evaluacion2" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="True" allAliases="True" allSynonyms="True" allSystemTables="False" allSystemViews="False" allViews="True" allProcedures="False" allProcedureParameters="False" full="True" />
+    <schema SCHEMA_NAME="twk_intranet" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="True" allAliases="True" allSynonyms="True" allSystemTables="False" allSystemViews="False" allViews="True" allProcedures="False" allProcedureParameters="False" full="True" />
+    <schema SCHEMA_NAME="twk_planifica" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="True" allAliases="True" allSynonyms="True" allSystemTables="False" allSystemViews="False" allViews="True" allProcedures="False" allProcedureParameters="False" full="True" />
+    <schema SCHEMA_NAME="twk_service" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="True" allAliases="True" allSynonyms="True" allSystemTables="False" allSystemViews="False" allViews="True" allProcedures="False" allProcedureParameters="False" full="True" />
+  </catalog>
+</LldlCache>

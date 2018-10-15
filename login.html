@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="GENERATOR" content="CodeCharge Studio 3.0.1.6">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Softlab
+</title>
+<link href="Themes/InLine/Style.css" type="text/css" rel="stylesheet">
+<meta http-equiv="expires" content="-1">
+<script language="JavaScript">
+//Begin CCS script
+//Include Common JSFunctions @1-921C7A7E
+</script>
+<script src="ClientI18N.php?file=Globalize.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-A87AC9EE
+</script>
+{page:scriptIncludes}
+<script type="text/javascript">
+//End Include User Scripts
+
+//Common Script Start @1-8BFA436B
+jQuery(function ($) {
+    var features = { };
+    var actions = { };
+    var params = { };
+//End Common Script Start
+
+//OnLoad Event Start @-2FD76255
+    actions["OnLoad"] = function (eventType, parameters) {
+        var result = true;
+//End OnLoad Event Start
+
+//previene de mostrar en un frame
+if (top.location != self.location) top.location = self.location;
+
+//Set Focus @7-E04EC523
+        $('*:ccsControl(Login, login)').each(function(){ this.focus(); });
+//End Set Focus
+
+//DEL  function bind_events() {
+//DEL      page_OnLoad();
+//DEL  //    forms_onload();
+//DEL  }
+
+//OnLoad Event End @-A5B9ECB8
+        return result;
+    };
+//End OnLoad Event End
+
+//Event Binding @1-18912803
+    $(window).ccsBind(function() {
+        this.each(function(){ actions["OnLoad"].call(this); });
+    });
+//End Event Binding
+
+//Common Script End @1-562554DE
+});
+//End Common Script End
+//End CCS script
+</script>
+</head>
+<body class="InLinePageBODY" text="#000000" vlink="#000000" alink="#000000" link="#000000" bgcolor="#e5e5e5" background="images/fondo.jpg" topmargin="50">
+<!-- BEGIN Record Login -->
+<form name="{HTMLFormName}" action="{Action}" method="post">
+  <table class="InLineTABLERound" cellspacing="0" cellpadding="3" align="center" bgcolor="#ffff99" border="0">
+    <!-- BEGIN Error -->
+    <tr>
+      <td bgcolor="#ffcc00" colspan="3"><strong>{Error} </strong></td>
+    </tr>
+    <!-- END Error -->
+    <tr>
+      <td class="" nowrap align="center" bgcolor="#9c9c9c" colspan="3"><strong><font color="#ffffff">Ingrese
+        sus Datos para iniciar sesión en el sistema</font></strong> </td>
+    </tr>
+ 
+    <tr>
+      <td class="" width="128" rowspan="3"><img id="Image1" src="images/llave.gif" name="Image1"></td> 
+      <td class="" nowrap>Usuario</td> 
+      <td class="" width="144"><input class="InLineInput" maxlength="100" value="{login}" name="{login_Name}" id="Loginlogin"></td>
+    </tr>
+ 
+    <tr>
+      <td class="" nowrap>Contraseña</td> 
+      <td class=""><input class="InLineInput" type="password" maxlength="100" value="{password}" name="{password_Name}" id="Loginpassword"></td>
+    </tr>
+ 
+    <tr>
+      <td class="">&nbsp;</td> 
+      <td class="" height="100%">&nbsp;</td>
+    </tr>
+ 
+    <tr>
+      <td class="" nowrap align="right" colspan="3">
+        <!-- BEGIN Button Button_DoLogin --><input class="InLineButton" type="submit" size="57" value="Ingresar" name="{Button_Name}" id="LoginButton_DoLogin"><!-- END Button Button_DoLogin --></td>
+    </tr>
+  </table>
+</form>
+<!-- END Record Login -->
+</body>
+</html>

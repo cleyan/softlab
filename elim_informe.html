@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="GENERATOR" content="CodeCharge Studio 3.0.1.6">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>elim_informe</title>
+<link href="Themes/InLine/Style.css" type="text/css" rel="stylesheet">
+<script language="javascript" src="funciones.js"></script>
+<script language="JavaScript">
+<!--
+function MostrarGrupos(){
+        openWindow('win_detalle_elim_informe.php?informe_id={informe_id}&mostrar=grupo', 'MuestraGrupos', 600, 550, 'yes', 50);
+}
+
+function MostrarTest(){
+        openWindow('win_detalle_elim_informe.php?informe_id={alt_informe_id}&mostrar=test', 'MuestraTest', 600, 550, 'yes', 50);
+}
+
+
+-->
+</script>
+</head>
+<body class="InLinePageBODY">
+<table class="InLineFieldCaptionTD" width="700" align="center" border="0">
+  <tr>
+    <td class=""><img id="Image1" src="images/menu/panel-force-quit.gif" name="Image1"></td> 
+    <td>
+      <!-- BEGIN Grid informes -->
+      <table class="InLineFormTABLE" cellspacing="0" cellpadding="0" width="100%">
+        <tr>
+          <td class="InLineFormHeaderFont" align="center">Eliminar&nbsp;Informe
+            de la Base de Datos. </td>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr>
+          <td class="InLineDataTD" width="100%">Se eliminará el Informe:&nbsp;<strong>{nom_informe}</strong>&nbsp;</td>
+        </tr>
+ 
+        <tr>
+          <td class="InLineDataTD" width="100%">Hay&nbsp;<a class="InLineDataLink" onclick="JavaScript:MostrarGrupos();" href="{qty_grupo_Src}" id="informesqty_grupo">{qty_grupo}</a>&nbsp;Grupos
+            de Informe que serán eliminados.</td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords --><!-- END NoRecords -->
+      </table>
+      <!-- END Grid informes -->
+      <table class="InLineFieldCaptionTD" cellspacing="0" cellpadding="0" width="700" align="center" border="0">
+        <tr>
+          <td>
+            <!-- BEGIN Record NewRecord1 -->
+            <form name="{HTMLFormName}" action="{Action}" method="get">
+              <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+                <!-- BEGIN Error -->
+                <tr>
+                  <td class="InLineErrorDataTD">{Error}</td>
+                </tr>
+                <!-- END Error -->
+                <tr>
+                  <td class="InLineFieldCaptionTD">Hay&nbsp;<a class="InLineDataLink" onclick="JavaScript:MostrarTest();" href="{qty_test_Src}" id="NewRecord1qty_test">{qty_test}</a>&nbsp;
+                    test que tienen su informe predeterminado&nbsp;asignado a <strong>{nom_informe}</strong>, <br>
+                    un ves eliminado este informe, reasignar a los test como
+                    informe predeterminado a:&nbsp;<input type="hidden" value="{informe_id}" name="{informe_id_Name}" id="NewRecord1informe_id">
+                    <select class="InLineSelect" name="{nuevo_informe_id_Name}" id="NewRecord1nuevo_informe_id">
+                      {nuevo_informe_id_Options}
+                    </select>
+ </td>
+                </tr>
+ 
+                <tr>
+                  <td class="InLineFooterTD" nowrap align="right"><input class="InLineButton" id="si" type="submit" value="Sí, Eliminar" name="si"><input class="InLineButton" id="no" type="submit" value="No Eliminar" name="no"></td>
+                </tr>
+              </table>
+            </form>
+            <!-- END Record NewRecord1 --></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

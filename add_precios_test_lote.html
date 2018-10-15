@@ -1,0 +1,168 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>add_precios_test_lote</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+<link rel="stylesheet" type="text/css" href="Themes/InLine/Style.css">
+<script>
+	function all_test(f){
+		if(f.check_todos.checked){
+			f.nom_test.value= "Todos";
+			f.nom_test.disabled =true;
+			f.buscar.width = "0";
+			f.test_id.value = "0";
+		}
+		else{
+			f.nom_test.value= "Buscar test -->";
+			f.nom_test.disabled =false;
+			f.buscar.width = "20";
+			f.test_id.value = "0";
+		}
+	}
+	function openWindow(FileURL, winName, w, h) {
+	    winStats = "width=" + w + ",height=" + h + ",toolbar=no,location=no,directories=no,menubar=no,scrollbars=no,status=no,";
+	    if (navigator.appName.indexOf("Microsoft") >= 0) {// or if (document.all)
+	        var xMax = screen.width, yMax = screen.height;
+	    }else {
+	        if (navigator.appName.indexOf("Netscape") >= 0) {// or if (document.layers)
+	            var xMax = window.outerWidth, yMax = window.outerHeight;
+	        }else {
+	            var xMax = 640, yMax=480; //default guess
+	        }
+	    }
+	    //calculate center
+	    var xOffset = (xMax - w)/2, yOffset = (yMax - h)/2;
+	    winStats += "left=" + xOffset + ",top=" + yOffset;
+		window.open(FileURL, winName, winStats);
+	}
+	function popAdd_findtest() {
+	    aTemplate = "add_precios_test_lote_find.php";
+	    openWindow(aTemplate, "winPreview", '550','330');
+	}
+
+</script>
+<script language="javascript" src="scripts/calendario/popcalendar.js"></script>
+</head>
+<body  class="InLinePageBODY">
+<div id="toolTipLayer" class="InLineFooterTD" style="VISIBILITY: hidden; POSITION: absolute">
+</div>
+<script language="JavaScript">
+	<!--
+	initToolTips(); 
+	//-->
+</script>
+<table width="700" align="center" border="0">
+  <tr>
+    <td>
+      <!-- BEGIN Record precios_test -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <input type="hidden" name="{precio_test_id_Name}" value="{precio_test_id}" id="precios_testprecio_test_id"><input type="hidden" name="{test_id_Name}" value="{test_id}" id="precios_testtest_id">
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%" align="center">
+          <tr>
+            <td class="InLineFormHeaderFont" colspan="3"><img class="" src="images/money.gif">&nbsp;&nbsp;Editar
+              Precios&nbsp;por lote&nbsp; </td> 
+          </tr>
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="3">{Error}</td> 
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td width="59%" align="left" class="InLineFieldCaptionTD"><strong>Seleccionar
+              condiciones:</strong></td> 
+            <td width="37%" class="InLineDataTD"></td> 
+            <td width="4%" class="InLineDataTD"></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD" align="right">Actulizar los valores
+              de la previsión&nbsp;</td> 
+            <td class="InLineDataTD">
+              <select class="InLineSelect" name="{prevision_id_Name}" style="WIDTH: 100%" id="precios_testprevision_id">
+                <option value="0" selected>Todas las previsiones</option>
+ {prevision_id_Options} 
+              </select>
+ </td> 
+            <td class="InLineDataTD"></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD" align="right">que son
+              de&nbsp;procedencia</td> 
+            <td class="InLineDataTD">
+              <select class="InLineSelect" name="{procedencia_id_Name}" style="WIDTH: 100%" id="precios_testprocedencia_id">
+                <option value="0" selected>Todas las procedencias</option>
+ {procedencia_id_Options} 
+              </select>
+ </td> 
+            <td class="InLineDataTD"></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD" align="right">usando como base los
+              valores de la previsión</td> 
+            <td class="InLineDataTD">
+              <select name="{prevision_base_id_Name}" class="InLineSelect" style="WIDTH: 100%" id="precios_testprevision_base_id">
+                <option value="0" selected>Ninguna</option>
+ {prevision_base_id_Options} 
+              </select>
+ </td> 
+            <td class="InLineDataTD"></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD" align="right"><input type="hidden" value="{ayuda_1}" name="{ayuda_1_Name}" style="WIDTH: 74px; HEIGHT: 22px" size="9" id="precios_testayuda_1">&nbsp;<input type="hidden" name="{titulo_ayuda_1_Name}" value="{titulo_ayuda_1}" style="WIDTH: 100px; HEIGHT: 22px" size="12" id="precios_testtitulo_ayuda_1">&nbsp;<input style="WIDTH:  77px; HEIGHT: 22px" type="hidden" size="9" value="{icono_ayuda_1}" name="{icono_ayuda_1_Name}" id="precios_testicono_ayuda_1">Aplicando
+              un factor</td> 
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="10" size="10" value="{factor}" name="{factor_Name}" id="precios_testfactor">&nbsp;<img onmouseover="toolTip('{ayuda_1}','{icono_ayuda_1}','{titulo_ayuda_1}')" onmouseout="toolTip()" src="images/ayudita.gif"></td> 
+            <td class="InLineDataTD"></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD" align="right">para&nbsp;el test</td> 
+            <td class="InLineDataTD"><input class="InLineInput" style="WIDTH: 100%" value="{nom_test}" name="{nom_test_Name}" readonly id="precios_testnom_test"></td> 
+            <td class="InLineDataTD"><a class="InLineDataLink" href="javascript:popAdd_findtest();"><img class="" height="20" alt="Buscar test" src="images/search.gif" width="20" border="0" name="buscar"></a></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD" align="right">o para todos los test</td> 
+            <td class="InLineDataTD"><input id="todos" type="checkbox" name="check_todos" onclick="javascript: all_test(precios_test);"></td> 
+            <td class="InLineDataTD"></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD" align="right">y la seccion del test
+              sea</td> 
+            <td class="InLineDataTD">
+              <select name="{seccion_id_Name}" class="InLineSelect" style="WIDTH: 100%" id="precios_testseccion_id">
+                <option value="0" selected>Todas las secciones</option>
+ {seccion_id_Options} 
+              </select>
+ </td> 
+            <td class="InLineDataTD"></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD" align="right">y el equipo del test
+              sea</td> 
+            <td class="InLineDataTD">
+              <select class="InLineSelect" name="{equipo_id_Name}" style="WIDTH: 100%" id="precios_testequipo_id">
+                <option value="0" selected>Todos los equipos</option>
+ {equipo_id_Options} 
+              </select>
+ </td> 
+            <td class="InLineDataTD"></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFooterTD" nowrap align="middle" colspan="3">
+              <!-- BEGIN Button Button_Insert --><input class="InLineButton" type="submit" value="Procesar cambio de precios" name="{Button_Name}" id="precios_testButton_Insert"><!-- END Button Button_Insert -->&nbsp; 
+              <!-- BEGIN Button Button_Cancel --><input class="InLineButton" type="submit" value="Cancelar" name="{Button_Name}" id="precios_testButton_Cancel"><!-- END Button Button_Cancel --></td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END Record precios_test --></td> 
+  </tr>
+</table>
+</body>
+</html>

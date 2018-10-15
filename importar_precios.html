@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>importar_precios</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+<link rel="stylesheet" type="text/css" href="Themes/InLine/Style.css">
+</head>
+<body class="InLinePageBODY">
+<table width="700" align="center" border="0">
+  <tr>
+    <td>
+      <!-- BEGIN Record NewRecord1 -->
+      <form name="{HTMLFormName}" action="{Action}" method="post" enctype="{HTMLFormEnctype}">
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3">
+          <tr>
+            <td class="InLineFormHeaderFont" colspan="2">Importar Nueva Lista de
+              Precios</td> 
+          </tr>
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="2">{Error}</td> 
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineFieldCaptionTD" nowrap>Archivo de precios&nbsp;</td> 
+            <td class="InLineDataTD">
+              <!-- BEGIN FileUpload archivo --><input type="hidden" value="{State}" name="{ControlName}" id="NewRecord1archivoControlName">
+              <!-- BEGIN Info -->&nbsp;{FileName}&nbsp;{FileSize}&nbsp;bytes. <!-- END Info -->
+              <!-- BEGIN Upload --><input class="InLineInput" type="file" name="{FileControl}" size="70"><!-- END Upload -->
+              <!-- BEGIN DeleteControl -->Borrar <input class="InLineInput" type="checkbox" name="{DeleteControl}" {DeleteChecked}><!-- END DeleteControl --><!-- END FileUpload archivo --></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD">Previsión:</td> 
+            <td class="InLineDataTD">
+              <select name="{prevision_id_Name}" class="InLineSelect" id="NewRecord1prevision_id">
+                <option value="" selected>Seleccionar Valor</option>
+ {prevision_id_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD">Procedencia</td> 
+            <td class="InLineDataTD">
+              <select class="InLineSelect" name="{procedencia_id_Name}" id="NewRecord1procedencia_id">
+                <option value="" selected>Seleccionar Valor</option>
+ 
+                <option value="-1">Todas las Procedencias</option>
+ {procedencia_id_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD" nowrap>Crear test faltantes</td> 
+            <td class="InLineDataTD">
+              <!-- BEGIN RadioButton creartest --><input class="InLineInput" type="radio" value="{Value}" name="{creartest_Name}" {Check} id="NewRecord1creartest_{creartest:optionNumber}">{Description}<br>
+              <!-- END RadioButton creartest --></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD" nowrap>Eliminar Antes TODAS la
+              slista de precio</td> 
+            <td class="InLineDataTD">
+              <!-- BEGIN RadioButton eliminarlistas --><input class="InLineInput" type="radio" value="{Value}" name="{eliminarlistas_Name}" {Check} id="NewRecord1eliminarlistas_{eliminarlistas:optionNumber}">{Description}<br>
+              <!-- END RadioButton eliminarlistas --></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input class="InLineButton" type="submit" value="Importar..." name="{Button_Name}" id="NewRecord1Button_Insert"><!-- END Button Button_Insert -->&nbsp;&nbsp;&nbsp; </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END Record NewRecord1 --></td> 
+  </tr>
+</table>
+</body>
+</html>

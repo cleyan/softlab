@@ -1,0 +1,271 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="GENERATOR" content="CodeCharge Studio 3.0.1.6">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>add_perfiles</title>
+<link href="Themes/InLine/Style.css" type="text/css" rel="stylesheet">
+<script language="JavaScript">
+//Begin CCS script
+//Include Common JSFunctions @1-921C7A7E
+</script>
+<script src="ClientI18N.php?file=Globalize.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-A87AC9EE
+</script>
+{page:scriptIncludes}
+<script type="text/javascript">
+//End Include User Scripts
+
+//Common Script Start @1-8BFA436B
+jQuery(function ($) {
+    var features = { };
+    var actions = { };
+    var params = { };
+//End Common Script Start
+
+//perfilesButton1OnClick Event Start @-5A91EB19
+    actions["perfilesButton1OnClick"] = function (eventType, parameters) {
+        var result = true;
+//End perfilesButton1OnClick Event Start
+
+//Custom Code @23-2A29BDB7
+    // -------------------------
+        pasar_valor();
+    // -------------------------
+//End Custom Code
+
+//perfilesButton1OnClick Event End @-A5B9ECB8
+        return result;
+    };
+//End perfilesButton1OnClick Event End
+
+//perfilesButton2OnClick Event Start @-736E9DB5
+    actions["perfilesButton2OnClick"] = function (eventType, parameters) {
+        var result = true;
+//End perfilesButton2OnClick Event Start
+
+//Custom Code @24-2A29BDB7
+    // -------------------------
+        sacar_valor();
+    // -------------------------
+//End Custom Code
+
+//perfilesButton2OnClick Event End @-A5B9ECB8
+        return result;
+    };
+//End perfilesButton2OnClick Event End
+
+//perfilesButton_DeleteOnClick Event Start @-35924810
+    actions["perfilesButton_DeleteOnClick"] = function (eventType, parameters) {
+        var result = true;
+//End perfilesButton_DeleteOnClick Event Start
+
+//Confirmation Message @6-F3E99EA7
+        return confirm('¿Borrar este perfil?');
+//End Confirmation Message
+
+//perfilesButton_DeleteOnClick Event End @-A5B9ECB8
+        return result;
+    };
+//End perfilesButton_DeleteOnClick Event End
+
+//perfilesOnSubmit Event Start @-4F131117
+    actions["perfilesOnSubmit"] = function (eventType, parameters) {
+        var result = true;
+//End perfilesOnSubmit Event Start
+
+//Custom Code @28-2A29BDB7
+    // -------------------------
+         var LinkedLB = document.getElementById("list_test_asignados");
+         document.perfiles.LinkedID.value = "";
+         for (i=0; i<LinkedLB.options.length; i++) {
+            if (document.perfiles.LinkedID.value != "" ) {
+                document.perfiles.LinkedID.value = document.perfiles.LinkedID.value + ",";
+                }
+                document.perfiles.LinkedID.value = document.perfiles.LinkedID.value + LinkedLB.options[i].value;
+         }
+    // -------------------------
+//End Custom Code
+
+//perfilesOnSubmit Event End @-A5B9ECB8
+        return result;
+    };
+//End perfilesOnSubmit Event End
+
+//Event Binding @1-38E323C3
+    $('*:ccsControl(perfiles, Button1)').ccsBind(function() {
+        this.bind("click", actions["perfilesButton1OnClick"]);
+    });
+    $('*:ccsControl(perfiles, Button2)').ccsBind(function() {
+        this.bind("click", actions["perfilesButton2OnClick"]);
+    });
+    $('*:ccsControl(perfiles, Button_Delete)').ccsBind(function() {
+        this.bind("click", actions["perfilesButton_DeleteOnClick"]);
+    });
+    $('*:ccsControl(perfiles)').ccsBind(function() {
+        this.bind("submit", actions["perfilesOnSubmit"]);
+    });
+//End Event Binding
+
+//Plugin Calls @1-442151B4
+    $('*:ccsControl(perfiles, Button_Delete)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+    $('*:ccsControl(perfiles, Button_Cancel)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+//End Plugin Calls
+
+//Common Script End @1-562554DE
+});
+//End Common Script End
+//End CCS script
+</script>
+<script>
+function pasar_valor(){
+                var AvailableLB = document.getElementById("list_test");
+                var LinkedLB = document.getElementById("list_test_asignados");
+
+                for (var i=0; i < AvailableLB.length; i++) {
+                  if (AvailableLB.options[i].selected == true) {
+                      LinkedLB.options[LinkedLB.length] = new Option(AvailableLB.options[i].text, AvailableLB.options[i].value);
+                      AvailableLB.options[i] = null;
+                      i=i-1;
+                  }
+                }
+}
+function sacar_valor(){
+                var AvailableLB = document.getElementById("list_test");
+                var LinkedLB = document.getElementById("list_test_asignados");
+
+                for (var i=0; i < LinkedLB.length; i++) {
+                  if (LinkedLB.options[i].selected == true) {
+                     AvailableLB.options[AvailableLB.length] = new Option(LinkedLB.options[i].text, LinkedLB.options[i].value);
+                     LinkedLB.options[i] = null;
+                     i=i-1;
+                  }
+                }
+}
+function openWindow(FileURL, winName, w, h) {
+    winStats = "width=" + w + ",height=" + h + ",toolbar=no,location=no,directories=no,menubar=no,scrollbars=no,status=no,";
+    if (navigator.appName.indexOf("Microsoft") >= 0) {// or if (document.all)
+        var xMax = screen.width, yMax = screen.height;
+    }else {
+        if (navigator.appName.indexOf("Netscape") >= 0) {// or if (document.layers)
+            var xMax = window.outerWidth, yMax = window.outerHeight;
+        }else {
+            var xMax = 640, yMax=480; //default guess
+        }
+    }
+    //calculate center
+    var xOffset = (xMax - w)/2, yOffset = (yMax - h)/2;
+    winStats += "left=" + xOffset + ",top=" + yOffset;
+        window.open(FileURL, winName, winStats);
+}
+function popAdd_perfil() {
+        var perfil_id = document.perfiles.perfil_id.value;
+    aTemplate = "add_perfil.php";
+    openWindow(aTemplate, "winPreview", '500','170');
+}
+function popAdd_editperfil() {
+        var perfil_id = document.perfiles.perfil_id.value;
+    aTemplate = "add_perfil.php?perfil_id="+perfil_id;
+    openWindow(aTemplate, "winPreview", '500','170');
+}
+function busca_cadena(listbox,textbox){
+        var lista = document.getElementById(listbox);
+        var texto = document.getElementById(textbox);
+        for(var index=lista.length-1; index >= 0; index--){           
+                var aguja = texto.value.toLowerCase();
+                var pajar = new String(lista.options[index].text.toLowerCase());
+                if(aguja != ""){        
+                        var resultado = pajar.search(aguja);
+                        if(resultado!=-1) lista.options[index].selected = true;                         
+                        else lista.options[index].selected = false;
+                }
+                else{
+                        for(var index2=0;index2 < lista.length; index2++)
+                                lista.options[index2].selected = false;
+                }
+        }
+}
+</script>
+</head>
+<body class="InLinePageBODY">
+<table width="700" align="center" border="0">
+  <tr>
+    <td>
+      <!-- BEGIN Record perfiles -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <input type="hidden" value="{perfil_id}" name="{perfil_id_Name}" id="perfilesperfil_id"><input type="hidden" value="{nom_perfil}" name="{nom_perfil_Name}" id="perfilesnom_perfil"><input type="hidden" value="{LinkedID}" name="{LinkedID_Name}" id="perfilesLinkedID">
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%" align="center">
+          <tr>
+            <td class="InLineFormHeaderFont" align="center" colspan="3">Agregar/Editar
+              Perfiles </td>
+          </tr>
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="3">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineFieldCaptionTD">Nombre del Perfil</td> 
+            <td class="InLineDataTD" width="50%">{listbox_perfiles}</td> 
+            <td class="InLineDataTD"><a class="InLineDataLink" href="javascript:popAdd_perfil();"><img class="" alt="Agregar nuevo perfil" src="images/btn_agregarnuevo.png" border="0"></a></td>
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD" colspan="3">
+              <p align="center">
+              <table width="100%" align="center" border="0">
+                <tr>
+                  <td class="InLineFormHeaderFont">Test</td> 
+                  <td width="11%"></td> 
+                  <td class="InLineFormHeaderFont">Test asignados</td>
+                </tr>
+ 
+                <tr>
+                  <td class="InLineDataTD"><input class="InLineInput" onkeyup="javascript:busca_cadena('list_test','{cadena_Name}');" style="WIDTH: 100%" value="{cadena}" name="{cadena_Name}" id="perfilescadena"></td> 
+                  <td width="11%"><img class="" alt="escriba en el campo de texto el test a buscar" src="images/lupa.gif" width="25"></td> 
+                  <td class="InLineDataTD" width="44%" rowspan="2">
+                    <select class="InLineSelect" id="perfileslist_test_asignados" ondblclick="javascript:sacar_valor();" style="WIDTH: 100%" multiple size="17" name="{list_test_asignados_Name}">
+                      {list_test_asignados_Options}
+                    </select>
+ </td>
+                </tr>
+ 
+                <tr>
+                  <td style="WIDTH: 40%" width="45%">
+                    <select class="InLineSelect" id="perfileslist_test" ondblclick="javascript:pasar_valor();" style="WIDTH: 100%" multiple size="15" name="{list_test_Name}">
+                      {list_test_Options}
+                    </select>
+ </td> 
+                  <td>
+                    <p align="center">
+                    <!-- BEGIN Button Button1 --><input class="" style="WIDTH: 90%" type="button" value="&gt;&gt;" name="{Button_Name}" id="perfilesButton1"><!-- END Button Button1 --><br>
+                    <br>
+                    <!-- BEGIN Button Button2 --><input class="" style="WIDTH: 90%" type="button" value="&lt;&lt;" name="{Button_Name}" id="perfilesButton2"><!-- END Button Button2 --></p>
+                  </td>
+                </tr>
+              </table>
+              </p>
+            </td>
+          </tr>
+ 
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="3">
+              <!-- BEGIN Button Button_Insert --><input class="InLineButton" type="submit" value="Agregar" name="{Button_Name}" id="perfilesButton_Insert"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input class="InLineButton" type="submit" value="Grabar" name="{Button_Name}" id="perfilesButton_Update"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Delete --><input class="InLineButton" type="submit" value="Borrar" name="{Button_Name}" id="perfilesButton_Delete"><!-- END Button Button_Delete -->
+              <!-- BEGIN Button Button_Cancel --><input class="InLineButton" type="submit" value="Cancelar" name="{Button_Name}" id="perfilesButton_Cancel"><!-- END Button Button_Cancel -->&nbsp; </td>
+          </tr>
+        </table>
+      </form>
+      <!-- END Record perfiles --></td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>det_Peticion</title>
+<meta content="CodeCharge Studio 3.0.1.6" name="GENERATOR">
+<link href="Themes/InLine/Style.css" type="text/css" rel="stylesheet">
+<script language="javascript" src="funciones.js"></script>
+<script language="JavaScript">
+function pidedetalle()
+{
+        window.open('{lblRutaDetalle}',"detfecha","modal=yes, dialog=yes, width=500, height=400,toolbar=no,location=no,directories=no,menubar=no, scrollbar=yes, status=no,");
+}
+</script>
+<script language="JavaScript">
+//Begin CCS script
+//Include Common JSFunctions @1-921C7A7E
+</script>
+<script src="ClientI18N.php?file=Globalize.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-A87AC9EE
+</script>
+{page:scriptIncludes}
+<script type="text/javascript">
+//End Include User Scripts
+
+//Common Script Start @1-8BFA436B
+jQuery(function ($) {
+    var features = { };
+    var actions = { };
+    var params = { };
+//End Common Script Start
+
+//grdDetallesButton_SubmitOnClick Event Start @-8127B2EB
+    actions["grdDetallesButton_SubmitOnClick"] = function (eventType, parameters) {
+        var result = true;
+//End grdDetallesButton_SubmitOnClick Event Start
+
+//Confirmation Message @780-96FAE8C2
+        return confirm('Enviar registro?');
+//End Confirmation Message
+
+//grdDetallesButton_SubmitOnClick Event End @-A5B9ECB8
+        return result;
+    };
+//End grdDetallesButton_SubmitOnClick Event End
+
+//Event Binding @1-E52F808D
+    $('*:ccsControl(grdDetalles, Button_Submit)').ccsBind(function() {
+        this.bind("click", actions["grdDetallesButton_SubmitOnClick"]);
+    });
+//End Event Binding
+
+//Common Script End @1-562554DE
+});
+//End Common Script End
+//End CCS script
+</script>
+<script>
+function muestrarecibo(){
+        {fun_muestrarecibo}
+}
+</script>
+</head>
+<body class="InLinePageBODY" text="#000000" vlink="#000000" alink="#000000" link="#000000" bgcolor="#ffffff" onload="muestrarecibo();">
+<table width="700" align="center" border="0">
+  <tr>
+    <td>{detalle_peticion}</td>
+  </tr>
+ 
+  <tr>
+    <td>
+      <!-- BEGIN EditableGrid grdDetalles -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <input type="hidden" value="{FormState}" name="FormState">{FormScript} 
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="0" width="100%" border="0">
+          <tr>
+            <td class="InLineFormHeaderFont" align="center" colspan="7">Detalle de la petición: </td>
+          </tr>
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="6">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineColumnTD"><a href="{lnk_detalles_Src}" id="grdDetalleslnk_detalles" title="Ver / Ocutar Detalles de los Test Compuestos">{lnk_detalles}</a></td> 
+            <td class="InLineColumnTD" nowrap>Muestra ID</td> 
+            <td class="InLineColumnTD" nowrap>Código del Test</td> 
+            <td class="InLineColumnTD" nowrap>Precio&nbsp;</td> 
+            <td class="InLineColumnTD" nowrap>Prioridad</td> 
+            <td class="InLineColumnTD" nowrap>Estado&nbsp;</td>
+          </tr>
+ 
+          <!-- BEGIN Row -->
+          <!-- BEGIN RowError -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="6">{Error}</td>
+          </tr>
+          <!-- END RowError -->
+          <tr {lbl_class}>
+            <td valign="top" align="left" width="20">{lbl_info}<a href="{detalle_compuesto_Src}" class="InLineDataLink" id="grdDetallesdetalle_compuesto">{detalle_compuesto}</a></td> 
+            <td>&nbsp;{muestra_id}</td> 
+            <td>{cod_test}</td> 
+            <td>
+              <div {lbl_hidden}>
+                <input class="InLineInput" id="grdDetallesprecio" style="TEXT-ALIGN: right" maxlength="10" size="10" value="{precio}" name="{precio_Name}" autocomplete="off">
+              </div>
+            </td> 
+            <td>
+              <select class="InLineSelect" id="grdDetallesprioridad_id" name="{prioridad_id_Name}">
+                <option value="" selected>{prioridad_id_Options}</option>
+              </select>
+ <input id="grdDetallesdecompuesto" type="hidden" value="{decompuesto}" name="{decompuesto_Name}"></td> 
+            <td>{nom_estado}&nbsp;</td>
+          </tr>
+ <!-- END Row -->
+          <!-- BEGIN NoRecords -->
+          <tr>
+            <td class="InLineDataTD" colspan="6">No se encontaron&nbsp;Test solicitados en esta petición&nbsp;</td>
+          </tr>
+          <!-- END NoRecords -->
+          <tr>
+            <td class="InLineFooterTD" valign="top" nowrap align="center" colspan="6">
+              <!-- BEGIN Button Button_Submit --><input class="InLineButton" id="grdDetallesButton_Submit" type="submit" value="Grabar Cambios" name="{Button_Name}"><!-- END Button Button_Submit --></td>
+          </tr>
+        </table>
+ 
+        <table align="center" border="0">
+          <tr>
+            <td align="center"><a href="{lnkNueva}" class="InLineDataLink"><img src="images/btn_nuevapeticion.png" border="0"></a></td> 
+            <td align="center"><a href="{lnkEditar}" class="InLineDataLink"><img src="images/btn_editarpeticion.png" border="0"></a></td> 
+            <td align="center"><a href="{lnkAbonos}" class="InLineDataLink"><img src="images/btn_abonos.png" border="0"></a></td> 
+            <td align="center"><a href="{lnkRecibo}" class="InLineDataLink"><img src="images/btn_hojadetrabajo.png" border="0"></a></td> 
+            <td align="center"><a href="{ImageLink1}" class="InLineDataLink" onclick="JavaScript:pidedetalle();"><img class="" src="images/btn_plazoentrega.png" border="0"></a></td> 
+            <td align="center"><a href="{lnkTomaMuestra}" class="InLineDataLink"><img src="images/btn_tomademuestra.png" border="0"></a></td>
+          </tr>
+ 
+          <tr>
+            <td align="center"><a href="{ImageLink2}" class="InLineDataLink" onclick="return confirm('Seguro de eliminar esta petición y sus resultados de la Base de Datos');"><img class="" src="images/btn_eliminarpeticion.png" border="0"></a></td> 
+            <td align="center"><a href="{ImageLink4}" class="InLineDataLink"><img class="" src="images/btn_ingresaanotacion.png" border="0"></a></td> 
+            <td align="center"><a href="{lnkPendientes}" class="InLineDataLink"><img class="" src="images/btn_ingresapendiente.png" border="0"></a></td> 
+            <td align="center"><a href="{lnkResultados}" class="InLineDataLink"><img src="images/btn_irresultados.png" border="0"></a></td> 
+            <td align="center"><a href="{lnkValidar}" class="InLineDataLink"><img src="images/btn_validar.png" border="0"></a></td> 
+            <td align="center"><a href="{lnkInformes}" class="InLineDataLink"><img class="" src="images/btn_Informes.png" border="0"></a></td>
+          </tr>
+        </table>
+      </form>
+      <!-- END EditableGrid grdDetalles --><br>
+      <!-- BEGIN Grid DetBitacora -->
+      <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+        <tr>
+          <td class="InLineFormHeaderFont" colspan="6">Bitácora de la Petición </td>
+        </tr>
+ 
+        <tr>
+          <td class="InLineColumnTD" nowrap>Cerrar</td> 
+          <td class="InLineColumnTD" nowrap>
+            <!-- BEGIN Sorter Sorter_fecha --><a href="{Sort_URL}" class="InLineSorterLink">Fecha</a> 
+            <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_fecha -->&nbsp;</td> 
+          <td class="InLineColumnTD" nowrap width="100%">Descripción &nbsp;</td> 
+          <td class="InLineColumnTD" nowrap>
+            <!-- BEGIN Sorter Tipo --><a href="{Sort_URL}" class="InLineSorterLink">Tipo</a> 
+            <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Tipo -->&nbsp;</td> 
+          <td class="InLineColumnTD" nowrap>
+            <!-- BEGIN Sorter Sorter_nom_estado --><a href="{Sort_URL}" class="InLineSorterLink">Estado</a> 
+            <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_nom_estado -->&nbsp;</td> 
+          <td class="InLineColumnTD" nowrap>
+            <!-- BEGIN Sorter Sorter_nom_usuario --><a href="{Sort_URL}" class="InLineSorterLink">Usuario</a> 
+            <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_nom_usuario -->&nbsp;</td>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr>
+          <td class="InLineDataTD" align="center"><a href="{lnkAccion_Src}" class="InLineDataLink" id="DetBitacoralnkAccion" onclick="return confirm('Seguro de Cerrar este evento?');">{lnkAccion}</a><input id="DetBitacoraestado_id" style="WIDTH: 79px; HEIGHT: 22px" type="hidden" size="10" value="{estado_id}" name="{estado_id_Name}"><input id="DetBitacorabitacora_id" style="WIDTH: 91px; HEIGHT: 22px" type="hidden" size="11" value="{bitacora_id}" name="{bitacora_id_Name}"><input id="DetBitacoratipo_bitacora_id" style="WIDTH: 111px; HEIGHT: 22px" type="hidden" size="14" value="{tipo_bitacora_id}" name="{tipo_bitacora_id_Name}"><a href="{ImageLink1}" class="InLineDataLink"></a></td> 
+          <td class="InLineDataTD" nowrap>{fecha}&nbsp;</td> 
+          <td class="InLineDataTD" width="100%">{descripcion}&nbsp;</td> 
+          <td class="InLineDataTD">{nom_tipo_bitacora}</td> 
+          <td class="InLineDataTD">{nom_estado}&nbsp;</td> 
+          <td class="InLineDataTD" nowrap>{nom_usuario}&nbsp;</td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr>
+          <td class="InLineDataTD" colspan="6">No se encontaron registros&nbsp;</td>
+        </tr>
+        <!-- END NoRecords -->
+      </table>
+      <!-- END Grid DetBitacora --></td>
+  </tr>
+</table>
+</body>
+</html>

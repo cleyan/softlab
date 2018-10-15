@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>ver_tomademuestra</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+<link rel="stylesheet" type="text/css" href="Themes/InLine/Style.css">
+</head>
+<body class="InLinePageBODY">
+<table width="700" align="center" border="0">
+  <tr>
+    <td>
+      <!-- BEGIN Grid peticiones_pacientes_proc -->
+      <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+        <tr>
+          <td class="InLineFormHeaderFont" align="middle" colspan="4">Detalle de
+            la petición </td> 
+        </tr>
+        <!-- BEGIN Row -->
+        <tr>
+          <td class="InLineColumnTD" nowrap>Número de Peticion</td> 
+          <td class="InLineDataTD"><strong>{peticion_id}</strong>&nbsp;</td> 
+          <td class="InLineColumnTD" nowrap></td> 
+          <td class="InLineDataTD"></td> 
+        </tr>
+ 
+        <tr>
+          <td class="InLineColumnTD" nowrap>Nombre del Paciente&nbsp;</td> 
+          <td class="InLineDataTD">{nombres}&nbsp;{apellidos}</td> 
+          <td class="InLineColumnTD" nowrap>Rut&nbsp;/ Ficha</td> 
+          <td class="InLineDataTD">{rut}&nbsp;/{ficha}</td> 
+        </tr>
+ 
+        <tr>
+          <td class="InLineColumnTD" nowrap>Fecha Ingreso petición</td> 
+          <td class="InLineDataTD">{fecha}&nbsp;-{hora}&nbsp;hrs.</td> 
+          <td class="InLineColumnTD" nowrap>Procedencia&nbsp;</td> 
+          <td class="InLineDataTD">{nom_procedencia}</td> 
+        </tr>
+ 
+        <tr>
+          <td class="InLineColumnTD" nowrap>Fecha de Nacimiento</td> 
+          <td class="InLineDataTD">{fecha_nacimiento}</td> 
+          <td class="InLineColumnTD" nowrap>Edad</td> 
+          <td class="InLineDataTD">{edad}<input type="hidden" value="{paciente_id}" name="{paciente_id_Name}" id="peticiones_pacientes_procpaciente_id"></td> 
+        </tr>
+ 
+        <tr>
+          <td class="InLineColumnTD" nowrap>Observaciones&nbsp;</td> 
+          <td class="InLineDataTD">{observaciones}&nbsp;</td> 
+          <td class="InLineColumnTD" nowrap></td> 
+          <td class="InLineDataTD"></td> 
+        </tr>
+        <!-- END Row -->
+        <!-- BEGIN NoRecords --><!-- END NoRecords -->
+      </table>
+ <!-- END Grid peticiones_pacientes_proc -->&nbsp; &nbsp; 
+      <!-- BEGIN Grid peticiones_peticiones_det -->
+      <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+        <tr>
+          <td class="InLineFormHeaderFont" align="middle" colspan="3">Peticiones
+            y Sus tipos de muestra </td> 
+        </tr>
+ 
+        <tr>
+          <td class="InLineColumnTD" nowrap>Muestra Id&nbsp;(rotular)</td> 
+          <td class="InLineColumnTD" nowrap>Tipo Muestra&nbsp;</td> 
+          <td class="InLineColumnTD" nowrap>Cuerpo Indicacion&nbsp;</td> 
+        </tr>
+        <!-- BEGIN Row -->
+        <tr>
+          <td class="InLineDataTD" nowrap>{muestra_id}&nbsp;</td> 
+          <td class="InLineDataTD" nowrap>{nom_tipo_muestra}&nbsp;</td> 
+          <td class="InLineDataTD">{cuerpo_indicacion}&nbsp;</td> 
+        </tr>
+        <!-- END Row -->
+        <!-- BEGIN AltRow -->
+        <tr>
+          <td class="InLineAltDataTD" nowrap>{Alt_muestra_id}&nbsp;</td> 
+          <td class="InLineAltDataTD" nowrap>{Alt_nom_tipo_muestra}&nbsp;</td> 
+          <td class="InLineAltDataTD">{Alt_cuerpo_indicacion}&nbsp;</td> 
+        </tr>
+        <!-- END AltRow -->
+        <!-- BEGIN NoRecords -->
+        <tr>
+          <td class="InLineAltDataTD" colspan="3">No se encontaron
+            indicaciones&nbsp;</td> 
+        </tr>
+        <!-- END NoRecords -->
+        <tr>
+          <td class="InLineFooterTD" nowrap colspan="3">&nbsp;&nbsp; </td> 
+        </tr>
+ 
+      </table>
+ 
+      <table width="100%" align="center" border="0">
+        <tr>
+          <td align="left"><a class="InLineDataLink" href="{ImageLink1}"><img class="" src="images/detalle.gif" border="0"></a>&nbsp;</td> 
+          <td><strong>Ver Detalle de los test solicitados </strong> </td> 
+          <td align="right">&nbsp; 
+            <!-- BEGIN Button Cancelar --><input class="InLineButton" type="button" value="Cancelar" name="{Button_Name}" onclick="javascript:window.location='ver_Peticiones.php';" id="peticiones_peticiones_detCancelar"><!-- END Button Cancelar --></td> 
+        </tr>
+ 
+      </table>
+ <!-- END Grid peticiones_peticiones_det --></td> 
+  </tr>
+</table>
+</body>
+</html>

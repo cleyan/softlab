@@ -1,0 +1,225 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>def_grupos</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+<link rel="stylesheet" type="text/css" href="Themes/InLine/Style.css">
+<script language="JavaScript">
+//Begin CCS script
+//Include Common JSFunctions @1-921C7A7E
+</script>
+<script src="ClientI18N.php?file=Globalize.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-A87AC9EE
+</script>
+{page:scriptIncludes}
+<script type="text/javascript">
+//End Include User Scripts
+
+//Common Script Start @1-8BFA436B
+jQuery(function ($) {
+    var features = { };
+    var actions = { };
+    var params = { };
+//End Common Script Start
+
+//grupos1Button_DeleteOnClick Event Start @-B2D840E4
+    actions["grupos1Button_DeleteOnClick"] = function (eventType, parameters) {
+        var result = true;
+//End grupos1Button_DeleteOnClick Event Start
+
+//Confirmation Message @30-BED55CD3
+        return confirm('Borrar registro?');
+//End Confirmation Message
+
+//grupos1Button_DeleteOnClick Event End @-A5B9ECB8
+        return result;
+    };
+//End grupos1Button_DeleteOnClick Event End
+
+//Event Binding @1-D86D878E
+    $('*:ccsControl(grupos1, Button_Delete)').ccsBind(function() {
+        this.bind("click", actions["grupos1Button_DeleteOnClick"]);
+    });
+//End Event Binding
+
+//Plugin Calls @1-8D3E1490
+    $('*:ccsControl(grupos1, Button_Delete)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+    $('*:ccsControl(grupos1, Button_Cancel)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+//End Plugin Calls
+
+//Common Script End @1-562554DE
+});
+//End Common Script End
+//End CCS script
+</script>
+</head>
+<body class="InLinePageBODY">
+<table width="700" align="center" border="0" class="Table">
+  <tr>
+    <td>
+      <!-- BEGIN Record gruposSearch -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+          <tr>
+            <td class="InLineFormHeaderFont" colspan="3"></td> 
+          </tr>
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="3">{Error}</td> 
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineFormHeaderFont" nowrap><strong>Elija el Informe</strong>&nbsp;</td> 
+            <td class="InLineDataTD" width="100%">
+              <select name="{s_informe_id_Name}" class="InLineSelect" style="WIDTH: 100%" id="gruposSearchs_informe_id">
+                <option value="0" selected>Seleccionar Valor</option>
+ {s_informe_id_Options} 
+              </select>
+ </td> 
+            <td class="InLineFooterTD">
+              <!-- BEGIN Button Button_DoSearch --><input class="InLineButton" type="submit" value="Buscar" name="{Button_Name}" id="gruposSearchButton_DoSearch"><!-- END Button Button_DoSearch --></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="3"></td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END Record gruposSearch -->
+      <!-- BEGIN Grid grupos -->
+      <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+        <tr>
+          <td class="InLineFormHeaderFont" align="middle" colspan="6">Lista de
+            Grupos &nbsp;(Registros:{grupos_TotalRecords}) </td> 
+        </tr>
+ 
+        <tr>
+          <td class="InLineColumnTD" nowrap align="middle">Operaciones</td> 
+          <td class="InLineColumnTD" nowrap>
+            <!-- BEGIN Sorter Sorter_nom_grupo --><a class="InLineSorterLink" href="{Sort_URL}">Nombre
+            Grupo</a> 
+            <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_nom_grupo -->&nbsp;</td> 
+          <td class="InLineColumnTD" nowrap align="middle">¿Imprimir?</td> 
+          <td class="InLineColumnTD" nowrap>Diseño del Grupo</td> 
+          <td class="InLineColumnTD" nowrap align="middle">Orden</td> 
+          <td class="InLineColumnTD" nowrap align="middle">Ordenar</td> 
+        </tr>
+        <!-- BEGIN Row -->
+        <tr>
+          <td class="InLineDataTD" align="middle"><a class="InLineDataLink" href="{Link1}"><img class="" src="images/btns_Test.png" align="absMiddle" border="0"></a>&nbsp;<a class="InLineDataLink" href="{Detail}"><img class="" src="images/btns_Editar.png" align="absMiddle" border="0"></a></td> 
+          <td class="InLineDataTD" nowrap>{nom_grupo}&nbsp;</td> 
+          <td class="InLineDataTD" align="middle">{imprimir}</td> 
+          <td class="InLineDataTD" nowrap width="100%">{alineacion}:{nom_grupo_modelo}</td> 
+          <td class="InLineDataTD" align="middle">{orden}</td> 
+          <td class="InLineDataTD" align="middle"><a class="InLineDataLink" href="{imgsube}"><img class="" src="images/restar.png" border="0"></a><a class="InLineDataLink" href="{img_baja}"><img class="" src="images/sumar.png" border="0"></a></td> 
+        </tr>
+        <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr>
+          <td class="InLineAltDataTD" colspan="6">No se encontaron registros, <strong>¿Eligió
+            un&nbsp;Informe?, </strong>también puede ser que este informe no
+            tenga grupos definidos </td> 
+        </tr>
+        <!-- END NoRecords -->
+        <tr>
+          <td class="InLineFooterTD" nowrap colspan="6"><a class="InLineDataLink" href="{grupos_Insert}"><img class="" src="images/btn_agregarnuevo.png" border="0"></a>&nbsp; <a class="InLineDataLink" href="{ImageLink1}"><img class="" src="images/btn_inicio.png" border="0"></a> </td> 
+        </tr>
+ 
+      </table>
+ <!-- END Grid grupos -->
+      <!-- BEGIN Record grupos1 -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+          <tr>
+            <td class="InLineFormHeaderFont" colspan="2">Agregar/Editar Grupos </td> 
+          </tr>
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="2">{Error}</td> 
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineFieldCaptionTD">Informe</td> 
+            <td class="InLineDataTD">
+              <select name="{informe_id_Name}" class="InLineSelect" id="grupos1informe_id">
+                <option value="" selected>Seleccionar Valor</option>
+ {informe_id_Options} 
+              </select>
+ &nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD">Nombre del &nbsp;Grupo&nbsp;</td> 
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="50" size="52" value="{nom_grupo}" name="{nom_grupo_Name}" style="WIDTH: 342px; HEIGHT: 20px" id="grupos1nom_grupo"></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD">Título a Imprimir:</td> 
+            <td class="InLineDataTD"><input class="" type="checkbox" value="1" name="{imprimir_Name}" title="Marque o desmarque esta casilla según quiera o no que se imprima el título" {imprimir} id="grupos1imprimir"><input class="InLineInput" maxlength="50" size="50" value="{titulo}" name="{titulo_Name}" id="grupos1titulo"></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD">Diseño del Grupo:</td> 
+            <td class="InLineDataTD">
+              <select class="InLineSelect" name="{alineacion_Name}" id="grupos1alineacion">
+                <option value="" selected>Seleccionar Valor</option>
+ {alineacion_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD" valign="top" align="middle">
+              <p align="center"></p>
+ <fieldset style="WIDTH: 179px">
+              <div align="left">
+                <legend>Alineación&nbsp; del título </legend>
+ 
+                <!-- BEGIN RadioButton titulo_alineacion --><input class="" type="radio" value="{Value}" name="{titulo_alineacion_Name}" {Check} id="grupos1titulo_alineacion_{titulo_alineacion:optionNumber}">{Description} <br>
+                <!-- END RadioButton titulo_alineacion -->
+              </div>
+ </fieldset> </td> 
+            <td class="InLineDataTD" valign="top"><fieldset style="WIDTH: 184px">
+              <legend>Imprimir Linea en Blanco</legend>
+ <input class="" type="checkbox" value="1" name="{CheckBox1_Name}" {CheckBox1} id="grupos1CheckBox1">Antes <br>
+              <input class="" type="checkbox" value="1" name="{CheckBox2_Name}" {CheckBox2} id="grupos1CheckBox2">&nbsp;Después </fieldset></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD">Pie del Grupo</td> 
+            <td class="InLineDataTD"><input class="InLineInput" value="{pie}" name="{pie_Name}" style="WIDTH: 100%" maxlength="255" id="grupos1pie"></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD">Orden del Grupo dentro del Informe</td> 
+            <td class="InLineDataTD"><input class="InLineInput" value="{orden}" name="{orden_Name}" id="grupos1orden"></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input class="InLineButton" type="submit" value="Agregar" name="{Button_Name}" id="grupos1Button_Insert"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input class="InLineButton" type="submit" value="Grabar" name="{Button_Name}" id="grupos1Button_Update"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Delete --><input class="InLineButton" type="submit" value="Borrar" name="{Button_Name}" id="grupos1Button_Delete"><!-- END Button Button_Delete -->
+              <!-- BEGIN Button Button_Cancel --><input class="InLineButton" type="submit" value="Cancelar" name="{Button_Name}" id="grupos1Button_Cancel"><!-- END Button Button_Cancel -->&nbsp; </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END Record grupos1 --></td> 
+  </tr>
+ 
+</table>
+ 
+</body>
+ 
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>list_insumos</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+<link rel="stylesheet" type="text/css" href="Themes/InLine/Style.css">
+<script language="JavaScript">
+//Begin CCS script
+//Include Common JSFunctions @1-9D65069C
+</script>
+<script src="../ClientI18N.php?file=Globalize.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-A87AC9EE
+</script>
+{page:scriptIncludes}
+<script type="text/javascript">
+//End Include User Scripts
+
+//Common Script Start @1-8BFA436B
+jQuery(function ($) {
+    var features = { };
+    var actions = { };
+    var params = { };
+//End Common Script Start
+
+//insumosAddRowBtnOnClick Event Start @-5E290866
+    actions["insumosAddRowBtnOnClick"] = function (eventType, parameters) {
+        var result = true;
+//End insumosAddRowBtnOnClick Event Start
+
+//Custom Code @29-2A29BDB7
+    // -------------------------
+var NS6 = (!document.all && document.getElementById) ? 1 : 0;
+var IE  = (document.all) ? 1 : 0;
+
+var FormState = document.insumos.FormState.value.split(";");
+var AllLength = parseInt(FormState[0])+parseInt(FormState[1]);
+
+  if (parseInt(FormState[0]) == 0 ) {
+      FormState[0] = 1;
+  }
+
+  var i;
+  for (i=FormState[0]; i<AllLength; i++) {
+     var objRow = document.getElementById(i);
+     if (NS6) {
+       if (objRow.style.display == "none") {
+           objRow.style.display = '';
+           break;
+       }
+     } else {
+       if (objRow.style.display == "none") {
+           objRow.style.display = "block"; 
+           break;
+       }
+	 }
+  }
+
+  if (i >= AllLength) 
+      document.forms["insumos"].AddRowBtn.disabled = true;
+    // -------------------------
+//End Custom Code
+
+//insumosAddRowBtnOnClick Event End @-A5B9ECB8
+        return result;
+    };
+//End insumosAddRowBtnOnClick Event End
+
+//insumosButton_SubmitOnClick Event Start @-9D57DB1E
+    actions["insumosButton_SubmitOnClick"] = function (eventType, parameters) {
+        var result = true;
+//End insumosButton_SubmitOnClick Event Start
+
+//Confirmation Message @23-F0DFA30E
+        return confirm('¿Guardar los cambios?');
+//End Confirmation Message
+
+//insumosButton_SubmitOnClick Event End @-A5B9ECB8
+        return result;
+    };
+//End insumosButton_SubmitOnClick Event End
+
+//Event Binding @1-911770BD
+    $('*:ccsControl(insumos, AddRowBtn)').ccsBind(function() {
+        this.bind("click", actions["insumosAddRowBtnOnClick"]);
+    });
+    $('*:ccsControl(insumos, Button_Submit)').ccsBind(function() {
+        this.bind("click", actions["insumosButton_SubmitOnClick"]);
+    });
+//End Event Binding
+
+//Plugin Calls @1-B015BD18
+    $('*:ccsControl(insumos, AddRowBtn)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+    $('*:ccsControl(insumos, Cancel)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+//End Plugin Calls
+
+//Common Script End @1-562554DE
+});
+//End Common Script End
+//End CCS script
+</script>
+<script>
+function sel_all_check(check){
+var check = document.getElementById(check);
+  if(navigator.appName != 'Netscape'){
+    for(i=0;i<document.forms.length;i++){
+      for(j=0;j<document.forms[i].elements.length;j++){
+        var formObj=document.forms[i].elements[j];
+        if(formObj.type.toLowerCase() == "checkbox"){
+			if(check.checked)
+				formObj.checked = true;
+			else
+				formObj.checked = false;
+		}
+      }
+    }
+  }
+}
+
+</script>
+</head>
+<body class="InLinePageBODY">
+<table width="700" align="center" border="0">
+  <tr>
+    <td align="left">
+      <!-- BEGIN Record insumosSearch -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+          <tr>
+            <td class="InLineFormHeaderFont">
+              <p align="center">&nbsp;</p>
+ </td> 
+            <td class="InLineFormHeaderFont" colspan="2">Buscar Insumos</td> 
+          </tr>
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="2">{Error}</td> 
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineFieldCaptionTD">Palabra clave&nbsp;</td> 
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="50" size="50" value="{s_keyword}" name="{s_keyword_Name}" id="insumosSearchs_keyword">&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD">Registro por página&nbsp;</td> 
+            <td class="InLineDataTD">
+              <select class="InLineSelect" name="{insumosPageSize_Name}" id="insumosSearchinsumosPageSize">
+                {insumosPageSize_Options} 
+              </select>
+ &nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="2">
+              <!-- BEGIN Button Button_DoSearch --><input class="InLineButton" type="submit" value="Buscar" name="{Button_Name}" id="insumosSearchButton_DoSearch"><!-- END Button Button_DoSearch -->&nbsp; </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END Record insumosSearch -->
+      <!-- BEGIN EditableGrid insumos -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <input type="hidden" value="{FormState}" name="FormState">{FormScript} 
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+          <tr>
+            <td class="InLineFormHeaderFont" align="middle" colspan="6">Lista de
+              Insumos &nbsp;(Total de Registros:{insumos_TotalRecords}) </td> 
+          </tr>
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="6">{Error}</td> 
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineColumnTD" nowrap align="middle">
+              <!-- BEGIN Sorter Sorter_cod_insumo --><a class="InLineSorterLink" href="{Sort_URL}">Código</a> 
+              <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+              <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_cod_insumo --></td> 
+            <td class="InLineColumnTD" nowrap align="middle">
+              <!-- BEGIN Sorter Sorter_nom_insumo --><a class="InLineSorterLink" href="{Sort_URL}">Insumo</a> 
+              <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+              <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_nom_insumo --></td> 
+            <td class="InLineColumnTD" nowrap align="middle">UM</td> 
+            <td class="InLineColumnTD" nowrap align="middle">
+              <!-- BEGIN Sorter Sorter_stock_min --><a class="InLineSorterLink" href="{Sort_URL}">Stock
+              Mín</a> 
+              <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+              <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_stock_min -->&nbsp;</td> 
+            <td class="InLineColumnTD" nowrap align="middle">
+              <!-- BEGIN Sorter Sorter_stock_max --><a class="InLineSorterLink" href="{Sort_URL}">Stock
+              Máx</a> 
+              <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+              <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_stock_max -->&nbsp;</td> 
+            <td class="InLineColumnTD" nowrap align="middle">Borrar <input id="Checkbox1" type="checkbox" name="Checkbox1" onclick="javascritp:sel_all_check('Checkbox1');"></td> 
+          </tr>
+          <!-- BEGIN Row -->
+          <!-- BEGIN RowError -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="6">{Error}</td> 
+          </tr>
+          <!-- END RowError -->
+          <tr id="{RowIDAttribute}" name="{RowNameAttribute}" {RowStyleAttribute}>
+            <td class="InLineDataTD" align="middle"><input class="InLineInput" maxlength="50" value="{cod_insumo}" name="{cod_insumo_Name}" size="10" id="insumoscod_insumo"></td> 
+            <td class="InLineDataTD" align="middle"><input class="InLineInput" maxlength="100" size="35" value="{nom_insumo}" name="{nom_insumo_Name}" id="insumosnom_insumo"></td> 
+            <td class="InLineDataTD" align="middle"><input class="InLineInput" value="{unidad_medida}" name="{unidad_medida_Name}" size="5" id="insumosunidad_medida"></td> 
+            <td class="InLineDataTD" align="middle"><input class="InLineInput" maxlength="10" size="4" value="{stock_min}" name="{stock_min_Name}" id="insumosstock_min"></td> 
+            <td class="InLineDataTD" align="middle"><input class="InLineInput" maxlength="10" size="4" value="{stock_max}" name="{stock_max_Name}" id="insumosstock_max"></td> 
+            <td class="InLineDataTD" align="middle">
+              <!-- BEGIN CheckBox CheckBox_Delete --><input class="InLineInput" type="checkbox" value="1" name="{CheckBox_Delete_Name}" {CheckBox_Delete} id="insumosCheckBox_Delete"><!-- END CheckBox CheckBox_Delete --></td> 
+          </tr>
+          <!-- END Row -->
+          <!-- BEGIN NoRecords -->
+          <tr>
+            <td class="InLineDataTD" colspan="6">No se encontaron
+              registros&nbsp;</td> 
+          </tr>
+          <!-- END NoRecords -->
+          <tr>
+            <td class="InLineFooterTD" nowrap align="middle" colspan="6">
+              <!-- BEGIN Navigator Navigator -->
+              <!-- BEGIN First_On --><a class="InLineNavigatorLink" href="{First_URL}">Inicio</a> <!-- END First_On -->
+              <!-- BEGIN First_Off -->Inicio <!-- END First_Off -->
+              <!-- BEGIN Prev_On --><a class="InLineNavigatorLink" href="{Prev_URL}">Anterior</a> <!-- END Prev_On -->
+              <!-- BEGIN Prev_Off -->Anterior <!-- END Prev_Off -->&nbsp; 
+              <!-- BEGIN Pages -->
+              <!-- BEGIN Page_On --><a class="InLineNavigatorLink" href="{Page_URL}">{Page_Number}</a>&nbsp;<!-- END Page_On -->
+              <!-- BEGIN Page_Off -->{Page_Number}&nbsp;<!-- END Page_Off --><!-- END Pages -->de
+              {Total_Pages}&nbsp; 
+              <!-- BEGIN Next_On --><a class="InLineNavigatorLink" href="{Next_URL}">Siguiente</a> <!-- END Next_On -->
+              <!-- BEGIN Next_Off -->Siguiente <!-- END Next_Off -->
+              <!-- BEGIN Last_On --><a class="InLineNavigatorLink" href="{Last_URL}">Final</a> <!-- END Last_On -->
+              <!-- BEGIN Last_Off -->Final <!-- END Last_Off --><!-- END Navigator Navigator --></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFooterTD" nowrap align="left" colspan="4">
+              <p align="left">
+              <!-- BEGIN Button AddRowBtn --><input class="InLineButton" type="button" value="Nueva fila" name="{Button_Name}" id="insumosAddRowBtn"><!-- END Button AddRowBtn --></p>
+ </td> 
+            <td class="InLineFooterTD" nowrap align="right" colspan="3">
+              <!-- BEGIN Button Button_Submit --><input class="InLineButton" type="submit" value="Grabar" name="{Button_Name}" id="insumosButton_Submit"><!-- END Button Button_Submit -->&nbsp; 
+              <!-- BEGIN Button Cancel --><input class="InLineButton" type="submit" value="Cancelar" name="{Button_Name}" id="insumosCancel"><!-- END Button Cancel --></td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END EditableGrid insumos --></td> 
+  </tr>
+</table>
+</body>
+</html>

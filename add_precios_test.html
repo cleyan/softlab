@@ -1,0 +1,151 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>add_precios_test</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+<link rel="stylesheet" type="text/css" href="Themes/InLine/Style.css">
+<script language="JavaScript">
+//Begin CCS script
+//Include Common JSFunctions @1-921C7A7E
+</script>
+<script src="ClientI18N.php?file=Globalize.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-A87AC9EE
+</script>
+{page:scriptIncludes}
+<script type="text/javascript">
+//End Include User Scripts
+
+//Common Script Start @1-8BFA436B
+jQuery(function ($) {
+    var features = { };
+    var actions = { };
+    var params = { };
+//End Common Script Start
+
+//precios_testButton_DeleteOnClick Event Start @-FBE24F96
+    actions["precios_testButton_DeleteOnClick"] = function (eventType, parameters) {
+        var result = true;
+//End precios_testButton_DeleteOnClick Event Start
+
+//Confirmation Message @6-58AEDC5A
+        return confirm('¿Borrar este precio?');
+//End Confirmation Message
+
+//precios_testButton_DeleteOnClick Event End @-A5B9ECB8
+        return result;
+    };
+//End precios_testButton_DeleteOnClick Event End
+
+//Event Binding @1-28EAFABD
+    $('*:ccsControl(precios_test, Button_Delete)').ccsBind(function() {
+        this.bind("click", actions["precios_testButton_DeleteOnClick"]);
+    });
+//End Event Binding
+
+//Plugin Calls @1-D7A3331B
+    $('*:ccsControl(precios_test, Button_Delete)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+    $('*:ccsControl(precios_test, Button_Cancel)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+//End Plugin Calls
+
+//Common Script End @1-562554DE
+});
+//End Common Script End
+//End CCS script
+</script>
+<script language="JavaScript">
+
+function openWindow(FileURL, winName, w, h) {
+    winStats = "width=" + w + ",height=" + h + ",toolbar=no,location=no,directories=no,menubar=no,scrollbars=no,status=no,";
+    if (navigator.appName.indexOf("Microsoft") >= 0) {// or if (document.all)
+        var xMax = screen.width, yMax = screen.height;
+    }else {
+        if (navigator.appName.indexOf("Netscape") >= 0) {// or if (document.layers)
+            var xMax = window.outerWidth, yMax = window.outerHeight;
+        }else {
+            var xMax = 640, yMax=480; //default guess
+        }
+    }
+    //calculate center
+    var xOffset = (xMax - w)/2, yOffset = (yMax - h)/2;
+    winStats += "left=" + xOffset + ",top=" + yOffset;
+	window.open(FileURL, winName, winStats);
+}
+function popFind_test() {
+    aTemplate = "add_precios_test_find.php";
+    openWindow(aTemplate, "winPreview", '560','330');
+}
+</script>
+</head>
+<body  class="InLinePageBODY">
+<table width="700" align="center" border="0">
+  <tr>
+    <td>
+      <!-- BEGIN Record precios_test -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <input type="hidden" name="{precio_test_id_Name}" value="{precio_test_id}" id="precios_testprecio_test_id"><input type="hidden" name="{test_id_Name}" value="{test_id}" id="precios_testtest_id">
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%" align="center">
+          <tr>
+            <td class="InLineFormHeaderFont" colspan=""><img class="" src="images/money.gif"></td> 
+            <td class="InLineFormHeaderFont" colspan="4">Asignar&nbsp;Precio</td> 
+          </tr>
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="5">{Error}</td> 
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td width="12%" class="InLineDataTD">Test</td> 
+            <td class="InLineDataTD" colspan="3"><input class="InLineInput" style="WIDTH: 100%" readonly value="{nom_test}" name="{nom_test_Name}" id="precios_testnom_test"></td> 
+            <td width="6%" class="InLineFieldCaptionTD"><a class="InLineDataLink" href="javascript:popFind_test();"><img class="" height="20" alt="Buscar y seleccionar test" src="images/search.gif" width="20" border="0"></a></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineDataTD">Previsión</td> 
+            <td class="InLineDataTD" colspan="3">
+              <select name="{prevision_id_Name}" class="InLineSelect" style="WIDTH: 100%" id="precios_testprevision_id">
+                <option value="" selected>Todas las previsiones</option>
+ {prevision_id_Options} 
+              </select>
+ </td> 
+            <td class="InLineFieldCaptionTD"></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineDataTD">Procedencia</td> 
+            <td class="InLineDataTD" colspan="3">
+              <select class="InLineSelect" style="WIDTH: 100%" size="WIDTH: 100%" name="{procedencia_id_Name}" id="precios_testprocedencia_id">
+                <option value="" selected>Todas las procedencias</option>
+ {procedencia_id_Options} 
+              </select>
+ </td> 
+            <td class="InLineFieldCaptionTD"></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineDataTD">Precio</td> 
+            <td class="InLineDataTD" colspan="3"><input class="InLineInput" maxlength="10" size="10" value="{precio}" name="{precio_Name}" id="precios_testprecio"></td> 
+            <td class="InLineFieldCaptionTD"></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="5">
+              <!-- BEGIN Button Button_Insert --><input class="InLineButton" type="submit" value="Agregar" name="{Button_Name}" id="precios_testButton_Insert"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input class="InLineButton" type="submit" value="Grabar" name="{Button_Name}" id="precios_testButton_Update"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Delete --><input class="InLineButton" type="submit" value="Borrar" name="{Button_Name}" id="precios_testButton_Delete"><!-- END Button Button_Delete -->
+              <!-- BEGIN Button Button_Cancel --><input class="InLineButton" type="submit" value="Cancelar" name="{Button_Name}" id="precios_testButton_Cancel"><!-- END Button Button_Cancel -->&nbsp; </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END Record precios_test --></td> 
+  </tr>
+</table>
+</body>
+</html>

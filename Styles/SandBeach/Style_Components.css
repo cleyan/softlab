@@ -1,0 +1,675 @@
+/* CCSTheme v 3.x */
+/* General */
+
+
+
+.HeaderSandbeach {
+	width: 100%;
+	}
+
+.HeaderSandbeach th { 
+	font-family: Arial; font-size: 110%; font-weight: bold; text-align: left;
+	padding: 2px;
+	background-image: url('Images/HeaderBg.gif'); color: #ffffff;
+	width: 100%;
+	white-space: nowrap;
+	}
+
+.HeaderSandbeach a:link { 
+	color: #ffffff;
+	}
+
+.HeaderSandbeach a:visited { 
+	color: #ffffff;
+	}
+
+.HeaderSandbeach a:hover, .Caption a:active { 
+	color: #ffffff; text-decoration: none;
+	}
+
+.HeaderLeftSandbeach { 
+	background-image: url('Images/HeaderLeft.gif');
+	}
+
+.HeaderRightSandbeach { 
+	background-image: url('Images/HeaderRight.gif');
+	}
+
+.HeaderLeftSandbeach img{
+	width: 7px;
+	}
+
+.HeaderRightSandbeach img{
+	width: 14px;
+	}
+
+
+/* Grid Options */
+.GridSandbeach { 
+	border: 1px solid #3d84cc;
+	width: 100%;
+	}
+
+.CaptionSandbeach th { 
+	font-family: Arial; font-size: 80%; text-align: left; vertical-align: top;
+	padding: 2px;
+	border-top: 1px solid #ffe3b0; border-right: 1px solid #ffe3b0;
+	background-image: url('Images/CaptionBg.gif'); color: #000000;
+	white-space: nowrap;
+	}
+
+.CaptionSandbeach td { 
+	font-family: Arial; font-size: 80%; text-align: left; vertical-align: top;
+	padding: 2px;
+	border-top: 1px solid #ffe3b0; border-right: 1px solid #ffe3b0;
+	background-image: url('Images/CaptionBg.gif'); color: #000000;
+	white-space: nowrap;
+	}
+
+.CaptionSandbeach a:link { 
+	color: #000000;
+	}
+
+.CaptionSandbeach a:visited { 
+	color: #000000;
+	}
+
+.CaptionSandbeach a:hover, .Caption a:active { 
+	color: #cc4141;
+	}
+
+.CaptionSandbeach img {
+	margin: 2px; 
+	vertical-align: middle;
+	}
+
+.CaptionSandbeach input {
+	vertical-align: middle;
+	}
+
+.RowSandbeach th { 
+	font-family: Arial; font-size: 80%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 2px;
+	border-top: 1px solid #ffe3b0; border-right: 1px solid #ffe3b0;
+	background-color: #f7f7f7; color: #000000;
+	white-space: nowrap;
+	color: #000000;
+	}
+
+.RowSandbeach td { 
+	font-family: Arial; font-size: 80%;
+	padding: 2px;
+	border-top: 1px solid #ffe3b0; border-right: 1px solid #ffe3b0;
+	vertical-align: top;
+	background-color: #f7f7f7; 
+	color: #000000;
+	}
+
+.RowSandbeach a:link { 
+	color: #507bb2;
+	}
+
+.RowSandbeach a:visited { 
+	color: #507bb2;
+	}
+
+.RowSandbeach a:hover, .Row a:active { 
+	color: #cc4141;
+	}
+
+.SeparatorSandbeach{
+	color: #3d84cc;
+	}
+
+.SeparatorSandbeach td{
+	height: 1px;
+	}
+
+
+.AltRowSandbeach th { 
+	font-family: Arial; font-size: 80%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 2px;
+	border-top: 1px solid #ffe3b0; border-right: 1px solid #ffe3b0;
+	background-color: #f7f7f7; color: #000000;
+	white-space: nowrap;
+	color: #000000;
+	}
+
+.AltRowSandbeach td { 
+	font-family: Arial; font-size: 80%;
+	padding: 2px;
+	border-top: 1px solid #ffe3b0; border-right: 1px solid #ffe3b0;
+	vertical-align: top;
+	background-color: #fff6e6; 
+	color: #000000;
+	}
+
+.AltRowSandbeach a:link { 
+	color: #507bb2;
+	}
+
+.AltRowSandbeach a:visited { 
+	color: #507bb2;
+	}
+
+.AltRowSandbeach a:hover, .AltRow a:active { 
+	color: #cc4141;
+	}
+
+.NoRecordsSandbeach td { 
+	font-family: Arial; font-size: 80%;
+	padding: 2px;
+	border-top: 1px solid #ffe3b0; border-right: 1px solid #ffe3b0;
+	background-color: #f7f7f7; 
+	color: #000000;
+	vertical-align: top;
+	}
+
+.FooterSandbeach td { 
+	font-family: Arial; font-size: 80%;
+	padding: 2px;
+	border: 1px solid #ffe3b0; border-left: 0px none;
+	background-image: url('Images/CaptionBg.gif'); color: #000000;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	color: #000000;
+	}
+
+.FooterSandbeach a:link { 
+	color: #000000;
+	}
+
+.FooterSandbeach a:visited { 
+	color: #000000;
+	}
+
+.FooterSandbeach a:hover, .Footer a:active { 
+	color: #cc4141;
+	}
+
+.FooterSandbeach img {
+	margin: 2px; 
+	vertical-align: middle;
+	}
+
+.FooterSandbeach input {
+	vertical-align: middle;
+	}
+
+/* Record Options */
+.RecordSandbeach { 
+	border: 1px solid #3d84cc;
+	width: 100%;
+	}
+
+.ErrorSandbeach td { 
+	font-family: Arial; font-size: 80%;
+	padding: 2px;
+	border-top: 1px solid #ffe3b0; border-right: 1px solid #ffe3b0;
+	color: #FF0000;
+	vertical-align: top;
+	background-color: #f7f7f7; 
+	}
+
+.ControlsSandbeach th { 
+	font-family: Arial; font-size: 80%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 2px;
+	border-top: 1px solid #ffe3b0; border-right: 1px solid #ffe3b0;
+	background-color: #f7f7f7; color: #000000;
+	white-space: nowrap;
+	color: #000000;
+	}
+
+.ControlsSandbeach td { 
+	font-family: Arial; font-size: 80%;
+	padding: 2px;
+	border-top: 1px solid #ffe3b0; border-right: 1px solid #ffe3b0;
+	vertical-align: top;
+	background-color: #f7f7f7; 
+	color: #000000;
+	}
+
+.BottomSandbeach td { 
+	font-family: Arial; font-size: 80%;
+	padding: 2px;
+	border: 1px solid #ffe3b0; border-left: 0px none;
+	background-image: url('Images/CaptionBg.gif'); color: #000000;
+	text-align: right;
+	vertical-align: middle;
+	white-space: nowrap;
+	color: #000000;
+	}
+
+.BottomSandbeach a:link { 
+	color: #000000;
+	}
+
+.BottomSandbeach a:visited { 
+	color: #000000;
+	}
+
+.BottomSandbeach a:hover, .Caption a:active { 
+	color: #cc4141;
+	}
+
+.BottomSandbeach img {
+	margin: 2px;
+	vertical-align: middle; 
+	}
+
+.BottomSandbeach input {
+	vertical-align: middle;
+	}
+
+/* Report */
+.GroupCaptionSandbeach th{
+	font-family: Arial; font-size: 80%;
+	padding: 2px;
+	border-top: 1px solid #ffe3b0; border-right: 1px solid #ffe3b0;
+	white-space: nowrap;
+	text-align: left; 
+	vertical-align: top;
+	font-weight: bold;
+	background-color: #fff6e6; 
+	color: #000000;
+	}
+
+.GroupCaptionSandbeach td{
+	font-family: Arial; font-size: 80%;
+	padding: 2px;
+	border-top: 1px solid #ffe3b0; border-right: 1px solid #ffe3b0;
+	vertical-align: top;
+	font-weight: bold;
+	background-color: #f7f7f7; 
+	color: #000000;
+	}
+
+.GroupCaptionSandbeach a:link {
+	color: #000000;
+	}
+
+.GroupCaptionSandbeach a:visited{
+	color: #000000;
+	}
+
+.GroupCaptionSandbeach a:hover, .GroupCaption a:active{
+	color: #cc4141;
+	}
+
+.GroupFooterSandbeach td{
+	font-family: Arial; font-size: 80%;
+	padding: 2px;
+	border: 1px solid #ffe3b0; border-left: 0px none;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	background-color: #ffe3b0; 
+	color: #000000;
+	}
+
+.GroupFooterSandbeach a:link {
+	color: #000000;
+	}
+
+.GroupFooterSandbeach a:visited{
+	color: #000000;
+	}
+
+.GroupFooterSandbeach a:hover,.GroupFooter a:active{
+	color: #cc4141;
+	}
+
+.GroupFooterSandbeach img {
+	margin: 2px; 
+	vertical-align: middle;
+	}
+
+.GroupFooterSandbeach input {
+	vertical-align: middle;
+	}
+
+.SubTotalSandbeach td{
+	font-family: Arial; font-size: 80%;
+	padding: 2px;
+	border-top: 1px solid #ffe3b0; border-right: 1px solid #ffe3b0;
+	vertical-align: top;
+	font-weight: bold;
+	background-color: #fff6e6; 
+	color: #000000;
+	border-bottom: 2px solid #3d84cc;
+	}
+
+.SubTotalSandbeach a:link {
+	color: #507bb2;
+	}
+
+.SubTotalSandbeach a:visited{
+	color: #507bb2;
+	}
+
+.SubTotalSandbeach a:hover, .SubTotal a:active{
+	color: #cc4141;
+	}
+
+.TotalSandbeach td{
+	font-family: Arial; font-size: 80%;
+	padding: 2px;
+	border-top: 1px solid #ffe3b0; border-right: 1px solid #ffe3b0;
+	vertical-align: top;
+	white-space: nowrap;
+	font-weight: bold;
+	background-color: #fff6e6; 
+	color: #000000;
+	}
+
+.TotalSandbeach a:link {
+	color: #507bb2;
+	}
+
+.TotalSandbeach a:visited{
+	color: #507bb2;
+	}
+
+.TotalSandbeach a:hover, .Total a:active{
+	color: #cc4141;
+	}
+
+/* Form Options */
+.ButtonSandbeach { 
+	margin: 2px
+	}
+
+/* Calendar */
+
+.CalendarSandbeach { 
+	border: 1px solid #3d84cc;
+	width: 100%;
+	}
+
+.CalendarWeekdayNameSandbeach{
+	font-family: Arial; font-size: 80%;
+	padding: 2px;
+	border-top: 1px solid #ffe3b0; border-right: 1px solid #ffe3b0;
+	text-align: center; 
+	vertical-align: top;
+	white-space: nowrap;
+	background-color: #fff6e6; 
+	color: #000000;
+	}
+
+.CalendarWeekdayNameSandbeach a:link {
+	color: #507bb2;
+	}
+
+.CalendarWeekdayNameSandbeach a:visited{
+	color: #507bb2;
+	}
+
+.CalendarWeekdayNameSandbeach a:hover, .CalendarWeekdayName a:active{
+	color: #cc4141;
+	}
+
+.CalendarWeekendNameSandbeach{
+	font-family: Arial; font-size: 80%;
+	padding: 2px;
+	border-top: 1px solid #ffe3b0; border-right: 1px solid #ffe3b0;
+	white-space: nowrap;
+	text-align: center; 
+	vertical-align: top;
+	background-color: #fff6e6;	
+	color: #000000;
+	}
+
+.CalendarWeekendNameSandbeach a:link {
+	color: #000000;
+	}
+
+.CalendarWeekendNameSandbeach a:visited{
+	color: #000000;
+	}
+
+.CalendarWeekendNameSandbeach a:link, .CalendarWeekendName a:visited{
+	color: #cc4141;
+	}
+
+/* Calendar Day */
+.CalendarDaySandbeach{
+	font-family: Arial; font-size: 80%;
+	padding: 2px;
+	border-top: 1px solid #ffe3b0; border-right: 1px solid #ffe3b0;
+	text-align: center;
+	background-color: #f7f7f7;	
+	color: #000000;
+	}
+
+.CalendarDaySandbeach a:link {
+	color: #507bb2;
+	}
+
+.CalendarDaySandbeach a:visited{
+	color: #507bb2;
+	}
+
+.CalendarDaySandbeach a:hover, .CalendarDay a:active{
+	color: #cc4141;
+	}
+
+/* Calendar Weekend */
+.CalendarWeekendSandbeach{
+	font-family: Arial; font-size: 80%;
+	padding: 2px;
+	border-top: 1px solid #ffe3b0; border-right: 1px solid #ffe3b0;
+	text-align: center;
+	background-color: #fff6e6;	
+	color: #000000;
+	}
+
+.CalendarWeekendSandbeach a:link {
+	color: #507bb2;
+	}
+
+.CalendarWeekendSandbeach a:visited{
+	color: #507bb2;
+	}
+
+.CalendarWeekendSandbeach a:hover, .CalendarWeekend a:active{
+	color: #cc4141;
+	}
+
+/* Calendar Today */
+.CalendarTodaySandbeach {
+	font-family: Arial; font-size: 80%;
+	border: 2px solid #3d84cc;
+	text-align: center;
+	background-color: #f7f7f7;	
+	color: #000000;
+	}
+
+.CalendarTodaySandbeach a:link {
+	color: #507bb2;
+	}
+
+.CalendarTodaySandbeach a:visited{
+	color: #507bb2;
+	}
+
+.CalendarTodaySandbeach a:hover, .CalendarToday a:active {
+	color: #cc4141;
+	}
+
+/* Calendar Weekend Today */
+.CalendarWeekendTodaySandbeach {
+	font-family: Arial; font-size: 80%;
+	border: 2px solid #3d84cc;
+	text-align: center;
+	background-color: #fff6e6;	
+	color: #000000;
+	}
+
+.CalendarWeekendTodaySandbeach a:link {
+	color: #507bb2;
+	}
+
+.CalendarWeekendTodaySandbeach a:visited{
+	color: #507bb2;
+	}
+
+.CalendarWeekendTodaySandbeach a:hover, .CalendarWeekendToday a:active{
+	color: #cc4141;
+	}
+
+/* Calendar Other Month's Day */
+.CalendarOtherMonthDaySandbeach{
+	font-family: Arial; font-size: 80%;
+	padding: 2px;
+	border-top: 1px solid #ffe3b0; border-right: 1px solid #ffe3b0;
+	text-align: center;
+	background-color: #f7f7f7;	
+	color: #3d84cc;
+	}
+
+.CalendarOtherMonthDaySandbeach a:link {
+	color: #3d84cc;
+	}
+
+.CalendarOtherMonthDaySandbeach a:visited{
+	color: #3d84cc;
+	}
+
+.CalendarOtherMonthDaySandbeach a:hover, .CalendarOtherMonthDay a:active{
+	color: #cc4141;
+	}
+
+/* Calendar Other Month's Today */
+.CalendarOtherMonthTodaySandbeach {
+	font-family: Arial; font-size: 80%;
+	border: 2px solid #3d84cc;
+	text-align: center;
+	background-color: #f7f7f7;	
+	color: #3d84cc;
+	}
+
+.CalendarOtherMonthTodaySandbeach a:link {
+	color: #3d84cc;
+	}
+
+.CalendarOtherMonthTodaySandbeach a:visited{
+	color: #3d84cc;
+	}
+
+.CalendarOtherMonthTodaySandbeach a:hover,.CalendarOtherMonthToday a:active{
+	color: #cc4141;
+	}
+
+/* Calendar Other Month's Weekend */
+.CalendarOtherMonthWeekendSandbeach {
+	font-family: Arial; font-size: 80%;
+	padding: 2px;
+	border-top: 1px solid #ffe3b0; border-right: 1px solid #ffe3b0;
+	text-align: center;
+	background-color: #fff6e6;	
+	color: #3d84cc;
+	}
+
+.CalendarOtherMonthWeekendSandbeach a:link {
+	color: #3d84cc;
+	}
+
+.CalendarOtherMonthWeekendSandbeach a:visited{
+	color: #3d84cc;
+	}
+
+.CalendarOtherMonthWeekendSandbeach a:hover, .CalendarOtherMonthWeekend a:active{
+	color: #cc4141;
+	}
+
+/* Calendar Other Month's Weekend Today */
+.CalendarOtherMonthWeekendTodaySandbeach {
+	font-family: Arial; font-size: 80%;
+	border: 2px solid #3d84cc;
+	text-align: center;
+	color: #3d84cc;
+	background-color: #fff6e6;	
+	}
+
+.CalendarOtherMonthWeekendTodaySandbeach a:link {
+	color: #3d84cc;
+	}
+
+.CalendarOtherMonthWeekendTodaySandbeach a:visited{
+	color: #3d84cc;
+	}
+
+.CalendarOtherMonthWeekendTodaySandbeach a:hover, .CalendarOtherMonthWeekendToday a:active{
+	color: #cc4141;
+	}
+
+/* Calendar Selected Day (for DatePicker) */
+.CalendarSelectedDaySandbeach{
+	font-family: Arial; font-size: 80%;
+	padding: 2px;
+	border-top: 1px solid #ffe3b0; border-right: 1px solid #ffe3b0;
+	background-color: #ffe3b0;
+	color: #000000;
+	text-align: center;
+	font-weight: bold;
+	}
+
+.CalendarSelectedDaySandbeach a:link {
+	color: #000000;
+	}
+
+.CalendarSelectedDaySandbeach a:visited{
+	color: #000000;
+	}
+
+.CalendarSelectedDaySandbeach a:hover, .CalendarSelectedDay a:active{
+	color: #cc4141;
+	}
+
+/* Calendar Navigator */
+.CalendarNavigatorSandbeach {
+	font-family: Arial; font-size: 80%;
+	padding: 2px;
+	background-image: url('Images/CaptionBg.gif'); color: #000000;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	color: #000000;
+	}
+
+.CalendarNavigatorSandbeach a:link {
+	color: #507bb2;
+	}
+
+.CalendarNavigatorSandbeach a:visited{
+	color: #507bb2;
+	}
+
+.CalendarNavigatorSandbeach a:hover, .CalendarNavigator a:active{
+	color: #cc4141;
+	}
+
+.CalendarNavigatorSandbeach img{
+	margin: 2px;
+	vertical-align: middle; 	
+	}
+
+/* Calendar Extra */
+.CalendarEventSandbeach{
+	font-size: 80%;
+	text-align: left;
+	}
+
+.CalendarEventSandbeach a:link {
+	color: #507bb2;
+	}
+
+.CalendarEventSandbeach a:visited{
+	color: #507bb2;
+	}
+
+.CalendarEventSandbeach a:hover, .CalendarEvent a:active{
+	color: #cc4141;
+	}

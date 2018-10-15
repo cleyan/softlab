@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>list_medicos</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+<link rel="stylesheet" type="text/css" href="Themes/InLine/Style.css">
+</head>
+<body class="InLinePageBODY">
+<table width="700" align="center" border="0">
+  <tr>
+    <td>
+      <!-- BEGIN Record medicos_especialidadesSearch -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+          <tr>
+            <td class="InLineFormHeaderFont" colspan="2">Buscar /
+              Filtrar&nbsp;Médicos </td> 
+          </tr>
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="2">{Error}</td> 
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineFieldCaptionTD" nowrap>Nombre del&nbsp;Médico&nbsp;</td> 
+            <td class="InLineDataTD" width="100%"><input class="InLineInput" maxlength="100" size="50" value="{s_nom_medico}" name="{s_nom_medico_Name}" id="medicos_especialidadesSearchs_nom_medico">&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD">Especialidad&nbsp;</td> 
+            <td class="InLineDataTD">
+              <select name="{s_especialidad_id_Name}" class="InLineSelect" id="medicos_especialidadesSearchs_especialidad_id">
+                <option value="" selected>Seleccionar Valor</option>
+ {s_especialidad_id_Options} 
+              </select>
+ &nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="2">
+              <!-- BEGIN Button Button_DoSearch --><input class="InLineButton" type="submit" value="Buscar" name="{Button_Name}" id="medicos_especialidadesSearchButton_DoSearch"><!-- END Button Button_DoSearch -->&nbsp; </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END Record medicos_especialidadesSearch -->
+      <!-- BEGIN Grid medicos_especialidades -->
+      <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+        <tr>
+          <td class="InLineFormHeaderFont" align="middle" colspan="6">Lista
+            de&nbsp;Médicos&nbsp;(Total de
+            Registros:{medicos_especialidades_TotalRecords}) </td> 
+        </tr>
+ 
+        <tr>
+          <td class="InLineColumnTD" nowrap align="middle">Editar</td> 
+          <td class="InLineColumnTD" nowrap>
+            <!-- BEGIN Sorter Sorter_nom_medico --><a class="InLineSorterLink" href="{Sort_URL}">Nombre</a> 
+            <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_nom_medico -->&nbsp;</td> 
+          <td class="InLineColumnTD" nowrap>
+            <!-- BEGIN Sorter Sorter_nom_especialidad --><a class="InLineSorterLink" href="{Sort_URL}">Especialidad</a> 
+            <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_nom_especialidad -->&nbsp;</td> 
+          <td class="InLineColumnTD" nowrap>
+            <!-- BEGIN Sorter Sorter_fono --><a class="InLineSorterLink" href="{Sort_URL}">Fono</a> 
+            <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_fono -->&nbsp;</td> 
+          <td class="InLineColumnTD" nowrap>
+            <!-- BEGIN Sorter Sorter_email --><a class="InLineSorterLink" href="{Sort_URL}">Email</a> 
+            <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_email -->&nbsp;</td> 
+          <td class="InLineColumnTD" nowrap>
+            <!-- BEGIN Sorter Sorter_activo --><a class="InLineSorterLink" href="{Sort_URL}">Activo</a> 
+            <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_activo -->&nbsp;</td> 
+        </tr>
+        <!-- BEGIN Row -->
+        <tr>
+          <td class="InLineDataTD" align="middle"><a class="InLineDataLink" href="{ImageLink1}"><img class="" src="images/edit16.png" border="0"></a></td> 
+          <td class="InLineDataTD">{nom_medico}&nbsp;</td> 
+          <td class="InLineDataTD">{nom_especialidad}&nbsp;</td> 
+          <td class="InLineDataTD">{fono}&nbsp;</td> 
+          <td class="InLineDataTD">{email}&nbsp;</td> 
+          <td class="InLineDataTD">{activo}&nbsp;</td> 
+        </tr>
+        <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr>
+          <td class="InLineDataTD" colspan="6">No se encontaron registros&nbsp;</td> 
+        </tr>
+        <!-- END NoRecords -->
+        <tr>
+          <td class="InLineFooterTD" nowrap colspan="6">
+            <!-- BEGIN Navigator Navigator -->
+            <!-- BEGIN First_On --><a class="InLineNavigatorLink" href="{First_URL}"><img src="Themes/InLine/FirstOn.gif" border="0"></a> <!-- END First_On -->
+            <!-- BEGIN Prev_On --><a class="InLineNavigatorLink" href="{Prev_URL}"><img src="Themes/InLine/PrevOn.gif" border="0"></a> <!-- END Prev_On -->&nbsp;{Page_Number}&nbsp;de
+            {Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a class="InLineNavigatorLink" href="{Next_URL}"><img src="Themes/InLine/NextOn.gif" border="0"></a> <!-- END Next_On -->
+            <!-- BEGIN Last_On --><a class="InLineNavigatorLink" href="{Last_URL}"><img src="Themes/InLine/LastOn.gif" border="0"></a> <!-- END Last_On --><!-- END Navigator Navigator -->&nbsp; </td> 
+        </tr>
+ 
+      </table>
+ 
+      <p align="center"><!-- END Grid medicos_especialidades --><a class="InLineDataLink" href="{ImageLink1}"><img class="" src="images/btn_agregarnuevo.png" border="0"></a>&nbsp;<a class="InLineDataLink" href="{ImageLink2}"><img class="" src="images/btn_inicio.png" border="0"></a></p>
+ </td> 
+  </tr>
+</table>
+</body>
+</html>

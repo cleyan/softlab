@@ -1,0 +1,247 @@
+<!DOCTYPE HTML>
+{alerta_grabado}<html>
+<head>
+<title>.:: Editar Fórmula ::.</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+<link rel="stylesheet" type="text/css" href="Themes/InLine/Style.css">
+<script language="JavaScript">
+//Begin CCS script
+//Include Common JSFunctions @1-921C7A7E
+</script>
+<script src="ClientI18N.php?file=Globalize.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-A87AC9EE
+</script>
+{page:scriptIncludes}
+<script type="text/javascript">
+//End Include User Scripts
+
+//Common Script Start @1-8BFA436B
+jQuery(function ($) {
+    var features = { };
+    var actions = { };
+    var params = { };
+//End Common Script Start
+
+//formulasButton_DeleteOnClick Event Start @-A71D819A
+    actions["formulasButton_DeleteOnClick"] = function (eventType, parameters) {
+        var result = true;
+//End formulasButton_DeleteOnClick Event Start
+
+//Confirmation Message @7-BED55CD3
+        return confirm('Borrar registro?');
+//End Confirmation Message
+
+//formulasButton_DeleteOnClick Event End @-A5B9ECB8
+        return result;
+    };
+//End formulasButton_DeleteOnClick Event End
+
+//Event Binding @1-C9B4647E
+    $('*:ccsControl(formulas, Button_Delete)').ccsBind(function() {
+        this.bind("click", actions["formulasButton_DeleteOnClick"]);
+    });
+//End Event Binding
+
+//Plugin Calls @1-611F5A1F
+    $('*:ccsControl(formulas, Button_Delete)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+//End Plugin Calls
+
+//Common Script End @1-562554DE
+});
+//End Common Script End
+//End CCS script
+</script>
+</head>
+<body class="InLinePageBODY">
+<table width="100%" align="center" border="0">
+  <tr>
+    <td align="middle">
+      <table width="100%" align="left" border="0">
+        <tr>
+          <td class="InLineFormHeaderFont" align="middle">Editar Fórmula para
+            Test:&nbsp;<strong>{nom_test}</strong></td> 
+        </tr>
+ 
+      </table>
+ </td> 
+  </tr>
+ 
+  <tr>
+    <td align="left">
+      <!-- BEGIN Record formulas -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="4">{Error}</td> 
+          </tr>
+ <!-- END Error -->
+          <tr>
+            <td class="InLineColumnTD">A&nbsp;</td> 
+            <td class="InLineDataTD">
+              <select class="InLineSelect" name="{a_Name}" style="WIDTH: 218px" id="formulasa">
+                <option value="" selected>-------------</option>
+ {a_Options} 
+              </select>
+ </td> 
+            <td class="InLineColumnTD">B</td> 
+            <td class="InLineDataTD">
+              <select class="InLineSelect" name="{b_Name}" style="WIDTH: 218px" id="formulasb">
+                <option value="" selected>-------------</option>
+ {b_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineColumnTD">C&nbsp;</td> 
+            <td class="InLineDataTD">
+              <select class="InLineSelect" name="{c_Name}" style="WIDTH: 218px" id="formulasc">
+                <option value="" selected>-------------</option>
+ {c_Options} 
+              </select>
+ </td> 
+            <td class="InLineColumnTD">D</td> 
+            <td class="InLineDataTD">
+              <select class="InLineSelect" name="{d_Name}" style="WIDTH: 218px" id="formulasd">
+                <option value="" selected>-------------</option>
+ {d_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineColumnTD">E&nbsp;</td> 
+            <td class="InLineDataTD">
+              <select class="InLineSelect" name="{e_Name}" style="WIDTH: 218px" id="formulase">
+                <option value="" selected>-------------</option>
+ {e_Options} 
+              </select>
+ </td> 
+            <td class="InLineColumnTD">F</td> 
+            <td class="InLineDataTD">
+              <select class="InLineSelect" name="{f_Name}" style="WIDTH: 218px" id="formulasf">
+                <option value="" selected>-------------</option>
+ {f_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineColumnTD">G&nbsp;</td> 
+            <td class="InLineDataTD">
+              <select class="InLineSelect" name="{g_Name}" style="WIDTH: 218px" id="formulasg">
+                <option value="" selected>-------------</option>
+ {g_Options} 
+              </select>
+ </td> 
+            <td class="InLineColumnTD">H</td> 
+            <td class="InLineDataTD">
+              <select class="InLineSelect" name="{h_Name}" style="WIDTH: 218px" id="formulash">
+                <option value="" selected>-------------</option>
+ {h_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineColumnTD">I&nbsp;</td> 
+            <td class="InLineDataTD">
+              <select class="InLineSelect" name="{i_Name}" style="WIDTH: 218px" id="formulasi">
+                <option value="" selected>-------------</option>
+ {i_Options} 
+              </select>
+ </td> 
+            <td class="InLineColumnTD">J</td> 
+            <td class="InLineDataTD">
+              <select class="InLineSelect" name="{j_Name}" style="WIDTH: 218px" id="formulasj">
+                <option value="" selected>-------------</option>
+ {j_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineColumnTD">K&nbsp;</td> 
+            <td class="InLineDataTD">
+              <select class="InLineSelect" name="{k_Name}" style="WIDTH: 218px" id="formulask">
+                <option value="" selected>-------------</option>
+ {k_Options} 
+              </select>
+ </td> 
+            <td class="InLineColumnTD">L</td> 
+            <td class="InLineDataTD">
+              <select class="InLineSelect" name="{l_Name}" style="WIDTH: 218px" id="formulasl">
+                <option value="" selected>-------------</option>
+ {l_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+        </table>
+ 
+        <table width="100%" align="left" border="0" class="InLineFormTABLE" cellspacing="0" cellpadding="5">
+          <tr>
+            <td class="InLineColumnTD" width="40%" valign="top">Fórmula:&nbsp;<br>
+              <small>Para referirse a una variable anteponga el signo $ a su
+              nombre, por ejemplo: <br>
+              Variable A divido entre dos es:&nbsp;&nbsp; ($a/2)</small></td> 
+            <td class="InLineDataTD" colspan="3" width="50%"><textarea class="InLineTextarea" style="WIDTH: 100%; HEIGHT: 100%" name="{formula_Name}" id="formulasformula">{formula}</textarea></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD" width="100%" colspan="4">Número de
+              Decimales
+              <select name="{decimales_Name}" class="InLineSelect" id="formulasdecimales">
+                <option value=""></option>
+                {decimales_Options}
+              </select>
+              &nbsp;&nbsp;Agregar al Final <input class="InLineInput" value="{etiqueta}" name="{etiqueta_Name}" id="formulasetiqueta"></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD" width="100%" colspan="4"><input class="" type="checkbox" value="1" name="{permitir_falta_Name}" {permitir_falta} id="formulaspermitir_falta">Permitir
+              que falte algún&nbsp;valor y reemplazar los faltantes por <input class="InLineInput" value="{valor_falta}" name="{valor_falta_Name}" id="formulasvalor_falta"></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD" width="100%" colspan="4">Cambiar&nbsp;Resultado
+              Cero por <input class="InLineInput" value="{cambia_cero}" name="{cambia_cero_Name}" id="formulascambia_cero"><small>&nbsp;(deje
+              en blanco para no reemplazar)</small></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD" colspan="4" width="100%"><input class="" type="checkbox" value="1" name="{alarma_Name}" {alarma} id="formulasalarma">&nbsp;El
+              Test actúa como alarma, Avisar cuando el resultado sea 
+              <select class="InLineSelect" name="{operador_Name}" id="formulasoperador">
+                <option value="" selected></option>
+ {operador_Options} 
+              </select>
+ &nbsp;a <input class="InLineInput" value="{target}" name="{target_Name}" id="formulastarget"></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineColumnTD" nowrap align="right">Mensaje de aviso </td> 
+            <td class="InLineFieldCaptionTD" width="100%" colspan="3"><textarea class="InLineTextarea" style="WIDTH: 100%" name="{mensaje_Name}" id="formulasmensaje">{mensaje}</textarea></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="4">
+              <!-- BEGIN Button Button_Insert --><input class="InLineButton" type="submit" value="Agregar" name="{Button_Name}" id="formulasButton_Insert"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input class="InLineButton" type="submit" value="Grabar" name="{Button_Name}" id="formulasButton_Update"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Delete --><input class="InLineButton" type="submit" value="Borrar" name="{Button_Name}" id="formulasButton_Delete"><!-- END Button Button_Delete -->&nbsp; <input class="InLineButton" id="Cerrar" type="button" value="Cerrar" name="Cerrar" onclick="window.close(); return false;"></td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END Record formulas --></td> 
+  </tr>
+ 
+</table>
+</body>
+</html>

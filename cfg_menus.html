@@ -1,0 +1,195 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="GENERATOR" content="CodeCharge Studio 3.0.1.6">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>cfg_menus</title>
+<link href="Themes/InLine/Style.css" type="text/css" rel="stylesheet">
+<script language="JavaScript">
+//Begin CCS script
+//Include Common JSFunctions @1-921C7A7E
+</script>
+<script src="ClientI18N.php?file=Globalize.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-A87AC9EE
+</script>
+{page:scriptIncludes}
+<script type="text/javascript">
+//End Include User Scripts
+
+//Common Script Start @1-8BFA436B
+jQuery(function ($) {
+    var features = { };
+    var actions = { };
+    var params = { };
+//End Common Script Start
+
+//menuButton_SubmitOnClick Event Start @-CE13033F
+    actions["menuButton_SubmitOnClick"] = function (eventType, parameters) {
+        var result = true;
+//End menuButton_SubmitOnClick Event Start
+
+//Confirmation Message @22-96FAE8C2
+        return confirm('Enviar registro?');
+//End Confirmation Message
+
+//menuButton_SubmitOnClick Event End @-A5B9ECB8
+        return result;
+    };
+//End menuButton_SubmitOnClick Event End
+
+//Event Binding @1-A0FFDAB5
+    $('*:ccsControl(menu, Button_Submit)').ccsBind(function() {
+        this.bind("click", actions["menuButton_SubmitOnClick"]);
+    });
+//End Event Binding
+
+//Plugin Calls @1-33B1D199
+    $('*:ccsControl(menu, Cancel)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+//End Plugin Calls
+
+//Common Script End @1-562554DE
+});
+//End Common Script End
+//End CCS script
+</script>
+</head>
+<body class="InLinePageBODY">
+<table width="700" align="center" border="0">
+  <tr>
+    <td>&nbsp; 
+      <!-- BEGIN Record menuSearch -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3">
+          <tr>
+            <td class="InLineFormHeaderFont" colspan="2">Buscar Menu </td>
+          </tr>
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineFieldCaptionTD">Caption&nbsp;</td> 
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="20" value="{s_caption}" name="{s_caption_Name}" id="menuSearchs_caption">&nbsp;</td>
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD">Niver Minimo</td> 
+            <td class="InLineDataTD">
+              <select class="InLineSelect" name="{s_niver_minimo_id_Name}" id="menuSearchs_niver_minimo_id">
+                <option value="" selected>Seleccionar Valor</option>
+                {s_niver_minimo_id_Options}
+              </select>
+ &nbsp;</td>
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD">Registro por página&nbsp;</td> 
+            <td class="InLineDataTD">
+              <select class="InLineSelect" name="{menuPageSize_Name}" id="menuSearchmenuPageSize">
+                {menuPageSize_Options}
+              </select>
+ &nbsp;</td>
+          </tr>
+ 
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="2">
+              <!-- BEGIN Button Button_DoSearch --><input class="InLineButton" type="submit" value="Buscar" name="{Button_Name}" id="menuSearchButton_DoSearch"><!-- END Button Button_DoSearch -->&nbsp; </td>
+          </tr>
+        </table>
+      </form>
+      <!-- END Record menuSearch -->
+      <!-- BEGIN EditableGrid menu -->
+      <form name="{HTMLFormName}" action="{Action}" method="post" enctype="{HTMLFormEnctype}">
+        <input type="hidden" value="{FormState}" name="FormState">{FormScript} 
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3">
+          <tr>
+            <td class="InLineFormHeaderFont" align="center" colspan="5">Lista de
+              Menu </td>
+          </tr>
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="5">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineColumnTD" nowrap>
+              <!-- BEGIN Sorter Sorter_caption --><a class="InLineSorterLink" href="{Sort_URL}">Caption</a> 
+              <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+              <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_caption -->&nbsp;</td> 
+            <td class="InLineColumnTD" nowrap>
+              <!-- BEGIN Sorter Sorter_icono --><a class="InLineSorterLink" href="{Sort_URL}">Icono</a> 
+              <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+              <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_icono -->&nbsp;</td> 
+            <td class="InLineColumnTD" nowrap>
+              <!-- BEGIN Sorter Sorter_accion --><a class="InLineSorterLink" href="{Sort_URL}">Accion</a> 
+              <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+              <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_accion -->&nbsp;</td> 
+            <td class="InLineColumnTD" nowrap>
+              <!-- BEGIN Sorter Sorter_niver_minimo_id --><a class="InLineSorterLink" href="{Sort_URL}">Niver
+              Minimo</a> 
+              <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+              <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_niver_minimo_id -->&nbsp;</td> 
+            <td class="InLineColumnTD" nowrap>Borrar &nbsp;</td>
+          </tr>
+ 
+          <!-- BEGIN Row -->
+          <!-- BEGIN RowError -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="5">{Error}</td>
+          </tr>
+          <!-- END RowError -->
+          <tr>
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="20" value="{caption}" name="{caption_Name}" id="menucaption">&nbsp;</td> 
+            <td class="InLineDataTD">
+              <!-- BEGIN FileUpload FileUpload1 --><input type="hidden" value="{State}" name="{ControlName}" id="menuFileUpload1ControlName">
+              <!-- BEGIN Info -->&nbsp;{FileName}&nbsp;{FileSize}&nbsp;bytes. <!-- END Info -->
+              <!-- BEGIN Upload --><input class="InLineInput" type="file" name="{FileControl}"><!-- END Upload -->
+              <!-- BEGIN DeleteControl -->Borrar <input class="InLineInput" type="checkbox" name="{DeleteControl}" {DeleteChecked}><!-- END DeleteControl --><!-- END FileUpload FileUpload1 --></td> 
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="200" size="50" value="{accion}" name="{accion_Name}" id="menuaccion">&nbsp;</td> 
+            <td class="InLineDataTD">
+              <select class="InLineSelect" name="{niver_minimo_id_Name}" id="menuniver_minimo_id">
+                <option value="" selected>Seleccionar Valor</option>
+                {niver_minimo_id_Options}
+              </select>
+ &nbsp;</td> 
+            <td class="InLineDataTD">
+              <!-- BEGIN CheckBox CheckBox_Delete --><input class="InLineInput" type="checkbox" value="1" name="{CheckBox_Delete_Name}" {CheckBox_Delete} id="menuCheckBox_Delete"><!-- END CheckBox CheckBox_Delete -->&nbsp;</td>
+          </tr>
+ <!-- END Row -->
+          <!-- BEGIN NoRecords -->
+          <tr>
+            <td class="InLineDataTD" colspan="5">No se encontaron
+              registros&nbsp;</td>
+          </tr>
+          <!-- END NoRecords -->
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="5">
+              <!-- BEGIN Navigator Navigator -->
+              <!-- BEGIN First_On --><a class="InLineNavigatorLink" href="{First_URL}">Inicio</a> <!-- END First_On -->
+              <!-- BEGIN First_Off -->Inicio <!-- END First_Off -->
+              <!-- BEGIN Prev_On --><a class="InLineNavigatorLink" href="{Prev_URL}">Anterior</a> <!-- END Prev_On -->
+              <!-- BEGIN Prev_Off -->Anterior <!-- END Prev_Off -->&nbsp; 
+              <!-- BEGIN Pages -->
+              <!-- BEGIN Page_On --><a class="InLineNavigatorLink" href="{Page_URL}">{Page_Number}</a>&nbsp;<!-- END Page_On -->
+              <!-- BEGIN Page_Off -->{Page_Number}&nbsp;<!-- END Page_Off --><!-- END Pages -->de
+              {Total_Pages}&nbsp; 
+              <!-- BEGIN Next_On --><a class="InLineNavigatorLink" href="{Next_URL}">Siguiente</a> <!-- END Next_On -->
+              <!-- BEGIN Next_Off -->Siguiente <!-- END Next_Off -->
+              <!-- BEGIN Last_On --><a class="InLineNavigatorLink" href="{Last_URL}">Final</a> <!-- END Last_On -->
+              <!-- BEGIN Last_Off -->Final <!-- END Last_Off --><!-- END Navigator Navigator -->&nbsp; 
+              <!-- BEGIN Button Button_Submit --><input class="InLineButton" type="submit" value="Grabar" name="{Button_Name}" id="menuButton_Submit"><!-- END Button Button_Submit -->&nbsp; 
+              <!-- BEGIN Button Cancel --><input class="InLineButton" type="submit" value="Cancelar" name="{Button_Name}" id="menuCancel"><!-- END Button Cancel -->&nbsp; </td>
+          </tr>
+        </table>
+      </form>
+      <!-- END EditableGrid menu --></td>
+  </tr>
+</table>
+</body>
+</html>

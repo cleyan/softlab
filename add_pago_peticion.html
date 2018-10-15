@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>add_pago_peticion</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+<link rel="stylesheet" type="text/css" href="Themes/InLine/Style.css">
+</head>
+<body class="InLinePageBODY" bgcolor="#ffffff" link="#000000" alink="#000000" vlink="#000000" text="#000000">
+<table width="700" align="center" border="0">
+  <tr>
+    <td>
+      <!-- BEGIN Record detalle_pago -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+          <tr>
+            <td class="InLineFormHeaderFont" colspan="4">Agregar/Editar Detalle
+              de Pago </td> 
+          </tr>
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="4">{Error}</td> 
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineFieldCaptionTD">Paciente</td> 
+            <td class="InLineDataTD" nowrap><strong>{paciente}</strong></td> 
+            <td class="InLineDataTD" nowrap>Petición ID</td> 
+            <td class="InLineDataTD"><strong>{lb_peticion_id}</strong></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD" nowrap>Forma de&nbsp;pago</td> 
+            <td class="InLineDataTD">
+              <select name="{forma_pago_id_Name}" class="InLineSelect" id="detalle_pagoforma_pago_id">
+                <option value="" selected>-----</option>
+ {forma_pago_id_Options} 
+              </select>
+ </td> 
+            <td class="InLineDataTD">Fecha</td> 
+            <td class="InLineDataTD" valign="top"><input class="InLineInput" maxlength="10" size="10" value="{fecha_documento}" name="{fecha_documento_Name}" id="detalle_pagofecha_documento"><a hidefocus title="haga click aquí para elegir la Fecha" onclick="if(self.gfPop)gfPop.fPopCalendar(document.{HTMLFormName}.{fecha_documento_Name});return false;" href="javascript:void(0)"><img class="PopcalTrigger" align="top" src="calbtn.gif" width="34" height="22" border="0" alt="" id="btn_cal" name="btn_cal"></a>&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD">Banco</td> 
+            <td class="InLineDataTD">
+              <select name="{nom_banco_Name}" class="InLineSelect" id="detalle_pagonom_banco">
+                <option value="" selected>-----</option>
+ {nom_banco_Options} 
+              </select>
+ </td> 
+            <td class="InLineDataTD">Previsión<input type="hidden" name="{user_id_Name}" value="{user_id}" id="detalle_pagouser_id"></td> 
+            <td class="InLineDataTD">
+              <select name="{prevision_id_Name}" class="InLineSelect" id="detalle_pagoprevision_id">
+                <option value="" selected>-----</option>
+ {prevision_id_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD" nowrap>Nº Cheque/Bono/Boleta</td> 
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="250" value="{num_cheque_bono}" name="{num_cheque_bono_Name}" id="detalle_pagonum_cheque_bono"></td> 
+            <td class="InLineDataTD">&nbsp;<input type="hidden" name="{peticion_id_Name}" value="{peticion_id}" id="detalle_pagopeticion_id"><input type="hidden" name="{max_valor_Name}" value="{max_valor}" id="detalle_pagomax_valor"></td> 
+            <td class="InLineDataTD"><input type="hidden" name="{fecha_ingreso_Name}" value="{fecha_ingreso}" id="detalle_pagofecha_ingreso">&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD">Valor</td> 
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="20" value="{valor}" name="{valor_Name}" id="detalle_pagovalor" onchange="">&nbsp;</td> 
+            <td class="InLineDataTD" colspan="2" nowrap>&nbsp;<strong>{lb_max_valor}</strong><input type="hidden" name="{detalle_pago_id_Name}" value="{detalle_pago_id}" id="detalle_pagodetalle_pago_id">&nbsp;<input type="hidden" name="{max_valor_actual_Name}" value="{max_valor_actual}" id="detalle_pagomax_valor_actual"></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD">Observaciones</td> 
+            <td class="InLineDataTD" colspan="3"><textarea class="InLineTextarea" style="WIDTH: 100%" name="{observacion_Name}" id="detalle_pagoobservacion">{observacion}</textarea></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="4">
+              <!-- BEGIN Button Button_Insert --><input class="InLineButton" type="submit" value="Grabar" name="{Button_Name}" id="detalle_pagoButton_Insert"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input class="InLineButton" type="submit" value="Grabar" name="{Button_Name}" id="detalle_pagoButton_Update"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Delete --><input class="InLineButton" type="submit" value="Borrar" name="{Button_Name}" id="detalle_pagoButton_Delete"><!-- END Button Button_Delete -->
+              <!-- BEGIN Button Button_Cancel --><input class="InLineButton" type="submit" value="Cancelar" name="{Button_Name}" id="detalle_pagoButton_Cancel"><!-- END Button Button_Cancel --></td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END Record detalle_pago --><br>
+    </td> 
+  </tr>
+</table>
+ 
+<!-- BEGIN Grid detalle_pago_formas_pago -->
+<table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%" align="center">
+  <tr>
+    <td class="InLineFormHeaderFont" align="middle" colspan="7">Detalle de Pagos
+      / Abonos asociados a esta Petición </td> 
+  </tr>
+ 
+  <tr>
+    <td class="InLineColumnTD" nowrap>
+      <!-- BEGIN Sorter Sorter_fecha_ingreso --><a class="InLineSorterLink" href="{Sort_URL}">Fecha
+      Ingreso</a> 
+      <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+      <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_fecha_ingreso -->&nbsp;</td> 
+    <td class="InLineColumnTD" nowrap>
+      <!-- BEGIN Sorter Sorter_nom_forma_pago --><a class="InLineSorterLink" href="{Sort_URL}">Forma
+      Pago</a> 
+      <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+      <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_nom_forma_pago -->&nbsp;</td> 
+    <td class="InLineColumnTD" nowrap>
+      <!-- BEGIN Sorter Sorter_nom_banco --><a class="InLineSorterLink" href="{Sort_URL}">Banco</a> 
+      <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+      <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_nom_banco -->&nbsp;/ 
+      <!-- BEGIN Sorter Sorter_nom_prevision --><a class="InLineSorterLink" href="{Sort_URL}">Previsión</a> 
+      <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+      <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_nom_prevision --></td> 
+    <td class="InLineColumnTD" nowrap>
+      <!-- BEGIN Sorter Sorter_fecha_documento --><a class="InLineSorterLink" href="{Sort_URL}">Fecha
+      Documento</a> 
+      <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+      <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_fecha_documento -->&nbsp;</td> 
+    <td class="InLineColumnTD" nowrap>
+      <!-- BEGIN Sorter Sorter_num_cheque_bono --><a class="InLineSorterLink" href="{Sort_URL}">Nº
+      Docuemento</a> 
+      <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+      <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_num_cheque_bono -->&nbsp;</td> 
+    <td class="InLineColumnTD" nowrap align="right">
+      <!-- BEGIN Sorter Sorter_valor --><a class="InLineSorterLink" href="{Sort_URL}">Valor</a> 
+      <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+      <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_valor -->&nbsp;</td> 
+    <td class="InLineColumnTD" nowrap>
+      <!-- BEGIN Sorter Sorter_nom_usuario --><a class="InLineSorterLink" href="{Sort_URL}">Usuario</a> 
+      <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+      <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_nom_usuario -->&nbsp;</td> 
+  </tr>
+  <!-- BEGIN Row -->
+  <tr class="TRDestacada">
+    <td>{fecha_ingreso}&nbsp;</td> 
+    <td>{nom_forma_pago}&nbsp;</td> 
+    <td>{nom_banco}&nbsp;{nom_prevision}</td> 
+    <td>{fecha_documento}&nbsp;</td> 
+    <td>{num_cheque_bono}&nbsp;</td> 
+    <td align="right">{valor}&nbsp;</td> 
+    <td>{nom_usuario}&nbsp;</td> 
+  </tr>
+  <!-- END Row -->
+  <!-- BEGIN NoRecords -->
+  <tr>
+    <td class="InLineDataTD" colspan="7">No se encontaron Abosoa asociados a
+      esta petición</td> 
+  </tr>
+  <!-- END NoRecords -->
+</table>
+ <!-- END Grid detalle_pago_formas_pago -->{calendar_tag}
+</body>
+</html>

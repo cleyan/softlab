@@ -1,0 +1,195 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>add_tipos_muestra</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+<link rel="stylesheet" type="text/css" href="Themes/InLine/Style.css">
+<script language="JavaScript">
+//Begin CCS script
+//Include Common JSFunctions @1-921C7A7E
+</script>
+<script src="ClientI18N.php?file=Globalize.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-A87AC9EE
+</script>
+{page:scriptIncludes}
+<script type="text/javascript">
+//End Include User Scripts
+
+//Common Script Start @1-8BFA436B
+jQuery(function ($) {
+    var features = { };
+    var actions = { };
+    var params = { };
+//End Common Script Start
+
+//tipos_muestraButton_SubmitOnClick Event Start @-C7C66216
+    actions["tipos_muestraButton_SubmitOnClick"] = function (eventType, parameters) {
+        var result = true;
+//End tipos_muestraButton_SubmitOnClick Event Start
+
+//Confirmation Message @21-96FAE8C2
+        return confirm('Enviar registro?');
+//End Confirmation Message
+
+//tipos_muestraButton_SubmitOnClick Event End @-A5B9ECB8
+        return result;
+    };
+//End tipos_muestraButton_SubmitOnClick Event End
+
+//Event Binding @1-127B50CD
+    $('*:ccsControl(tipos_muestra, Button_Submit)').ccsBind(function() {
+        this.bind("click", actions["tipos_muestraButton_SubmitOnClick"]);
+    });
+//End Event Binding
+
+//Plugin Calls @1-848CB580
+    $('*:ccsControl(tipos_muestra, Cancel)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+//End Plugin Calls
+
+//Common Script End @1-562554DE
+});
+//End Common Script End
+//End CCS script
+</script>
+</head>
+<body  class="InLinePageBODY">
+<table width="700" align="center" border="0">
+  <tr>
+    <td>
+      <!-- BEGIN Record tipos_muestraSearch -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%" align="center">
+          <tr>
+            <td class="InLineFormHeaderFont" colspan="4">Buscar Tipos Muestra </td> 
+          </tr>
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="4">{Error}</td> 
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineFieldCaptionTD">Tipo de&nbsp;Muestra&nbsp;</td> 
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="100" size="50" value="{s_nom_tipo_muestra}" name="{s_nom_tipo_muestra_Name}" id="tipos_muestraSearchs_nom_tipo_muestra">&nbsp;</td> 
+            <td class="InLineDataTD">Estado de uso</td> 
+            <td class="InLineDataTD">
+              <select name="{s_activo_Name}" class="InLineSelect" id="tipos_muestraSearchs_activo">
+                <option value="" selected>Seleccionar Valor</option>
+ {s_activo_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="4">
+              <p align="right">
+              <!-- BEGIN Button Button_DoSearch --><input class="InLineButton" type="submit" value="Buscar" name="{Button_Name}" id="tipos_muestraSearchButton_DoSearch"><!-- END Button Button_DoSearch --></p>
+ </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END Record tipos_muestraSearch -->
+      <!-- BEGIN EditableGrid tipos_muestra -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <input type="hidden" value="{FormState}" name="FormState">{FormScript} 
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+          <tr>
+            <td class="InLineFormHeaderFont" align="middle" colspan="4">Listado
+              de Tipos Muestra &nbsp;(Total de
+              Registros:{tipos_muestra_TotalRecords}) </td> 
+          </tr>
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="4">{Error}</td> 
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineColumnTD" nowrap>
+              <p align="center">
+              <!-- BEGIN Sorter Sorter_nom_tipo_muestra --><a class="InLineSorterLink" href="{Sort_URL}">Tipo
+              Muestra</a> 
+              <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+              <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_nom_tipo_muestra --></p>
+ </td> 
+            <td class="InLineColumnTD" nowrap>
+              <p align="center">
+              <!-- BEGIN Sorter Sorter_indicacion_id --><a class="InLineSorterLink" href="{Sort_URL}">Indicación</a> 
+              <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+              <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_indicacion_id --></p>
+ </td> 
+            <td class="InLineColumnTD" nowrap>
+              <p align="center">Activo</p>
+ </td> 
+            <td class="InLineColumnTD" nowrap>
+              <p align="center">Borrar</p>
+ </td> 
+          </tr>
+          <!-- BEGIN Row -->
+          <!-- BEGIN RowError -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="4">{Error}</td> 
+          </tr>
+          <!-- END RowError -->
+          <tr>
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="100" size="50" value="{nom_tipo_muestra}" name="{nom_tipo_muestra_Name}" id="tipos_muestranom_tipo_muestra"></td> 
+            <td class="InLineDataTD">
+              <p align="center">
+              <select name="{indicacion_id_Name}" class="InLineSelect" id="tipos_muestraindicacion_id">
+                <option value="" selected>Seleccionar Valor</option>
+ {indicacion_id_Options} 
+              </select>
+ </p>
+ </td> 
+            <td class="InLineDataTD">
+              <p align="center"><input type="checkbox" name="{activo_Name}" value="1" class="InLineInput" {activo} id="tipos_muestraactivo"></p>
+ </td> 
+            <td class="InLineDataTD">
+              <!-- BEGIN CheckBox CheckBox_Delete -->
+              <p align="center" id="tipos_muestraCheckBox_Delete"><input class="InLineInput" type="checkbox" value="1" name="{CheckBox_Delete_Name}" {CheckBox_Delete}></p>
+              <!-- END CheckBox CheckBox_Delete --></td> 
+          </tr>
+          <!-- END Row -->
+          <!-- BEGIN NoRecords -->
+          <tr>
+            <td class="InLineDataTD" colspan="4">No se encontaron
+              registros&nbsp;</td> 
+          </tr>
+          <!-- END NoRecords -->
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="4">
+              <!-- BEGIN Navigator Navigator -->
+              <!-- BEGIN First_On --><a class="InLineNavigatorLink" href="{First_URL}">Inicio</a> <!-- END First_On -->
+              <!-- BEGIN First_Off -->Inicio <!-- END First_Off -->
+              <!-- BEGIN Prev_On --><a class="InLineNavigatorLink" href="{Prev_URL}">Anterior</a> <!-- END Prev_On -->
+              <!-- BEGIN Prev_Off -->Anterior <!-- END Prev_Off -->&nbsp; 
+              <!-- BEGIN Pages -->
+              <!-- BEGIN Page_On --><a class="InLineNavigatorLink" href="{Page_URL}">{Page_Number}</a>&nbsp;<!-- END Page_On -->
+              <!-- BEGIN Page_Off -->{Page_Number}&nbsp;<!-- END Page_Off --><!-- END Pages -->de
+              {Total_Pages}&nbsp; 
+              <!-- BEGIN Next_On --><a class="InLineNavigatorLink" href="{Next_URL}">Siguiente</a> <!-- END Next_On -->
+              <!-- BEGIN Next_Off -->Siguiente <!-- END Next_Off -->
+              <!-- BEGIN Last_On --><a class="InLineNavigatorLink" href="{Last_URL}">Final</a> <!-- END Last_On -->
+              <!-- BEGIN Last_Off -->Final <!-- END Last_Off --><!-- END Navigator Navigator --></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="4">
+              <p align="right">&nbsp; 
+              <!-- BEGIN Button Button_Submit --><input class="InLineButton" type="submit" value="Grabar" name="{Button_Name}" id="tipos_muestraButton_Submit"><!-- END Button Button_Submit -->
+              <!-- BEGIN Button Cancel --><input class="InLineButton" type="submit" value="Cancelar" name="{Button_Name}" id="tipos_muestraCancel"><!-- END Button Cancel --></p>
+ </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END EditableGrid tipos_muestra --></td> 
+  </tr>
+</table>
+</body>
+</html>

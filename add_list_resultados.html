@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>.:: Listado de Resultados ::.</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+<link rel="stylesheet" type="text/css" href="Themes/InLine/Style.css">
+<script language="JavaScript">
+//Begin CCS script
+//DEL    </script>
+//DEL  <script language="JavaScript" src="funciones.js"></script>
+//DEL    
+
+//Include Common JSFunctions @1-921C7A7E
+</script>
+<script src="ClientI18N.php?file=Globalize.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-A87AC9EE
+</script>
+{page:scriptIncludes}
+<script type="text/javascript">
+//End Include User Scripts
+
+//Common Script Start @1-8BFA436B
+jQuery(function ($) {
+    var features = { };
+    var actions = { };
+    var params = { };
+//End Common Script Start
+
+//valores_resultadoButton_SubmitOnClick Event Start @-19FFC1C1
+    actions["valores_resultadoButton_SubmitOnClick"] = function (eventType, parameters) {
+        var result = true;
+//End valores_resultadoButton_SubmitOnClick Event Start
+
+//Confirmation Message @13-96FAE8C2
+        return confirm('Enviar registro?');
+//End Confirmation Message
+
+//valores_resultadoButton_SubmitOnClick Event End @-A5B9ECB8
+        return result;
+    };
+//End valores_resultadoButton_SubmitOnClick Event End
+
+//Event Binding @1-D53C2D6F
+    $('*:ccsControl(valores_resultado, Button_Submit)').ccsBind(function() {
+        this.bind("click", actions["valores_resultadoButton_SubmitOnClick"]);
+    });
+//End Event Binding
+
+//Common Script End @1-562554DE
+});
+//End Common Script End
+//End CCS script
+</script>
+</head>
+<body class="InLinePageBODY" bottommargin="0" leftmargin="0" topmargin="0" rightmargin="0" marginheight="0" marginwidth="0">
+<table width="100%" align="center" border="0">
+  <tr>
+    <td>
+      <!-- BEGIN EditableGrid valores_resultado -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <input type="hidden" value="{FormState}" name="FormState">{FormScript}
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+          <tr>
+            <td class="InLineFormHeaderFont" align="middle" colspan="2">Listado
+              de Resultados Disponibles para: {nom_test} </td> 
+          </tr>
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="2">{Error}</td> 
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineColumnTD" nowrap>
+              <!-- BEGIN Sorter Sorter_nom_resultado --><a class="InLineSorterLink" href="{Sort_URL}">Resultado</a> 
+              <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+              <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_nom_resultado -->&nbsp;</td> 
+            <td class="InLineColumnTD" nowrap align="middle">Borrar &nbsp;</td> 
+          </tr>
+          <!-- BEGIN Row -->
+          <!-- BEGIN RowError -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="2">{Error}</td> 
+          </tr>
+          <!-- END RowError -->
+          <tr>
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="100" size="50" value="{nom_resultado}" name="{nom_resultado_Name}" style="WIDTH: 100%" id="valores_resultadonom_resultado"></td> 
+            <td class="InLineDataTD" align="middle">
+              <!-- BEGIN CheckBox CheckBox_Delete --><input class="InLineInput" type="checkbox" value="1" name="{CheckBox_Delete_Name}" {CheckBox_Delete} id="valores_resultadoCheckBox_Delete"><!-- END CheckBox CheckBox_Delete --></td> 
+          </tr>
+          <!-- END Row -->
+          <!-- BEGIN NoRecords -->
+          <tr>
+            <td class="InLineDataTD" colspan="2"><img id="Image1" src="images/emblem-important.png" align="left" name="Image1">No
+              se encontaron registros&nbsp;</td> 
+          </tr>
+          <!-- END NoRecords -->
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="2">
+              <!-- BEGIN Button Button_Submit --><input class="InLineButton" type="submit" value="Grabar" name="{Button_Name}" id="valores_resultadoButton_Submit"><!-- END Button Button_Submit -->&nbsp;&nbsp; </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END EditableGrid valores_resultado --></td> 
+  </tr>
+</table>
+</body>
+</html>

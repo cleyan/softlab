@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>:::: Configurar la Fecha del Sistema ::::</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+<link rel="stylesheet" type="text/css" href="Themes/InLine/Style.css">
+<script language="javascript" src="scripts/calendario/popcalendar.js"></script>
+</head>
+<body class="InLinePageBODY" >
+<table width="100%" align="center" border="0">
+  <tr>
+    <td align="middle">
+      <!-- BEGIN Record fechaSistema -->
+      <form method="post" action="{Action}" name="{HTMLFormName}" target="bottomFrame">
+        <table cellpadding="3" cellspacing="0" class="InLineFormTABLE" width="100%">
+          <tr>
+            <td width="27%" class="InLineTitulo"><img class="" src="images/calendario.gif"></td> 
+            <td width="73%" class="InLineTitulo">Configurar Fecha del Sistema&nbsp; </td> 
+          </tr>
+          <!-- BEGIN Error -->
+          <tr>
+            <td colspan="2" class="InLineErrorDataTD" align="middle">{Error}</td> 
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineFieldCaptionTD">Fecha Sistema Actual</td> 
+            <td class="InLineDataTD">{viejaFechaSistema}</td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD">Nueva Fecha del Sistema&nbsp;</td> 
+            <td class="InLineDataTD"><input name="{nuevafechasistema_Name}" value="{nuevafechasistema}" class="InLineInput" id="fechaSistemanuevafechasistema">&nbsp; 
+              <script language="javascript">
+				<!--
+				if (!document.layers) {
+				document.write("<input type=button onclick='popUpCalendar(this, fechaSistema.nuevafechasistema, \"dd/mm/yyyy\")' value='Seleccionar' class='InLineButton'>")
+				}
+				//-->
+			</script>
+            </td> 
+          </tr>
+ 
+          <tr>
+            <td colspan="2" align="right" nowrap class="InLineFooterTD">&nbsp; 
+              <!-- BEGIN Button Actualizar --><input class="InLineButton" type="submit" value="Grabar nueva Fecha" name="{Button_Name}" onclick="javascript:window.close();" id="fechaSistemaActualizar"><!-- END Button Actualizar -->&nbsp; 
+              <!-- BEGIN Button Cancelar --><input class="InLineButton" type="button" value="Cancelar" name="{Button_Name}" onclick="javascript:window.close();" id="fechaSistemaCancelar"><!-- END Button Cancelar -->&nbsp; </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END Record fechaSistema --></td> 
+  </tr>
+</table>
+</body>
+</html>

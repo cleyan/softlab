@@ -1,0 +1,208 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>control</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+<link rel="stylesheet" type="text/css" href="Themes/InLine/Style.css">
+</head>
+<body class="InLinePageBODY" bgcolor="#ffffff" link="#000000" alink="#000000" vlink="#000000" text="#000000">
+<table width="100%" align="center" border="0">
+  <tr>
+    <td><img id="Image1" src="images/menu/gnome-settings.gif" name="Image1"></td> 
+    <td width="100%">
+      <h2>PANEL DE CONTROL</h2>
+ </td> 
+  </tr>
+</table>
+ 
+<table width="100%" align="center" border="0" cellspacing="5" cellpadding="5" bgcolor="#f0f0f0" class="Table">
+  <tr>
+    <td align="middle" valign="top">
+      <table cellspacing="3" cellpadding="3" width="100%" align="center" border="0">
+        <tr>
+          <td align="middle"><a href="{ImageLink1}"><img src="images/menu/gnome-ccdesktop.gif" border="0"></a><br>
+            Informes...</td> 
+          <td align="middle"><a href="{ImageLink2}"><img src="images/menu/gnome-monitor.gif" border="0"></a><br>
+            Equipos...</td> 
+          <td class="" align="middle"><a href="{ImageLink5}"><img src="images/menu/yast_nis_client.gif" border="0"></a><br>
+            Secciones</td> 
+        </tr>
+ 
+        <tr>
+          <td align="middle"><a href="{ImageLink6}"><img src="images/menu/documents.gif" border="0"></a><br>
+            Procedencias</td> 
+          <td align="middle">&nbsp;<a href="{ImageLink3}"><img src="images/menu/medico.png" border="0"></a><br>
+            Médicos...</td> 
+          <td class="" align="middle">Métodos</td> 
+        </tr>
+ 
+        <tr>
+          <td align="middle">Previsiones</td> 
+          <td align="middle">Indicaciones <br>
+            del Test</td> 
+          <td align="middle">Indicaciones<br>
+            de Muestra</td> 
+        </tr>
+ 
+        <tr>
+          <td align="middle">Sexos</td> 
+          <td align="middle">Formas<br>
+            de Pago</td> 
+          <td align="middle">&nbsp;<a href="{ImageLink4}"><img src="images/menu/kuzer.gif" border="0"></a><br>
+            Usuarios...</td> 
+        </tr>
+ 
+        <tr>
+          <td align="middle"></td> 
+          <td align="middle"></td> 
+          <td align="middle"></td> 
+        </tr>
+ 
+        <tr>
+          <td align="middle"></td> 
+          <td align="middle"></td> 
+          <td class="" align="middle"></td> 
+        </tr>
+ 
+      </table>
+ </td> 
+    <td valign="top" width="100%">
+      <!-- Inicio de tabuladores -->
+      <div style="WIDTH: 100%">
+        <link id="luna-tab-style-sheet" href="./tabs/tabpane.css" type="text/css" rel="stylesheet">
+        <script type="text/javascript" src="./tabs/tabpane.js"></script>
+        <div class="tab-page" id="modules-cpanel">
+          <script type="text/javascript">
+			   		var tabPane1 = new WebFXTabPane( document.getElementById( "modules-cpanel" ), 1 )
+				  </script>
+          <div class="tab-page" id="informes">
+            <h2 class="tab">Informes</h2>
+ 
+            <script type="text/javascript">
+			tabPane1.addTabPage( document.getElementById( "informes" ) );
+		</script>
+            <!-- BEGIN Grid informes -->
+            <table width="100%">
+              <tr>
+                <td width="100%">
+                  <!-- BEGIN Row -->&nbsp;&nbsp;-&nbsp;<a href="{nom_informe_Src}" id="informesnom_informe">{nom_informe}</a>&nbsp;<br>
+                  <!-- END Row --></td> 
+              </tr>
+              <!-- BEGIN NoRecords -->
+              <tr>
+                <td>No se encontaron registros&nbsp;</td> 
+              </tr>
+              <!-- END NoRecords -->
+            </table>
+ <!-- END Grid informes -->
+          </div>
+ 
+          <div class="tab-page" id="module20">
+            <h2 class="tab">Top Visitas</h2>
+ 
+            <script type="text/javascript">
+					tabPane1.addTabPage( document.getElementById( "module20" ) );
+				</script>
+            Modulo 20 
+          </div>
+ 
+          <div class="tab-page" id="module21">
+            <h2 class="tab">Parámetros</h2>
+ 
+            <script type="text/javascript">
+					tabPane1.addTabPage( document.getElementById( "module21" ) );
+				</script>
+            <!-- BEGIN EditableGrid configuracion -->
+            <form name="{HTMLFormName}" action="{Action}" method="post">
+              <input type="hidden" value="{FormState}" name="FormState">{FormScript} 
+              <table class="InLineFormTABLE" cellspacing="0" cellpadding="3">
+                <tr>
+                  <td class="InLineFormHeaderFont" align="middle" colspan="2">Lista
+                    de Configuracion </td> 
+                </tr>
+                <!-- BEGIN Error -->
+                <tr>
+                  <td class="InLineErrorDataTD" colspan="2">{Error}</td> 
+                </tr>
+                <!-- END Error -->
+                <tr>
+                  <td class="InLineColumnTD" nowrap>
+                    <!-- BEGIN Sorter Sorter_descripcion --><a class="InLineSorterLink" href="{Sort_URL}">Descripción</a> 
+                    <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+                    <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_descripcion -->&nbsp;</td> 
+                  <td class="InLineColumnTD" nowrap>
+                    <!-- BEGIN Sorter Sorter_valor --><a class="InLineSorterLink" href="{Sort_URL}">Valor</a> 
+                    <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+                    <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_valor -->&nbsp;</td> 
+                </tr>
+                <!-- BEGIN Row -->
+                <!-- BEGIN RowError -->
+                <tr>
+                  <td class="InLineErrorDataTD" colspan="2">{Error}</td> 
+                </tr>
+                <!-- END RowError -->
+                <tr>
+                  <td class="InLineDataTD" width="100%">{descripcion}&nbsp;<br>
+                    <small>{clave}</small></td> 
+                  <td class="InLineDataTD" valign="center"><input class="InLineInput" maxlength="100" size="30" value="{valor}" name="{valor_Name}" id="configuracionvalor"></td> 
+                </tr>
+                <!-- END Row -->
+                <!-- BEGIN NoRecords -->
+                <tr>
+                  <td class="InLineDataTD" colspan="2">No se encontaron
+                    registros&nbsp;</td> 
+                </tr>
+                <!-- END NoRecords -->
+                <tr>
+                  <td class="InLineFooterTD" nowrap align="right" colspan="2">
+                    <!-- BEGIN Button Button_Submit --><input class="InLineButton" type="submit" value="Grabar" name="{Button_Name}" id="configuracionButton_Submit"><!-- END Button Button_Submit --></td> 
+                </tr>
+ 
+              </table>
+ 
+            </form>
+ <!-- END EditableGrid configuracion -->
+          </div>
+ 
+          <div class="tab-page" id="Avanzada">
+            <h2 class="tab">Conf. Avanzada</h2>
+ 
+            <script type="text/javascript">
+					tabPane1.addTabPage( document.getElementById( "Avanzada" ) );
+				</script>
+            <table width="100%" align="center" border="0">
+              <tr>
+                <td align="middle">&nbsp;Mensajes de<br>
+                  Ayuda</td> 
+                <td>&nbsp;Formatos</td> 
+                <td>Estados&nbsp;</td> 
+              </tr>
+ 
+              <tr>
+                <td>&nbsp;Niveles</td> 
+                <td>&nbsp;Iconos</td> 
+                <td>&nbsp;Parámetros</td> 
+              </tr>
+ 
+              <tr>
+                <td>&nbsp;Config.<br>
+                  Avanzada</td> 
+                <td>&nbsp;</td> 
+                <td>&nbsp;</td> 
+              </tr>
+ 
+            </table>
+ 
+          </div>
+ 
+        </div>
+ 
+      </div>
+      <!-- Fin de Tabulador -->
+    </td> 
+  </tr>
+ 
+</table>
+ 
+</body>
+ 
+</html>

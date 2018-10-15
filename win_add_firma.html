@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Softlab</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+<link rel="stylesheet" type="text/css" href="Themes/InLine/Style.css">
+<script language="JavaScript">
+//Begin CCS script
+//Include Common JSFunctions @1-921C7A7E
+</script>
+<script src="ClientI18N.php?file=Globalize.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-A87AC9EE
+</script>
+{page:scriptIncludes}
+<script type="text/javascript">
+//End Include User Scripts
+
+//Common Script Start @1-8BFA436B
+jQuery(function ($) {
+    var features = { };
+    var actions = { };
+    var params = { };
+//End Common Script Start
+
+//usuariosButton_DeleteOnClick Event Start @-015DA804
+    actions["usuariosButton_DeleteOnClick"] = function (eventType, parameters) {
+        var result = true;
+//End usuariosButton_DeleteOnClick Event Start
+
+//Confirmation Message @6-BED55CD3
+        return confirm('Borrar registro?');
+//End Confirmation Message
+
+//usuariosButton_DeleteOnClick Event End @-A5B9ECB8
+        return result;
+    };
+//End usuariosButton_DeleteOnClick Event End
+
+//usuariosButton_CancelOnClick Event Start @-9BDA9432
+    actions["usuariosButton_CancelOnClick"] = function (eventType, parameters) {
+        var result = true;
+//End usuariosButton_CancelOnClick Event Start
+
+//Custom Code @11-2A29BDB7
+// -------------------------
+		window.close();   
+// -------------------------
+//End Custom Code
+
+//usuariosButton_CancelOnClick Event End @-A5B9ECB8
+        return result;
+    };
+//End usuariosButton_CancelOnClick Event End
+
+//Event Binding @1-09D7A5B2
+    $('*:ccsControl(usuarios, Button_Delete)').ccsBind(function() {
+        this.bind("click", actions["usuariosButton_DeleteOnClick"]);
+    });
+    $('*:ccsControl(usuarios, Button_Cancel)').ccsBind(function() {
+        this.bind("click", actions["usuariosButton_CancelOnClick"]);
+    });
+//End Event Binding
+
+//Plugin Calls @1-DF518964
+    $('*:ccsControl(usuarios, Button_Delete)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+    $('*:ccsControl(usuarios, Button_Cancel)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+//End Plugin Calls
+
+//Common Script End @1-562554DE
+});
+//End Common Script End
+//End CCS script
+</script>
+</head>
+<body  class="InLinePageBODY">
+<table width="545" align="center" border="0">
+  <tr>
+    <td>
+      <!-- BEGIN Record usuarios -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+          <tr>
+            <td class="InLineFormHeaderFont" colspan="2">Igresar clave para
+              validación de&nbsp;resultado&nbsp; </td> 
+          </tr>
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="2">{Error}</td> 
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineFieldCaptionTD">Usuario&nbsp;</td> 
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="20" value="{log_usuario}" name="{log_usuario_Name}" id="usuarioslog_usuario">&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD">Clave&nbsp;</td> 
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="100" size="50" value="{clave}" name="{clave_Name}" id="usuariosclave">&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input class="InLineButton" type="submit" value="Validar" name="{Button_Name}" id="usuariosButton_Insert"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input class="InLineButton" type="submit" value="Grabar" name="{Button_Name}" id="usuariosButton_Update"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Delete --><input class="InLineButton" type="submit" value="Borrar" name="{Button_Name}" id="usuariosButton_Delete"><!-- END Button Button_Delete -->
+              <!-- BEGIN Button Button_Cancel --><input class="InLineButton" type="button" value="Cancelar" name="{Button_Name}" id="usuariosButton_Cancel"><!-- END Button Button_Cancel -->&nbsp; </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END Record usuarios --></td> 
+  </tr>
+</table>
+</body>
+</html>

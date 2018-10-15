@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>busca_ayuda</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+<link rel="stylesheet" type="text/css" href="Themes/InLine/Style.css">
+</head>
+<body class="InLinePageBODY">
+<table width="700" align="center" border="0">
+  <tr>
+    <td>&nbsp; 
+      <!-- BEGIN Record ayudaSearch -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+          <tr>
+            <td class="InLineFormHeaderFont" colspan="2">Buscar Ayuda </td> 
+          </tr>
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="2">{Error}</td> 
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineFieldCaptionTD">Palabra clave&nbsp;</td> 
+            <td class="InLineDataTD" width="100%"><input class="InLineInput" maxlength="100" size="50" value="{s_keyword}" name="{s_keyword_Name}" style="WIDTH: 100%" id="ayudaSearchs_keyword"></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD" nowrap>Mostrar todo el contenido</td> 
+            <td class="InLineDataTD"><input class="InLineInput" type="checkbox" value="1" name="{todo_Name}" {todo} id="ayudaSearchtodo"></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="2">
+              <!-- BEGIN Button Button_DoSearch --><input class="InLineButton" type="submit" value="Buscar" name="{Button_Name}" id="ayudaSearchButton_DoSearch"><!-- END Button Button_DoSearch -->&nbsp; </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END Record ayudaSearch -->
+      <!-- BEGIN Grid ayuda -->
+      <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+        <tr>
+          <td class="InLineFormHeaderFont" align="middle">Lista de Ayuda
+            &nbsp;(Total de Registros:{ayuda_TotalRecords}) </td> 
+        </tr>
+        <!-- BEGIN Row -->
+        <tr>
+          <td class="InLineDataTD"><a class="InLineDataLink" href="{titulo_Src}" id="ayudatitulo">{titulo}</a>&nbsp;</td> 
+        </tr>
+ 
+        <tr>
+          <td class="InLineDataTD">{contenido}</td> 
+        </tr>
+ 
+        <tr>
+          <td class="InLineSeparatorTD" colspan="2"></td> 
+        </tr>
+        <!-- END Row -->
+        <!-- BEGIN AltRow -->
+        <tr>
+          <td class="InLineAltDataTD"><a class="InLineDataLink" href="{Alt_titulo_Src}" id="ayudaAlt_titulo">{Alt_titulo}</a>&nbsp;</td> 
+        </tr>
+ 
+        <tr>
+          <td class="InLineAltDataTD">{Alt_contenido}</td> 
+        </tr>
+ 
+        <tr>
+          <td class="InLineSeparatorTD" colspan="2"><font style="BACKGROUND-COLOR: #f2f2f2"></font></td> 
+        </tr>
+        <!-- END AltRow -->
+        <!-- BEGIN NoRecords -->
+        <tr>
+          <td class="InLineAltDataTD">No se encontaron registros&nbsp;</td> 
+        </tr>
+        <!-- END NoRecords -->
+        <tr>
+          <td class="InLineFooterTD" nowrap>
+            <!-- BEGIN Navigator Navigator -->
+            <!-- BEGIN First_On --><a class="InLineNavigatorLink" href="{First_URL}">Inicio</a> <!-- END First_On -->
+            <!-- BEGIN First_Off -->Inicio <!-- END First_Off -->
+            <!-- BEGIN Prev_On --><a class="InLineNavigatorLink" href="{Prev_URL}">Anterior</a> <!-- END Prev_On -->
+            <!-- BEGIN Prev_Off -->Anterior <!-- END Prev_Off -->&nbsp; 
+            <!-- BEGIN Pages -->
+            <!-- BEGIN Page_On --><a class="InLineNavigatorLink" href="{Page_URL}">{Page_Number}</a>&nbsp;<!-- END Page_On -->
+            <!-- BEGIN Page_Off -->{Page_Number}&nbsp;<!-- END Page_Off --><!-- END Pages -->de
+            {Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a class="InLineNavigatorLink" href="{Next_URL}">Siguiente</a> <!-- END Next_On -->
+            <!-- BEGIN Next_Off -->Siguiente <!-- END Next_Off -->
+            <!-- BEGIN Last_On --><a class="InLineNavigatorLink" href="{Last_URL}">Final</a> <!-- END Last_On -->
+            <!-- BEGIN Last_Off -->Final <!-- END Last_Off --><!-- END Navigator Navigator -->&nbsp; </td> 
+        </tr>
+ 
+      </table>
+ <!-- END Grid ayuda --></td> 
+  </tr>
+</table>
+</body>
+</html>

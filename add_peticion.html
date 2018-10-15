@@ -1,0 +1,419 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>add_peticion</title>
+    <meta name="GENERATOR" content="CodeCharge Studio 3.0.1.6">
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <link href="Themes/InLine/Style.css" type="text/css" rel="stylesheet">
+    <style>@import url( css/dropdown.css );</style>
+    <script src="js/modomt.js"></script>
+    <script src="js/getobject2.js"></script>
+    <script src="js/xmlextras.js"></script>
+    <script src="js/acdropdown.js"></script>
+    <script language="javascript" src="funciones.js"></script>
+    <script src="cpaint2.inc.js" type="text/javascript"></script>
+    <script language="JavaScript">
+      <!--
+
+      var cp = new cpaint();
+      cp.set_response_type('OBJECT');
+      cp.set_transfer_mode('POST');
+      cp.set_debug(0);
+      cp.set_async(false);
+
+      {var_test}
+
+      var destino="add_peticion.php";
+
+      function enfoque(idobjeto){
+        var objeto=document.getElementById(idobjeto);
+
+        if (objeto){
+          if (!objeto.disabled){
+            objeto.focus();
+            objeto.select();
+          }
+        }
+      }
+
+      function buscarPaciente(){
+
+        tipo='rut';
+
+        var cadena=document.getElementById('nom_paciente').value;
+
+        if (cadena==''){
+          openWindow('frmBuscarPaciente.php', 'BuscaPaciente', 600, 550, 'yes', 50);
+        } else {
+          cp.call('ejecutarsql.php', 'ajax_buscapaciente', recuperapaciente, cadena, tipo);
+        }
+
+      }
+
+      function BuscarPacientexID(pid){
+        tipo='pid';
+        cp.call('ejecutarsql.php', 'ajax_buscapaciente', recuperapaciente, pid, tipo);
+
+      }
+
+
+
+
+      function recuperapaciente(datospaciente){
+
+        var paciente_id =datospaciente.ajaxResponse[0].pacienteid[0].data;
+        var nom_paciente='' + datospaciente.ajaxResponse[0].nompaciente[0].data;
+        var prevision_id=datospaciente.ajaxResponse[0].previsionid[0].data;
+        var direccion   =datospaciente.ajaxResponse[0].direccion[0].data;
+
+//      alert('paciente_id=' + paciente_id);
+//      alert('nom_paciente=' + nom_paciente);
+//      alert('prevision_id=' + prevision_id);
+
+        var primer='';
+        var numeros='0123456789';
+        var esnumero='';
+
+        if (paciente_id==0) {
+
+          document.getElementById('nom_paciente').value='';
+          nom_paciente=nom_paciente.split(' ');
+          nom_paciente=nom_paciente[0];
+          primer=nom_paciente.substr(0,1);
+          esnumero=numeros.indexOf(primer);
+          if (esnumero==-1) {
+            openWindow('frmBuscarPaciente.php?s_apellido=' + nom_paciente, 'BuscaPaciente', 600, 550, 'yes', 50);
+          } else {
+            openWindow('frmBuscarPaciente.php?s_rut_ficha=' + nom_paciente, 'BuscaPaciente', 600, 550, 'yes', 50);
+          }
+
+        } else {
+          document.getElementById('paciente_id').value = paciente_id;
+          document.getElementById('nom_paciente').value = nom_paciente;
+          document.getElementById('prevision_id').value = prevision_id;
+          document.getElementById('datos_paciente').innerHTML = direccion;
+          document.getElementById('medico_id').focus();
+        }
+      }
+
+      function buscarTest()
+      {
+        if (document.paciente.seccion_id.selectedIndex>0){
+          var valorOP=document.paciente.seccion_id.options[document.paciente.seccion_id.selectedIndex].value;
+          openWindow('frmEligeTest.php?seccion_id='+valorOP, 'BuscaTest', 700, 500, 'yes', 5);
+        } else {
+          openWindow('frmEligeTest.php', 'BuscaTest', 700, 500, 'yes', 5);
+        }
+      }
+
+      function crealista(){
+        var items="";
+        var itemsLista="";
+        var elegido="";
+        var sep="";
+        ///limpia el option
+        for (var i=0;i<document.paciente.lista_test.options.length;ii++) {
+          document.paciente.lista_test.options[i]=null;
+        }
+
+        for (var ii=0;ii<document.paciente.elements.length;ii++) {
+          if (document.paciente.elements[ii].type == 'checkbox' && document.paciente.elements[ii].checked==true) {
+            document.paciente.lista_test.options[document.paciente.lista_test.options.length] = new Option(document.paciente.elements[ii].value,document.paciente.elements[ii].id);
+          }
+        }
+
+        if(document.getElementById && document.getElementById("spanQTY")){
+          document.getElementById("spanQTY").innerHTML ='Cantidad de Test solicitados: <b>'+ document.paciente.lista_test.options.length + '</b>';
+        }
+      }
+
+      function enviarForm()
+      {
+        document.paciente.action=destino;
+        document.paciente.submit();
+      }
+
+      function boton(boton, elem)
+      {
+        /*Deshabilitar el boton */
+        elem.disabled=true;
+
+        switch (boton) {
+          case 'grabar':
+            document.paciente.action=destino + '?grabar=grabar';
+            document.paciente.submit();
+            elem.disabled=false;
+            break;
+
+          case 'cancelar':
+            document.paciente.action=destino + '?cancelar=cancelar';
+            document.paciente.submit();
+            elem.disabled=false;
+            break;
+
+          case '':
+            document.paciente.action=destino + 'add_peticion.php';
+            document.paciente.submit();
+            elem.disabled=false;
+            break;
+
+        }
+      }
+
+
+      function addmedico(){
+        var nom_medico=prompt('Ingrese el Nombre del nuevo médico');
+        cp.call('ejecutarsql.php', 'ajax_add_lista', actualiza_medicos, nom_medico, 'medicos','medico_id','nom_medico');
+      }
+
+      function actualiza_medicos(texto){
+        document.getElementById('medicos').innerHTML = texto.ajaxResponse[0].data;
+      }
+
+
+      function addprevision(){
+        var nom_prev=prompt('Ingrese la Nueva Previsión');
+        cp.call('ejecutarsql.php', 'ajax_add_lista', actualiza_previsiones, nom_prev, 'previsiones', 'prevision_id','nom_prevision');
+      }
+
+      function actualiza_previsiones(texto){
+        document.getElementById('previsiones').innerHTML = texto.ajaxResponse[0].data;
+      }
+
+
+      function addprocedencia(){
+        var nom_pro=prompt('Ingrese la Nueva Procedencia');
+        cp.call('ejecutarsql.php', 'ajax_add_lista', actualiza_procedencias, nom_pro, 'procedencias', 'procedencia_id', 'nom_procedencia');
+      }
+
+      function actualiza_procedencias(texto){
+        document.getElementById('procedencias').innerHTML = texto.ajaxResponse[0].data;
+
+      }
+
+      function buscafonasa(){
+        var codigo=document.getElementById('codigo_fonasa').value;
+
+        if (codigo==''){
+          document.getElementById('grabar').focus();
+          //document.getElementById('grabar').select();
+          return false;
+        }
+
+        arr_codigo=codigo.split('\t');
+        codigo=arr_codigo[2];
+//      alert('Codigo en Busca Fonasa (Antes de Cond.):' + codigo);
+
+        if (codigo != undefined){
+//              alert('Codigo en Busca Fonasa:' + codigo);
+          cp.call('ejecutarsql.php', 'ajax_busca_test', actualiza_test, codigo);
+        }
+        codigo=document.getElementById('codigo_fonasa').value="";
+
+      }
+
+      function actualiza_test(resultado){
+
+        texto=resultado.ajaxResponse[0].data;
+
+        if (texto=='__NINGUNO__'){
+          alert('Ninguna conhincidencia para ese código');
+        } else if (texto=='__MUCHOS__'){
+          alert('Más de un Test coincide con el Código ingresado');
+        } else {
+//              alert('Código Recibido: ' + texto);
+          var ctrl_e = document.getElementById(texto);
+          ctrl_e.click();
+          //      ctrl_e.checked=true;
+        }
+      }
+
+      function evaluarkey(e)
+      {
+        var key;
+        var keychar;
+        var reg;
+
+        if(window.event) {
+          // for IE, e.keyCode or window.event.keyCode can be used
+          key = e.keyCode;
+        }
+        else if(e.which) {
+          // netscape
+          key = e.which;
+        }
+        else {
+          // no event, so pass through
+          return true;
+        }
+
+        if (key==13){
+          buscafonasa();
+        }
+
+        return true;
+      }
+
+
+      function keypaciente(e)
+      {
+        var key;
+        var keychar;
+        var reg;
+
+        if(window.event) {
+          // for IE, e.keyCode or window.event.keyCode can be used
+          key = e.keyCode;
+        }
+        else if(e.which) {
+          // netscape
+          key = e.which;
+        }
+        else {
+          // no event, so pass through
+          return true;
+        }
+
+        if (key==13){
+          buscarPaciente();
+        } else {
+          document.getElementById('paciente_id').value=""
+          document.getElementById('datos_paciente').innerHTML=""
+        }
+
+        return true;
+      }
+
+      function sacar_valor(){
+        var lista = document.getElementById("lista_test");
+
+        for (var i=0; i < lista.length; i++) {
+          if (lista.options[i].selected == true) {
+            var ctrl_e = document.getElementById(lista.options[i].value);
+            ctrl_e.click();
+
+            //LinkedLB.options[i] = null;
+            i=i-1;
+          }
+        }
+      }
+      //-->
+    </script>
+</head>
+<body class="InLinePageBODY" onload="crealista();enfoque('nom_paciente');">
+{aviso}
+<table width="100%" align="center" border="0">
+    <tr>
+        <td align="middle">
+            <form name="paciente" method="post">
+                <table class="InLineFormTABLE" cellspacing="0" cellpadding="0" width="100%" border="0">
+                    <tr>
+                        <td class="InLineFormHeaderFont" colspan="3">1) Seleccione el
+                            paciente </td>
+                        <td align="center" bgcolor="#ffcc00" colspan="3"><strong><font size="3">{status_peticion}</font></strong> </td>
+                    </tr>
+
+                    <tr>
+                        <td class="InLineErrorDataTD" align="center" colspan="6"><strong>{mensajes}</strong> </td>
+                    </tr>
+
+                    <tr>
+                        <td class="InLineFieldCaptionTD">Paciente </td>
+                        <td class="InLineDataTD" nowrap colspan="2"><input class="InLineInput" onkeypress="keypaciente(event);" id="nom_paciente" maxlength="100" size="50" value="{nom_paciente}" name="nom_paciente" autocomplete="off"></input><a id="buscar" title="Buscar Paciente" onclick="buscarPaciente()" href="#"><img src="images/btn_buscar.png" align="absMiddle" border="0"></a><input class="InLineInput" id="paciente_id" readonly type="hidden" size="8" value="{paciente_id}" name="paciente_id"></input><input class="InLineInput" id="estado_id" readonly type="hidden" size="8" value="{estado_id}" name="estado_id"></input></td>
+                        <td class="InLineDataTD" colspan="3" rowspan="2"><span id="datos_paciente">&nbsp;&nbsp;</span></td>
+                    </tr>
+
+                    <tr>
+                        <td class="InLineFieldCaptionTD" nowrap>Fecha y Hora </td>
+                        <td class="InLineDataTD" nowrap colspan="2"><input class="InLineInput" id="fecha" maxlength="10" size="13" value="{fecha}" name="fecha"></input><a hidefocus="hidefocus" title="haga click aquí para elegir la Fecha" onclick="if(self.gfPop)gfPop.fPopCalendar(document.paciente.fecha);return false;" href="javascript:void(0)"><img class="PopcalTrigger" height="22" alt="" src="calbtn.gif" width="34" align="top" border="0"></a> (dd/mm/aaaa)
+                            &nbsp; <input class="InLineInput" id="hora" maxlength="5" size="11" value="{hora}" name="hora"></input>&nbsp;(HH:MM) </td>
+                    </tr>
+
+                    <tr>
+                        <td class="InLineFieldCaptionTD">Previsión </td>
+                        <td class="InLineDataTD"><span id="previsiones">{opPrevision} </span><a id="ImageLink2" href="#" name="ImageLink2"><img onclick="addprevision();" src="images/btns_Nuevo.png" align="absMiddle" border="0"></a> </td>
+                        <td class="InLineDataTD" nowrap align="right">Médico solicitante
+                            &nbsp; </td>
+                        <td class="InLineDataTD" nowrap colspan="3"><span id="medicos">{opMedico}</span> <a id="ImageLink1" href="#" name="ImageLink1"><img onclick="addmedico();" src="images/btns_Nuevo.png" align="absMiddle" border="0"></a> </td>
+                    </tr>
+
+                    <tr>
+                        <td class="InLineFieldCaptionTD">Procedencia </td>
+                        <td class="InLineDataTD"><span id="procedencias">{valorOp} </span><a id="ImageLink3" href="#" name="ImageLink3"><img onclick="addprocedencia();" src="images/btns_Nuevo.png" align="absMiddle" border="0"></a> </td>
+                        <td class="InLineDataTD" nowrap align="right">Prioridad de la
+                            petición &nbsp; </td>
+                        <td class="InLineDataTD" colspan="3">{opPrioridad} </td>
+                    </tr>
+
+                    <tr>
+                        <td class="InLineFieldCaptionTD">Observaciones </td>
+                        <td class="InLineDataTD" colspan="5"><input class="InLineInput" id="observaciones" style="WIDTH: 100%" size="16" value="{observaciones}" name="observaciones" autocomplete="off"></input></td>
+                    </tr>
+                </table>
+
+                <table cellspacing="0" cellpadding="0" width="100%" align="center" bgcolor="#ffffff" border="0">
+                    <tr>
+                        <td class="InLineFormHeaderFont" nowrap>
+                            <table cellspacing="0" cellpadding="0" align="left" border="0">
+                                <tr>
+                                    <td>2)&nbsp;Seleccione los Test que desea Agregar a esta
+                                        petición </td>
+                                </tr>
+                            </table>
+                            {division1}
+                            <table cellspacing="0" cellpadding="0" align="right" border="0">
+                                <tr>
+                                    <td nowrap>Sección: {op_seccion_id} </td>
+                                    <td><a id="ImageLink4" title="Filtrar por sección" href="#"><img onclick="enviarForm();" src="images/xmag.png" border="0"></a> </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="InLineDataTD" valign="top"><span id="barra_tabla">
+              <table cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td nowrap>Buscar Test: </td> 
+                  <td width="100%"><input class="dropdown" onkeypress="evaluarkey(event)" id="codigo_fonasa" style="WIDTH: 100%" accesskey="z" size="33" autocomplete="off" autocomplete_matchbegin="false" autocomplete_list_sort="true" autocomplete_list="array:arr_test" acdropdown="true"></td> 
+                  <td>&nbsp;<a title="Seleccionar Test" href="#"><img onclick="buscafonasa();" src="images/btns_Elegir.png" align="absMiddle" border="0"></a>&nbsp; </td>
+                </tr>
+              </table>
+              {lblTest} </span>{division} <span id="barra_lista">
+              <div class="InLineFooterTD">
+                <b>TEST SOLICITADOS</b> <a title="Eliminar Test seleccionados" onclick="sacar_valor();" href="#" name="Eliminar Los Test Marcados"><img src="images/restar.png" border="0"></a> 
+              </div>
+              {listaTest} 
+              <script language="JavaScript">
+                        <!--
+                        if (navigator.appName == "Netscape" && navigator.appVersion < 5){
+                          document.write('<br/><input size="6" type="text" name="textQTY">');
+                        }else{
+                          document.write('<br/><span ID="spanQTY" class="textopago" >&nbsp;</span>');
+                        }
+                        //-->
+                        </script>
+              </span></td>
+                    </tr>
+
+                    <tr class="InLineFooterTD">
+                        <td><a id="grabar" onclick="boton('grabar',this);" href="#"><img src="images/btn_grabar.png" align="absMiddle" border="0"></a> <a id="cancelar" onclick="boton('cancelar',this);" href="#"><img src="images/btn_cancelar.png" align="absMiddle" border="0"></a> </td>
+                    </tr>
+
+                    <tr>
+                        <td nowrap align="center">Después de grabar esta petición: <input type="radio" value="nuevo" name="accion">Agregar
+                            Nueva Petición <input type="radio" checked value="continuar" name="accion">&nbsp;Ver
+                            Detalle de Petición Creada </td>
+                    </tr>
+
+                    <tr>
+                        <td>{restoTest} </td>
+                    </tr>
+                </table>
+            </form>
+        </td>
+    </tr>
+</table>
+{calendar_tag}
+</body>
+</html>

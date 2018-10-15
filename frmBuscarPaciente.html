@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>::: Buscar Paciente :::</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+<link rel="stylesheet" type="text/css" href="Themes/InLine/Style.css">
+<script language="JavaScript">
+function SetOpenerValue(pacienteid, pacientenombre, pacienteprevision)
+{
+
+	window.opener.BuscarPacientexID(pacienteid);
+
+/*  window.opener.document.paciente.paciente_id.value = pacienteid;
+  window.opener.document.paciente.nom_paciente.value = pacientenombre;
+  window.opener.document.paciente.prevision_id.value = pacienteprevision;
+*/
+  window.opener.focus();
+  window.close();
+//alert('Rut: '+paciente_id+' Nombre: '+paciente_nombre);
+
+}
+function eligeAuto(){
+	{fn_eligeAuto}
+}
+
+function enfoque(idobjeto){
+	var objeto=document.getElementById(idobjeto);
+
+	if (objeto){
+		if (!objeto.disabled){				
+			objeto.focus();
+			objeto.select();
+		}		 
+	}
+}
+
+
+</script>
+</head>
+<body class="InLinePageBODY" topmargin="0" leftmargin="0" rightmargin="0" onload="JavaScript:eligeAuto();enfoque('s_rut_ficha');">
+<table width="100%" align="center" border="0">
+  <tr>
+    <td valign="top" align="middle">
+      <!-- BEGIN Record pacientesSearch -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="0" width="100%">
+          <tr>
+            <td class="InLineFormHeaderFont" colspan="3">Buscar Pacientes </td> 
+          </tr>
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="3">{Error} </td> 
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineFieldCaptionTD" nowrap>Rut&nbsp;/ Ficha <input class="InLineInput" id="pacientesSearchs_rut_ficha" maxlength="12" size="12" value="{s_rut_ficha}" name="{s_rut_ficha_Name}"></td> 
+            <td class="InLineFieldCaptionTD" nowrap>&nbsp;Nombre <input class="InLineInput" maxlength="50" value="{s_nombre}" name="{s_nombre_Name}" id="pacientesSearchs_nombre"></td> 
+            <td class="InLineFieldCaptionTD" nowrap>&nbsp;Apellido <input class="InLineInput" maxlength="50" value="{s_apellido}" name="{s_apellido_Name}" id="pacientesSearchs_apellido"></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="3">
+              <!-- BEGIN Button Button_DoSearch --><input class="InLineButton" type="submit" value="Buscar" name="{Button_Name}" id="pacientesSearchButton_DoSearch"><!-- END Button Button_DoSearch -->&nbsp; </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END Record pacientesSearch -->
+      <!-- BEGIN Grid pacientes -->
+      <table class="InLineFormTABLE" cellspacing="0" cellpadding="1" width="100%">
+        <tr>
+          <td class="InLineFormHeaderFont" align="middle" colspan="4">Lista de
+            Pacientes &nbsp;(Total de Registros:{pacientes_TotalRecords}) </td> 
+        </tr>
+ 
+        <tr>
+          <td class="InLineColumnTD" nowrap>&nbsp; </td> 
+          <td class="InLineColumnTD" nowrap>
+            <!-- BEGIN Sorter Sorter_rut --><a class="InLineSorterLink" href="{Sort_URL}">Rut</a> 
+            <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_rut -->&nbsp;/ 
+            <!-- BEGIN Sorter Sorter_ficha --><a class="InLineSorterLink" href="{Sort_URL}">Ficha</a> 
+            <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_ficha --></td> 
+          <td class="InLineColumnTD" nowrap>
+            <!-- BEGIN Sorter Sorter_nombres --><a class="InLineSorterLink" href="{Sort_URL}">Nombres</a> 
+            <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_nombres -->&nbsp; 
+            <!-- BEGIN Sorter Sorter_apellidos --><a class="InLineSorterLink" href="{Sort_URL}">Apellidos</a> 
+            <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_apellidos --></td> 
+          <td class="InLineColumnTD" nowrap>Editar </td> 
+        </tr>
+        <!-- BEGIN Row -->
+        <tr>
+          <td class="InLineDataTD" align="middle">{Aceptar} </td> 
+          <td class="InLineDataTD" nowrap>{rut}&nbsp;<input style="WIDTH:  87px;  HEIGHT:  22px" type="hidden" size="10" value="{paciente_id}" name="{paciente_id_Name}" id="pacientespaciente_id"><input type="hidden" value="{prevision_id}" name="{prevision_id_Name}" id="pacientesprevision_id">&nbsp;/
+            {ficha} </td> 
+          <td class="InLineDataTD" nowrap width="100%">{nombres}&nbsp;{apellidos} </td> 
+          <td class="InLineDataTD" nowrap align="middle"><a class="InLineDataLink" href="{ImageLink2}"><img class="" src="images/edit16.png" border="0"></a>&nbsp; </td> 
+        </tr>
+        <!-- END Row -->
+        <!-- BEGIN AltRow -->
+        <tr>
+          <td class="InLineAltDataTD" align="middle">{Alt_Aceptar} </td> 
+          <td class="InLineAltDataTD" nowrap>{Alt_rut}&nbsp;<input style="WIDTH:  65px;  HEIGHT:  22px" type="hidden" size="8" value="{Alt_paciente_id}" name="{Alt_paciente_id_Name}" id="pacientesAlt_paciente_id"><input type="hidden" value="{Alt_prevision_id}" name="{Alt_prevision_id_Name}" id="pacientesAlt_prevision_id">&nbsp;/
+            {Alt_ficha} </td> 
+          <td class="InLineAltDataTD" nowrap width="100%">{Alt_nombres}&nbsp;{Alt_apellidos} </td> 
+          <td class="InLineAltDataTD" nowrap align="middle"><a class="InLineDataLink" href="{ImageLink3}"><img class="" src="images/edit16.png" border="0"></a>&nbsp; </td> 
+        </tr>
+        <!-- END AltRow -->
+        <!-- BEGIN NoRecords -->
+        <tr>
+          <td class="InLineAltDataTD" colspan="4">No se encontaron
+            registros&nbsp; </td> 
+        </tr>
+        <!-- END NoRecords -->
+        <tr>
+          <td class="InLineFooterTD" nowrap colspan="4">
+            <!-- BEGIN Navigator Navigator1 -->
+            <!-- BEGIN First_On --><a class="InLineNavigatorLink" href="{First_URL}"><img src="Themes/Square/FirstOn.gif" border="0"></a> <!-- END First_On -->
+            <!-- BEGIN Prev_On --><a class="InLineNavigatorLink" href="{Prev_URL}"><img src="Themes/Square/PrevOn.gif" border="0"></a> <!-- END Prev_On -->&nbsp;{Page_Number}&nbsp;de
+            {Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a class="InLineNavigatorLink" href="{Next_URL}"><img src="Themes/Square/NextOn.gif" border="0"></a> <!-- END Next_On -->
+            <!-- BEGIN Last_On --><a class="InLineNavigatorLink" href="{Last_URL}"><img src="Themes/Square/LastOn.gif" border="0"></a> <!-- END Last_On --><!-- END Navigator Navigator1 -->&nbsp; </td> 
+        </tr>
+ 
+      </table>
+ <a class="InLineDataLink" href="{btn_agregar}"><img class="" src="images/btn_nuevo.png" align="absMiddle" border="0"></a><a class="InLineDataLink" href="{ImageLink1}"></a> <a class="InLineDataLink" href="{ImageLink1}"><img class="" onclick="javascript:window.close();" src="images/btn_cerrar.png" align="absMiddle" border="0"></a> <!-- END Grid pacientes --><a id="ImageLink1" href="#" name="ImageLink1"></a> </td> 
+  </tr>
+</table>
+
+</body>
+</html>

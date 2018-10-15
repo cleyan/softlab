@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>add_prioridades</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+<link rel="stylesheet" type="text/css" href="Themes/InLine/Style.css">
+<script language="JavaScript">
+//Begin CCS script
+//Include Common JSFunctions @1-921C7A7E
+</script>
+<script src="ClientI18N.php?file=Globalize.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-A87AC9EE
+</script>
+{page:scriptIncludes}
+<script type="text/javascript">
+//End Include User Scripts
+
+//Common Script Start @1-8BFA436B
+jQuery(function ($) {
+    var features = { };
+    var actions = { };
+    var params = { };
+//End Common Script Start
+
+//prioridadesButton_SubmitOnClick Event Start @-CF14257A
+    actions["prioridadesButton_SubmitOnClick"] = function (eventType, parameters) {
+        var result = true;
+//End prioridadesButton_SubmitOnClick Event Start
+
+//Confirmation Message @13-96FAE8C2
+        return confirm('Enviar registro?');
+//End Confirmation Message
+
+//prioridadesButton_SubmitOnClick Event End @-A5B9ECB8
+        return result;
+    };
+//End prioridadesButton_SubmitOnClick Event End
+
+//Event Binding @1-B695C759
+    $('*:ccsControl(prioridades, Button_Submit)').ccsBind(function() {
+        this.bind("click", actions["prioridadesButton_SubmitOnClick"]);
+    });
+//End Event Binding
+
+//Plugin Calls @1-69922C56
+    $('*:ccsControl(prioridades, Cancel)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+//End Plugin Calls
+
+//Common Script End @1-562554DE
+});
+//End Common Script End
+//End CCS script
+</script>
+</head>
+<body  class="InLinePageBODY">
+<table width="700" align="center" border="0">
+  <tr>
+    <td>
+      <!-- BEGIN EditableGrid prioridades -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <font class="InLineFormHeaderFont"></font><input type="hidden" value="{FormState}" name="FormState">{FormScript} <br/>
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="4">{Error}</td> 
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineTitulo" nowrap colspan="4">
+              <p align="center">Listado de prioridades (Total de
+              Registros:&nbsp; {prioridades_TotalRecords} )</p>
+ </td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineColumnTD" nowrap>
+              <p align="center">
+              <!-- BEGIN Sorter Sorter_nom_prioridad --><a class="InLineSorterLink" href="{Sort_URL}">Prioridad</a> 
+              <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+              <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_nom_prioridad --></p>
+ </td> 
+            <td class="InLineColumnTD" nowrap>
+              <p align="center">
+              <!-- BEGIN Sorter Sorter_signo_prioridad --><a class="InLineSorterLink" href="{Sort_URL}">Signo
+              Prioridad</a> 
+              <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+              <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_signo_prioridad --></p>
+ </td> 
+            <td class="InLineColumnTD" nowrap>
+              <p align="center">Activo</p>
+ </td> 
+            <td class="InLineColumnTD" nowrap>
+              <p align="center">Borrar</p>
+ </td> 
+          </tr>
+          <!-- BEGIN Row -->
+          <!-- BEGIN RowError -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="4">{Error}</td> 
+          </tr>
+          <!-- END RowError -->
+          <tr>
+            <td class="InLineDataTD" style="WIDTH: 45%"><input class="InLineInput" maxlength="200" size="50" value="{nom_prioridad}" name="{nom_prioridad_Name}" style="WIDTH: 100%" id="prioridadesnom_prioridad"></td> 
+            <td class="InLineDataTD" style="WIDTH: 45%"><input class="InLineInput" maxlength="10" size="10" value="{signo_prioridad}" name="{signo_prioridad_Name}" style="WIDTH: 100%" id="prioridadessigno_prioridad"></td> 
+            <td class="InLineDataTD">
+              <p align="center"><input class="InLineInput" type="checkbox" value="1" name="{activo_Name}" {activo} id="prioridadesactivo"></p>
+ </td> 
+            <td class="InLineDataTD">
+              <!-- BEGIN CheckBox CheckBox_Delete -->
+              <p align="center" id="prioridadesCheckBox_Delete"><input class="InLineInput" type="checkbox" value="1" name="{CheckBox_Delete_Name}" {CheckBox_Delete}></p>
+              <!-- END CheckBox CheckBox_Delete --></td> 
+          </tr>
+          <!-- END Row -->
+          <!-- BEGIN NoRecords -->
+          <tr>
+            <td class="InLineDataTD" colspan="4">No hay registros&nbsp;</td> 
+          </tr>
+          <!-- END NoRecords -->
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="4">
+              <!-- BEGIN Navigator Navigator -->
+              <!-- BEGIN First_On --><a class="InLineNavigatorLink" href="{First_URL}">Inicio</a> <!-- END First_On -->
+              <!-- BEGIN First_Off -->Inicio <!-- END First_Off -->
+              <!-- BEGIN Prev_On --><a class="InLineNavigatorLink" href="{Prev_URL}">Anterior</a> <!-- END Prev_On -->
+              <!-- BEGIN Prev_Off -->Anterior <!-- END Prev_Off -->&nbsp; 
+              <!-- BEGIN Pages -->
+              <!-- BEGIN Page_On --><a class="InLineNavigatorLink" href="{Page_URL}">{Page_Number}</a>&nbsp;<!-- END Page_On -->
+              <!-- BEGIN Page_Off -->{Page_Number}&nbsp;<!-- END Page_Off --><!-- END Pages -->de
+              {Total_Pages}&nbsp; 
+              <!-- BEGIN Next_On --><a class="InLineNavigatorLink" href="{Next_URL}">Siguiente</a> <!-- END Next_On -->
+              <!-- BEGIN Next_Off -->Siguiente <!-- END Next_Off -->
+              <!-- BEGIN Last_On --><a class="InLineNavigatorLink" href="{Last_URL}">Final</a> <!-- END Last_On -->
+              <!-- BEGIN Last_Off -->Final <!-- END Last_Off --><!-- END Navigator Navigator --></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="4">
+              <p align="right">
+              <!-- BEGIN Button Button_Submit --><input class="InLineButton" type="submit" value="Guardar" name="{Button_Name}" id="prioridadesButton_Submit"><!-- END Button Button_Submit -->&nbsp; 
+              <!-- BEGIN Button Cancel --><input class="InLineButton" type="submit" value="Cancelar" name="{Button_Name}" id="prioridadesCancel"><!-- END Button Cancel --></p>
+ </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END EditableGrid prioridades --></td> 
+  </tr>
+</table>
+</body>
+</html>

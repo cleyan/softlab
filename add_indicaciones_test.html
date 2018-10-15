@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>add_indicaciones_test</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+<link rel="stylesheet" type="text/css" href="Themes/InLine/Style.css">
+</head>
+<body class="InLinePageBODY">
+<table width="700" align="center" border="0">
+  <tr>
+    <td>
+      <!-- BEGIN Record indicaciones_testSearch1 -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+          <tr>
+            <td class="InLineFormHeaderFont" colspan="2">Buscar
+              /Filtrar&nbsp;Indicaciones Test </td> 
+          </tr>
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="2">{Error}</td> 
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineFieldCaptionTD" nowrap>Palabra clave&nbsp;</td> 
+            <td class="InLineDataTD" width="100%"><input class="InLineInput" maxlength="50" size="51" value="{s_keyword}" name="{s_keyword_Name}" style="WIDTH: 100%" id="indicaciones_testSearch1s_keyword"></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="2">Registro
+              por página 
+              <select class="InLineSelect" name="{indicaciones_test1PageSize_Name}" id="indicaciones_testSearch1indicaciones_test1PageSize">
+                {indicaciones_test1PageSize_Options} 
+              </select>
+ &nbsp; 
+              <!-- BEGIN Button Button_DoSearch --><input class="InLineButton" type="submit" value="Buscar" name="{Button_Name}" id="indicaciones_testSearch1Button_DoSearch"><!-- END Button Button_DoSearch -->&nbsp; </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END Record indicaciones_testSearch1 -->
+      <!-- BEGIN Grid indicaciones_test1 -->
+      <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+        <tr>
+          <td class="InLineFormHeaderFont" align="middle" colspan="3">Indicaciones
+            del Test (Para el Paciente) </td> 
+        </tr>
+ 
+        <tr>
+          <td class="InLineColumnTD" nowrap align="middle">Editar</td> 
+          <td class="InLineColumnTD" nowrap>
+            <!-- BEGIN Sorter Sorter_nom_indicacion --><a class="InLineSorterLink" href="{Sort_URL}">Nombre</a> 
+            <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_nom_indicacion -->&nbsp;</td> 
+          <td class="InLineColumnTD" nowrap align="middle">
+            <!-- BEGIN Sorter Sorter_activo --><a class="InLineSorterLink" href="{Sort_URL}">Activo</a> 
+            <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_activo -->&nbsp;</td> 
+        </tr>
+        <!-- BEGIN Row -->
+        <tr>
+          <td class="InLineDataTD" align="middle"><a class="InLineDataLink" href="{edit_indicacion}"><img class="" src="images/edit16.png" border="0"></a>&nbsp;</td> 
+          <td class="InLineDataTD" width="100%">{nom_indicacion}&nbsp;</td> 
+          <td class="InLineDataTD" align="middle">{activo}&nbsp;</td> 
+        </tr>
+        <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr>
+          <td class="InLineDataTD" colspan="3">No se encontaron registros&nbsp;</td> 
+        </tr>
+        <!-- END NoRecords -->
+        <tr>
+          <td class="InLineFooterTD" nowrap colspan="3">
+            <!-- BEGIN Navigator Navigator -->
+            <!-- BEGIN First_On --><a class="InLineNavigatorLink" href="{First_URL}"><img src="Themes/InLine/FirstOn.gif" border="0"></a> <!-- END First_On -->
+            <!-- BEGIN Prev_On --><a class="InLineNavigatorLink" href="{Prev_URL}"><img src="Themes/InLine/PrevOn.gif" border="0"></a> <!-- END Prev_On -->&nbsp;{Page_Number}&nbsp;de
+            {Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a class="InLineNavigatorLink" href="{Next_URL}"><img src="Themes/InLine/NextOn.gif" border="0"></a> <!-- END Next_On -->
+            <!-- BEGIN Last_On --><a class="InLineNavigatorLink" href="{Last_URL}"><img src="Themes/InLine/LastOn.gif" border="0"></a> <!-- END Last_On --><!-- END Navigator Navigator -->&nbsp; </td> 
+        </tr>
+ 
+      </table>
+ <!-- END Grid indicaciones_test1 --></td> 
+  </tr>
+</table>
+<p align="center"><a class="InLineDataLink" href="{ImageLink1}"><img class="" src="images/btn_agregarnuevo.png" border="0"></a>&nbsp;<a class="InLineDataLink" href="{ImageLink2}"><img class="" src="images/btn_inicio.png" border="0"></a></p>
+</body>
+</html>

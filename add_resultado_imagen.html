@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Softlab</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+<link rel="stylesheet" type="text/css" href="Themes/InLine/Style.css">
+<script>
+function pasar_valor(){
+	var nom_objeto = resultados.nom_valor_enviar.value;
+	var nom_valor = window.opener.document.getElementById(nom_objeto).value;
+	resultados.valor.value = nom_valor;
+	//alert("Valor: "+nom_valor);
+}
+</script>
+</head>
+<body class="InLinePageBODY" onload="javascript:pasar_valor();">
+<table width="530" align="center" border="0">
+  <tr>
+    <td>
+      <!-- BEGIN Record resultados -->
+      <form name="{HTMLFormName}" action="{Action}" method="post" enctype="{HTMLFormEnctype}">
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+          <tr>
+            <td class="InLineFormHeaderFont" colspan="2">Agregar/Editar
+              Resultados </td> 
+          </tr>
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="2">{Error}</td> 
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineFieldCaptionTD">Valor</td> 
+            <td class="InLineDataTD"><input maxlength="100" size="50" value="{valor}" name="{valor_Name}" id="resultadosvalor"></td>
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD">Archivo&nbsp;</td> 
+            <td class="InLineDataTD">&nbsp; 
+              <!-- BEGIN FileUpload archivo --><input type="hidden" value="{State}" name="{ControlName}" id="resultadosarchivoControlName">
+              <!-- BEGIN Info -->&nbsp;{FileName}&nbsp;{FileSize}&nbsp;bytes. <!-- END Info -->
+              <!-- BEGIN Upload --><input class="InLineInput" type="file" name="{FileControl}"><!-- END Upload -->
+              <!-- BEGIN DeleteControl -->Borrar <input class="InLineInput" type="checkbox" name="{DeleteControl}" {DeleteChecked}><!-- END DeleteControl --><!-- END FileUpload archivo -->&nbsp;<input style="WIDTH:  44px;  HEIGHT:  22px" type="hidden" size="5" value="{nom_valor_enviar}" name="{nom_valor_enviar_Name}" id="resultadosnom_valor_enviar"><input style="WIDTH:  27px;  HEIGHT:  22px" type="hidden" size="3" value="{resultado_id}" name="{resultado_id_Name}" id="resultadosresultado_id"><input style="WIDTH:  52px;  HEIGHT:  22px" type="hidden" size="6" value="{test_id}" name="{test_id_Name}" id="resultadostest_id"><input style="WIDTH:  58px;  HEIGHT:  22px" type="hidden" size="7" value="{s_peticion_id}" name="{s_peticion_id_Name}" id="resultadoss_peticion_id"><input style="WIDTH:  65px;  HEIGHT:  22px" type="hidden" size="8" value="{muestra_id}" name="{muestra_id_Name}" id="resultadosmuestra_id"><input style="WIDTH:  46px;  HEIGHT:  22px" type="hidden" size="5" value="{estado_id}" name="{estado_id_Name}" id="resultadosestado_id"><input style="WIDTH:  61px;  HEIGHT:  22px" type="hidden" size="7" value="{fecha_creacion}" name="{fecha_creacion_Name}" id="resultadosfecha_creacion"><input style="WIDTH:  35px;  HEIGHT:  22px" type="hidden" size="4" value="{hora_creacion}" name="{hora_creacion_Name}" id="resultadoshora_creacion"><input style="WIDTH:  45px;  HEIGHT:  22px" type="hidden" size="5" value="{ingresado_por}" name="{ingresado_por_Name}" id="resultadosingresado_por"><input type="hidden" name="{pagina_Name}" value="{pagina}" id="resultadospagina"></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input class="InLineButton" type="submit" value="Agregar" name="{Button_Name}" id="resultadosButton_Insert"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input class="InLineButton" type="submit" value="Grabar" name="{Button_Name}" id="resultadosButton_Update"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Cancel --><input class="InLineButton" type="button" value="Cancelar" name="{Button_Name}" onclick="javascript:window.close();" id="resultadosButton_Cancel"><!-- END Button Button_Cancel -->&nbsp; </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END Record resultados --></td> 
+  </tr>
+</table>
+</body>
+</html>

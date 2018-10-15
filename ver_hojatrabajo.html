@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="GENERATOR" content="CodeCharge Studio 3.0.1.6">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>ver_hojatrabajo</title>
+<link href="Themes/InLine/Style.css" type="text/css" rel="stylesheet">
+<script language="javascript" src="funciones.js"></script>
+<script language="JavaScript">
+function Imprimir(){
+        {fun_imprimir}
+}
+</script>
+</head>
+<body class="InLinePageBODY">
+<table width="700" align="center" border="0">
+  <tr>
+    <td align="middle">
+      <!-- BEGIN Record peticiones_detalle_test_sSearch -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+          <tr>
+            <td class="InLineFormHeaderFont" colspan="4">Buscar/Filtrar en Hoja
+              de trabajo </td>
+          </tr>
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="4">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineFieldCaptionTD">Equipo&nbsp;</td> 
+            <td class="InLineDataTD">
+              <select class="InLineSelect" name="{s_test_equipo_id_Name}" id="peticiones_detalle_test_sSearchs_test_equipo_id">
+                <option value="" selected>Seleccionar Valor</option>
+                {s_test_equipo_id_Options}
+              </select>
+ </td> 
+            <td class="InLineDataTD">Sección</td> 
+            <td class="InLineDataTD">
+              <select class="InLineSelect" name="{s_secciones_id_Name}" id="peticiones_detalle_test_sSearchs_secciones_id">
+                <option value="" selected>Seleccionar Valor</option>
+                {s_secciones_id_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD">Fecha de solicitud</td> 
+            <td class="InLineDataTD"><input class="InLineInput" id="peticiones_detalle_test_sSearchs_fecha" maxlength="13" size="13" value="{s_fecha}" name="{s_fecha_Name}"><a hidefocus="hidefocus" title="haga click aquí para elegir la Fecha" onclick="if(self.gfPop)gfPop.fPopCalendar(document.peticiones_detalle_test_sSearch.s_fecha);return false;" href="javascript:void(0)"><img class="PopcalTrigger" height="22" alt="" src="calbtn.gif" width="34" align="absMiddle" border="0"></a></td> 
+            <td class="InLineDataTD">Estado</td> 
+            <td class="InLineDataTD">
+              <select class="InLineSelect" name="{s_estado_id_Name}" id="peticiones_detalle_test_sSearchs_estado_id">
+                <option value="" selected>Seleccionar Valor</option>
+                {s_estado_id_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr>
+            <td class="InLineFooterTD" nowrap align="center" colspan="4">
+              <!-- BEGIN Button Button_DoSearch --><input class="InLineButton" type="submit" value="Buscar" name="{Button_Name}" id="peticiones_detalle_test_sSearchButton_DoSearch"><!-- END Button Button_DoSearch --></td>
+          </tr>
+        </table>
+      </form>
+      <!-- END Record peticiones_detalle_test_sSearch -->
+      <!-- BEGIN Grid peticiones_detalle_test_s -->
+      <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+        <tr>
+          <td class="InLineFormHeaderFont" align="center" colspan="6">Hoja de
+            trabajo (Total de
+            Registros:{peticiones_detalle_test_s_TotalRecords}) </td>
+        </tr>
+ 
+        <tr>
+          <td class="InLineColumnTD" nowrap>Paciente</td> 
+          <td class="InLineColumnTD" nowrap>
+            <!-- BEGIN Sorter Sorter_muestra_id --><a class="InLineSorterLink" href="{Sort_URL}">Muestra
+            Id</a> 
+            <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_muestra_id -->&nbsp;</td> 
+          <td class="InLineColumnTD" nowrap>Test&nbsp;</td> 
+          <td class="InLineColumnTD" nowrap>Tipo de Muestra</td> 
+          <td class="InLineColumnTD" nowrap>Estado</td> 
+          <td class="InLineColumnTD" nowrap>
+            <!-- BEGIN Sorter Sorter_nom_prioridad --><a class="InLineSorterLink" href="{Sort_URL}">Prioridad</a> 
+            <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_nom_prioridad -->&nbsp;</td>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr>
+          <td class="InLineDataTD" nowrap>{nombres}&nbsp;{apellidos}</td> 
+          <td class="InLineDataTD">{muestra_id}&nbsp;</td> 
+          <td class="InLineDataTD" nowrap>{nom_test}&nbsp;</td> 
+          <td class="InLineDataTD" nowrap>{nom_tipo_muestra}</td> 
+          <td class="InLineDataTD" nowrap>{nom_estado}&nbsp;</td> 
+          <td class="InLineDataTD">{nom_prioridad}&nbsp;</td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN AltRow -->
+        <tr>
+          <td class="InLineAltDataTD" nowrap>{Alt_nombres}&nbsp;{Alt_apellidos}</td> 
+          <td class="InLineAltDataTD">{Alt_muestra_id}&nbsp;</td> 
+          <td class="InLineAltDataTD" nowrap>{Alt_nom_test}&nbsp;</td> 
+          <td class="InLineAltDataTD" nowrap>{Alt_nom_tipo_muestra}</td> 
+          <td class="InLineAltDataTD" nowrap>{Alt_nom_estado}</td> 
+          <td class="InLineAltDataTD">{Alt_nom_prioridad}&nbsp;</td>
+        </tr>
+ <!-- END AltRow -->
+        <!-- BEGIN NoRecords -->
+        <tr>
+          <td class="InLineAltDataTD" colspan="6">No se encontaron
+            registros&nbsp;</td>
+        </tr>
+        <!-- END NoRecords -->
+        <tr>
+          <td class="InLineFooterTD" nowrap align="center" colspan="6">
+            <!-- BEGIN Navigator Navigator1 -->&nbsp; 
+            <!-- BEGIN First_On --><a class="InLineNavigatorLink" href="{First_URL}"><img src="Themes/InLine/FirstOn.gif" border="0"></a> <!-- END First_On -->
+            <!-- BEGIN Prev_On --><a class="InLineNavigatorLink" href="{Prev_URL}"><img src="Themes/InLine/PrevOn.gif" border="0"></a> <!-- END Prev_On -->&nbsp;{Page_Number}&nbsp;de&nbsp;{Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a class="InLineNavigatorLink" href="{Next_URL}"><img src="Themes/InLine/NextOn.gif" border="0"></a> <!-- END Next_On -->
+            <!-- BEGIN Last_On --><a class="InLineNavigatorLink" href="{Last_URL}"><img src="Themes/InLine/LastOn.gif" border="0"></a> <!-- END Last_On --><!-- END Navigator Navigator1 --><br>
+            <a title="Imprimir Hoja de Carga" onclick="Imprimir(); return false;" href=""><img class="" src="images/btn_imprimir.png" border="0"></a></td>
+        </tr>
+      </table>
+      <!-- END Grid peticiones_detalle_test_s --></td>
+  </tr>
+</table>
+{calendar_tag1} 
+</body>
+</html>

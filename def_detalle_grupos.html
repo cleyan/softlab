@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>def_detalle_grupos</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+<link rel="stylesheet" type="text/css" href="Themes/InLine/Style.css">
+<script language="JavaScript">
+//Begin CCS script
+//Include Common JSFunctions @1-921C7A7E
+</script>
+<script src="ClientI18N.php?file=Globalize.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-A87AC9EE
+</script>
+{page:scriptIncludes}
+<script type="text/javascript">
+//End Include User Scripts
+
+//Common Script Start @1-8BFA436B
+jQuery(function ($) {
+    var features = { };
+    var actions = { };
+    var params = { };
+//End Common Script Start
+
+//grupos_detalleButton_SubmitOnClick Event Start @-B68B54E6
+    actions["grupos_detalleButton_SubmitOnClick"] = function (eventType, parameters) {
+        var result = true;
+//End grupos_detalleButton_SubmitOnClick Event Start
+
+//Confirmation Message @13-96FAE8C2
+        return confirm('Enviar registro?');
+//End Confirmation Message
+
+//grupos_detalleButton_SubmitOnClick Event End @-A5B9ECB8
+        return result;
+    };
+//End grupos_detalleButton_SubmitOnClick Event End
+
+//Event Binding @1-C4A147B0
+    $('*:ccsControl(grupos_detalle, Button_Submit)').ccsBind(function() {
+        this.bind("click", actions["grupos_detalleButton_SubmitOnClick"]);
+    });
+//End Event Binding
+
+//Plugin Calls @1-EF02286B
+    $('*:ccsControl(grupos_detalle, Cancel)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+//End Plugin Calls
+
+//Common Script End @1-562554DE
+});
+//End Common Script End
+//End CCS script
+</script>
+</head>
+<body class="InLinePageBODY">
+<table width="700" align="center" border="0">
+  <tr>
+    <td>
+      <!-- BEGIN EditableGrid grupos_detalle -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <input type="hidden" value="{FormState}" name="FormState">{FormScript} 
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+          <tr>
+            <td class="InLineFormHeaderFont" align="middle" colspan="4">EDITANDO
+              GRUPO: {nom_grupo}
+              <hr>Lista de Grupos Detalle &nbsp;(Total de
+              Registros:{grupos_detalle_TotalRecords}) </td> 
+          </tr>
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="4">{Error}</td> 
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineColumnTD" nowrap>Test&nbsp;</td> 
+            <td class="InLineColumnTD" nowrap>Nombre para el Informe</td> 
+            <td class="InLineColumnTD" nowrap align="middle">Orden en
+              Informe&nbsp;<a class="InLineDataLink" href="{renum_informe}"><img class="" alt="Renumerar" src="images/star_16.gif" border="0"></a> <a class="InLineDataLink" href="{ImageLink1}"><img class="" src="images/edit16.png" border="0"></a> </td> 
+            <td class="InLineColumnTD" nowrap>Borrar &nbsp;</td> 
+          </tr>
+          <!-- BEGIN Row -->
+          <!-- BEGIN RowError -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="4">{Error}</td> 
+          </tr>
+          <!-- END RowError -->
+          <tr>
+            <td class="InLineDataTD">
+              <select name="{test_id_Name}" class="InLineSelect" id="grupos_detalletest_id">
+                <option value="" selected>Seleccionar Valor</option>
+ {test_id_Options} 
+              </select>
+ </td> 
+            <td class="InLineDataTD">{nom_test}</td> 
+            <td class="InLineDataTD" align="middle"><a class="InLineDataLink" href="{imgsube_Src}" id="grupos_detalleimgsube">{imgsube}</a>&nbsp;{orden_informe}&nbsp;<a class="InLineDataLink" href="{img_baja_Src}" id="grupos_detalleimg_baja">{img_baja}</a></td> 
+            <td class="InLineDataTD" align="middle">
+              <!-- BEGIN CheckBox CheckBox_Delete --><input class="InLineInput" type="checkbox" value="1" name="{CheckBox_Delete_Name}" {CheckBox_Delete} id="grupos_detalleCheckBox_Delete"><!-- END CheckBox CheckBox_Delete -->&nbsp;</td> 
+          </tr>
+          <!-- END Row -->
+          <!-- BEGIN NoRecords -->
+          <tr>
+            <td class="InLineDataTD" colspan="4">No se encontaron
+              registros&nbsp;</td> 
+          </tr>
+          <!-- END NoRecords -->
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="4">&nbsp; 
+              <!-- BEGIN Button Button_Submit --><input class="InLineButton" type="submit" value="Grabar" name="{Button_Name}" id="grupos_detalleButton_Submit"><!-- END Button Button_Submit -->&nbsp; 
+              <!-- BEGIN Button Cancel --><input class="InLineButton" type="submit" value="Cancelar" name="{Button_Name}" id="grupos_detalleCancel"><!-- END Button Cancel -->&nbsp; </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END EditableGrid grupos_detalle --></td> 
+  </tr>
+</table>
+</body>
+</html>

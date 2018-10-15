@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>stat_liquidacion</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+<link rel="stylesheet" type="text/css" href="Themes/InLine/Style.css">
+</head>
+<body class="InLinePageBODY">
+<table width="700" align="center" border="0" class="Table">
+  <tr>
+    <td>
+      <!-- BEGIN Record peticiones_previsiones_prSearch -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3">
+          <tr>
+            <td class="InLineFormHeaderFont" colspan="4">Buscar&nbsp;/
+              Filtrar&nbsp; </td> 
+          </tr>
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="4">{Error}</td> 
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineFieldCaptionTD">Procedencia&nbsp;</td> 
+            <td class="InLineDataTD" width="100%">
+              <select name="{s_procedencia_id_Name}" class="InLineSelect" id="peticiones_previsiones_prSearchs_procedencia_id">
+                <option value="" selected>Seleccionar Valor</option>
+ {s_procedencia_id_Options} 
+              </select>
+ </td> 
+            <td class="InLineDataTD" width="100%">Previsión</td> 
+            <td class="InLineDataTD" width="100%">
+              <select class="InLineSelect" name="{s_prevision_id_Name}" id="peticiones_previsiones_prSearchs_prevision_id">
+                <option value="" selected>Seleccionar Valor</option>
+ {s_prevision_id_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD" nowrap>Rango&nbsp; de Fecha&nbsp;</td> 
+            <td class="InLineDataTD" nowrap><input class="InLineInput" maxlength="10" size="10" value="{s_fecha_ini}" name="{s_fecha_ini_Name}" id="peticiones_previsiones_prSearchs_fecha_ini"><a hidefocus title="haga click aquí para elegir la Fecha" onclick="if(self.gfPop)gfPop.fStartPop(document.{HTMLFormName}.{s_fecha_ini_Name},document.{HTMLFormName}.{s_fecha_fin_Name});return false;" href="javascript:void(0)"><img class="PopcalTrigger" align="absMiddle" src="calbtn.gif" width="34" height="22" border="0" alt=""></a>&nbsp;&nbsp;- <input class="InLineInput" value="{s_fecha_fin}" name="{s_fecha_fin_Name}" maxlength="10" size="10" id="peticiones_previsiones_prSearchs_fecha_fin"><a hidefocus title="haga click aquí para elegir la Fecha" onclick="if(self.gfPop)gfPop.fEndPop(document.{HTMLFormName}.{s_fecha_ini_Name},document.{HTMLFormName}.{s_fecha_fin_Name});return false;" href="javascript:void(0)"><img class="PopcalTrigger" align="absMiddle" src="calbtn.gif" width="34" height="22" border="0" alt=""></a>&nbsp;</td> 
+            <td class="InLineDataTD" nowrap></td> 
+            <td class="InLineDataTD"></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="4">
+              <!-- BEGIN Button Button_DoSearch --><input class="InLineButton" type="submit" value="Buscar" name="{Button_Name}" id="peticiones_previsiones_prSearchButton_DoSearch"><!-- END Button Button_DoSearch -->&nbsp; </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END Record peticiones_previsiones_prSearch -->
+      <!-- BEGIN Grid peticiones_previsiones_pr -->
+      <table class="InLineFormTABLE" cellspacing="1" cellpadding="0" width="100%">
+        <tr>
+          <td class="InLineFormHeaderFont" align="middle" colspan="6">Lista de
+            Peticiones&nbsp;&nbsp;(Total de
+            Registros:{peticiones_previsiones_pr_TotalRecords}) </td> 
+        </tr>
+ 
+        <tr>
+          <td class="InLineColumnTD" nowrap>
+            <!-- BEGIN Sorter Sorter_fecha --><a class="InLineSorterLink" href="{Sort_URL}">Fecha</a> 
+            <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_fecha -->&nbsp;</td> 
+          <td class="InLineColumnTD" nowrap>
+            <!-- BEGIN Sorter Sorter_peticion_id --><a class="InLineSorterLink" href="{Sort_URL}">Nº
+            Petición</a> 
+            <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_peticion_id -->&nbsp;</td> 
+          <td class="InLineColumnTD" nowrap>
+            <!-- BEGIN Sorter Paciente --><a class="InLineSorterLink" href="{Sort_URL}">Paciente</a><!-- END Sorter Paciente --></td> 
+          <td class="InLineColumnTD" nowrap>
+            <!-- BEGIN Sorter Sorter_nom_procedencia --><a class="InLineSorterLink" href="{Sort_URL}">Procedencia</a> 
+            <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_nom_procedencia -->&nbsp;</td> 
+          <td class="InLineColumnTD" nowrap>
+            <!-- BEGIN Sorter Sorter_nom_prevision --><a class="InLineSorterLink" href="{Sort_URL}">Previsión</a> 
+            <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_nom_prevision -->&nbsp;</td> 
+          <td class="InLineColumnTD" nowrap align="right">Total</td> 
+        </tr>
+        <!-- BEGIN Row -->
+        <tr>
+          <td class="InLineDataTD">{fecha}&nbsp;</td> 
+          <td class="InLineDataTD">{peticion_id}&nbsp;<input type="hidden" value="{s_peticion_id}" name="{s_peticion_id_Name}" id="peticiones_previsiones_prs_peticion_id"></td> 
+          <td class="InLineDataTD" nowrap>{nombres}&nbsp;{apellidos}</td> 
+          <td class="InLineDataTD" nowrap>{nom_procedencia}&nbsp;</td> 
+          <td class="InLineDataTD" nowrap>{nom_prevision}&nbsp;</td> 
+          <td class="InLineDataTD" align="right">{lbl_total}</td> 
+        </tr>
+        <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr>
+          <td class="InLineDataTD" colspan="6"><img id="Image1" src="images/emblem-important.png" align="left" name="Image1">No
+            se encontaron registros&nbsp;</td> 
+        </tr>
+        <!-- END NoRecords -->
+        <tr>
+          <td class="InLineFooterTD" nowrap colspan="6">
+            <!-- BEGIN Navigator Navigator1 -->
+            <!-- BEGIN First_On --><a class="InLineNavigatorLink" href="{First_URL}"><img src="Themes/Square/FirstOn.gif" border="0"></a> <!-- END First_On -->
+            <!-- BEGIN Prev_On --><a class="InLineNavigatorLink" href="{Prev_URL}"><img src="Themes/Square/PrevOn.gif" border="0"></a> <!-- END Prev_On -->&nbsp;{Page_Number}&nbsp;de
+            {Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a class="InLineNavigatorLink" href="{Next_URL}"><img src="Themes/Square/NextOn.gif" border="0"></a> <!-- END Next_On -->
+            <!-- BEGIN Last_On --><a class="InLineNavigatorLink" href="{Last_URL}"><img src="Themes/Square/LastOn.gif" border="0"></a> <!-- END Last_On --><!-- END Navigator Navigator1 -->&nbsp; </td> 
+        </tr>
+ 
+      </table>
+ <!-- END Grid peticiones_previsiones_pr -->
+      <!-- BEGIN Record Impresion -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD">{Error}</td> 
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineDataTD" align="middle">
+              <!-- BEGIN RadioButton s_detallado --><input class="InLineInput" type="radio" value="{Value}" name="{s_detallado_Name}" {Check} id="Impresions_detallado_{s_detallado:optionNumber}">{Description}<!-- END RadioButton s_detallado --><input type="hidden" name="{s_fecha_ini_Name}" value="{s_fecha_ini}" style="WIDTH: 84px; HEIGHT: 22px" size="10" id="Impresions_fecha_ini"><input type="hidden" name="{s_fecha_fin_Name}" value="{s_fecha_fin}" style="WIDTH: 85px; HEIGHT: 22px" size="10" id="Impresions_fecha_fin"><input type="hidden" name="{s_procedencia_id_Name}" value="{s_procedencia_id}" style="WIDTH: 116px; HEIGHT: 22px" size="14" id="Impresions_procedencia_id"><input type="hidden" name="{s_prevision_id_Name}" value="{s_prevision_id}" style="WIDTH: 100px; HEIGHT: 22px" size="12" id="Impresions_prevision_id"></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right">
+              <!-- BEGIN Button Imprimir --><input class="InLineButton" type="submit" value="Imprimir" name="{Button_Name}" id="ImpresionImprimir"><!-- END Button Imprimir -->&nbsp;&nbsp;&nbsp; 
+              <!-- BEGIN Button Cancelar --><input class="InLineButton" type="submit" value="Cancelar" name="{Button_Name}" id="ImpresionCancelar"><!-- END Button Cancelar --></td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END Record Impresion --></td> 
+  </tr>
+</table>
+{calendar_tag}
+</body>
+</html>

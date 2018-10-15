@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Softlab</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+<link rel="stylesheet" type="text/css" href="Themes/InLine/Style.css">
+<script>
+	function pasar_valor(f){
+		if(f.equipo_last_id.value!=""){	
+			window.opener.test.h_equipo.value = f.equipo_last_id.value;
+			window.opener.test.h_nom_equipo.value = f.last_nom_equipo.value;
+			window.opener.test.h_equipo.focus();			
+			window.close();
+		}
+	}
+</script>
+</head>
+<body  class="InLinePageBODY" onload="javascript:pasar_valor(equipos);">
+<table width="500" align="center" border="0">
+  <tr>
+    <td>
+      <!-- BEGIN Record equipos -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <input type="hidden" value="{equipo_last_id}" name="{equipo_last_id_Name}" id="equiposequipo_last_id"><input type="hidden" value="{last_nom_equipo}" name="{last_nom_equipo_Name}" id="equiposlast_nom_equipo">
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%" align="center">
+          <tr>
+            <td class="InLineFormHeaderFont" colspan="2">
+              <p align="center">Agregar/Editar Equipos</p>
+ </td> 
+          </tr>
+ 
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="2">{Error}</td> 
+          </tr>
+ <!-- END Error -->
+          <tr>
+            <td class="InLineFieldCaptionTD">Nombre del&nbsp;Equipo&nbsp;</td> 
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="200" size="50" value="{nom_equipo}" name="{nom_equipo_Name}" id="equiposnom_equipo">&nbsp;<input type="hidden" name="{equipo_id_Name}" value="{equipo_id}" style="WIDTH: 71px; HEIGHT: 22px" size="9" id="equiposequipo_id"><input type="hidden" name="{activo_Name}" value="{activo}" style="WIDTH: 44px; HEIGHT: 22px" size="5" id="equiposactivo"></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="2">
+              <p align="right">
+              <!-- BEGIN Button Button_Insert --><input class="InLineButton" type="submit" value="Agregar" name="{Button_Name}" id="equiposButton_Insert"><!-- END Button Button_Insert -->&nbsp; 
+              <!-- BEGIN Button Button_Cancel --><input class="InLineButton" type="button" value="Cancelar" name="{Button_Name}" onclick="javascript:window.close();" id="equiposButton_Cancel"><!-- END Button Button_Cancel --></p>
+ </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END Record equipos --></td> 
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>stat_liquidacion</title>
+<meta content="CodeCharge Studio 3.0.1.6" name="GENERATOR">
+<link href="Themes/InLine/Style.css" type="text/css" rel="stylesheet">
+</head>
+<body class="InLinePageBODY">
+{Header} 
+<table width="700" align="center" border="0">
+  <tr>
+    <td>
+      <!-- BEGIN Record peticiones_previsiones_prSearch -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+          <tr>
+            <td class="InLineFormHeaderFont" colspan="4">Buscar&nbsp;/ Filtrar&nbsp; </td>
+          </tr>
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="4">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineFieldCaptionTD">Procedencia&nbsp;</td> 
+            <td class="InLineDataTD" width="100%">
+              <select class="InLineSelect" id="peticiones_previsiones_prSearchs_procedencia_id" name="{s_procedencia_id_Name}">
+                <option value="0" selected>(Todas las Procedencias)</option>
+                {s_procedencia_id_Options}
+              </select>
+ </td> 
+            <td class="InLineDataTD" width="100%">Equipo</td> 
+            <td class="InLineDataTD" width="100%">
+              <select class="InLineSelect" id="peticiones_previsiones_prSearchs_equipo_id" name="{s_equipo_id_Name}">
+                <option value="0" selected>(Todos los Equipos)</option>
+                {s_equipo_id_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD" nowrap>Rango&nbsp; de Fecha&nbsp;</td> 
+            <td class="InLineDataTD" valign="middle" nowrap><input class="InLineInput" id="peticiones_previsiones_prSearchs_fecha_ini" maxlength="10" size="10" value="{s_fecha_ini}" name="{s_fecha_ini_Name}"><a href="javascript:void(0)" hidefocus="hidefocus" title="haga click aquí para elegir la Fecha" onclick="if(self.gfPop)gfPop.fStartPop(document.{HTMLFormName}.{s_fecha_ini_Name},document.{HTMLFormName}.{s_fecha_fin_Name});return false;"><img class="PopcalTrigger" height="22" alt="" src="calbtn.gif" width="34" align="absMiddle" border="0"></a>&nbsp;&nbsp;- <input class="InLineInput" id="peticiones_previsiones_prSearchs_fecha_fin" maxlength="10" size="10" value="{s_fecha_fin}" name="{s_fecha_fin_Name}"><a href="javascript:void(0)" hidefocus="hidefocus" title="haga click aquí para elegir la Fecha" onclick="if(self.gfPop)gfPop.fEndPop(document.{HTMLFormName}.{s_fecha_ini_Name},document.{HTMLFormName}.{s_fecha_fin_Name});return false;"><img class="PopcalTrigger" height="22" alt="" src="calbtn.gif" width="34" align="absMiddle" border="0"></a>&nbsp;</td> 
+            <td class="InLineDataTD" nowrap>Compuestos?</td> 
+            <td class="InLineDataTD">
+              <select class="InLineSelect" id="peticiones_previsiones_prSearchs_decompuesto" name="{s_decompuesto_Name}">
+                <option value="X" selected>Todos</option>
+                {s_decompuesto_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="4">
+              <!-- BEGIN Button Button_DoSearch --><input class="InLineButton" id="peticiones_previsiones_prSearchButton_DoSearch" type="submit" value="Buscar" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+          </tr>
+        </table>
+      </form>
+      <!-- END Record peticiones_previsiones_prSearch -->
+      <!-- BEGIN Grid peticiones_previsiones_pr -->
+      <div id="tabla_stat" style="OVERFLOW: scroll; WIDTH: 100%; HEIGHT: 250px">
+        <table class="InLineFormTABLE" cellspacing="1" cellpadding="0" width="100%">
+          <tr>
+            <td class="InLineFormHeaderFont" align="center" colspan="4">Listado de Test Realizado en el Período {s_fecha_ini} - {s_fecha_fin} </td>
+          </tr>
+ 
+          <tr>
+            <td class="InLineColumnTD" nowrap>Cód. Fonasa</td> 
+            <td class="InLineColumnTD" nowrap>Código del Test</td> 
+            <td class="InLineColumnTD" nowrap>Nombre del Test</td> 
+            <td class="InLineColumnTD" nowrap align="right">Cantidad</td>
+          </tr>
+ 
+          <!-- BEGIN Row -->
+          <tr>
+            <td class="InLineDataTD">{codigo_fonasa}</td> 
+            <td class="InLineDataTD">&nbsp;{cod_test}</td> 
+            <td class="InLineDataTD">{nom_test}</td> 
+            <td class="InLineDataTD" align="right">{qty}</td>
+          </tr>
+ <!-- END Row -->
+          <!-- BEGIN NoRecords -->
+          <tr>
+            <td class="InLineDataTD" colspan="4">No se encontaron registros&nbsp;</td>
+          </tr>
+          <!-- END NoRecords -->
+          <tr>
+            <td class="InLineFooterTD" nowrap colspan="4"></td>
+          </tr>
+        </table>
+      </div>
+      <!-- END Grid peticiones_previsiones_pr -->
+      <!-- BEGIN Record Impresion -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineFieldCaptionTD"><input id="Impresions_fecha_ini" style="WIDTH: 87px; HEIGHT: 22px" type="hidden" size="11" value="{s_fecha_ini}" name="{s_fecha_ini_Name}"><input id="Impresions_fecha_fin" style="WIDTH: 90px; HEIGHT: 22px" type="hidden" size="11" value="{s_fecha_fin}" name="{s_fecha_fin_Name}"><input id="Impresions_procedencia_id" style="WIDTH: 120px; HEIGHT: 22px" type="hidden" size="15" value="{s_procedencia_id}" name="{s_procedencia_id_Name}"><input id="Impresions_equipo_id" style="WIDTH: 89px; HEIGHT: 22px" type="hidden" size="11" value="{s_equipo_id}" name="{s_equipo_id_Name}"><input id="Impresions_decompuesto" style="WIDTH: 115px; HEIGHT: 22px" type="hidden" size="14" value="{s_decompuesto}" name="{s_decompuesto_Name}">Nivel de Agrupación: 
+              <select class="InLineSelect" id="Impresions_agrupacion" name="{s_agrupacion_Name}">
+                <option value="0" selected>Sin Agrupación</option>
+ {s_agrupacion_Options}
+              </select>
+ EXPORTARXLS</td> 
+            <td class="InLineDataTD">&nbsp;</td>
+          </tr>
+ 
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="2">
+              <!-- BEGIN Button Imprimir --><input class="InLineButton" id="ImpresionImprimir" type="submit" value="Imprimir" name="{Button_Name}"><!-- END Button Imprimir -->&nbsp; 
+              <!-- BEGIN Button Cancelar --><input class="InLineButton" id="ImpresionCancelar" type="submit" value="Cancelar" name="{Button_Name}"><!-- END Button Cancelar --></td>
+          </tr>
+        </table>
+      </form>
+      <!-- END Record Impresion --></td>
+  </tr>
+</table>
+{calendar_tag} 
+</body>
+</html>

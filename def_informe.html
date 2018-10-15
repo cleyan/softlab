@@ -1,0 +1,185 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>def_informe</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+<link rel="stylesheet" type="text/css" href="Themes/InLine/Style.css">
+<script language="JavaScript">
+//Begin CCS script
+//Include Common JSFunctions @1-921C7A7E
+</script>
+<script src="ClientI18N.php?file=Globalize.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-A87AC9EE
+</script>
+{page:scriptIncludes}
+<script type="text/javascript">
+//End Include User Scripts
+
+//Common Script Start @1-8BFA436B
+jQuery(function ($) {
+    var features = { };
+    var actions = { };
+    var params = { };
+//End Common Script Start
+
+//informes1Button_DeleteOnClick Event Start @-6D84EF77
+    actions["informes1Button_DeleteOnClick"] = function (eventType, parameters) {
+        var result = true;
+//End informes1Button_DeleteOnClick Event Start
+
+//Confirmation Message @28-BED55CD3
+    return confirm('Está seguro de querer Borar este Informe'+
+				   ' Esto Borrará ademas todos los grupos asociados' +
+				   ' Con este Informe\n ESTE PROCESO ES IRREVERSIBLE'); 	 	
+	
+//End Confirmation Message
+
+//informes1Button_DeleteOnClick Event End @-A5B9ECB8
+        return result;
+    };
+//End informes1Button_DeleteOnClick Event End
+
+//Event Binding @1-AE4C099D
+    $('*:ccsControl(informes1, Button_Delete)').ccsBind(function() {
+        this.bind("click", actions["informes1Button_DeleteOnClick"]);
+    });
+//End Event Binding
+
+//Plugin Calls @1-548CDC11
+    $('*:ccsControl(informes1, Button_Delete)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+    $('*:ccsControl(informes1, Button_Cancel)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+//End Plugin Calls
+
+//Common Script End @1-562554DE
+});
+//End Common Script End
+//End CCS script
+</script>
+</head>
+<body class="InLinePageBODY">
+<table width="600" align="center" border="0" class="Table">
+  <tr>
+    <td>
+      <!-- BEGIN Record informesSearch -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+          <tr>
+            <td class="InLineFormHeaderFont" colspan="2">Buscar/Filtrar Informe </td> 
+          </tr>
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="2">{Error}</td> 
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineFieldCaptionTD">Nombre del Informe&nbsp;</td> 
+            <td class="InLineDataTD" nowrap><input class="InLineInput" maxlength="100" size="50" value="{s_nom_informe}" name="{s_nom_informe_Name}" id="informesSearchs_nom_informe">&nbsp; 
+              <!-- BEGIN Button Button_DoSearch --><input class="InLineButton" type="submit" value="Buscar" name="{Button_Name}" id="informesSearchButton_DoSearch"><!-- END Button Button_DoSearch --></td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END Record informesSearch -->
+      <!-- BEGIN Grid informes -->
+      <table class="InLineFormTABLE" cellspacing="0" cellpadding="0" width="100%" border="0">
+        <tr>
+          <td class="InLineFormHeaderFont" colspan="4">Lista de Informes --&gt;
+            Total de Registros:&nbsp; {informes_TotalRecords}</td> 
+        </tr>
+ 
+        <tr>
+          <td class="InLineColumnTD" nowrap></td> 
+          <td class="InLineColumnTD" nowrap width="100%" colspan="2">
+            <!-- BEGIN Sorter Sorter_nom_informe --><a class="InLineSorterLink" href="{Sort_URL}">Nombre</a> 
+            <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_nom_informe -->&nbsp;</td> 
+          <td class="InLineColumnTD" nowrap align="middle">Detalles</td> 
+        </tr>
+        <!-- BEGIN Row -->
+        <tr>
+          <td class="InLineDataTD"><a class="InLineDataLink" href="{icon_plus_Src}" id="informesicon_plus">{icon_plus}</a></td> 
+          <td class="InLineDataTD" colspan="2"><a class="InLineDataLink" title="Editar Propiedades del Informe" href="{Editar}"><img class="" src="images/edit16.png" align="absMiddle" border="0"></a>&nbsp;{nom_informe}&nbsp;<input type="hidden" value="{informe_id}" name="{informe_id_Name}" id="informesinforme_id">&nbsp;{linea}</td> 
+          <td class="InLineDataTD" align="middle"><a class="InLineDataLink" href="{detalle}"><img class="" src="images/btns_Test.png" align="absMiddle" border="0"></a></td> 
+        </tr>
+ 
+        <tr>
+          <td class="InLineAltDataTD" valign="top" background="{lbl_lin_fondo}">{lbl_tree_1}</td> 
+          <td class="InLineAltDataTD" valign="top"><a class="InLineDataLink" title="Configurar los Grupos del Informe" href="{det_grupo_Src}" id="informesdet_grupo">{det_grupo}</a></td> 
+          <td class="InLineAltDataTD" width="100%">{lbl_det_grupo}</td> 
+          <td class="InLineAltDataTD" valign="top"></td> 
+          <td class="InLineAltDataTD" valign="top"></td> 
+          <td class="InLineAltDataTD"></td> 
+        </tr>
+        <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr>
+          <td class="InLineAltDataTD" colspan="4">No hay Informes&nbsp;</td> 
+        </tr>
+        <!-- END NoRecords -->
+        <tr>
+          <td class="InLineFooterTD" nowrap colspan="4"><a class="InLineDataLink" href="{informes_Insert}"><img class="" src="images/btn_agregarnuevo.png" align="absMiddle" border="0"></a>&nbsp;<a class="InLineDataLink" href="{ImageLink1}"><img class="" src="images/btn_inicio.png" align="absMiddle" border="0"></a></td> 
+        </tr>
+ 
+      </table>
+ <!-- END Grid informes -->
+      <!-- BEGIN Record informes1 -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+          <tr>
+            <td class="InLineFormHeaderFont" colspan="2">Agregar/Editar Informes </td> 
+          </tr>
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="2">{Error}</td> 
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineFieldCaptionTD" nowrap>Nombre
+              del&nbsp;Informe&nbsp;</td> 
+            <td class="InLineDataTD" width="100%"><input class="InLineInput" maxlength="100" size="50" value="{nom_informe}" name="{nom_informe_Name}" style="WIDTH: 100%" id="informes1nom_informe"></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD" nowrap>Encabezado</td> 
+            <td class="InLineDataTD" width="100%"><input class="InLineInput" value="{encabezado}" name="{encabezado_Name}" style="WIDTH: 100%" id="informes1encabezado"></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD" nowrap>Pie</td> 
+            <td class="InLineDataTD" width="100%"><input class="InLineInput" value="{pie}" name="{pie_Name}" style="WIDTH: 100%" id="informes1pie"></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD" nowrap>Diseño del Encabezado de
+              Columna</td> 
+            <td class="InLineDataTD" width="100%">
+              <select class="InLineSelect" name="{informes_encabezado_id_Name}" id="informes1informes_encabezado_id">
+                <option value="" selected>Seleccionar Valor</option>
+ {informes_encabezado_id_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input class="InLineButton" type="submit" value="Grabar" name="{Button_Name}" id="informes1Button_Insert"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input class="InLineButton" type="submit" value="Grabar" name="{Button_Name}" id="informes1Button_Update"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Delete --><input class="InLineButton" type="submit" value="Borrar" name="{Button_Name}" id="informes1Button_Delete"><!-- END Button Button_Delete -->
+              <!-- BEGIN Button Button_Cancel --><input class="InLineButton" type="submit" value="Cancelar" name="{Button_Name}" id="informes1Button_Cancel"><!-- END Button Button_Cancel -->&nbsp; </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END Record informes1 --></td> 
+  </tr>
+</table>
+</body>
+</html>

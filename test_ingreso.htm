@@ -1,0 +1,279 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>::: Ingreso de Peticiones :::</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<link rel="stylesheet" type="text/css" href="Themes/InLine/Style.css">
+
+<script language="javascript">
+<!--
+
+var ns4 = (document.layers);
+var ie4 = (document.all && !document.getElementById);
+var ie5 = (document.all && document.getElementById);
+var ns6 = (!document.all && document.getElementById);
+
+function show(id){
+	// Netscape 4
+	if(ns4){
+		document.layers[id].visibility = "show";
+	}
+	// Explorer 4
+	else if(ie4){
+		document.all[id].style.visibility = "visible";
+	}
+	// W3C - Explorer 5+ and Netscape 6+
+	else if(ie5 || ns6){
+		document.getElementById(id).style.visibility = "visible";
+	}
+}
+
+function hide(id){
+	// Netscape 4
+	if(ns4){
+		document.layers[id].visibility = "hide";
+	}
+	// Explorer 4
+	else if(ie4){
+		document.all[id].style.visibility = "hidden";
+	}
+	// W3C - Explorer 5+ and Netscape 6+
+	else if(ie5 || ns6){
+		document.getElementById(id).style.visibility = "hidden";
+	}
+}
+
+
+function muestracapa(control)
+{
+	
+	var valor = control.value;
+	//alert(valor);
+	
+	show(valor);
+	hide(control.name);
+}
+
+
+//Funciones para agregar el código
+function addTest(objeto, lista)
+{
+	var largo;
+	//alert('Nombre='+objeto.name+' Valor: '+objeto.value+' Marcado:'+objeto.checked);
+	if (objeto.checked==true){
+		lista.options[lista.length]=new Option(objeto.value,objeto.value);
+	} else {
+		largo = lista.length;
+		for (i=0;i<largo;i++ ){
+			//alert('lista:'+lista.options[i].value+' check: '+objeto.value);
+			//alert('Largo='+largo+' i='+i);
+			if(lista.options[i].value==objeto.value){
+				lista.options[i]=null;
+				largo = lista.length;
+			}
+		}
+	}
+}
+
+function quitar_test(lista, formulario)
+{
+	var largo=lista.length;
+	//alert('Lista: '+lista.name+' Lista sel: '+ lista.options[lista.selectedIndex].value +' Largo: '+largo + ' Form: '+formulario.name);
+	if (largo>0)
+	{
+		for(var i=0;i<largo;i++){
+			//alert('i='+i+' largo='+largo+' seleccionada='+lista.options[i].selected);
+			if (lista.options[i].selected==true && lista.options[i].value!="" )
+			{
+				//alert('lista['+i+'].selected=true');
+				var valLista = lista.options[i].value;
+				for (var ii=0;ii<formulario.elements.length;ii++)
+				{    
+					//alert('----------------> voy a asignar a e'+formulario.elements[ii].name+' que tiene el valor: '+formulario.elements[ii].value);
+					if (formulario.elements[ii].name!=lista.name)
+					{
+						var e = formulario.elements[ii];
+						//if (e.name != referencia.name)
+						//alert('voy a comparar '+e.value+' el elemento '+i+' con el valor de la lista: '+lista.options[i].value);
+						if (e.value==lista.options[i].value)
+						{
+							//alert('listo para desmarcar ' + e.name + ' con el valor ' + e.value);
+							e.checked = false;//referencia.checked;
+							//alert('Voy a eliminar elemento '+i+' con el valor '+ lista.options[i].value);
+							lista.options[i].value='__eliminar';
+						}
+					}
+				}
+			}
+		}
+		largo=lista.length;
+		for(var i=0;i<largo;i++){
+			if(lista.options[i].value=='__eliminar')
+			{
+				lista.options[i]=null;
+			}
+			largo=lista.length;
+		}
+	}
+	lista.focus();
+//	lista.SelectedIndex=0;
+}
+//-->
+</script>
+
+
+</head>
+
+<body class="InLinePageBODY">
+
+<div id="todas" class="InLineFormHeaderFont" style="VISIBILITY: hidden; POSITION: absolute; width: 505px; height: 229px; overflow: auto; left: 11px; top: 4px; z-index: 99999;">
+<form name="form1">
+  <table height="100%"  border="0" align="center" cellpadding="3" cellspacing="1" class="InLineFormTABLE">
+    <tr class="InLineFormHeaderFont">
+      <td>Seleccione los Test que desea solicitar </td>
+      <td align="right"><input name="btnCerrar2" class="InLineButton"  type="button" value="Cerrar" onClick="javascript:hide('todas');show('EligeTest')"></td>
+    </tr>
+    <tr align="center" valign="top">
+      <td colspan="2" class="InLineDataTD"><table width="95%" height="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="InLineFormTABLE">
+        <tr class="InLineDataTD">
+          <td><input type="checkbox" name="optest[]" value="TEST30" onClick="addTest(this,form2.lista_test)">
+      TEST1</td>
+          <td><input type="checkbox" name="optest[]" value="TEST31" onClick="addTest(this,form2.lista_test)">
+      TEST2 </td>
+          <td><input type="checkbox" name="optest[]" value="TEST32" onClick="addTest(this,form2.lista_test)">
+      TEST3</td>
+        </tr>
+        <tr class="InLineDataTD">
+          <td><input type="checkbox" name="optest[]" value="TEST33" onClick="addTest(this,form2.lista_test)">
+      TEST4</td>
+          <td><input type="checkbox" name="optest[]" value="TEST34" onClick="addTest(this,form2.lista_test)">
+      TEST5</td>
+          <td><input type="checkbox" name="optest[]" value="TEST35" onClick="addTest(this,form2.lista_test)">
+      TEST6</td>
+        </tr>
+        <tr class="InLineDataTD">
+          <td><input type="checkbox" name="optest[]" value="TEST36" onClick="addTest(this,form2.lista_test)">
+      TEST7 </td>
+          <td><input type="checkbox" name="optest[]" value="TEST37" onClick="addTest(this,form2.lista_test)">
+      TEST8 </td>
+          <td><input type="checkbox" name="optest[]" value="TEST38" onClick="addTest(this,form2.lista_test)">
+      TEST9</td>
+        </tr>
+      </table>
+        
+      </tr>
+  </table>
+  </form>
+</div>
+
+<div id="seccion1" class="InLineFormTABLE" style="VISIBILITY: hidden; POSITION: absolute; width: 505px; height: 229px; overflow: auto; left: 6px; top: 7px; z-index: 99999;">
+<input name="btnCerrar" type="button" class="InLineButton"  value="Cerrar" onClick="javascript:hide('seccion1');show('EligeTest')">
+seccion 1
+
+</div>
+
+<div id="seccion2" class="InLineFormHeaderFont" style="VISIBILITY: hidden; POSITION: absolute; width: 505px; height: 229px; overflow: auto; left: 6px; top: 7px; z-index: 99999;">
+<input name="btnCerrar" type="button" class="InLineButton"  value="Cerrar" onClick="javascript:hide('seccion2');show('EligeTest')">
+seccion 2</div>
+
+
+<form action="detalle.php" method="post" name="form2" target="_self" class="InLineFormTABLE">
+  <table border="0" align="center" cellpadding="3" cellspacing="1" class="InLineFormTABLE">
+    <tr>
+      <td valign="baseline"><table border="0" align="center" cellpadding="3" cellspacing="1" class="InLineFormTABLE">
+        <tr>
+          <td class="InLineDataTD"><input type="checkbox" name="optest[]2" value="TEST1" onClick="addTest(this,lista_test)">
+      GLU</td>
+          <td class="InLineDataTD"><input type="checkbox" name="optest[]2" value="TEST2" onClick="addTest(this,lista_test)">
+      TRIG</td>
+          <td class="InLineDataTD"><input type="checkbox" name="optest[]2" value="TEST3" onClick="addTest(this,lista_test)">
+      TRIG</td>
+          <td class="InLineDataTD"><input type="checkbox" name="optest[]2" value="TEST4" onClick="addTest(this,lista_test)">
+      TRIG</td>
+          <td class="InLineDataTD"><input type="checkbox" name="optest[]2" value="TEST5" onClick="addTest(this,lista_test)">
+      TRIG</td>
+          <td class="InLineDataTD"><input type="checkbox" name="optest[]2" value="TEST6" onClick="addTest(this,lista_test)">
+      TRIG</td>
+          <td class="InLineDataTD"><input type="checkbox" name="optest[]2" value="TEST7" onClick="addTest(this,lista_test)">
+      TRIG</td>
+        </tr>
+        <tr>
+          <td class="InLineDataTD"><input type="checkbox" name="optest[]2" value="TEST8" onClick="addTest(this,lista_test)">
+      CHOL</td>
+          <td class="InLineDataTD"><input type="checkbox" name="optest[]2" value="TEST9" onClick="addTest(this,lista_test)">
+      TRIG</td>
+          <td class="InLineDataTD"><input type="checkbox" name="optest[]2" value="TEST10" onClick="addTest(this,lista_test)">
+      TRIG</td>
+          <td class="InLineDataTD"><input type="checkbox" name="optest[]2" value="TEST11" onClick="addTest(this,lista_test)">
+      TRIG</td>
+          <td class="InLineDataTD"><input type="checkbox" name="optest[]2" value="TEST12" onClick="addTest(this,lista_test)">
+      TRIG</td>
+          <td class="InLineDataTD"><input type="checkbox" name="optest[]2" value="TEST13" onClick="addTest(this,lista_test)">
+      TRIG</td>
+          <td class="InLineDataTD"><input type="checkbox" name="optest[]2" value="TEST14" onClick="addTest(this,lista_test)">
+      GGT</td>
+        </tr>
+        <tr>
+          <td class="InLineDataTD"><input type="checkbox" name="optest[]2" value="TEST15" onClick="addTest(this,lista_test)">
+      URIC</td>
+          <td class="InLineDataTD"><input type="checkbox" name="optest[]2" value="TEST16" onClick="addTest(this,lista_test)">
+      TRIG</td>
+          <td class="InLineDataTD"><input type="checkbox" name="optest[]2" value="TEST17" onClick="addTest(this,lista_test)">
+      TRIG</td>
+          <td class="InLineDataTD"><input type="checkbox" name="optest[]2" value="TEST18" onClick="addTest(this,lista_test)">
+      TRIG</td>
+          <td class="InLineDataTD"><input type="checkbox" name="optest[]2" value="TEST19" onClick="addTest(this,lista_test)">
+      TRIG</td>
+          <td class="InLineDataTD"><input type="checkbox" name="optest[]2" value="TEST20" onClick="addTest(this,lista_test)">
+      TRIG</td>
+          <td class="InLineDataTD"><input type="checkbox" name="optest[]2" value="TEST21" onClick="addTest(this,lista_test)">
+      VHS</td>
+        </tr>
+        <tr>
+          <td class="InLineDataTD">&nbsp;</td>
+          <td class="InLineDataTD">&nbsp;</td>
+          <td class="InLineDataTD">&nbsp;</td>
+          <td class="InLineDataTD">&nbsp;</td>
+          <td class="InLineDataTD">&nbsp;</td>
+          <td class="InLineDataTD">&nbsp;</td>
+          <td class="InLineDataTD">&nbsp;</td>
+        </tr>
+        <tr class="InLineFooterTD">
+          <td colspan="7" align="left" class="InLineFooterTD"><select name="EligeTest" class="InLineSelect" id="select5">
+              <option value="todas" selected>(Todas las secciones)</option>
+              <option value="seccion1">Seccion 1</option>
+              <option value="seccion2">Seccion 2</option>
+            </select>
+              <input name="btnMostrarTest" type="button" class="InLineButton" onClick="muestracapa(EligeTest)" value="M&aacute;s Test"></td>
+        </tr>
+      </table></td>
+      <td rowspan="2"><table border="0" cellpadding="3" cellspacing="1" class="InLineFormTABLE">
+        <tr>
+          <td class="InLineDataTD">
+            <select name="lista_test" size="10" class="InLineInput" id="select4">
+              <option>--Inserte Los test --</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td class="InLineFooterTD">
+            <input name="saca_test" type="button" class="InLineButton" id="saca_test5" onClick="javascript:quitar_test(lista_test, form2);quitar_test(lista_test, form1)" value="Quitar">
+          </td>
+        </tr>
+        <tr>
+          <td class="InLineFooterTD"><input name="Pedir" type="submit" class="InLineButton" id="Pedir" value="Confirma Peticion"></td>
+        </tr>
+      </table></td>
+    </tr>
+    <tr>
+      <td valign="baseline"><p>Datos Del Paciente:</p>
+      <p>Nombre:</p>
+      <p>N&ordm; de Muestra 
+        <input name="muestra_id" type="text" id="muestra_id">
+      </p></td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>

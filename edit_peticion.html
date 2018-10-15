@@ -1,0 +1,186 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>addd_peticion</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+<link rel="stylesheet" type="text/css" href="Themes/InLine/Style.css">
+<script language="javascript" src="funciones.js"></script>
+<script language="JavaScript">
+<!--
+function buscarTest()
+{
+	if (document.paciente.seccion_id.selectedIndex>0){
+		var valorOP=document.paciente.seccion_id.options[document.paciente.seccion_id.selectedIndex].value;
+		openWindow('frmEligeTest.php?seccion_id='+valorOP, 'BuscaTest', 780, 680, 'yes', 5);
+	} else {
+		openWindow('frmEligeTest.php', 'BuscaTest', 780, 680, 'yes', 5);
+	}
+}
+
+function generarMuestraID()
+{
+	openWindow('generarID.php', 'GeneraID', 400, 200);
+
+}
+
+
+function crealista()
+{
+	var items="";
+	var itemsLista="";
+	var elegido="";
+	var sep="";
+	///limpia el option
+	for (var i=0;i<document.paciente.lista_test.options.length;ii++)
+	{
+		document.paciente.lista_test.options[i]=null;
+	}
+	
+	for (var ii=0;ii<document.paciente.elements.length;ii++)
+	{    		
+//		if (document.paciente.elements[ii].type == 'checkbox' )
+//		{
+//			if (document.paciente.elements[ii].checked==true) {
+//			document.paciente.lista_test.options[document.paciente.lista_test.options.length] = new Option(document.paciente.elements[ii].value);
+//			}
+//		}
+
+
+		if (document.paciente.elements[ii].type == 'checkbox' && document.paciente.elements[ii].checked==true)
+		{
+//			if () {
+			document.paciente.lista_test.options[document.paciente.lista_test.options.length] = new Option(document.paciente.elements[ii].value);
+//			}
+		}
+	}
+
+
+	if(document.getElementById && document.getElementById("spanQTY"))
+	{
+		document.getElementById("spanQTY").innerHTML ='Cantidad de Test solicitados: <b>'+ document.paciente.lista_test.options.length + '</b>';
+	}
+	
+//	document.paciente.test_sol.value=items;
+}
+
+function enviarForm()
+{
+	document.paciente.submit();
+}
+
+
+//-->
+</script>
+</head>
+<body class="InLinePageBODY" onload="javascript:crealista();">
+<table width="700" align="center" border="0">
+  <tr>
+    <td align="middle">
+      <form name="paciente" method="post" action="edit_peticion.php">
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+          <tr>
+            <td class="InLineFormHeaderFont" colspan="3">1) Seleccione el
+              paciente </td> 
+            <td colspan="3" align="middle" bgcolor="#ffcc00"><strong><font size="3">{status_peticion}</font></strong> </td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineErrorDataTD" colspan="6" align="middle"><strong>{mensajes}</strong></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD">Paciente</td> 
+            <td colspan="5" nowrap class="InLineDataTD"><input name="nom_paciente" class="InLineInput" id="nom_paciente" size="60" maxlength="100" readonly value="{nom_paciente}" style="WIDTH: 389px; HEIGHT: 20px">&nbsp;<input class="InLineInput" id="paciente_id" readonly type="hidden" size="8" name="paciente_id" value="{paciente_id}">&nbsp; <input class="InLineInput" id="estado_id" readonly type="hidden" size="8" value="{estado_id}" name="estado_id"><input class="InLineInput" id="peticion_id" style="WIDTH: 44px; HEIGHT: 22px" readonly type="hidden" size="4" value="{peticion_id}" name="peticion_id"></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD" nowrap>Fecha y Hora</td> 
+            <td colspan="5" nowrap class="InLineDataTD"><input name="fecha" class="InLineInput" id="fecha" size="13" maxlength="10" value="{fecha}" readonly>- <input name="hora" class="InLineInput" id="hora" size="11" maxlength="5" value="{hora}" readonly>Hrs. </td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD"><span class="InLineDataTD">Previsión</span></td> 
+            <td class="InLineDataTD">
+			{opPrevision}
+ 			</td> 
+            <td align="right" nowrap class="InLineDataTD">Médico Solicitante</td> 
+            <td colspan="3" class="InLineDataTD">
+			{opMedico}
+ 			</td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD">Procedencia</td> 
+            <td class="InLineDataTD">
+			{valorOp}
+			</td> 
+            <td align="right" nowrap class="InLineDataTD">Prioridad de la
+              petición </td> 
+            <td colspan="3" class="InLineDataTD">
+			{opPrioridad}
+ 			</td> 
+          </tr>
+ 
+        </table>
+ 
+        <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#ffffff">
+          <tr>
+            <td colspan="2" class="InLineFormHeaderFont">2)&nbsp;Seleccione los
+              Test que desea Agregar a esta petición </td> 
+            <td class="InLineFormHeaderFont" nowrap>Sección: {op_seccion_id} 
+ <input class="" id="bt_seccion_id" onclick="enviarForm()" type="button" value="!" ? ?name='bt_seccion_id"'></td> 
+          </tr>
+ 
+          <tr>
+            <td valign="top" align="middle" width="63%" colspan="2" rowspan="2">{lblTest}</td> 
+            <td class="InLineFormHeaderFont" align="middle" width="37%" height="10">Test
+              Solicitados </td> 
+          </tr>
+ 
+          <tr>
+            <td valign="top" align="right">{listaTest} 
+              <script language="JavaScript">
+                <!--
+                if (navigator.appName == "Netscape" && version < 5){
+                    document.write('<input size="6" type="text" name="textQTY" designtimesp=22810>');
+                }else{
+                    document.write('<span ID="spanQTY" class="textopago" designtimesp=22811>&nbsp;</span>');
+                }
+                //-->
+           </script>
+              &nbsp; </td> 
+          </tr>
+ 
+          <tr class="InLineFooterTD">
+            <td width="63%" colspan="2" align="middle" valign="top"><input class="InLineButton" id="Button13" type="button" value="Buscar Más Test" name="Button1" onclick="javascript:buscarTest();"></td> 
+            <td align="middle" nowrap><input class="InLineButton" id="grabar" type="submit" value="Grabar" name="grabar">&nbsp; <input class="InLineButton" id="cancelar" type="submit" value="Cancelar" name="cancelar"></td> 
+          </tr>
+ 
+          <tr>
+            <td align="right" colspan="2"><input class="InLineInput" id="mas_test2" style="WIDTH: 13px; HEIGHT: 20px" type="hidden" size="1" name="mas_test"><input class="InLineInput" id="test_sol2" style="WIDTH: 8px; HEIGHT: 20px" type="hidden" size="4" name="test_sol">Después
+              de grabar esta petición: <input type="radio" value="nuevo" name="accion">Agregar
+              Nueva Petición </td> 
+            <td align="left"><input type="radio" checked value="continuar" name="accion">&nbsp;Ver
+              Detalle de Petición Creada</td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFormHeaderFont" colspan="3"><strong>Observaciones:
+              Escriba aquí las observaciones para la Petición</strong></td> 
+          </tr>
+ 
+          <tr align="middle">
+            <td colspan="3"><input id="observaciones" name="observaciones" value="{observaciones}" style="WIDTH: 100%; HEIGHT: 25px" class="InLineInput"></td> 
+          </tr>
+ 
+          <tr>
+            <td colspan="3">{restoTest} </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ </td> 
+  </tr>
+</table>
+</body>
+</html>

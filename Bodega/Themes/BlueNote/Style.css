@@ -1,0 +1,37 @@
+/* BlueNote CCSTheme */
+BODY, TABLE, TH, TR, TD, UL, OL, LI, P, FONT, A, BLOCKQUOTE, LABEL { font-family: Verdana, Helvetica, Arial, Tahoma; font-size: 13px; }
+.BlueNotePageBODY{ font-family: Verdana, Helvetica, Arial, Tahoma; font-size: 13px; scrollbar-face-color: #CEE3FD; scrollbar-highlight-color: #4D6890; scrollbar-shadow-color: #4D6890; scrollbar-3dlight-color: #CEE3FD; scrollbar-arrow-color: #000000; scrollbar-track-color: #CEE3FD; scrollbar-darkshadow-color: #4D6890; }
+.BlueNoteFormTABLE{ border: 1px outset #FFFFFF; padding: 4px; background-color: #CEE3FD; }
+.BlueNoteFormHeaderFont{ color: #6D92BE; font-size: 18px; font-weight: bold; }
+.BlueNoteColumnTD { padding: 4px; color: #000000; font-size: 13px; font-weight: bold; }
+.BlueNoteFieldCaptionTD { padding: 4px; color: #000000; font-size: 13px; }
+.BlueNoteDataTD{ border: 1px outset #FFFFFF; padding: 4px; color: #000000; background-color: #FFFFFF; font-size: 13px; }
+.BlueNoteAltDataTD{ border: 1px outset #F1F7FE; padding: 4px; color: #000000; background-color: #F2F8FF; font-size: 13px; }
+.BlueNoteErrorDataTD{ border: 1px outset #FFFFFF; padding: 4px; color: #FF0000; background-color: #FFFFFF; font-size: 13px; font-weight: bold; }
+.BlueNoteSeparatorTD{ height: 1px; background-color: #000000; }
+.BlueNoteFooterTD { padding: 4px; color: #000000; font-size: 13px; }
+a.BlueNoteSorterLink:link,a.BlueNoteSorterLink:visited{ color: #000000; font-weight: bold; font-size: 13px; text-decoration: underline; }
+a.BlueNoteSorterLink:hover,a.BlueNoteSorterLink:active{ color: #6D92BE; font-weight: bold; font-size: 13px; text-decoration: none; }
+a.BlueNoteDataLink:link,a.BlueNoteDataLink:visited{ color: #000000; text-decoration: underline; }
+a.BlueNoteDataLink:hover,a.BlueNoteDataLink:active{ color: #6D92BE; text-decoration: none; }
+a.BlueNoteNavigatorLink:link,a.BlueNoteNavigatorLink:visited{ color: #000000; font-weight: bold; font-size: 13px; text-decoration: underline; }
+a.BlueNoteNavigatorLink:hover,a.BlueNoteNavigatorLink:active{ color: #6D92BE; font-weight: bold; font-size: 13px; text-decoration: none; }
+.BlueNoteButton { border-bottom: 1px outset #000000; border-left: 1px outset #000000; border-right: 1px outset #000000; border-top: 1px outset #000000; background-color: #F2F8FF; font-family: Verdana, Helvetica, Arial, Tahoma; font-size: 13px; }
+.BlueNoteInput { border-bottom: 1px outset #000000; border-left: 1px outset #000000; border-right: 1px outset #000000; border-top: 1px outset #000000; font-family: Verdana, Helvetica, Arial, Tahoma; font-size: 13px; }
+.BlueNoteTextarea { border-bottom: 1px outset #000000; border-left: 1px outset #000000; border-right: 1px outset #000000; border-top: 1px outset #000000; font-family: Verdana, Helvetica, Arial, Tahoma; font-size: 13px; }
+.BlueNoteSelect { border-bottom: 1px outset #000000; border-left: 1px outset #000000; border-right: 1px outset #000000; border-top: 1px outset #000000; font-family: Verdana, Helvetica, Arial, Tahoma; font-size: 13px; }
+/* Calendar */
+a.today:link,a.today:visited{ color: #FF0000; background-color: #FFFFFF; font-weight: bold; text-decoration: none; }
+a.today:hover,a.today:active{ color: #3399FF; font-weight: bold; text-decoration: none; }
+a.selectedDay:link,a.selectedDay:visited{ color: #000000; font-weight: bold; text-decoration: none; }
+a.selectedDay:hover,a.selectedDay:active{ color: #3399FF; font-weight: bold; text-decoration: none; }
+a.weekDay:link,a.weekDay:visited{ color: #000000; text-decoration: none; }
+a.weekDay:hover,a.weekDay:active{ color: #3399FF; text-decoration: none; }
+TD.selectedDay { border: 1px outset #FFFFFF; padding: 4px; color: #000000; background-color: #CEE3FD; font-size: 13px; }
+TD.today { border-bottom: 1px solid #FF0000; border-left: 1px solid #FF0000; border-right: 1px solid #FF0000; border-top: 1px solid #FF0000; padding: 4px; color: #000000; background-color: #FFFFFF; font-size: 13px; }
+TD.workday { border: 1px outset #FFFFFF; padding: 1px; color: #000000; background-color: #FFFFFF; font-size: 13px; }
+TD.weekend { border: 1px outset #F1F7FE; padding: 1px; color: #000000; background-color: #E8F4FF; font-size: 13px; }
+TH.calendar { margin: 1px; padding: 1px; background-color: #CEE3FD; color: #000000; font-size: 13px; font-weight: bold; }
+.CalendarButtons { border-bottom: 1px outset #000000; border-left: 1px outset #000000; border-right: 1px outset #000000; border-top: 1px outset #000000; background-color: #F2F8FF; font-family: Verdana, Helvetica, Arial, Tahoma; font-size: 13px; }
+.CalendarControls { font-family: Arial, Tahoma, Verdana, Helvetica; font-size: 13px; }
+.Table { border: 1px outset #FFFFFF; padding: 5px; background-color: #CEE3FD; }

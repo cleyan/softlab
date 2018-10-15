@@ -1,0 +1,191 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>cfg_toolbar</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+<link rel="stylesheet" type="text/css" href="Themes/InLine/Style.css">
+<script language="JavaScript">
+//Begin CCS script
+//Include Common JSFunctions @1-921C7A7E
+</script>
+<script src="ClientI18N.php?file=Globalize.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-A87AC9EE
+</script>
+{page:scriptIncludes}
+<script type="text/javascript">
+//End Include User Scripts
+
+//Common Script Start @1-8BFA436B
+jQuery(function ($) {
+    var features = { };
+    var actions = { };
+    var params = { };
+//End Common Script Start
+
+//tool_barButton_SubmitOnClick Event Start @-EA572B65
+    actions["tool_barButton_SubmitOnClick"] = function (eventType, parameters) {
+        var result = true;
+//End tool_barButton_SubmitOnClick Event Start
+
+//Confirmation Message @50-96FAE8C2
+        return confirm('Enviar registro?');
+//End Confirmation Message
+
+//tool_barButton_SubmitOnClick Event End @-A5B9ECB8
+        return result;
+    };
+//End tool_barButton_SubmitOnClick Event End
+
+//Event Binding @1-0228B2FA
+    $('*:ccsControl(tool_bar, Button_Submit)').ccsBind(function() {
+        this.bind("click", actions["tool_barButton_SubmitOnClick"]);
+    });
+//End Event Binding
+
+//Plugin Calls @1-C3013200
+    $('*:ccsControl(tool_bar, Cancel)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+//End Plugin Calls
+
+//Common Script End @1-562554DE
+});
+//End Common Script End
+//End CCS script
+</script>
+</head>
+<body class="InLinePageBODY" bgcolor="#ffffff" link="#000000" alink="#000000" vlink="#000000" text="#000000">
+<table width="700" align="center" border="0">
+  <tr>
+    <td>
+      <!-- BEGIN Record tool_barSearch -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+          <tr>
+            <td class="InLineFormHeaderFont" colspan="4">Buscar Tool Bar </td> 
+          </tr>
+ 
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="4">{Error}</td> 
+          </tr>
+ <!-- END Error -->
+          <tr>
+            <td class="InLineFieldCaptionTD">Usuario</td> 
+            <td class="InLineDataTD">
+              <select name="{s_usuario_id_Name}" class="InLineSelect" id="tool_barSearchs_usuario_id">
+                <option value="">Seleccionar Valor</option>
+                {s_usuario_id_Options}
+              </select>
+            </td> 
+            <td class="InLineDataTD" nowrap>Caption&nbsp;/ Acción</td> 
+            <td class="InLineDataTD" width="100%"><input class="InLineInput" maxlength="15" size="15" value="{s_contenido}" name="{s_contenido_Name}" style="WIDTH: 100%" id="tool_barSearchs_contenido"></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFooterTD" nowrap align="middle" colspan="4">
+              <!-- BEGIN Button Button_DoSearch --><input class="InLineButton" type="submit" value="Buscar" name="{Button_Name}" id="tool_barSearchButton_DoSearch"><!-- END Button Button_DoSearch -->&nbsp; </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END Record tool_barSearch -->
+      <!-- BEGIN EditableGrid tool_bar -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <input type="hidden" value="{FormState}" name="FormState">{FormScript} 
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3">
+          <tr>
+            <td class="InLineFormHeaderFont" align="middle" colspan="7">Lista de
+              Tool Bar &nbsp;(Total de Registros:{tool_bar_TotalRecords}) </td> 
+          </tr>
+ 
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="7">{Error}</td> 
+          </tr>
+ <!-- END Error -->
+          <tr>
+            <td class="InLineColumnTD" nowrap>
+              <!-- BEGIN Sorter Sorter_caption --><a class="InLineSorterLink" href="{Sort_URL}">Caption</a> 
+              <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+              <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_caption -->&nbsp;</td> 
+            <td class="InLineColumnTD" nowrap>
+              <!-- BEGIN Sorter Sorter_tooltip --><a class="InLineSorterLink" href="{Sort_URL}">Tooltip</a> 
+              <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+              <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_tooltip -->&nbsp;</td> 
+            <td class="InLineColumnTD" nowrap>
+              <!-- BEGIN Sorter Sorter_accion --><a class="InLineSorterLink" href="{Sort_URL}">Acción</a> 
+              <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+              <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_accion -->&nbsp;</td> 
+            <td class="InLineColumnTD" nowrap>
+              <!-- BEGIN Sorter Sorter_usuario_id --><a class="InLineSorterLink" href="{Sort_URL}">Usuario</a> 
+              <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+              <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_usuario_id -->&nbsp;</td> 
+            <td class="InLineColumnTD" nowrap>
+              <!-- BEGIN Sorter Sorter_actulizar --><a class="InLineSorterLink" href="{Sort_URL}">Actualizar</a> 
+              <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+              <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_actulizar -->&nbsp;</td> 
+            <td class="InLineColumnTD" nowrap>
+              <!-- BEGIN Sorter Sorter_usar_en --><a class="InLineSorterLink" href="{Sort_URL}">Usar
+              En</a> 
+              <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+              <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_usar_en -->&nbsp;</td> 
+            <td class="InLineColumnTD" nowrap>Borrar &nbsp;</td> 
+          </tr>
+ 
+          <!-- BEGIN Row -->
+          <!-- BEGIN RowError -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="7">{Error}</td> 
+          </tr>
+ <!-- END RowError -->
+          <tr>
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="15" size="15" value="{caption}" name="{caption_Name}" id="tool_barcaption"></td> 
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="50" value="{tooltip}" name="{tooltip_Name}" size="18" id="tool_bartooltip"></td> 
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="200" size="40" value="{accion}" name="{accion_Name}" id="tool_baraccion"></td> 
+            <td class="InLineDataTD">
+              <select name="{usuario_id_Name}" class="InLineSelect" style="WIDTH: 104px" id="tool_barusuario_id">
+                <option value="" selected>Seleccionar Valor</option>
+ {usuario_id_Options} 
+              </select>
+ </td> 
+            <td class="InLineDataTD" align="middle"><input type="checkbox" name="{actulizar_Name}" value="1" class="InLineInput" {actulizar} id="tool_baractulizar">&nbsp;</td> 
+            <td class="InLineDataTD">
+              <select name="{usar_en_Name}" class="InLineSelect" style="WIDTH: 107px" id="tool_barusar_en">
+                <option value="" selected>Seleccionar Valor</option>
+ {usar_en_Options} 
+              </select>
+ </td> 
+            <td class="InLineDataTD">
+              <!-- BEGIN CheckBox CheckBox_Delete --><input class="InLineInput" type="checkbox" value="1" name="{CheckBox_Delete_Name}" {CheckBox_Delete} id="tool_barCheckBox_Delete"><!-- END CheckBox CheckBox_Delete -->&nbsp;</td> 
+          </tr>
+ <!-- END Row -->
+          <!-- BEGIN NoRecords -->
+          <tr>
+            <td class="InLineDataTD" colspan="7">No se encontaron
+              registros&nbsp;</td> 
+          </tr>
+ <!-- END NoRecords -->
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="7">
+              <!-- BEGIN Navigator Navigator -->
+              <!-- BEGIN First_On --><a class="InLineNavigatorLink" href="{First_URL}"><img src="Themes/InLine/FirstOn.gif" border="0"></a> <!-- END First_On -->
+              <!-- BEGIN Prev_On --><a class="InLineNavigatorLink" href="{Prev_URL}"><img src="Themes/InLine/PrevOn.gif" border="0"></a> <!-- END Prev_On -->&nbsp;{Page_Number}&nbsp;de
+              {Total_Pages}&nbsp; 
+              <!-- BEGIN Next_On --><a class="InLineNavigatorLink" href="{Next_URL}"><img src="Themes/InLine/NextOn.gif" border="0"></a> <!-- END Next_On -->
+              <!-- BEGIN Last_On --><a class="InLineNavigatorLink" href="{Last_URL}"><img src="Themes/InLine/LastOn.gif" border="0"></a> <!-- END Last_On --><!-- END Navigator Navigator -->&nbsp; 
+              <!-- BEGIN Button Button_Submit --><input class="InLineButton" type="submit" value="Grabar" name="{Button_Name}" id="tool_barButton_Submit"><!-- END Button Button_Submit -->&nbsp; 
+              <!-- BEGIN Button Cancel --><input class="InLineButton" type="submit" value="Cancelar" name="{Button_Name}" id="tool_barCancel"><!-- END Button Cancel -->&nbsp; </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END EditableGrid tool_bar --></td> 
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>add_pacientes</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+<link rel="stylesheet" type="text/css" href="Themes/InLine/Style.css">
+<script language="javascript" src="funciones.js"></script>
+<script language="JavaScript">
+//Begin CCS script
+//Include Common JSFunctions @1-921C7A7E
+</script>
+<script src="ClientI18N.php?file=Globalize.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-A87AC9EE
+</script>
+{page:scriptIncludes}
+<script type="text/javascript">
+//End Include User Scripts
+
+//Common Script Start @1-8BFA436B
+jQuery(function ($) {
+    var features = { };
+    var actions = { };
+    var params = { };
+//End Common Script Start
+
+//pacientesButton_DeleteOnClick Event Start @-E62F847C
+    actions["pacientesButton_DeleteOnClick"] = function (eventType, parameters) {
+        var result = true;
+//End pacientesButton_DeleteOnClick Event Start
+
+//Confirmation Message @6-BED55CD3
+        return confirm('Borrar registro?');
+//End Confirmation Message
+
+//pacientesButton_DeleteOnClick Event End @-A5B9ECB8
+        return result;
+    };
+//End pacientesButton_DeleteOnClick Event End
+
+//Event Binding @1-E4A0AB28
+    $('*:ccsControl(pacientes, Button_Delete)').ccsBind(function() {
+        this.bind("click", actions["pacientesButton_DeleteOnClick"]);
+    });
+//End Event Binding
+
+//Plugin Calls @1-1D9497C3
+    $('*:ccsControl(pacientes, Button_Delete)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+    $('*:ccsControl(pacientes, Button_Cancel)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+//End Plugin Calls
+
+//Common Script End @1-562554DE
+});
+//End Common Script End
+//End CCS script
+</script>
+</head>
+<body bgcolor="#e5e5e5" link="#000000" alink="#000000" vlink="#000000" text="#000000" class="InLinePageBODY" leftmargin="1" topmargin="1">
+<table width="700" align="center" border="0">
+  <tr>
+    <td align="middle">
+      <!-- BEGIN Record pacientes -->
+      <form name="{HTMLFormName}" action="{Action}" method="post" enctype="{HTMLFormEnctype}">
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3" width="100%">
+          <tr>
+            <td class="InLineFormHeaderFont"></td> 
+            <td class="InLineFormHeaderFont">Agregar/Editar Pacientes</td> 
+          </tr>
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="2">{Error}</td> 
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineFieldCaptionTD">Nº de Rut&nbsp;</td> 
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="12" size="12" value="{rut}" name="{rut_Name}" onchange="javascript: return valida_rut(this);" id="pacientesrut">&nbsp;(11222333-4)</td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD">Nº de Ficha&nbsp;</td> 
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="10" size="11" value="{ficha}" name="{ficha_Name}" style="WIDTH: 96px; HEIGHT: 20px" id="pacientesficha"></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD">Nombres&nbsp;</td> 
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="200" size="50" value="{nombres}" name="{nombres_Name}" id="pacientesnombres">&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD">Apellidos&nbsp;</td> 
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="200" size="50" value="{apellidos}" name="{apellidos_Name}" id="pacientesapellidos">&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD">Direccion&nbsp;</td> 
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="200" size="50" value="{direccion}" name="{direccion_Name}" id="pacientesdireccion">&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD">Fono&nbsp;</td> 
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="100" size="33" value="{fono}" name="{fono_Name}" style="WIDTH: 218px; HEIGHT: 20px" id="pacientesfono">&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD">Celular&nbsp;</td> 
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="100" size="32" value="{celular}" name="{celular_Name}" style="WIDTH: 217px; HEIGHT: 20px" id="pacientescelular">&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD">Fax&nbsp;</td> 
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="100" size="33" value="{fax}" name="{fax_Name}" style="WIDTH: 217px; HEIGHT: 20px" id="pacientesfax">&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD">Email&nbsp;</td> 
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="100" size="50" value="{email}" name="{email_Name}" id="pacientesemail">&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD">Comuna&nbsp;</td> 
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="100" size="33" value="{comuna}" name="{comuna_Name}" style="WIDTH: 217px; HEIGHT: 20px" id="pacientescomuna">&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD">Ciudad&nbsp;</td> 
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="100" size="33" value="{ciudad}" name="{ciudad_Name}" style="WIDTH: 217px; HEIGHT: 20px" id="pacientesciudad">&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD">Pais&nbsp;</td> 
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="100" size="33" value="{pais}" name="{pais_Name}" style="WIDTH: 218px; HEIGHT: 20px" id="pacientespais">&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD" nowrap>Fecha
+              de&nbsp;Nacimiento&nbsp;</td> 
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="10" size="10" value="{fecha_nacimiento}" name="{fecha_nacimiento_Name}" onchange="JavaScript:document.getElementById('edad_calc').value=getEdad(this.value);" id="pacientesfecha_nacimiento"><small>(dd/mm/aaaa)</small>&nbsp;<input class="InLineInput" readonly size="31" value="{edad_calc}" name="{edad_calc_Name}" id="pacientesedad_calc"><br/>
+              Etiqueta de edad para los Informes (No recomendado)&nbsp; <input class="InLineInput" value="{edad}" name="{edad_Name}" maxlength="20" size="10" id="pacientesedad"></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD">Sexo</td> 
+            <td class="InLineDataTD">
+              <select name="{sexo_id_Name}" class="InLineSelect" id="pacientessexo_id">
+                <option value="" selected>Seleccionar Valor</option>
+ {sexo_id_Options} 
+              </select>
+ &nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD">Previsión</td> 
+            <td class="InLineDataTD">
+              <select name="{prevision_id_Name}" class="InLineSelect" id="pacientesprevision_id">
+                <option value="" selected>Seleccionar Valor</option>
+ {prevision_id_Options} 
+              </select>
+ &nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD">Fotografía&nbsp;</td> 
+            <td class="InLineDataTD">
+              <!-- BEGIN FileUpload path_foto --><input type="hidden" value="{State}" name="{ControlName}" id="pacientespath_fotoControlName">
+              <!-- BEGIN Info -->&nbsp;{FileName}&nbsp;{FileSize}&nbsp;bytes. <!-- END Info -->
+              <!-- BEGIN Upload --><input class="InLineInput" type="file" name="{FileControl}"><!-- END Upload -->
+              <!-- BEGIN DeleteControl -->Borrar <input class="InLineInput" type="checkbox" name="{DeleteControl}" {DeleteChecked}><!-- END DeleteControl --><!-- END FileUpload path_foto --></td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="2">&nbsp; 
+              <!-- BEGIN Button Button_Insert --><input class="InLineButton" type="submit" value="Agregar" name="{Button_Name}" id="pacientesButton_Insert"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input class="InLineButton" type="submit" value="Grabar" name="{Button_Name}" id="pacientesButton_Update"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Delete --><input class="InLineButton" type="submit" value="Borrar" name="{Button_Name}" id="pacientesButton_Delete"><!-- END Button Button_Delete -->
+              <!-- BEGIN Button Button_Cancel --><input class="InLineButton" type="submit" value="Cancelar" name="{Button_Name}" id="pacientesButton_Cancel"><!-- END Button Button_Cancel -->&nbsp; </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END Record pacientes --></td> 
+  </tr>
+</table>
+</body>
+</html>

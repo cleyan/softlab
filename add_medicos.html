@@ -1,0 +1,127 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>add_medicos</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+<link rel="stylesheet" type="text/css" href="Themes/InLine/Style.css">
+<script language="JavaScript">
+//Begin CCS script
+//Include Common JSFunctions @1-921C7A7E
+</script>
+<script src="ClientI18N.php?file=Globalize.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-A87AC9EE
+</script>
+{page:scriptIncludes}
+<script type="text/javascript">
+//End Include User Scripts
+
+//Common Script Start @1-8BFA436B
+jQuery(function ($) {
+    var features = { };
+    var actions = { };
+    var params = { };
+//End Common Script Start
+
+//medicosButton_DeleteOnClick Event Start @-C4D99506
+    actions["medicosButton_DeleteOnClick"] = function (eventType, parameters) {
+        var result = true;
+//End medicosButton_DeleteOnClick Event Start
+
+//Confirmation Message @61-BED55CD3
+        return confirm('Borrar registro?');
+//End Confirmation Message
+
+//medicosButton_DeleteOnClick Event End @-A5B9ECB8
+        return result;
+    };
+//End medicosButton_DeleteOnClick Event End
+
+//Event Binding @1-042DA046
+    $('*:ccsControl(medicos, Button_Delete)').ccsBind(function() {
+        this.bind("click", actions["medicosButton_DeleteOnClick"]);
+    });
+//End Event Binding
+
+//Plugin Calls @1-1D6ABBB9
+    $('*:ccsControl(medicos, Button_Delete)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+    $('*:ccsControl(medicos, Button_Cancel)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+//End Plugin Calls
+
+//Common Script End @1-562554DE
+});
+//End Common Script End
+//End CCS script
+</script>
+</head>
+<body class="InLinePageBODY">
+<table width="700" align="center" border="0">
+  <tr>
+    <td>
+      <!-- BEGIN Record medicos -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <table class="InLineFormTABLE" cellspacing="0" cellpadding="3">
+          <tr>
+            <td class="InLineFormHeaderFont" colspan="2">Agregar/Editar Medicos </td> 
+          </tr>
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="InLineErrorDataTD" colspan="2">{Error}</td> 
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="InLineFieldCaptionTD" nowrap>Nombre del&nbsp;Médico&nbsp;</td> 
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="100" size="50" value="{nom_medico}" name="{nom_medico_Name}" id="medicosnom_medico">&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD">Especialidad</td> 
+            <td class="InLineDataTD">
+              <select name="{especialidad_id_Name}" class="InLineSelect" id="medicosespecialidad_id">
+                <option value="" selected>Seleccionar Valor</option>
+ {especialidad_id_Options} 
+              </select>
+ &nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD">Fono&nbsp;</td> 
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="100" size="50" value="{fono}" name="{fono_Name}" id="medicosfono">&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD">Email&nbsp;</td> 
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="100" size="50" value="{email}" name="{email_Name}" id="medicosemail">&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD">Factor&nbsp;</td> 
+            <td class="InLineDataTD"><input class="InLineInput" maxlength="12" size="12" value="{factor}" name="{factor_Name}" id="medicosfactor">&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFieldCaptionTD">Activo&nbsp;</td> 
+            <td class="InLineDataTD"><input type="checkbox" name="{activo_Name}" value="1" class="InLineInput" {activo} id="medicosactivo">&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="InLineFooterTD" nowrap align="right" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input class="InLineButton" type="submit" value="Agregar" name="{Button_Name}" id="medicosButton_Insert"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input class="InLineButton" type="submit" value="Grabar" name="{Button_Name}" id="medicosButton_Update"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Delete --><input class="InLineButton" type="submit" value="Borrar" name="{Button_Name}" id="medicosButton_Delete"><!-- END Button Button_Delete -->
+              <!-- BEGIN Button Button_Cancel --><input class="InLineButton" type="submit" value="Cancelar" name="{Button_Name}" id="medicosButton_Cancel"><!-- END Button Button_Cancel -->&nbsp; </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END Record medicos --></td> 
+  </tr>
+</table>
+</body>
+</html>

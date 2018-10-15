@@ -1,0 +1,108 @@
+<Site id="0" language="PHPTemplates" name="softlab" siteLanguage="es-CL" securityType="Table" urlType="Absolute" useCCSCultureFormats="True" fileExtension=".php" improvedHTTPCaching="True" userIDStoreMethod="Session" userIDVariable="UserID" userLoginVariable="UserLogin" groupIDVariable="GroupID" cookieVariable="UserInfo" automatedLogin="False" PHPGlobalArrays="True" ccsVersion="5.1.1.18992" connection="Datos" securityConnection="Datos" loginPage="login.ccp" usersTable="usuarios" userIDField="usuario_id" userLoginField="log_usuario" userPasswordField="clave" userGroupField="nivel_acceso_id" higherLevel="False" defaultDateFormat="dd/mm/yyyy" startPage="login.ccp" charset="utf-8" showDepreciatedStyles="Styles" LSEnableQueryString="True" LSQueryStringName="locale" LSEnableHTTPHeader="False" LSEnableSession="True" LSSessionName="locale" LSLanguageSessionName="lang" LSEnableCookie="False" LSCookieName="locale" LSCookieExpired="365" cachingMethod="None" useI18nFeatures="True" useDynamicStyles="False" SSEnableQueryString="True" SSQueryStringName="style" SSEnableSession="True" SSSessionName="style" SSEnableCookie="False" SSCookieName="style" SSCookieExpired="365" outputFileFormat="unix" PHPVersion="5" defaultStyle="SoftLab" defaultHTMLEncoding="utf-8" codeFileEncoding="utf-8" CVSLogin=":local:D:\servidor\cvsrep\CVSROOT" PHPEncodeExtension="mb" omitIfEmpty="True" htmlTemplateType="HTML 5" isSection508="True" createIdsForControls="True" createIdsForNonEditableControls="True" createLablesForControls="False" ALLoginCookieName="softlabLogin" ALCookieExpired="30" ALEncryptionKey="76G7CUbDj7P9F308" ALAutoProlong="False" generateJS="True" isJQuery="True" useDynamicDesigns="True" DDEnableQueryString="True" DDQueryStringName="design" DDEnableSession="True" DDSessionName="design" DDEnableCookie="False" DDCookieName="design" DDCookieExpired="365" designFolder="Designs" ProtectPasswordsCodeExpression="md5({password})" ProtectPasswordsDBFunction="MD5({password})" HTMLTemplates="Templates" useOAuth="False">
+	<Components>
+	</Components>
+	<Connections>
+		<Connection id="1" serverDatabase="MySQL" DBNameUppercase="True" PHPDBLib="MySQL" database="MySQL" showViews="True" showSynonyms="True" showSysTable="False" showSysView="False" showAliases="True" relationshipDiscovery="True" serverPersistentConnection="True" serverUseODBCCursor="0" connectionType="ODBC" connectionString="softlab" name="Datos" DBDateFormat="yyyy-mm-dd HH:nn:ss" DBBooleanFormat="V;F" serverDatabaseName="softlab_v2" connection="Datos" OptimizeSQL="False"/>
+	</Connections>
+	<CodeFiles>
+		<CodeFile id="Templates" language="PHPTemplates" name="Template.php" comment="//" codePage="utf-8" forShow="False"/>
+		<CodeFile id="Common" language="PHPTemplates" name="Common.php" comment="//" codePage="utf-8" forShow="False"/>
+		<CodeFile id="Sorter" language="PHPTemplates" name="Sorter.php" comment="//" codePage="utf-8" forShow="False"/>
+		<CodeFile id="Navigator" language="PHPTemplates" name="Navigator.php" comment="//" codePage="utf-8" forShow="False"/>
+		<CodeFile id="JSFunctions" language="PHPTemplates" name="Functions.js" comment="//" codePage="utf-8" forShow="False"/>
+		<CodeFile id="JSDatePickerHTML" language="PHPTemplates" name="DatePicker.html" comment="&lt;!--" commentEnd="--&gt;" codePage="utf-8" forShow="False"/>
+		<CodeFile id="JSDatePicker" language="PHPTemplates" name="DatePicker.js" comment="//" codePage="utf-8" forShow="False"/>
+		<CodeFile id="Classes" language="PHPTemplates" forShow="False" name="Classes.php" codePage="utf-8" comment="//"/>
+		<CodeFile id="CalendarNavigator" language="PHPTemplates" name="CalendarNavigator.php" forShow="False" comment="//" codePage="utf-8"/>
+		<CodeFile id="Client" language="PHPTemplates" name="ClientI18N.php" forShow="False" comment="//" codePage="utf-8"/>
+		<CodeFile id="db_array" language="PHPTemplates" name="db_array.php" forShow="False" comment="//" codePage="utf-8"/>
+		<CodeFile id="db_adapter" language="PHPTemplates" name="db_adapter.php" forShow="False" comment="//" codePage="utf-8"/>
+		<CodeFile id="Services" language="PHPTemplates" name="Services.php" forShow="False" comment="//" codePage="utf-8"/>
+		<CodeFile id="db_mysqli" language="PHPTemplates" name="db_mysqli.php" forShow="False" comment="//" codePage="utf-8"/>
+		<CodeFile id="JSGlobalize" language="PHPTemplates" name="Globalize.js" forShow="False" comment="//" codePage="utf-8"/>
+		<CodeFile id="jQuery" language="PHPTemplates" name="jquery.js" path="js\jquery" forShow="False" comment="//" codePage="utf-8" CheckSum="5DA52498"/>
+		<CodeFile id="selectors" language="PHPTemplates" name="selectors.js" path="js\jquery" forShow="False" comment="//" codePage="utf-8" CheckSum="11C7B931"/>
+		<CodeFile id="event-manager" language="PHPTemplates" name="event-manager.js" path="js\jquery" forShow="False" comment="//" codePage="utf-8" CheckSum="FAD88F9A"/>
+		<CodeFile id="ccs-menu.js" language="PHPTemplates" name="ccs-menu.js" path="js\jquery\menu" forShow="False" comment="//" codePage="utf-8" CheckSum="D362A267"/>
+		<CodeFile id="ccs-captcha.js" language="PHPTemplates" name="ccs-captcha.js" path="js\jquery\captcha" forShow="False" comment="//" codePage="utf-8" CheckSum="C585DA4F"/>
+		<CodeFile id="ccs-auto-fill.js" language="PHPTemplates" name="ccs-auto-fill.js" path="js\jquery\autofill" forShow="False" comment="//" codePage="utf-8" CheckSum="ED1C790E"/>
+		<CodeFile id="ccs-dependent-listbox.js" language="PHPTemplates" name="ccs-dependent-listbox.js" path="js\jquery\dependentlistbox" forShow="False" comment="//" codePage="utf-8" CheckSum="313AB5A7"/>
+		<CodeFile id="ccs-update-panel.js" language="PHPTemplates" name="ccs-update-panel.js" path="js\jquery\updatepanel" forShow="False" comment="//" codePage="utf-8" CheckSum="C767E7A4"/>
+		<CodeFile id="ccs-update-panel-im.js" language="PHPTemplates" name="ccs-update-panel-im.js" path="js\jquery\updatepanel" forShow="False" comment="//" codePage="utf-8" CheckSum="5765A9CD"/>
+		<CodeFile id="ccs-data-sheet-view.js" language="PHPTemplates" name="ccs-data-sheet-view.js" path="js\jquery\datasheetview" forShow="False" comment="//" codePage="utf-8" CheckSum="68809390"/>
+		<CodeFile id="jQueryUiMin" language="PHPTemplates" name="jquery-ui.js" path="js\jquery\ui" forShow="False" comment="//" codePage="utf-8" CheckSum="04D8AC6D"/>
+		<CodeFile id="jQueryUiAccordionMin" language="PHPTemplates" name="jquery.ui.accordion.js" path="js\jquery\ui" forShow="False" comment="//" codePage="utf-8" CheckSum="26F794C2"/>
+		<CodeFile id="jQueryUiAutocompleteMin" language="PHPTemplates" name="jquery.ui.autocomplete.js" path="js\jquery\ui" forShow="False" comment="//" codePage="utf-8" CheckSum="6576AFD5"/>
+		<CodeFile id="jQueryUiCcsAutocomplete" language="PHPTemplates" name="ccs-autocomplete.js" path="js\jquery\autocomplete" forShow="False" comment="//" codePage="utf-8" CheckSum="FC5C62CD"/>
+		<CodeFile id="jQueryUiButtonMin" language="PHPTemplates" name="jquery.ui.button.js" path="js\jquery\ui" forShow="False" comment="//" codePage="utf-8" CheckSum="409A282E"/>
+		<CodeFile id="jQueryUiCoreMin" language="PHPTemplates" name="jquery.ui.core.js" path="js\jquery\ui" forShow="False" comment="//" codePage="utf-8" CheckSum="A9F7B6ED"/>
+		<CodeFile id="jQueryUiDatePickerMin" language="PHPTemplates" name="jquery.ui.datepicker.js" path="js\jquery\ui" forShow="False" comment="//" codePage="utf-8" CheckSum="64E1AFAB"/>
+		<CodeFile id="jQueryUiDateTimepickerMin" language="PHPTemplates" name="ccs-date-timepicker.js" path="js\jquery\datepicker" forShow="False" comment="//" codePage="utf-8" CheckSum="64BBA289"/>
+		<CodeFile id="jQueryUiDialogMin" language="PHPTemplates" name="jquery.ui.dialog.js" path="js\jquery\ui" forShow="False" comment="//" codePage="utf-8" CheckSum="1420884F"/>
+		<CodeFile id="jQueryUiCcsDialog" language="PHPTemplates" name="ccs-dialog.js" path="js\jquery\dialog" forShow="False" comment="//" codePage="utf-8" CheckSum="A1DA7BF2"/>
+		<CodeFile id="jQueryUiDraggableMin" language="PHPTemplates" name="jquery.ui.draggable.js" path="js\jquery\ui" forShow="False" comment="//" codePage="utf-8" CheckSum="7DD03D33"/>
+		<CodeFile id="jQueryUiDroppableMin" language="PHPTemplates" name="jquery.ui.droppable.js" path="js\jquery\ui" forShow="False" comment="//" codePage="utf-8" CheckSum="D0300F0C"/>
+		<CodeFile id="jQueryUiMenuMin" language="PHPTemplates" name="jquery.ui.menu.js" path="js\jquery\ui" forShow="False" comment="//" codePage="utf-8" CheckSum="E3AC404E"/>
+		<CodeFile id="jQueryUiMouseMin" language="PHPTemplates" name="jquery.ui.mouse.js" path="js\jquery\ui" forShow="False" comment="//" codePage="utf-8" CheckSum="FDD60163"/>
+		<CodeFile id="jQueryUiPositionMin" language="PHPTemplates" name="jquery.ui.position.js" path="js\jquery\ui" forShow="False" comment="//" codePage="utf-8" CheckSum="9F76B5C9"/>
+		<CodeFile id="jQueryUiResizableMin" language="PHPTemplates" name="jquery.ui.resizable.js" path="js\jquery\ui" forShow="False" comment="//" codePage="utf-8" CheckSum="365728D3"/>
+		<CodeFile id="jQueryUiSelectableMin" language="PHPTemplates" name="jquery.ui.selectable.js" path="js\jquery\ui" forShow="False" comment="//" codePage="utf-8" CheckSum="F38D4732"/>
+		<CodeFile id="jQueryUiSliderMin" language="PHPTemplates" name="jquery.ui.slider.js" path="js\jquery\ui" forShow="False" comment="//" codePage="utf-8" CheckSum="F9CAF4BC"/>
+		<CodeFile id="jQueryUiCcsSlider" language="PHPTemplates" name="ccs-slider.js" path="js\jquery\slider" forShow="False" comment="//" codePage="utf-8" CheckSum="D22DFFD3"/>
+		<CodeFile id="jQueryUiSpinnerMin" language="PHPTemplates" name="jquery.ui.spinner.js" path="js\jquery\ui" forShow="False" comment="//" codePage="utf-8" CheckSum="7D83AB71"/>
+		<CodeFile id="jQueryUiCcsSpinnerMin" language="PHPTemplates" name="ccs-numeric-up-down.js" path="js\jquery\spinner" forShow="False" comment="//" codePage="utf-8" CheckSum="02F17B78"/>
+		<CodeFile id="jQueryUiTabsMin" language="PHPTemplates" name="jquery.ui.tabs.js" path="js\jquery\ui" forShow="False" comment="//" codePage="utf-8" CheckSum="2651B1DB"/>
+		<CodeFile id="jQueryUiCcsTabs" language="PHPTemplates" name="ccs-tabs.js" path="js\jquery\tab" forShow="False" comment="//" codePage="utf-8" CheckSum="666F5A00"/>
+		<CodeFile id="jQueryUiWidgetMin" language="PHPTemplates" name="jquery.ui.widget.js" path="js\jquery\ui" forShow="False" comment="//" codePage="utf-8" CheckSum="D0FBD52A"/>
+		<CodeFile id="jQueryGlobalizeMin" language="PHPTemplates" name="globalize.js" path="js\jquery\external" forShow="False" comment="//" codePage="utf-8" CheckSum="B77BA092"/>
+		<CodeFile id="jQueryCookieMin" language="PHPTemplates" name="jquery.cookie.js" path="js\jquery\external" forShow="False" comment="//" codePage="utf-8" CheckSum="6CEFD119"/>
+		<CodeFile id="jQueryUiMousewheelMin" language="PHPTemplates" name="jquery.mousewheel.js" path="js\jquery\external" forShow="False" comment="//" codePage="utf-8" CheckSum="4332426C"/>
+	</CodeFiles>
+	<Groups>
+		<Group id="46" name="Visita" value="0"/>
+<Group id="47" name="Invitado" value="1"/>
+<Group id="48" name="Paciente" value="2"/>
+<Group id="49" name="Médico" value="3"/>
+<Group id="50" name="Secretaria" value="4"/>
+<Group id="51" name="Secretaria 2" value="5"/>
+<Group id="52" name="Administrativo 1" value="6"/>
+<Group id="53" name="Administrativo 2" value="7"/>
+<Group id="54" name="Cobranza" value="8"/>
+<Group id="55" name="Enfermera" value="9"/>
+<Group id="56" name="Auxiliar 1" value="10"/>
+<Group id="57" name="Auxiliar 2" value="11"/>
+<Group id="58" name="Tecnólogo " value="12"/>
+<Group id="59" name="Tecnólogo 2" value="13"/>
+<Group id="60" name="Jefe de Sección" value="14"/>
+<Group id="61" name="Coordinador" value="15"/>
+<Group id="62" name="Jefe de Laboratorio" value="16"/>
+<Group id="63" name="Administrador" value="17"/>
+<Group id="64" name="Administrador 2" value="18"/>
+<Group id="65" name="Reservado" value="19"/>
+<Group id="66" name="Super Usuario" value="20"/>
+</Groups>
+	<Events/>
+	<Profiles>
+		<Profile name="Server1" location="Local" localServerPath="F:\softlab" localServerURL="http://10.0.2.2/softlab" publishingType="ExceptMask" publishingAllMask="html;js;asp;php;jsp;cfm;pl;pm;cgi;mdb;gif;jpg;css;xml;java;asax;ascx;aspx;cs;vb;vbproj;resx;config;vsdisco;csproj;webinfo;bat;tld;jar;properties;inc;txt;resources;cfc;master" publishingExceptMask="ccs;ccp;db;.db" securedServerURL="" FTPFolder="" FTPLogin="" FTPPassiveMode="False" FTPPassword="" FTPSecureConnection="False" FTPServer="" FTPServerURL="" FTPpublishingAllMask="" FTPpublishingExceptMask="" FTPpublishingType="AllMask" fileExtension=".php" __specValue="">
+			<Connections>
+				<Connection id="1" serverDatabase="MySQL" DBNameUppercase="True" PHPDBLib="MySQLi" database="MySQL" showViews="True" showSynonyms="True" showSysTable="False" showSysView="False" showAliases="True" relationshipDiscovery="True" serverPersistentConnection="True" serverUseODBCCursor="0" connectionType="ODBC" connectionString="softlab" name="Datos" DBDateFormat="yyyy-mm-dd HH:nn:ss" DBBooleanFormat="1;0" serverDatabaseName="softlab_v2" connection="Datos" OptimizeSQL="True" login="root" serverHost="localhost" serverLogin="root" ddXMLPath="Datos_DataDictionary.xml" typeMode="Expert" addSchemaName="False" serverSameAsDesign="False" serverPort="3306"/>
+			</Connections>
+		</Profile>
+		<Profile name="Server2" location="FTP" localServerPath="" localServerURL="" publishingType="" publishingAllMask="" publishingExceptMask="" securedServerURL="" FTPServer="129.92.46.225" FTPFolder="/" FTPLogin="cleyan" FTPPassword="carlitos" FTPServerURL="http://servidorlab/softlab/" FTPPassiveMode="True" FTPpublishingType="ExceptMask" FTPpublishingAllMask="html;js;asp;php;jsp;cfm;pl;pm;cgi;mdb;gif;jpg;css;xml;java;ascx;aspx;cs;vb;vbproj;resx;config;vsdisco;csproj;webinfo;bat;tld;jar;properties;inc;txt;resources;cfc;asax;master" FTPpublishingExceptMask="ccs;ccp">
+			<Connections>
+				<Connection id="1" serverDatabase="MySQL" DBNameUppercase="True" PHPDBLib="MySQL" database="MySQL" showViews="True" showSynonyms="True" showSysTable="False" showSysView="False" showAliases="True" relationshipDiscovery="True" serverPersistentConnection="True" serverUseODBCCursor="0" connectionType="ODBC" connectionString="softlab" name="Datos" DBDateFormat="yyyy-mm-dd HH:nn:ss" DBBooleanFormat="V;F" serverDatabaseName="softlab_v2" connection="Datos" OptimizeSQL="False"/>
+			</Connections>
+		</Profile>
+	</Profiles>
+	<Languages>
+		<Language name="es" encoding="utf-8" defaultCountry="CL" country="CL">
+			<LocaleInfo booleanFormat="1;0;" overrideDateFormats="False" overrideNumberFormats="False" msValue="13322" phpValue=""/>
+		</Language>
+	</Languages>
+	<Styles>
+		<Style id="23" name="SoftLab" caption="SoftLab"/>
+		<Style id="45" name="SandBeach" caption="Sand Beach"/>
+	</Styles>
+	<CustomButtons/>
+	<OAuthProviders/>
+</Site>

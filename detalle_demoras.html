@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>detalle_demoras</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+<link rel="stylesheet" type="text/css" href="Themes/InLine/Style.css">
+</head>
+<body class="InLinePageBODY" onblur="self.focus();">
+<table width="500" align="center" border="0">
+  <tr>
+    <td>
+      <!-- BEGIN Grid peticiones_detalle_test -->
+      <table class="InLineFormTABLE" cellspacing="0" cellpadding="3">
+        <tr>
+          <td class="InLineFormHeaderFont" align="middle" colspan="4">Lista de
+            Peticiones Detalle de Entregas </td> 
+        </tr>
+ 
+        <tr>
+          <td class="InLineColumnTD" nowrap>
+            <!-- BEGIN Sorter Sorter_codigo_fonasa --><a class="InLineSorterLink" href="{Sort_URL}">Código
+            Fonasa</a> 
+            <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_codigo_fonasa -->&nbsp;</td> 
+          <td class="InLineColumnTD" nowrap>
+            <!-- BEGIN Sorter Sorter_nom_test --><a class="InLineSorterLink" href="{Sort_URL}">Nombre
+            del &nbsp;Test</a> 
+            <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_nom_test -->&nbsp;</td> 
+          <td class="InLineColumnTD" nowrap>
+            <!-- BEGIN Sorter Sorter_dias_demora --><a class="InLineSorterLink" href="{Sort_URL}">Dias
+            Demora</a> 
+            <!-- BEGIN Asc_On --><img src="Themes/InLine/AscOn.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Themes/InLine/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_dias_demora -->&nbsp;</td> 
+          <td class="InLineColumnTD" nowrap>Fecha de Entrega</td> 
+        </tr>
+        <!-- BEGIN Row -->
+        <tr>
+          <td class="InLineDataTD">{codigo_fonasa}&nbsp;</td> 
+          <td class="InLineDataTD">{nom_test}&nbsp;</td> 
+          <td class="InLineDataTD" align="middle">{dias_demora}&nbsp;</td> 
+          <td class="InLineDataTD" align="middle">{entrega}</td> 
+        </tr>
+        <!-- END Row -->
+        <!-- BEGIN AltRow -->
+        <tr>
+          <td class="InLineAltDataTD">{Alt_codigo_fonasa}&nbsp;</td> 
+          <td class="InLineAltDataTD">{Alt_nom_test}&nbsp;</td> 
+          <td class="InLineAltDataTD" align="middle">{Alt_dias_demora}&nbsp;</td> 
+          <td class="InLineAltDataTD" align="middle">{Alt_entrega}</td> 
+        </tr>
+        <!-- END AltRow -->
+        <!-- BEGIN NoRecords -->
+        <tr>
+          <td class="InLineAltDataTD" colspan="4">No se encontaron
+            registros&nbsp;</td> 
+        </tr>
+        <!-- END NoRecords -->
+      </table>
+ 
+      <p onclick="javascript:window.close();" align="center"><a class="InLineDataLink" href="{ImageLink1}"><img class="" src="images/btn_cerrar.png" border="0"></a><br>
+      <!-- END Grid peticiones_detalle_test --></p>
+ </td> 
+  </tr>
+</table>
+</body>
+</html>
