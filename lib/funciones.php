@@ -213,17 +213,15 @@ function CrearListBox(&$obj_label, $sel_id="", $tabla, $campo_id, $campo_txt, $c
           }
           unset($db2);
 
-
         $sel=0;
+        $itemOp = "";
           while (list ($clave, $val) = each ($valores)) {
               $seleccionado=($val[$campo_id]==$sel_id) ? "selected" :"";
                 $itemOp.='<option value="'.$val[$campo_id].'" '.$seleccionado.'>'.$val[$campo_txt]."</option>\n";
                  if ($seleccionado!="") $sel++;
-
           }
 
         $seleccionado=($sel==0)?"selected":"";
-
 
         $itemOp="<option value=\"$def_id\" $seleccionado>$def_txt</option>\n" . $itemOp . "\n";
         //die($itemOp);
@@ -242,7 +240,6 @@ function CrearListBox(&$obj_label, $sel_id="", $tabla, $campo_id, $campo_txt, $c
 // Igual que crealistbox pero crea un lisbox menu
 function CrearListBoxMenu(&$obj_label, $sel_id="", $tabla, $campo_id, $campo_txt, $condicion="", $destino="", $def_id="", $def_txt="Elija un valor")
 {
-
         $obj_label->HTML=true;
         if ($condicion!="") $condicion=" WHERE $condicion ";
           $sSQL= "SELECT $campo_id, $campo_txt FROM $tabla $condicion ORDER BY $campo_txt";
@@ -266,24 +263,18 @@ function CrearListBoxMenu(&$obj_label, $sel_id="", $tabla, $campo_id, $campo_txt
               $seleccionado=($val[$campo_id]==$sel_id) ? "selected" :"";
                 $itemOp.='<option value="'.$destino.$val[$campo_id].'" '.$seleccionado.'>'.$val[$campo_txt]."</option>\n";
                  if ($seleccionado!="") $sel++;
-
           }
 
         $seleccionado=($sel==0)?"selected":"";
-
 
         $itemOp="<option value=\"$destino$def_id\" $seleccionado>$def_txt</option>\n".$itemOp."\n";
         //die($itemOp);
         $obj_label->SetValue($itemOp);
 
         return $itemOp;
-
 }
 
 // Fin CrearListBoxMenu
-
-
-
 
 // -------------------------------------------------------------------------
 // Funcion CrearBoton
@@ -310,8 +301,8 @@ function CrearBoton(&$obj_lbl, $nombre="", $tipo='', $valor='', $id='', $clase='
 
 //-----------------------------------------------------------------------------------
 // Funcion RespaldarPrecios (Adivinen pa que es :) )
-function RespaldarPrecios(){
-
+function RespaldarPrecios()
+{
         $fecha = GetFechaServer("server_hora");
         $db = new clsDBDatos();
         $insert = new clsDBDatos();
@@ -359,8 +350,8 @@ function GetPrecioTest($test_id, $prevision_id, $procedencia_id)
 // ERR3!
 // ERR4!
 
-function CalculaFormula($peticion_id=0, $test_id=0){
-
+function CalculaFormula($peticion_id=0, $test_id=0)
+{
      //Array que contiene los resultados
      $tmp=array();
      $tmp['valor']="";
@@ -1663,44 +1654,48 @@ function generar_resultado_id($resultado_id,$numFila){
 //Fin funci�n "generar_resultado_id"
 //------------------------------------------------- FUNCI�N ( 27 )------------------------------------------------------------
 //genera un link al archivo de imagen si existe
-function link_imagen($peticion,$test_id,$muestra_id,$estado_id,$numFila,$pagina,$fecha_creacion,$hora_creacion){
-//    $estado_id=10;
-    if(con_archivo($test_id)){
-	    $db = new clsDBDatos();
-	    $db->query("SELECT secciones_id, equipo_id FROM test WHERE test_id='$test_id'");
-	    if($db->next_record()) {
-            $seccion_id = $db->f("secciones_id");
-            $equipo_id = $db->f("equipo_id");
-            $parametros = "&s_secciones_id=$seccion_id&s_equipo_id=$equipo_id&s_test_id=$test_id";
-	    }
-	    $db->query("SELECT paciente_id FROM peticiones WHERE peticion_id='$peticion'");
-	    if($db->next_record()) {
-            $paciente_id = $db->f("paciente_id");
-            $parametros .= "&paciente_id=$paciente_id";
-	    }
-
-	    $db->query("SELECT resultado_id, archivo FROM resultados WHERE peticion_id='$peticion' AND test_id='$test_id' AND fecha_creacion='$fecha_creacion' AND hora_creacion='$hora_creacion'");
-	    if($db->next_record()) {
-			$resultado_id=$db->f("resultado_id");
-
-            $link= ";
-			if ($estado_id==20) $link="<a href=\"#\" onclick=\"alert('Resultado Validado, No se puede editar');\"><img src='images/attach.png' border='0'></a>  ";
-
-	    } else {
+function link_imagen($peticion,$test_id,$muestra_id,$estado_id,$numFila,$pagina,$fecha_creacion,$hora_creacion)
+{
+    //    $estado_id=10;
+    if(con_archivo($test_id))
+    {
+            $db = new clsDBDatos();
+            $db->query("SELECT secciones_id, equipo_id FROM test WHERE test_id='$test_id'");
+            if($db->next_record()) {
+                $seccion_id = $db->f("secciones_id");
+                $equipo_id = $db->f("equipo_id");
+                $parametros = "&s_secciones_id=$seccion_id&s_equipo_id=$equipo_id&s_test_id=$test_id";
+            }
+            $db->query("SELECT paciente_id FROM peticiones WHERE peticion_id='$peticion'");
+            if($db->next_record()) {
+                $paciente_id = $db->f("paciente_id");
+                $parametros .= "&paciente_id=$paciente_id";
+            }
+            
+            $db->query("SELECT resultado_id, archivo FROM resultados WHERE peticion_id='$peticion' AND test_id='$test_id' AND fecha_creacion='$fecha_creacion' AND hora_creacion='$hora_creacion'");
+            if ($db->next_record())
+            {
+                $resultado_id = $db->f("resultado_id");
+                
+                $link = "";
+                if ($estado_id==20)
+                {
+                    $link = '<a href="#" onclick="alert('."'Resultado Validado, No se puede editar'" . ');"><img src="images/attach.png" border="0"></a>';
+                }
+        } else {
             $link="<a href=\"#\"
-			       onclick=\"javascript:popAdd_Imagen_2($peticion,$test_id,$muestra_id,$estado_id,'valor_enviar_$numFila','$pagina','$parametros');\">
-                   <img src='images/drivemount-applet.png' border='0' alt='Adjuntar imagen'>
-                   </a>";
-			if ($estado_id==20) $link="<a href=\"#\" onclick=\"alert('Resultado Validado, No se puede editar');\"><img src='images/drivemount-applet.png' border='0' alt='Adjuntar imagen'></a>  ";
-	    }
-	    unset($db);
-
-
-	} else
-    	$link="&nbsp;";
-
+                       onclick=\"javascript:popAdd_Imagen_2($peticion,$test_id,$muestra_id,$estado_id,'valor_enviar_$numFila','$pagina','$parametros');\">
+                       <img src='images/drivemount-applet.png' border='0' alt='Adjuntar imagen'>
+                       </a>";
+            if ($estado_id==20) $link="<a href=\"#\" onclick=\"alert('Resultado Validado, No se puede editar');\"><img src='images/drivemount-applet.png' border='0' alt='Adjuntar imagen'></a>  ";
+        }
+        unset($db);
+    } else {
+        $link = "&nbsp;";
+    }
     return $link;
 }
+
 //Fin funci�n "link_imagen"
 //------------------------------------------------- FUNCI�N ( 28 )------------------------------------------------------------
 //genera un link al archivo de imagen si existe

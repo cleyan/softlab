@@ -24,7 +24,7 @@ $CCConnectionSettings = array (
 );
 //End Connection Settings
 
-include(RelativePath . "/cfgs/configure.php");
+include(RelativePath . "/cfg/configure.php");
 include(RelativePath . "/lib/funciones.php");
 
 //Initialize Common Variables @0-9CA169A2

@@ -5,21 +5,12 @@
     <meta name="GENERATOR" content="CodeCharge Studio 3.0.1.6">
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
     <link href="Themes/InLine/Style.css" type="text/css" rel="stylesheet">
-    <style>@import url( css/dropdown.css );</style>
     <script src="js/modomt.js"></script>
     <script src="js/getobject2.js"></script>
     <script src="js/xmlextras.js"></script>
-    <script src="js/acdropdown.js"></script>
     <script language="javascript" src="funciones.js"></script>
-    <script src="cpaint2.inc.js" type="text/javascript"></script>
     <script language="JavaScript">
-      <!--
-
-      var cp = new cpaint();
-      cp.set_response_type('OBJECT');
-      cp.set_transfer_mode('POST');
-      cp.set_debug(0);
-      cp.set_async(false);
+       //TODO: reemplazar cpaint con jquery
 
       {var_test}
 
@@ -37,7 +28,6 @@
       }
 
       function buscarPaciente(){
-
         tipo='rut';
 
         var cadena=document.getElementById('nom_paciente').value;
@@ -47,20 +37,14 @@
         } else {
           cp.call('ejecutarsql.php', 'ajax_buscapaciente', recuperapaciente, cadena, tipo);
         }
-
       }
 
       function BuscarPacientexID(pid){
         tipo='pid';
         cp.call('ejecutarsql.php', 'ajax_buscapaciente', recuperapaciente, pid, tipo);
-
       }
 
-
-
-
       function recuperapaciente(datospaciente){
-
         var paciente_id =datospaciente.ajaxResponse[0].pacienteid[0].data;
         var nom_paciente='' + datospaciente.ajaxResponse[0].nompaciente[0].data;
         var prevision_id=datospaciente.ajaxResponse[0].previsionid[0].data;
@@ -160,7 +144,6 @@
         }
       }
 
-
       function addmedico(){
         var nom_medico=prompt('Ingrese el Nombre del nuevo médico');
         cp.call('ejecutarsql.php', 'ajax_add_lista', actualiza_medicos, nom_medico, 'medicos','medico_id','nom_medico');
@@ -179,7 +162,6 @@
       function actualiza_previsiones(texto){
         document.getElementById('previsiones').innerHTML = texto.ajaxResponse[0].data;
       }
-
 
       function addprocedencia(){
         var nom_pro=prompt('Ingrese la Nueva Procedencia');
@@ -297,7 +279,6 @@
           }
         }
       }
-      //-->
     </script>
 </head>
 <body class="InLinePageBODY" onload="crealista();enfoque('nom_paciente');">

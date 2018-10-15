@@ -3,8 +3,8 @@
 define("RelativePath", ".");
 include(RelativePath . "/Common.php");
 
-//Inicialización del Motor CPAINT
-require_once("cpaint2.inc.php");
+//Inicializaciï¿½n del Motor CPAINT
+//require_once("cpaint2.inc.php"); //TODO: Reeemplazar cpanin con jquery o vuejs
    $cp = new cpaint();
 
 //Registrar las funciones usadas
@@ -21,7 +21,7 @@ require_once("cpaint2.inc.php");
 
 
 
-//Recupera el nombre de la función que viene en el parámetro
+//Recupera el nombre de la funciï¿½n que viene en el parï¿½metro
 $funcion=CCGetParam('f','');
 $parametro=CCGetParam('s','');
 if ($funcion!='') {
@@ -237,23 +237,23 @@ global $cp;
 		}
 	}
 
-	if ($direccion=='') $direccion="Sin dirección registrada.";
-	if ($fono=='') $fono="Sin teléfono";
+	if ($direccion=='') $direccion="Sin direcciï¿½n registrada.";
+	if ($fono=='') $fono="Sin telï¿½fono";
 	$fecha_nacimiento= ($fecha_nacimiento=="") ? "Sin Fecha de nacimiento" : mysql_FormatDate($fecha_nacimiento);
 	if ($rut=="") $rut="<b>Sin R.U.T. !</b>";
 	if ($ultimapeticion=="") $ultimapeticion="Sin peticiones (Nuevo Paciente?)";
 
 	$datos ="<small>
-			 Dirección: $direccion<br>
+			 Direcciï¿½n: $direccion<br>
 			 Fono: $fono <br>
 			 R.U.T.: $rut <br>
 			 Fecha Nacimiento: $fecha_nacimiento <br>
-			 Ultima Petición: $ultimapeticion
+			 Ultima Peticiï¿½n: $ultimapeticion
 			 </small>";
 
 
 
-	//Nodos con los resultados de la búsqueda
+	//Nodos con los resultados de la bï¿½squeda
 	$nodo_paciente_id  =& $cp->add_node("pacienteid");
 	$nodo_nom_paciente =& $cp->add_node("nompaciente");
 	$nodo_prevision_id =& $cp->add_node("previsionid");
